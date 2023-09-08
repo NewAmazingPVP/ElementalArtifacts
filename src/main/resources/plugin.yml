@@ -1,0 +1,4 @@
+name: ElementalArtifacts
+version: '${project.version}'
+main: org.elemental.ElementalArtifacts
+api-version: '1.20'
