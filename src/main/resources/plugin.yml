@@ -2,3 +2,7 @@ name: ElementalArtifacts
 version: '${project.version}'
 main: org.elemental.ElementalArtifacts
 api-version: '1.20'
+commands:
+  elementalartifacts:
+    description: Gives you the recipe book
+    usage: /elementalartifacts
