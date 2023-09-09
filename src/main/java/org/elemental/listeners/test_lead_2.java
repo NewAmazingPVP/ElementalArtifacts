@@ -18,7 +18,7 @@ public class test_lead_2 implements Listener {
         ItemStack item = event.getItem();
 
         // Check if the player right-clicked with a compass
-        if (item != null && item.getType() == Material.COMPASS) {
+        if (item != null && item.getType() == Material.RECOVERY_COMPASS) {
             // Create a lead item
             ItemStack lead = new ItemStack(Material.LEAD);
             ItemMeta leadMeta = lead.getItemMeta();
