@@ -1,5 +1,7 @@
 package org.elemental;
 
+import org.bukkit.Bukkit;
+import org.bukkit.ChatColor;
 import org.bukkit.plugin.java.JavaPlugin;
 
 public final class ElementalArtifacts extends JavaPlugin {
@@ -16,6 +18,7 @@ public final class ElementalArtifacts extends JavaPlugin {
 
     @Override
     public void onDisable() {
+        Bukkit.broadcastMessage(ChatColor.RED + "" + ChatColor.BOLD + "Elemental Artifacts Has Stopped!");
         // Plugin shutdown logic
     }
 }
