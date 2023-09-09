@@ -13,7 +13,7 @@ import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
 import org.bukkit.event.player.PlayerInteractEvent;
 
-public class pickclass {
+/*public class pickclass {
     @EventHandler
     public void onPlayerInteract(InventoryOpenEvent event) {
         Player player = (Player) event.getPlayer();
@@ -28,4 +28,6 @@ public class pickclass {
 
                 if (heldItem.getType() == Material.RECOVERY_COMPASS) {
     }
-}
+}/*
+
+ */
