@@ -29,11 +29,11 @@ public class ElementalArtifactsGuide_1 implements Listener {
 
 
 
-                    ItemStack rteam = new ItemStack(Material.RED_CONCRETE);
-                    ItemMeta RMeta = rteam.getItemMeta();
-                    RMeta.setDisplayName(ChatColor.YELLOW + "" + ChatColor.BOLD + "Click" + ChatColor.DARK_RED + " To Join Red");
-                    rteam.setItemMeta(RMeta);
-                    Guide.setItem(11, rteam);
+                    ItemStack G1 = new ItemStack(Material.PURPLE_STAINED_GLASS_PANE);
+                    ItemMeta M1 = G1.getItemMeta();
+                    M1.setDisplayName("");
+                    G1.setItemMeta(M1);
+                    Guide.setItem(0, G1);
 
 
 
