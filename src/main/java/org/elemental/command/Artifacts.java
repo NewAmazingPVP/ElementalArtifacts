@@ -7,24 +7,24 @@ import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 import org.bukkit.inventory.ItemStack;
-import org.bukkit.inventory.meta.BookMeta;
 import org.bukkit.inventory.meta.ItemMeta;
-import org.bukkit.enchantments.Enchantment;
 
 public class Artifacts implements CommandExecutor {
     @Override
     public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
-        Player player = (Player) sender;
-        if (sender instanceof Player) {
-            player.sendMessage("Giving you a book");
-            ItemStack book = new ItemStack(Material.ENCHANTED_BOOK);
-            BookMeta bookMeta = (BookMeta) book.getItemMeta();
-            bookMeta.setDisplayName("Elemental Artifacts Guide");
-            book.setItemMeta(bookMeta);
-            player.getInventory().addItem(book);
-            player.sendMessage("Gave you a book");
+        if (!(sender instanceof Player)) {
+            sender.sendMessage(ChatColor.RED + "This command can only be executed by players.");
             return true;
         }
-        return false;
+
+        Player player = (Player) sender;
+        ItemStack teamsel = new ItemStack(Material.BOOK);
+        ItemMeta SI = teamsel.getItemMeta();
+        SI.setDisplayName(ChatColor.GOLD + "" + ChatColor.BOLD + "Elemental Artifacts Guide");
+        teamsel.setItemMeta(SI);
+
+        player.getInventory().addItem(teamsel);
+
+        return true;
     }
 }
