@@ -86,7 +86,6 @@ public class ElementalArtifactsGuide_1 implements Listener {
                     Guide.setItem(24, G1);
                     Guide.setItem(25, G1);
                     Guide.setItem(26, G1);
-                    Guide.setItem(27, G1);
 
 
 
