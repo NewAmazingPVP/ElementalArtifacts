@@ -18,7 +18,7 @@ public class Artifacts implements CommandExecutor {
             Player player = (Player) sender;
             ItemStack book = new ItemStack(Material.BOOK);
             BookMeta bookMeta = (BookMeta) book.getItemMeta();
-            bookMeta.setDisplayName(ChatColor.GOLD + "" + ChatColor.BOLD + "Elemental Artifacts Guide");
+            bookMeta.setDisplayName(ChatColor.GOLD + "" + ChatColor.BOLD + "[Elemental Artifacts Guide]");
             book.setItemMeta(bookMeta);
             player.getInventory().addItem(book);
             return true;
