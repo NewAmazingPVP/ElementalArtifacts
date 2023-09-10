@@ -8,6 +8,7 @@ import org.elemental.listener.PlayerJoin;
 import org.bukkit.plugin.java.JavaPlugin;
 import org.elemental.listeners.Reaper_axe;
 import org.elemental.command.Artifacts;
+import org.elemental.utility.AutoUpload;
 
 public final class ElementalArtifacts extends JavaPlugin implements Listener {
     public static ElementalArtifacts elementalArtifacts;
@@ -22,7 +23,7 @@ public final class ElementalArtifacts extends JavaPlugin implements Listener {
         getServer().getPluginManager().registerEvents(this, this);
         getServer().getPluginManager().registerEvents(new PlayerJoin(), this);
         getServer().getPluginManager().registerEvents(new Reaper_axe(), this);
-
+        AutoUpload.startReleaseChecker();
     }
 
     @Override
