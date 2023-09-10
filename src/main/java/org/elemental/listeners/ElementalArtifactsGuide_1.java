@@ -31,7 +31,17 @@ public class ElementalArtifactsGuide_1 implements Listener {
                     ItemMeta M1 = G1.getItemMeta();
                     M1.setDisplayName(" ");
                     G1.setItemMeta(M1);
+
                     Guide.setItem(0, G1);
+                    Guide.setItem(1, G1);
+                    Guide.setItem(2, G1);
+                    Guide.setItem(3, G1);
+                    Guide.setItem(4, G1);
+                    Guide.setItem(5, G1);
+                    Guide.setItem(6, G1);
+                    Guide.setItem(7, G1);
+                    Guide.setItem(8, G1);
+                    Guide.setItem(9, G1);
 
 
 
