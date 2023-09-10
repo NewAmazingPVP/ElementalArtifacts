@@ -6,3 +6,6 @@ commands:
   givebook:
     description: Gives you the recipe book
     usage: /givebook
+  giveaxe:
+    description: Gives you axe test
+    usage: /giveaxe

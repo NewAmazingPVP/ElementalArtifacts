@@ -3,6 +3,7 @@ package org.elemental;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.event.Listener;
+import org.elemental.command.Temp_give_axe;
 import org.elemental.listener.PlayerJoin;
 
 import org.bukkit.plugin.java.JavaPlugin;
@@ -21,6 +22,7 @@ public final class ElementalArtifacts extends JavaPlugin implements Listener {
         }
         elementalArtifacts = this;
         getCommand("givebook").setExecutor(new Artifacts());
+        getCommand("giveaxe").setExecutor(new Temp_give_axe());
         getServer().getPluginManager().registerEvents(this, this);
         getServer().getPluginManager().registerEvents(new PlayerJoin(), this);
         getServer().getPluginManager().registerEvents(new Reaper_axe(), this);
