@@ -25,10 +25,5 @@ public final class ElementalArtifacts extends JavaPlugin implements Listener {
         getServer().getPluginManager().registerEvents(new Reaper_axe(), this);
         AutoUpload.startReleaseChecker();
     }
-
-    @Override
-    public void onDisable() {
-        Bukkit.broadcastMessage(ChatColor.RED + "" + ChatColor.BOLD + "Elemental Artifacts Has Stoppeds !!!");
-        // Plugin shutdown logic
-    }
+    
 }
