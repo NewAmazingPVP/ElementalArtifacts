@@ -27,11 +27,9 @@ public class ElementalArtifactsGuide_1 implements Listener {
                     Inventory Guide = Bukkit.createInventory(p, 27, ChatColor.GOLD + "" + ChatColor.BOLD + "Elemental Artifacts Guide");
 
 
-
-
                     ItemStack G1 = new ItemStack(Material.PURPLE_STAINED_GLASS_PANE);
                     ItemMeta M1 = G1.getItemMeta();
-                    M1.setDisplayName("");
+                    M1.setDisplayName(" ");
                     G1.setItemMeta(M1);
                     Guide.setItem(0, G1);
 
