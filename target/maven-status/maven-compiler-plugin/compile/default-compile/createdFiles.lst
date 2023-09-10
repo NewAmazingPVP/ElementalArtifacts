@@ -1,3 +1,17 @@
+org\elemental\command\Artifacts.class
 org\elemental\utility\AutoUpload.class
+org\elemental\scoreboard\FastBoard.class
+org\elemental\listeners\Reaper_axe.class
+org\elemental\command\ExampleCommand.class
+org\elemental\listener\PlayerJoin.class
+org\elemental\scoreboard\FastBoardBase$TeamMode.class
 org\elemental\ElementalArtifacts.class
+org\elemental\scoreboard\FastBoardBase.class
 org\elemental\utility\AutoUpload$1.class
+org\elemental\listeners\Test_Lead_players.class
+org\elemental\scoreboard\FastBoardBase$ObjectiveMode.class
+org\elemental\scoreboard\FastBoardBase$VersionType.class
+org\elemental\scoreboard\FastReflection$PacketConstructor.class
+org\elemental\scoreboard\FastReflection.class
+org\elemental\variables\Locations.class
+org\elemental\scoreboard\FastBoardBase$ScoreboardAction.class
