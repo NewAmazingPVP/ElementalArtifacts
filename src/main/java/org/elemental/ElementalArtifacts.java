@@ -18,7 +18,7 @@ public final class ElementalArtifacts extends JavaPlugin implements Listener {
             getDataFolder().mkdirs();
         }
         elementalArtifacts = this;
-        getCommand("elementalartifacts").setExecutor(new Artifacts());
+        getCommand("EA").setExecutor(new Artifacts());
         getServer().getPluginManager().registerEvents(this, this);
         getServer().getPluginManager().registerEvents(new PlayerJoin(), this);
         getServer().getPluginManager().registerEvents(new Reaper_axe(), this);
