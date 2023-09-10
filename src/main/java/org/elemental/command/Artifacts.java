@@ -17,11 +17,12 @@ public class Artifacts implements CommandExecutor {
         Player player = (Player) sender;
         if (sender instanceof Player) {
             player.sendMessage("Giving you a book");
-            ItemStack book = new ItemStack(Material.BOOK);
+            ItemStack book = new ItemStack(Material.ENCHANTED_BOOK);
             BookMeta bookMeta = (BookMeta) book.getItemMeta();
             bookMeta.setDisplayName("Elemental Artifacts Guide");
             book.setItemMeta(bookMeta);
             player.getInventory().addItem(book);
+            player.sendMessage("Gave you a book");
             return true;
         }
         return false;
