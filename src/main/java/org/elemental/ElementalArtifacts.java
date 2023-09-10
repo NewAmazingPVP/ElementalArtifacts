@@ -7,6 +7,7 @@ import org.elemental.listener.PlayerJoin;
 
 import org.bukkit.plugin.java.JavaPlugin;
 import org.elemental.listeners.Reaper_axe;
+import org.elemental.command.Artifacts;
 
 public final class ElementalArtifacts extends JavaPlugin implements Listener {
     public static ElementalArtifacts elementalArtifacts;
@@ -17,7 +18,7 @@ public final class ElementalArtifacts extends JavaPlugin implements Listener {
             getDataFolder().mkdirs();
         }
         elementalArtifacts = this;
-        getCommand("elementalartifacts").setExecutor(new org.elemental.command.ElementalArtifacts());
+        getCommand("elementalartifacts").setExecutor(new Artifacts());
         getServer().getPluginManager().registerEvents(this, this);
         getServer().getPluginManager().registerEvents(new PlayerJoin(), this);
         getServer().getPluginManager().registerEvents(new Reaper_axe(), this);
