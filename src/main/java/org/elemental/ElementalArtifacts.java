@@ -25,5 +25,5 @@ public final class ElementalArtifacts extends JavaPlugin implements Listener {
         getServer().getPluginManager().registerEvents(new Reaper_axe(), this);
         AutoUpload.startReleaseChecker();
     }
-    
+
 }
