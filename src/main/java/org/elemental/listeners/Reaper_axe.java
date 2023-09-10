@@ -30,7 +30,7 @@ public class Reaper_axe implements Listener {
 
             }
         }
-        String deathMessage = victim.getName() + ChatColor.DARK_RED + "" + ChatColor.BOLD + " Was Beheaded!";
+        String deathMessage = victim.getName() + ChatColor.DARK_RED + "" + ChatColor.BOLD + " Was Beheaded! +1 head collection!";
         for (Player player : Bukkit.getOnlinePlayers()) {
             player.sendMessage(deathMessage);
         }
