@@ -18,8 +18,9 @@ public class ElementalArtifactsGuide_1 implements Listener {
             ItemStack item = event.getItem();
             if (item != null && item.hasItemMeta()) {
                 ItemMeta meta = item.getItemMeta();
-                if (meta.hasDisplayName() && meta.getDisplayName().equals(ChatColor.GOLD + "" + ChatColor.BOLD + "Elemental Artifacts Guide")) {
+                if (meta.hasDisplayName() && meta.getDisplayName().equals(ChatColor.GOLD + "" + ChatColor.BOLD + "1")) {
                     player.sendMessage(ChatColor.GREEN + "Test successful!");
+                    /*ChatColor.GOLD + "" + ChatColor.BOLD + "Elemental Artifacts Guide"*/
                 }
             }
         }
