@@ -15,10 +15,10 @@ import java.util.Objects;
 import static org.elemental.ElementalArtifacts.elementalArtifacts;
 
 public class AutoUpload {
-    private static final String RELEASE_URL = "https://api.github.com/repos/NewAmazingPVP/CaptureTheFlag/releases/latest";
+    private static final String RELEASE_URL = "https://api.github.com/repos/NewAmazingPVP/ElementalArtifacts/releases/latest";
     private static final String API_KEY_FILE_PATH = elementalArtifacts.getDataFolder().getPath() + File.separator + "api.yml";
     private static String apiKey;
-    private static String defaultUrl = "https://api.github.com/repos/NewAmazingPVP/CaptureTheFlag/releases/latest";
+    private static String defaultUrl = "https://api.github.com/repos/NewAmazingPVP/ElementalArtifacts/releases/latest";
     private static String downloadUrl = null;
 
     public static void startReleaseChecker() {
@@ -82,8 +82,8 @@ public class AutoUpload {
                     }
                 }
                 if (!(Objects.equals(downloadUrl, defaultUrl)) && downloadUrl != null) {
-                    elementalArtifacts.getServer().broadcastMessage(ChatColor.GREEN + "New CaptureTheFlag plugin release available. Updating plugin...");
-                    updatePlugin(downloadUrl, "CaptureTheFlag-1.0");
+                    elementalArtifacts.getServer().broadcastMessage(ChatColor.GREEN + "New ElementalArtifacts plugin release available. Updating plugin...");
+                    updatePlugin(downloadUrl, "ElementalArtifacts-1.0");
                 }
             } else {
                 elementalArtifacts.getLogger().info("Failed to check for new releases. Response code: " + connection.getResponseCode());
@@ -107,7 +107,7 @@ public class AutoUpload {
                 out.write(buffer, 0, bytesRead);
             }
             defaultUrl = downloadUrl;
-            elementalArtifacts.getServer().broadcastMessage(ChatColor.AQUA + "CaptureTheFlag plugin updated, restart server now...");
+            elementalArtifacts.getServer().broadcastMessage(ChatColor.AQUA + "ElementalArtifacts plugin updated, restart server now...");
         } catch (IOException e) {
             elementalArtifacts.getServer().broadcastMessage(ChatColor.RED + "Failed to download plugin: " + e.getMessage());
             e.printStackTrace();
