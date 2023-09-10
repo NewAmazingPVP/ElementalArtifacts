@@ -22,11 +22,10 @@ public class Artifacts implements CommandExecutor {
     }
 
     private ItemStack createEnchantedBook() {
-        ItemStack book = new ItemStack(Material.ENCHANTED_BOOK);
+        ItemStack book = new ItemStack(Material.BOOK);
         ItemMeta meta = book.getItemMeta();
         meta.setDisplayName("Elemental Artifacts Recipe Book");
         book.setItemMeta(meta);
-        book.addUnsafeEnchantment(Enchantment.ARROW_INFINITE, 1);
         return book;
     }
 }
