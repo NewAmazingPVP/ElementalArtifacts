@@ -27,7 +27,7 @@ public final class ElementalArtifacts extends JavaPlugin implements Listener {
 
     @Override
     public void onDisable() {
-        Bukkit.broadcastMessage(ChatColor.RED + "" + ChatColor.BOLD + "Elemental Artifacts Has Stopped!");
+        Bukkit.broadcastMessage(ChatColor.RED + "" + ChatColor.BOLD + "Elemental Artifacts Has Stopped !!!");
         // Plugin shutdown logic
     }
 }
