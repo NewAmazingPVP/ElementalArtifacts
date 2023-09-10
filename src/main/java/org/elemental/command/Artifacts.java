@@ -16,6 +16,7 @@ public class Artifacts implements CommandExecutor {
     public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
         Player player = (Player) sender;
         if (sender instanceof Player) {
+            player.sendMessage("Giving you a book");
             ItemStack book = new ItemStack(Material.BOOK);
             BookMeta bookMeta = (BookMeta) book.getItemMeta();
             bookMeta.setDisplayName("Elemental Artifacts Guide");
