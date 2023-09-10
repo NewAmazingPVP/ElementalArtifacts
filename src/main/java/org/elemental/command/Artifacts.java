@@ -10,7 +10,7 @@ import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
 import org.bukkit.plugin.java.JavaPlugin;
 
-public class ElementalArtifacts extends JavaPlugin {
+public class Artifacts extends JavaPlugin {
 
     @Override
     public void onEnable() {
