@@ -24,7 +24,8 @@ public class Artifacts implements CommandExecutor {
         teamsel.setItemMeta(SI);
 
         player.getInventory().addItem(teamsel);
-
+        player.playSound(player.getLocation(), "minecraft:block.enchantment_table.use", 1.0f, 1.0f);
+        player.sendMessage(ChatColor.GREEN + "Giving Book");
         return true;
     }
 }
