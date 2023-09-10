@@ -24,7 +24,7 @@ public class Artifacts implements CommandExecutor {
         ItemMeta SI = teamsel.getItemMeta();
         SI.addEnchant(Enchantment.DURABILITY, 1, false);
         SI.addItemFlags(ItemFlag.HIDE_ENCHANTS);
-        SI.setDisplayName(ChatColor.GOLD + "" + ChatColor.BOLD + "Elemental Artifacts Guide");
+        SI.setDisplayName(ChatColor.GOLD + "" + ChatColor.BOLD + "1");
         teamsel.setItemMeta(SI);
 
         player.getInventory().addItem(teamsel);
