@@ -11,6 +11,9 @@ import org.bukkit.inventory.ItemFlag;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Guide_Listener implements Listener {
 
     @EventHandler
@@ -119,22 +122,22 @@ public class Guide_Listener implements Listener {
 
                 ItemStack Mage = new ItemStack(Material.AMETHYST_CLUSTER);
                 ItemMeta MageM = Mage.getItemMeta();
-                MageM.setDisplayName("Mage");
+                MageM.setDisplayName(ChatColor.DARK_PURPLE + "" + ChatColor.BOLD + "Mage");
                 Mage.setItemMeta(MageM);
 
                 ItemStack Swordsman = new ItemStack(Material.GOLDEN_SWORD);
                 ItemMeta SwordsmanM = Swordsman.getItemMeta();
-                SwordsmanM.setDisplayName("Swordsman");
+                SwordsmanM.setDisplayName(ChatColor.RED + "" + ChatColor.BOLD + "Swordsman");
                 Swordsman.setItemMeta(SwordsmanM);
 
                 ItemStack Armorer = new ItemStack(Material.LEATHER_CHESTPLATE);
                 ItemMeta ArmorerM = Armorer.getItemMeta();
-                ArmorerM.setDisplayName("Armorer");
+                ArmorerM.setDisplayName(ChatColor.AQUA + "" + ChatColor.BOLD + "Armorer");
                 Armorer.setItemMeta(ArmorerM);
 
                 ItemStack Archer = new ItemStack(Material.BOW);
                 ItemMeta ArcherM = Archer.getItemMeta();
-                ArcherM.setDisplayName("Archer");
+                ArcherM.setDisplayName(ChatColor.GOLD + "" + ChatColor.BOLD + "Archer");
                 Archer.setItemMeta(ArcherM);
 
                 Guide.setItem(0, G2);
@@ -184,6 +187,20 @@ public class Guide_Listener implements Listener {
                 Player player = (Player) event.getView().getPlayer();
                 player.playSound(player.getLocation(), "minecraft:block.enchantment_table.use", 1.0f, 2.0f);
                 Inventory Guide = Bukkit.createInventory(player, 27, ChatColor.BLUE + "" + ChatColor.BOLD + "Info");
+
+                ItemStack Credits = new ItemStack(Material.DIAMOND);
+                ItemMeta CreditsM = Credits.getItemMeta();
+                CreditsM.setDisplayName(ChatColor.AQUA + "" + ChatColor.BOLD + "Credits");
+                CreditsM.addEnchant(Enchantment.DURABILITY, 1, false);
+                CreditsM.addItemFlags(ItemFlag.HIDE_ENCHANTS);
+                List<String> lore = new ArrayList<>();
+                lore.add("test");
+                lore.add("test 2");
+                CreditsM.setLore(lore);
+                Credits.setItemMeta(CreditsM);
+
+                Guide.setItem(1, Credits);
+
 
                 player.openInventory(Guide);
 
