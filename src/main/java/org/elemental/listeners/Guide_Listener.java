@@ -205,7 +205,7 @@ public class Guide_Listener implements Listener {
                 Credits.setItemMeta(CreditsM);
 
 
-                ItemStack HowToPlay = new ItemStack(Material.DIAMOND);
+                ItemStack HowToPlay = new ItemStack(Material.WRITTEN_BOOK);
                 ItemMeta HowToPlayM = HowToPlay.getItemMeta();
                 HowToPlayM.setDisplayName(ChatColor.GOLD + "" + ChatColor.BOLD + "How To Play");
                 HowToPlayM.addEnchant(Enchantment.DURABILITY, 1, false);
@@ -215,7 +215,7 @@ public class Guide_Listener implements Listener {
                 HowToPlayM.setLore(HowToPlaylore);
                 HowToPlay.setItemMeta(HowToPlayM);
 
-                ItemStack G3 = new ItemStack(Material.CYAN_STAINED_GLASS);
+                ItemStack G3 = new ItemStack(Material.CYAN_STAINED_GLASS_PANE);
                 ItemMeta M3 = G3.getItemMeta();
                 M3.setDisplayName(" ");
                 G3.setItemMeta(M3);
