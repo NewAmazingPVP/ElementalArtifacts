@@ -19,6 +19,7 @@ public class EAGuideclicklistener implements Listener {
             if (event.getCurrentItem() == null) {
                 return;
             }
+            event.setCancelled(true);
         }
     }
 }
