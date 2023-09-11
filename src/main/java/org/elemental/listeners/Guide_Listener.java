@@ -194,8 +194,13 @@ public class Guide_Listener implements Listener {
                 CreditsM.addEnchant(Enchantment.DURABILITY, 1, false);
                 CreditsM.addItemFlags(ItemFlag.HIDE_ENCHANTS);
                 List<String> lore = new ArrayList<>();
-                lore.add("test");
-                lore.add("test 2");
+                lore.add(ChatColor.DARK_PURPLE + "" + ChatColor.STRIKETHROUGH + "" + ChatColor.BOLD + "=========================");
+                lore.add(" ");
+                lore.add(ChatColor.GOLD + "" + ChatColor.BOLD + "Comet99" + ChatColor.AQUA + "[Developer]   [Game Design]");
+                lore.add(" ");
+                lore.add(ChatColor.GOLD + "" + ChatColor.BOLD + "NewAmazingPVP" + ChatColor.AQUA + "[Developer]   [Game Design]");
+                lore.add(" ");
+                lore.add(ChatColor.DARK_PURPLE + "" + ChatColor.STRIKETHROUGH + "" + ChatColor.BOLD + "=========================");
                 CreditsM.setLore(lore);
                 Credits.setItemMeta(CreditsM);
 
