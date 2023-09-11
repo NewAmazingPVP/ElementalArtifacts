@@ -35,26 +35,27 @@ public class ElementalArtifactsGuide_1 implements Listener {
                     G1.setItemMeta(M1);
 
 
-                    ItemStack Class = new ItemStack(Material.DIAMOND_SWORD);
+                    ItemStack Class = new ItemStack(Material.END_CRYSTAL);
                     ItemMeta Mclass = Class.getItemMeta();
-                    Mclass.setDisplayName(" ");
+                    Mclass.setDisplayName(ChatColor.DARK_AQUA + "" + ChatColor.BOLD + "Class");
                     Class.setItemMeta(Mclass);
 
                     ItemStack R1 = new ItemStack(Material.CRAFTING_TABLE);
                     ItemMeta MR1 = R1.getItemMeta();
-                    MR1.setDisplayName(" ");
+                    MR1.setDisplayName(ChatColor.DARK_AQUA + "" + ChatColor.BOLD + "Crafting Recipes");
                     R1.setItemMeta(MR1);
 
                     ItemStack Info = new ItemStack(Material.PAPER);
                     ItemMeta Minfo = Info.getItemMeta();
-                    Minfo.setDisplayName(" ");
+                    Minfo.setDisplayName(ChatColor.DARK_AQUA + "" + ChatColor.BOLD + "Info");
                     Minfo.addEnchant(Enchantment.DURABILITY, 1, false);
                     Minfo.addItemFlags(ItemFlag.HIDE_ENCHANTS);
                     Info.setItemMeta(Minfo);
 
-
-
-
+                    ItemStack Skill = new ItemStack(Material.CRAFTING_TABLE);
+                    ItemMeta MS = Skill.getItemMeta();
+                    MS.setDisplayName(ChatColor.DARK_AQUA + "" + ChatColor.BOLD + "Skill Points");
+                    Skill.setItemMeta(MS);
 
 
 
@@ -67,14 +68,14 @@ public class ElementalArtifactsGuide_1 implements Listener {
                     Guide.setItem(5, G1);
                     Guide.setItem(6, G1);
                     Guide.setItem(7, G1);
-                    Guide.setItem(8, G1);
+                    Guide.setItem(8, Info);
                     Guide.setItem(9, G1);
                     Guide.setItem(10, G1);
                     Guide.setItem(11, Class);
                     Guide.setItem(12, G1);
                     Guide.setItem(13, R1);
                     Guide.setItem(14, G1);
-                    Guide.setItem(15, Info);
+                    Guide.setItem(15, Skill);
                     Guide.setItem(16, G1);
                     Guide.setItem(17, G1);
                     Guide.setItem(18, G1);
