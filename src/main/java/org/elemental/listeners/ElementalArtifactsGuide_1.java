@@ -52,7 +52,7 @@ public class ElementalArtifactsGuide_1 implements Listener {
                     Minfo.addItemFlags(ItemFlag.HIDE_ENCHANTS);
                     Info.setItemMeta(Minfo);
 
-                    ItemStack Skill = new ItemStack(Material.CRAFTING_TABLE);
+                    ItemStack Skill = new ItemStack(Material.BEACON);
                     ItemMeta MS = Skill.getItemMeta();
                     MS.setDisplayName(ChatColor.DARK_AQUA + "" + ChatColor.BOLD + "Skill Points");
                     Skill.setItemMeta(MS);
