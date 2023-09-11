@@ -14,7 +14,7 @@ import org.bukkit.inventory.ItemFlag;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
 
-public class ElementalArtifactsGuide_1 implements Listener {
+public class Guide implements Listener {
 
     @EventHandler
     public void onPlayerInteract(PlayerInteractEvent event) {

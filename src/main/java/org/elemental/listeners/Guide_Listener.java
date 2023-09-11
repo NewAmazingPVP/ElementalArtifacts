@@ -10,11 +10,8 @@ import org.bukkit.inventory.Inventory;
 import org.bukkit.inventory.ItemFlag;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
-import org.bukkit.inventory.meta.LeatherArmorMeta;
 
-import java.util.Arrays;
-
-public class EAGuideclicklistener implements Listener {
+public class Guide_Listener implements Listener {
 
     @EventHandler
     public void onMenuClick(InventoryClickEvent event) {
@@ -55,7 +52,6 @@ public class EAGuideclicklistener implements Listener {
                 ItemStack armor = new ItemStack(Material.DIAMOND_CHESTPLATE);
                 ItemMeta AMI = armor.getItemMeta();
                 AMI.setDisplayName(ChatColor.GREEN + "" + ChatColor.BOLD + "Armor");
-                AMI.setLore(Arrays.asList(" "));
                 armor.setItemMeta(AMI);
 
                 ItemStack back = new ItemStack(Material.ARROW);
@@ -67,7 +63,6 @@ public class EAGuideclicklistener implements Listener {
                 ItemMeta CM = close.getItemMeta();
                 CM.setDisplayName(ChatColor.GREEN + "" + ChatColor.BOLD + "Close");
                 close.setItemMeta(CM);
-
 
 
                 Guide.setItem(0, G1);
@@ -108,18 +103,37 @@ public class EAGuideclicklistener implements Listener {
                 Guide.setItem(35, close);
 
 
+                player.openInventory(Guide);
+
+            }
+
+            if (event.getCurrentItem().getType() == Material.END_CRYSTAL) {
+                Player player = (Player) event.getView().getPlayer();
+                player.playSound(player.getLocation(), "minecraft:block.enchantment_table.use", 1.0f, 2.0f);
+                Inventory Guide = Bukkit.createInventory(player, 27, ChatColor.AQUA + "" + ChatColor.BOLD + "Class");
+
+                player.openInventory(Guide);
 
 
+            }
+            if (event.getCurrentItem().getType() == Material.BEACON) {
+                Player player = (Player) event.getView().getPlayer();
+                player.playSound(player.getLocation(), "minecraft:block.enchantment_table.use", 1.0f, 2.0f);
+                Inventory Guide = Bukkit.createInventory(player, 27, ChatColor.LIGHT_PURPLE + "" + ChatColor.BOLD + "Skill Points");
+
+                player.openInventory(Guide);
 
 
-
-
+            }
+            if (event.getCurrentItem().getType() == Material.PAPER) {
+                Player player = (Player) event.getView().getPlayer();
+                player.playSound(player.getLocation(), "minecraft:block.enchantment_table.use", 1.0f, 2.0f);
+                Inventory Guide = Bukkit.createInventory(player, 27, ChatColor.BLUE + "" + ChatColor.BOLD + "Info");
 
                 player.openInventory(Guide);
 
             }
             event.setCancelled(true);
         }
-
     }
 }
