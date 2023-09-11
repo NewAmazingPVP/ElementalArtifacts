@@ -12,6 +12,8 @@ import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
 import org.bukkit.inventory.meta.LeatherArmorMeta;
 
+import java.util.Arrays;
+
 public class EAGuideclicklistener implements Listener {
 
     @EventHandler
@@ -42,17 +44,18 @@ public class EAGuideclicklistener implements Listener {
 
                 ItemStack mat = new ItemStack(Material.NETHERITE_INGOT);
                 ItemMeta MM = mat.getItemMeta();
-                MM.setDisplayName(ChatColor.GOLD + "" + ChatColor.BOLD + "materials");
+                MM.setDisplayName(ChatColor.GOLD + "" + ChatColor.BOLD + "Materials");
                 mat.setItemMeta(MM);
 
                 ItemStack mis = new ItemStack(Material.CLOCK);
                 ItemMeta MI = mis.getItemMeta();
-                MI.setDisplayName(ChatColor.AQUA + "" + ChatColor.BOLD + "miscellaneous");
+                MI.setDisplayName(ChatColor.AQUA + "" + ChatColor.BOLD + "Miscellaneous");
                 mis.setItemMeta(MI);
 
                 ItemStack armor = new ItemStack(Material.DIAMOND_CHESTPLATE);
                 ItemMeta AMI = armor.getItemMeta();
                 AMI.setDisplayName(ChatColor.GREEN + "" + ChatColor.BOLD + "Armor");
+                AMI.setLore(Arrays.asList(" "));
                 armor.setItemMeta(AMI);
 
                 ItemStack back = new ItemStack(Material.ARROW);
