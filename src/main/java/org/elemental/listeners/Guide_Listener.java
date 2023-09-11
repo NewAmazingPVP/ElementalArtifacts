@@ -205,13 +205,13 @@ public class Guide_Listener implements Listener {
                 Credits.setItemMeta(CreditsM);
 
 
-                ItemStack HowToPlay = new ItemStack(Material.WRITTEN_BOOK);
+                ItemStack HowToPlay = new ItemStack(Material.BOOK);
                 ItemMeta HowToPlayM = HowToPlay.getItemMeta();
                 HowToPlayM.setDisplayName(ChatColor.GOLD + "" + ChatColor.BOLD + "How To Play");
                 HowToPlayM.addEnchant(Enchantment.DURABILITY, 1, false);
                 HowToPlayM.addItemFlags(ItemFlag.HIDE_ENCHANTS);
                 List<String> HowToPlaylore = new ArrayList<>();
-                lore.add(ChatColor.DARK_PURPLE + "If u see this then Comet99 was too lazy to change this text -_-");
+                HowToPlaylore.add(ChatColor.DARK_PURPLE + "If u see this then Comet99 was too lazy to change this text -_-");
                 HowToPlayM.setLore(HowToPlaylore);
                 HowToPlay.setItemMeta(HowToPlayM);
 
