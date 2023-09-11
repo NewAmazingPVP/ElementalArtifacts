@@ -6,6 +6,7 @@ import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.entity.EntityDamageByEntityEvent;
 import org.bukkit.event.entity.PlayerDeathEvent;
+import org.bukkit.event.player.PlayerInteractEntityEvent;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.SkullMeta;
 import org.bukkit.plugin.java.JavaPlugin;
@@ -19,7 +20,6 @@ public class Reaper_axe implements Listener {
 
         if (killer != null && killer.getItemInHand().getType() == Material.NETHERITE_AXE && killer.getItemInHand().hasItemMeta()) {
             if (killer.getItemInHand().getItemMeta().getDisplayName().equals("Beheading Axe")) {
-                victim.setGameMode(GameMode.SURVIVAL);
                 ItemStack skull = new ItemStack(Material.PLAYER_HEAD);
                 SkullMeta skullMeta = (SkullMeta) skull.getItemMeta();
                 skullMeta.setOwningPlayer(victim);
@@ -34,6 +34,17 @@ public class Reaper_axe implements Listener {
         String deathMessage = victim.getName() + ChatColor.DARK_RED + "" + ChatColor.BOLD + " Was Beheaded!";
         for (Player player : Bukkit.getOnlinePlayers()) {
             player.sendMessage(deathMessage);
+        }
+    }
+    @EventHandler
+    public void onPlayerHit(PlayerInteractEntityEvent event) {
+        Player player = event.getPlayer();
+        if (player.getInventory().getItemInMainHand().getType() == Material.NETHERITE_AXE &&
+                player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals("Beheading Axe")) {
+            if (event.getRightClicked() instanceof Player) {
+                Player target = (Player) event.getRightClicked();
+                target.setGameMode(GameMode.SURVIVAL);
+            }
         }
     }
 }
