@@ -94,7 +94,7 @@ public class EAGuideclicklistener implements Listener {
                 Guide.setItem(24, G1);
                 Guide.setItem(25, G1);
                 Guide.setItem(26, G1);
-                Guide.setItem(17, back);
+                Guide.setItem(27, back);
                 Guide.setItem(28, G1);
                 Guide.setItem(29, G1);
                 Guide.setItem(30, G1);
