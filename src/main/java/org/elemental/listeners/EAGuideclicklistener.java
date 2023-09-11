@@ -62,7 +62,7 @@ public class EAGuideclicklistener implements Listener {
                 armor.setItemMeta(armorMeta);
 
 
-                Guide.setItem(0, armor);
+                Guide.setItem(0, weapons);
 
 
 
