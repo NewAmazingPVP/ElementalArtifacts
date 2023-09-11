@@ -76,7 +76,8 @@ public class EAGuideclicklistener implements Listener {
                 player.openInventory(Guide);
 
             }
+            event.setCancelled(true);
         }
-        event.setCancelled(true);
+
     }
 }
