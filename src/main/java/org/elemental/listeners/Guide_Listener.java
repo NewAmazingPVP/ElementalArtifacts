@@ -64,7 +64,7 @@ public class Guide_Listener implements Listener {
 
                 ItemStack close = new ItemStack(Material.BARRIER);
                 ItemMeta CM = close.getItemMeta();
-                CM.setDisplayName(ChatColor.GREEN + "" + ChatColor.BOLD + "Close");
+                CM.setDisplayName(ChatColor.RED + "Close");
                 close.setItemMeta(CM);
 
 
@@ -196,15 +196,67 @@ public class Guide_Listener implements Listener {
                 List<String> lore = new ArrayList<>();
                 lore.add(ChatColor.DARK_PURPLE + "" + ChatColor.STRIKETHROUGH + "" + ChatColor.BOLD + "=========================");
                 lore.add(" ");
-                lore.add(ChatColor.GOLD + "" + ChatColor.BOLD + "Comet99" + ChatColor.AQUA + "[Developer]   [Game Design]");
+                lore.add(ChatColor.GOLD + "" + ChatColor.BOLD + "Comet99   " + ChatColor.AQUA + "[Developer]   [Game Design]");
                 lore.add(" ");
-                lore.add(ChatColor.GOLD + "" + ChatColor.BOLD + "NewAmazingPVP" + ChatColor.AQUA + "[Developer]   [Game Design]");
+                lore.add(ChatColor.GOLD + "" + ChatColor.BOLD + "NewAmazingPVP   " + ChatColor.AQUA + "[Developer]   [Game Design]");
                 lore.add(" ");
                 lore.add(ChatColor.DARK_PURPLE + "" + ChatColor.STRIKETHROUGH + "" + ChatColor.BOLD + "=========================");
                 CreditsM.setLore(lore);
                 Credits.setItemMeta(CreditsM);
 
-                Guide.setItem(1, Credits);
+
+                ItemStack HowToPlay = new ItemStack(Material.DIAMOND);
+                ItemMeta HowToPlayM = HowToPlay.getItemMeta();
+                HowToPlayM.setDisplayName(ChatColor.GOLD + "" + ChatColor.BOLD + "How To Play");
+                HowToPlayM.addEnchant(Enchantment.DURABILITY, 1, false);
+                HowToPlayM.addItemFlags(ItemFlag.HIDE_ENCHANTS);
+                List<String> HowToPlaylore = new ArrayList<>();
+                lore.add(ChatColor.DARK_PURPLE + "If u see this then Comet99 was too lazy to change this text -_-");
+                HowToPlayM.setLore(HowToPlaylore);
+                HowToPlay.setItemMeta(HowToPlayM);
+
+                ItemStack G3 = new ItemStack(Material.CYAN_STAINED_GLASS);
+                ItemMeta M3 = G3.getItemMeta();
+                M3.setDisplayName(" ");
+                G3.setItemMeta(M3);
+
+                ItemStack Back = new ItemStack(Material.ARROW);
+                ItemMeta BackM = Back.getItemMeta();
+                BackM.setDisplayName(ChatColor.RED + "Back");
+                Back.setItemMeta(BackM);
+
+                ItemStack close = new ItemStack(Material.BARRIER);
+                ItemMeta CM = close.getItemMeta();
+                CM.setDisplayName(ChatColor.RED + "Close");
+                close.setItemMeta(CM);
+
+                Guide.setItem(0, G3);
+                Guide.setItem(1, G3);
+                Guide.setItem(2, G3);
+                Guide.setItem(3, G3);
+                Guide.setItem(4, G3);
+                Guide.setItem(5, G3);
+                Guide.setItem(6, G3);
+                Guide.setItem(7, G3);
+                Guide.setItem(8, G3);
+                Guide.setItem(9, G3);
+                Guide.setItem(10, G3);
+                Guide.setItem(11, Credits);
+                Guide.setItem(12, G3);
+                Guide.setItem(13, G3);
+                Guide.setItem(14, G3);
+                Guide.setItem(15, HowToPlay);
+                Guide.setItem(16, G3);
+                Guide.setItem(17, G3);
+                Guide.setItem(18, Back);
+                Guide.setItem(19, G3);
+                Guide.setItem(20, G3);
+                Guide.setItem(21, G3);
+                Guide.setItem(22, G3);
+                Guide.setItem(23, G3);
+                Guide.setItem(24, G3);
+                Guide.setItem(25, G3);
+                Guide.setItem(26, close);
 
 
                 player.openInventory(Guide);
