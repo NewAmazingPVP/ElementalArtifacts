@@ -1,8 +1,6 @@
 package org.elemental.listeners;
 
-import org.bukkit.Bukkit;
-import org.bukkit.ChatColor;
-import org.bukkit.Material;
+import org.bukkit.*;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
@@ -21,10 +19,13 @@ public class Reaper_axe implements Listener {
 
         if (killer != null && killer.getItemInHand().getType() == Material.NETHERITE_AXE && killer.getItemInHand().hasItemMeta()) {
             if (killer.getItemInHand().getItemMeta().getDisplayName().equals("Beheading Axe")) {
+                victim.setGameMode(GameMode.SURVIVAL);
                 ItemStack skull = new ItemStack(Material.PLAYER_HEAD);
                 SkullMeta skullMeta = (SkullMeta) skull.getItemMeta();
                 skullMeta.setOwningPlayer(victim);
                 skull.setItemMeta(skullMeta);
+                Particle.DustOptions dustOptions = new Particle.DustOptions(org.bukkit.Color.RED, 1.0f);
+                victim.getWorld().spawnParticle(Particle.REDSTONE, victim.getLocation(), 10, dustOptions);
 
                 event.getDrops().add(skull);
 
