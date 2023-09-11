@@ -56,10 +56,10 @@ public class EAGuideclicklistener implements Listener {
                 AMI.setDisplayName(ChatColor.GREEN + "" + ChatColor.BOLD + "Armor");
                 armor.setItemMeta(AMI);
 
-                LeatherArmorMeta armorMeta = (LeatherArmorMeta) armor.getItemMeta();
+                /*LeatherArmorMeta armorMeta = (LeatherArmorMeta) armor.getItemMeta();
                 armorMeta.setColor(Color.fromRGB(128, 0, 0)); // Set the color to dark red
                 armorMeta.setDisplayName(ChatColor.GREEN + "" + ChatColor.BOLD + "Armor");
-                armor.setItemMeta(armorMeta);
+                armor.setItemMeta(armorMeta);*/
 
 
                 Guide.setItem(0, weapons);
