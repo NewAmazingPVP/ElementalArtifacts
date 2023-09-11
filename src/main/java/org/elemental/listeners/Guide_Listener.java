@@ -112,6 +112,61 @@ public class Guide_Listener implements Listener {
                 player.playSound(player.getLocation(), "minecraft:block.enchantment_table.use", 1.0f, 2.0f);
                 Inventory Guide = Bukkit.createInventory(player, 27, ChatColor.AQUA + "" + ChatColor.BOLD + "Class");
 
+                ItemStack G2 = new ItemStack(Material.LIME_STAINED_GLASS_PANE);
+                ItemMeta M2 = G2.getItemMeta();
+                M2.setDisplayName(" ");
+                G2.setItemMeta(M2);
+
+                ItemStack Mage = new ItemStack(Material.AMETHYST_CLUSTER);
+                ItemMeta MageM = Mage.getItemMeta();
+                MageM.setDisplayName("Mage");
+                Mage.setItemMeta(MageM);
+
+                ItemStack Swordsman = new ItemStack(Material.GOLDEN_SWORD);
+                ItemMeta SwordsmanM = Swordsman.getItemMeta();
+                SwordsmanM.setDisplayName("Swordsman");
+                Swordsman.setItemMeta(SwordsmanM);
+
+                ItemStack Armorer = new ItemStack(Material.LEATHER_CHESTPLATE);
+                ItemMeta ArmorerM = Armorer.getItemMeta();
+                ArmorerM.setDisplayName("Armorer");
+                Armorer.setItemMeta(ArmorerM);
+
+                ItemStack Archer = new ItemStack(Material.BOW);
+                ItemMeta ArcherM = Archer.getItemMeta();
+                ArcherM.setDisplayName("Archer");
+                Archer.setItemMeta(ArcherM);
+
+                Guide.setItem(0, G2);
+                Guide.setItem(1, G2);
+                Guide.setItem(2, G2);
+                Guide.setItem(3, G2);
+                Guide.setItem(4, G2);
+                Guide.setItem(5, G2);
+                Guide.setItem(6, G2);
+                Guide.setItem(7, G2);
+                Guide.setItem(8, G2);
+                Guide.setItem(9, G2);
+                Guide.setItem(10, Mage);
+                Guide.setItem(11, G2);
+                Guide.setItem(12, Swordsman);
+                Guide.setItem(13, G2);
+                Guide.setItem(14, Armorer);
+                Guide.setItem(15, G2);
+                Guide.setItem(16, Archer);
+                Guide.setItem(17, G2);
+                Guide.setItem(18, G2);
+                Guide.setItem(19, G2);
+                Guide.setItem(20, G2);
+                Guide.setItem(21, G2);
+                Guide.setItem(22, G2);
+                Guide.setItem(23, G2);
+                Guide.setItem(24, G2);
+                Guide.setItem(25, G2);
+                Guide.setItem(26, G2);
+
+
+
                 player.openInventory(Guide);
 
 
