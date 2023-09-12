@@ -5,10 +5,7 @@ import org.elemental.command.Temp_give_axe;
 import org.elemental.listener.PlayerJoin;
 
 import org.bukkit.plugin.java.JavaPlugin;
-import org.elemental.listeners.Guide_Listener;
-import org.elemental.listeners.Guide;
-import org.elemental.listeners.Info_Listener;
-import org.elemental.listeners.Reaper_axe;
+import org.elemental.listeners.*;
 import org.elemental.command.Artifacts;
 import org.elemental.utility.AutoUpload;
 
@@ -29,6 +26,7 @@ public final class ElementalArtifacts extends JavaPlugin implements Listener {
         getServer().getPluginManager().registerEvents(new Guide(), this);
         getServer().getPluginManager().registerEvents(new Guide_Listener(), this);
         getServer().getPluginManager().registerEvents(new Info_Listener(), this);
+        getServer().getPluginManager().registerEvents(new ClassMenu_Listener(), this);
         AutoUpload.startReleaseChecker();
     }
 
