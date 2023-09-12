@@ -35,12 +35,12 @@ public class Guide_Listener implements Listener {
                 M1.setDisplayName(" ");
                 G1.setItemMeta(M1);
 
-                ItemStack weapons = new ItemStack(Material.STICK);
-                ItemMeta WM = weapons.getItemMeta();
-                WM.setDisplayName(ChatColor.RED + "" + ChatColor.BOLD + "Weapons");
+                ItemStack Magic = new ItemStack(Material.STICK);
+                ItemMeta WM = Magic.getItemMeta();
+                WM.setDisplayName(ChatColor.DARK_BLUE + "" + ChatColor.BOLD + "Magic");
                 WM.addEnchant(Enchantment.DURABILITY, 1, false);
                 WM.addItemFlags(ItemFlag.HIDE_ENCHANTS);
-                weapons.setItemMeta(WM);
+                Magic.setItemMeta(WM);
 
                 ItemStack mat = new ItemStack(Material.NETHERITE_INGOT);
                 ItemMeta MM = mat.getItemMeta();
@@ -67,6 +67,11 @@ public class Guide_Listener implements Listener {
                 CM.setDisplayName(ChatColor.RED + "Close");
                 close.setItemMeta(CM);
 
+                ItemStack Weapons = new ItemStack(Material.DIAMOND_SWORD);
+                ItemMeta WWM = Weapons.getItemMeta();
+                WWM.setDisplayName(ChatColor.RED + "Weapons");
+                Weapons.setItemMeta(WWM);
+
 
                 Guide.setItem(0, G1);
                 Guide.setItem(1, G1);
@@ -77,15 +82,15 @@ public class Guide_Listener implements Listener {
                 Guide.setItem(6, G1);
                 Guide.setItem(7, G1);
                 Guide.setItem(8, G1);
-                Guide.setItem(9, G1);
-                Guide.setItem(10, weapons);
-                Guide.setItem(11, G1);
-                Guide.setItem(12, mat);
-                Guide.setItem(13, G1);
-                Guide.setItem(14, armor);
-                Guide.setItem(15, G1);
-                Guide.setItem(16, mis);
-                Guide.setItem(17, G1);
+                Guide.setItem(9, Magic);
+                Guide.setItem(10, G1);
+                Guide.setItem(11, mat);
+                Guide.setItem(12, G1);
+                Guide.setItem(13, armor);
+                Guide.setItem(14, G1);
+                Guide.setItem(15, mis);
+                Guide.setItem(16, G1);
+                Guide.setItem(17, Weapons);
                 Guide.setItem(18, G1);
                 Guide.setItem(19, G1);
                 Guide.setItem(20, G1);
