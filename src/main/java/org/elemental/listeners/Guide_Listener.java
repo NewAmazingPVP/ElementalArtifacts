@@ -122,22 +122,22 @@ public class Guide_Listener implements Listener {
 
                 ItemStack Mage = new ItemStack(Material.AMETHYST_CLUSTER);
                 ItemMeta MageM = Mage.getItemMeta();
-                MageM.setDisplayName(ChatColor.DARK_PURPLE + "" + ChatColor.BOLD + "Mage");
+                MageM.setDisplayName(ChatColor.DARK_BLUE + "" + ChatColor.BOLD + "Mage");
                 Mage.setItemMeta(MageM);
 
                 ItemStack Swordsman = new ItemStack(Material.GOLDEN_SWORD);
                 ItemMeta SwordsmanM = Swordsman.getItemMeta();
-                SwordsmanM.setDisplayName(ChatColor.RED + "" + ChatColor.BOLD + "Swordsman");
+                SwordsmanM.setDisplayName(ChatColor.DARK_RED + "" + ChatColor.BOLD + "Swordsman");
                 Swordsman.setItemMeta(SwordsmanM);
 
                 ItemStack Armorer = new ItemStack(Material.LEATHER_CHESTPLATE);
                 ItemMeta ArmorerM = Armorer.getItemMeta();
-                ArmorerM.setDisplayName(ChatColor.AQUA + "" + ChatColor.BOLD + "Armorer");
+                ArmorerM.setDisplayName(ChatColor.DARK_GREEN + "" + ChatColor.BOLD + "Armorer");
                 Armorer.setItemMeta(ArmorerM);
 
                 ItemStack Archer = new ItemStack(Material.BOW);
                 ItemMeta ArcherM = Archer.getItemMeta();
-                ArcherM.setDisplayName(ChatColor.GOLD + "" + ChatColor.BOLD + "Archer");
+                ArcherM.setDisplayName(ChatColor.DARK_PURPLE + "" + ChatColor.BOLD + "Archer");
                 Archer.setItemMeta(ArcherM);
 
                 ItemStack Back = new ItemStack(Material.ARROW);
