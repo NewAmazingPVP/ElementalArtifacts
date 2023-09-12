@@ -196,14 +196,19 @@ public class Guide_Listener implements Listener {
 
                 ItemStack Speed = new ItemStack(Material.SUGAR);
                 ItemMeta SpeedM = Speed.getItemMeta();
-                SpeedM.setDisplayName(" ");
+                SpeedM.setDisplayName(ChatColor.WHITE + "" + ChatColor.BOLD + "Speed");
                 List<String> SPEEDL = new ArrayList<>();
-                SPEEDL.add(ChatColor.WHITE + "" + ChatColor.BOLD + "+0.1 Speed Per Level");
+                SPEEDL.add(ChatColor.DARK_AQUA + "" + ChatColor.BOLD + "+0.1 Speed Per Level");
                 SpeedM.setLore(SPEEDL);
                 Speed.setItemMeta(SpeedM);
 
-
-                Guide.setItem(26, Speed);
+                ItemStack STR = new ItemStack(Material.SUGAR);
+                ItemMeta STRM = STR.getItemMeta();
+                STRM.setDisplayName(ChatColor.DARK_RED + "" + ChatColor.BOLD + "Damage");
+                List<String> STRL = new ArrayList<>();
+                STRL.add(ChatColor.DARK_AQUA + "" + ChatColor.BOLD + "+0.01 Speed Per Level");
+                STRM.setLore(STRL);
+                STR.setItemMeta(STRM);
 
 
 
