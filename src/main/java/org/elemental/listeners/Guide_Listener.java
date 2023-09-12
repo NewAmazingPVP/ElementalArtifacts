@@ -189,6 +189,35 @@ public class Guide_Listener implements Listener {
                 player.playSound(player.getLocation(), "minecraft:block.enchantment_table.use", 1.0f, 2.0f);
                 Inventory Guide = Bukkit.createInventory(player, 27, ChatColor.LIGHT_PURPLE + "" + ChatColor.BOLD + "Skill Points");
 
+                ItemStack G2 = new ItemStack(Material.GREEN_STAINED_GLASS_PANE);
+                ItemMeta M2 = G2.getItemMeta();
+                M2.setDisplayName(" ");
+                G2.setItemMeta(M2);
+
+                ItemStack Speed = new ItemStack(Material.SUGAR);
+                ItemMeta SpeedM = Speed.getItemMeta();
+                SpeedM.setDisplayName(" ");
+                List<String> SPEEDL = new ArrayList<>();
+                SPEEDL.add(ChatColor.WHITE + "" + ChatColor.BOLD + "+0.1 Speed Per Level");
+                SpeedM.setLore(SPEEDL);
+                Speed.setItemMeta(SpeedM);
+
+
+                Guide.setItem(26, Speed);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
                 player.openInventory(Guide);
 
 
