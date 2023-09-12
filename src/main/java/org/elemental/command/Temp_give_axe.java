@@ -25,7 +25,7 @@ public class Temp_give_axe implements CommandExecutor {
         Player player = (Player) sender;
         ItemStack teamsel = new ItemStack(Material.NETHERITE_AXE);
         ItemMeta SI = teamsel.getItemMeta();
-        SI.setDisplayName(ChatColor.GOLD + "" + ChatColor.BOLD + "LEGENDARY " + ChatColor.GOLD + "Beheading Axe");
+        SI.setDisplayName(ChatColor.GOLD + "" + ChatColor.BOLD + "Beheading Axe" + ChatColor.DARK_AQUA + "[Sword]");
         List<String> DEFL = new ArrayList<>();
         DEFL.add(ChatColor.RED + "Use this to show your power and execute people");
         DEFL.add(ChatColor.RED + "to keep there heads or something idk...");
