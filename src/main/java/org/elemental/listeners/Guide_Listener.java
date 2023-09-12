@@ -206,7 +206,7 @@ public class Guide_Listener implements Listener {
                 ItemMeta STRM = STR.getItemMeta();
                 STRM.setDisplayName(ChatColor.DARK_RED + "" + ChatColor.BOLD + "Damage");
                 List<String> STRL = new ArrayList<>();
-                STRL.add(ChatColor.DARK_AQUA + "" + ChatColor.BOLD + "+0.01 Speed Per Level");
+                STRL.add(ChatColor.DARK_AQUA + "" + ChatColor.BOLD + "+0.01 Damage Per Level");
                 STRM.setLore(STRL);
                 STR.setItemMeta(STRM);
 
@@ -214,11 +214,11 @@ public class Guide_Listener implements Listener {
                 ItemMeta DEFM = DEF.getItemMeta();
                 DEFM.setDisplayName(ChatColor.GOLD + "" + ChatColor.BOLD + "Defence");
                 List<String> DEFL = new ArrayList<>();
-                DEFL.add(ChatColor.DARK_AQUA + "" + ChatColor.BOLD + "+0.05 Speed Per Level");
+                DEFL.add(ChatColor.DARK_AQUA + "" + ChatColor.BOLD + "+0.05 Defence Per Level");
                 DEFM.setLore(DEFL);
                 DEF.setItemMeta(DEFM);
 
-                ItemStack not = new ItemStack(Material.GLOWSTONE_DUST);
+                ItemStack not = new ItemStack(Material.GUNPOWDER);
                 ItemMeta notM = not.getItemMeta();
                 notM.setDisplayName(ChatColor.GRAY + "" + ChatColor.BOLD + "Not Coming Soon");
                 List<String> notL = new ArrayList<>();
@@ -226,21 +226,44 @@ public class Guide_Listener implements Listener {
                 notM.setLore(notL);
                 not.setItemMeta(notM);
 
+                ItemStack Back = new ItemStack(Material.ARROW);
+                ItemMeta BackM = Back.getItemMeta();
+                BackM.setDisplayName(ChatColor.RED + "Back");
+                Back.setItemMeta(BackM);
+
+                ItemStack close = new ItemStack(Material.BARRIER);
+                ItemMeta CM = close.getItemMeta();
+                CM.setDisplayName(ChatColor.RED + "Close");
+                close.setItemMeta(CM);
 
 
-
-                Guide.setItem(22, not);
-                Guide.setItem(23, DEF);
-                Guide.setItem(24, Speed);
-                Guide.setItem(25, STR);
-
-
-
-
-
-
-
-
+                Guide.setItem(0, G2);
+                Guide.setItem(1, G2);
+                Guide.setItem(2, G2);
+                Guide.setItem(3, G2);
+                Guide.setItem(4, G2);
+                Guide.setItem(5, G2);
+                Guide.setItem(6, G2);
+                Guide.setItem(7, G2);
+                Guide.setItem(8, G2);
+                Guide.setItem(9, G2);
+                Guide.setItem(10, not);
+                Guide.setItem(11, G2);
+                Guide.setItem(12, DEF);
+                Guide.setItem(13, G2);
+                Guide.setItem(14, STR);
+                Guide.setItem(15, G2);
+                Guide.setItem(16, Speed);
+                Guide.setItem(17, G2);
+                Guide.setItem(18, Back);
+                Guide.setItem(19, G2);
+                Guide.setItem(20, G2);
+                Guide.setItem(21, G2);
+                Guide.setItem(22, G2);
+                Guide.setItem(23, G2);
+                Guide.setItem(24, G2);
+                Guide.setItem(25, G2);
+                Guide.setItem(26, close);
 
 
                 player.openInventory(Guide);
