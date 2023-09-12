@@ -30,6 +30,7 @@ public class Temp_give_axe implements CommandExecutor {
         DEFL.add(ChatColor.RED + "Use this to show your power and execute people");
         DEFL.add(ChatColor.RED + "to keep there heads or something idk...");
         DEFL.add(ChatColor.DARK_RED + "lol...");
+        DEFL.add(ChatColor.AQUA + "Can Not Break!");
         SI.setLore(DEFL);
         SI.setUnbreakable(true);
         teamsel.setItemMeta(SI);
