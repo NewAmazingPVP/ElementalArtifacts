@@ -29,7 +29,9 @@ public class Temp_give_axe implements CommandExecutor {
         List<String> DEFL = new ArrayList<>();
         DEFL.add(ChatColor.RED + "Use this to show your power and execute people");
         DEFL.add(ChatColor.RED + "to keep there heads or something idk...");
+        DEFL.add(ChatColor.DARK_RED + "lol...");
         SI.setLore(DEFL);
+        SI.setUnbreakable(true);
         teamsel.setItemMeta(SI);
 
         player.getInventory().addItem(teamsel);
