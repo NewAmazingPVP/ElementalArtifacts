@@ -212,7 +212,8 @@ public class Guide_Listener implements Listener {
 
 
 
-
+                Guide.setItem(24, Speed);
+                Guide.setItem(25, STR);
 
 
 
