@@ -27,6 +27,7 @@ public final class ElementalArtifacts extends JavaPlugin implements Listener {
         getServer().getPluginManager().registerEvents(new Guide_Listener(), this);
         getServer().getPluginManager().registerEvents(new Info_Listener(), this);
         getServer().getPluginManager().registerEvents(new ClassMenu_Listener(), this);
+        getServer().getPluginManager().registerEvents(new SkillMenu_listener(), this);
         AutoUpload.startReleaseChecker();
     }
 
