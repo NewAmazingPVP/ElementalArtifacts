@@ -8,4 +8,5 @@ commands:
     usage: /givebook
   giveaxe:
     description: Gives you axe test
-    usage: /giveaxe
+    usage: /ElementalArtifacts
+    aliases: /EA
