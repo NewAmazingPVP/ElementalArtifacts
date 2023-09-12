@@ -36,15 +36,4 @@ public class Reaper_axe implements Listener {
             player.sendMessage(deathMessage);
         }
     }
-    @EventHandler
-    public void onPlayerHit(PlayerInteractEntityEvent event) {
-        Player player = event.getPlayer();
-        if (player.getInventory().getItemInMainHand().getType() == Material.NETHERITE_AXE &&
-                player.getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals("Beheading Axe")) {
-            if (event.getRightClicked() instanceof Player) {
-                Player target = (Player) event.getRightClicked();
-                target.setGameMode(GameMode.SURVIVAL);
-            }
-        }
-    }
 }
