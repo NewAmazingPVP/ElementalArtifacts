@@ -11,16 +11,4 @@ import org.bukkit.inventory.ShapedRecipe;
 import org.bukkit.plugin.java.JavaPlugin;
 
 public class ReaperAxe_Recipe {
-
-    public final class ElementalArtifacts extends JavaPlugin implements Listener {
-        @Override
-        public void onEnable() {
-                ItemStack shulker = new ItemStack(Material.SHULKER_BOX);
-                ShapedRecipe shulkerRecipe = new ShapedRecipe(new NamespacedKey(this, "shulker_recipe"), shulker);
-                shulkerRecipe.shape("DDD", "DCD", "DDD");
-                shulkerRecipe.setIngredient('C', Material.CHEST);
-                shulkerRecipe.setIngredient('D', Material.DIAMOND);
-                Bukkit.addRecipe(shulkerRecipe);
-            }
-        }
     }
