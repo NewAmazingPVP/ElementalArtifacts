@@ -18,7 +18,7 @@ public class ClassMenu_Listener implements Listener {
 
     @EventHandler
     public void onMenuClick(InventoryClickEvent event) {
-        if (event.getView().getTitle().equalsIgnoreCase(ChatColor.BLUE + "" + ChatColor.BOLD + "Info")) {
+        if (event.getView().getTitle().equalsIgnoreCase(ChatColor.AQUA + "" + ChatColor.BOLD + "Class")) {
 
 
             if (event.getCurrentItem() == null) {
