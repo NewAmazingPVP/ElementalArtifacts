@@ -1,6 +1,7 @@
 package org.elemental;
 
 import org.bukkit.event.Listener;
+import org.elemental.CustomRecipes.ReaperAxe_Recipe;
 import org.elemental.command.Temp_give_axe;
 import org.elemental.listener.PlayerJoin;
 
@@ -29,6 +30,7 @@ public final class ElementalArtifacts extends JavaPlugin implements Listener {
         getServer().getPluginManager().registerEvents(new ClassMenu_Listener(), this);
         getServer().getPluginManager().registerEvents(new SkillMenu_listener(), this);
         getServer().getPluginManager().registerEvents(new CraftingMenu_1_Listener(), this);
+        getServer().getPluginManager().registerEvents((Listener) new ReaperAxe_Recipe(), this);
         AutoUpload.startReleaseChecker();
     }
 
