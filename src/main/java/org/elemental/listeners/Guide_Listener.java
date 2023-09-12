@@ -140,6 +140,16 @@ public class Guide_Listener implements Listener {
                 ArcherM.setDisplayName(ChatColor.GOLD + "" + ChatColor.BOLD + "Archer");
                 Archer.setItemMeta(ArcherM);
 
+                ItemStack Back = new ItemStack(Material.ARROW);
+                ItemMeta BackM = Back.getItemMeta();
+                BackM.setDisplayName(ChatColor.RED + "Back");
+                Back.setItemMeta(BackM);
+
+                ItemStack close = new ItemStack(Material.BARRIER);
+                ItemMeta CM = close.getItemMeta();
+                CM.setDisplayName(ChatColor.RED + "Close");
+                close.setItemMeta(CM);
+
                 Guide.setItem(0, G2);
                 Guide.setItem(1, G2);
                 Guide.setItem(2, G2);
@@ -158,7 +168,7 @@ public class Guide_Listener implements Listener {
                 Guide.setItem(15, G2);
                 Guide.setItem(16, Archer);
                 Guide.setItem(17, G2);
-                Guide.setItem(18, G2);
+                Guide.setItem(18, Back);
                 Guide.setItem(19, G2);
                 Guide.setItem(20, G2);
                 Guide.setItem(21, G2);
@@ -166,7 +176,7 @@ public class Guide_Listener implements Listener {
                 Guide.setItem(23, G2);
                 Guide.setItem(24, G2);
                 Guide.setItem(25, G2);
-                Guide.setItem(26, G2);
+                Guide.setItem(26, close);
 
 
 
