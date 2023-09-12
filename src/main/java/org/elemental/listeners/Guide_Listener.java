@@ -202,7 +202,7 @@ public class Guide_Listener implements Listener {
                 SpeedM.setLore(SPEEDL);
                 Speed.setItemMeta(SpeedM);
 
-                ItemStack STR = new ItemStack(Material.SUGAR);
+                ItemStack STR = new ItemStack(Material.REDSTONE);
                 ItemMeta STRM = STR.getItemMeta();
                 STRM.setDisplayName(ChatColor.DARK_RED + "" + ChatColor.BOLD + "Damage");
                 List<String> STRL = new ArrayList<>();
@@ -210,8 +210,27 @@ public class Guide_Listener implements Listener {
                 STRM.setLore(STRL);
                 STR.setItemMeta(STRM);
 
+                ItemStack DEF = new ItemStack(Material.GLOWSTONE_DUST);
+                ItemMeta DEFM = DEF.getItemMeta();
+                DEFM.setDisplayName(ChatColor.GOLD + "" + ChatColor.BOLD + "Defence");
+                List<String> DEFL = new ArrayList<>();
+                DEFL.add(ChatColor.DARK_AQUA + "" + ChatColor.BOLD + "+0.05 Speed Per Level");
+                DEFM.setLore(DEFL);
+                DEF.setItemMeta(DEFM);
+
+                ItemStack not = new ItemStack(Material.GLOWSTONE_DUST);
+                ItemMeta notM = not.getItemMeta();
+                notM.setDisplayName(ChatColor.GRAY + "" + ChatColor.BOLD + "Not Coming Soon");
+                List<String> notL = new ArrayList<>();
+                notL.add(ChatColor.GRAY + "" + ChatColor.BOLD + "...");
+                notM.setLore(notL);
+                not.setItemMeta(notM);
 
 
+
+
+                Guide.setItem(22, not);
+                Guide.setItem(23, DEF);
                 Guide.setItem(24, Speed);
                 Guide.setItem(25, STR);
 
