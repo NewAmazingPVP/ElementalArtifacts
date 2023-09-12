@@ -19,7 +19,7 @@ public class Reaper_axe implements Listener {
         Player killer = victim.getKiller();
 
         if (killer != null && killer.getItemInHand().getType() == Material.NETHERITE_AXE && killer.getItemInHand().hasItemMeta()) {
-            if (killer.getItemInHand().getItemMeta().getDisplayName().equals("Beheading Axe")) {
+            if (killer.getItemInHand().getItemMeta().getDisplayName().equals(ChatColor.GOLD + "" + ChatColor.BOLD + "LEGENDARY" + ChatColor.GOLD + "Beheading Axe")) {
                 ItemStack skull = new ItemStack(Material.PLAYER_HEAD);
                 SkullMeta skullMeta = (SkullMeta) skull.getItemMeta();
                 skullMeta.setOwningPlayer(victim);
