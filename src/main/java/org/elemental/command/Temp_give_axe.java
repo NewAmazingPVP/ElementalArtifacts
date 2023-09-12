@@ -27,7 +27,8 @@ public class Temp_give_axe implements CommandExecutor {
         ItemMeta SI = teamsel.getItemMeta();
         SI.setDisplayName(ChatColor.GOLD + "" + ChatColor.BOLD + "LEGENDARY " + ChatColor.GOLD + "Beheading Axe");
         List<String> DEFL = new ArrayList<>();
-        DEFL.add(ChatColor.RED + "Use this to show your power and execute people to keep there heads or something idk...");
+        DEFL.add(ChatColor.RED + "Use this to show your power and execute people");
+        DEFL.add(ChatColor.RED + "to keep there heads or something idk...");
         SI.setLore(DEFL);
         teamsel.setItemMeta(SI);
 
