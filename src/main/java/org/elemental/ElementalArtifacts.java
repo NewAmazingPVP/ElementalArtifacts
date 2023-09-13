@@ -3,6 +3,7 @@ package org.elemental;
 import org.bukkit.event.Listener;
 import org.elemental.CustomRecipes.ReaperAxe_Recipe;
 import org.elemental.command.Temp_give_axe;
+import org.elemental.command.Temp_give_portcrafttable;
 import org.elemental.listener.PlayerJoin;
 
 import org.bukkit.plugin.java.JavaPlugin;
@@ -19,6 +20,7 @@ public final class ElementalArtifacts extends JavaPlugin implements Listener {
             getDataFolder().mkdirs();
         }
         elementalArtifacts = this;
+        getCommand("giveportcraft").setExecutor(new Temp_give_portcrafttable());
         getCommand("EAGuide").setExecutor(new Artifacts());
         getCommand("giveaxe").setExecutor(new Temp_give_axe());
         getServer().getPluginManager().registerEvents(this, this);
@@ -30,6 +32,7 @@ public final class ElementalArtifacts extends JavaPlugin implements Listener {
         getServer().getPluginManager().registerEvents(new ClassMenu_Listener(), this);
         getServer().getPluginManager().registerEvents(new SkillMenu_listener(), this);
         getServer().getPluginManager().registerEvents(new CraftingMenu_1_Listener(), this);
+        getServer().getPluginManager().registerEvents(new PortCraftTable(), this);
         AutoUpload.startReleaseChecker();
     }
 
