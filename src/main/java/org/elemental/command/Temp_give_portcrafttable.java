@@ -29,7 +29,8 @@ public class Temp_give_portcrafttable implements CommandExecutor {
         List<String> DEFL = new ArrayList<>();
         DEFL.add(ChatColor.YELLOW + "" + ChatColor.BOLD + "Right Click" + ChatColor.GOLD + " To open!");
         SI.setLore(DEFL);
-        SI.setUnbreakable(true);
+        SI.addEnchant(Enchantment.DURABILITY, 1, false);
+        SI.addItemFlags(ItemFlag.HIDE_ENCHANTS);
         teamsel.setItemMeta(SI);
 
         player.getInventory().addItem(teamsel);
