@@ -19,7 +19,7 @@ public class PortCraftTable implements Listener {
                 // Open crafting table menu for the player
                 // Replace the code below with your own implementation
                 event.getPlayer().openWorkbench(null, true);
-                player.playSound(player.getLocation(), "minecraft:block.enchantment_table.use", 1.0f, 2.0f);
+                player.playSound(player.getLocation(), "minecraft:item.armor.equip_leather", 1.0f, 1.0f);
 
                 event.setCancelled(true); // Prevent the player from placing the crafting table
             }
