@@ -1,9 +1,11 @@
 package org.elemental;
 
 import org.bukkit.event.Listener;
+import org.bukkit.plugin.Plugin;
 import org.elemental.CustomRecipes.ReaperAxe_Recipe;
 import org.elemental.command.Temp_give_axe;
 import org.elemental.command.Temp_give_portcrafttable;
+import org.elemental.command.Temp_givedoublesword;
 import org.elemental.listener.PlayerJoin;
 
 import org.bukkit.plugin.java.JavaPlugin;
@@ -14,6 +16,7 @@ import org.elemental.utility.AutoUpload;
 public final class ElementalArtifacts extends JavaPlugin implements Listener {
     public static ElementalArtifacts elementalArtifacts;
 
+
     @Override
     public void onEnable() {
         if (!getDataFolder().exists()) {
@@ -23,6 +26,7 @@ public final class ElementalArtifacts extends JavaPlugin implements Listener {
         getCommand("giveportcraft").setExecutor(new Temp_give_portcrafttable());
         getCommand("EAGuide").setExecutor(new Artifacts());
         getCommand("giveaxe").setExecutor(new Temp_give_axe());
+        getCommand("givedoublesword").setExecutor(new Temp_givedoublesword());
         getServer().getPluginManager().registerEvents(this, this);
         getServer().getPluginManager().registerEvents(new PlayerJoin(), this);
         getServer().getPluginManager().registerEvents(new Reaper_axe(), this);
@@ -33,6 +37,7 @@ public final class ElementalArtifacts extends JavaPlugin implements Listener {
         getServer().getPluginManager().registerEvents(new SkillMenu_listener(), this);
         getServer().getPluginManager().registerEvents(new CraftingMenu_1_Listener(), this);
         getServer().getPluginManager().registerEvents(new PortCraftTable(), this);
+        getServer().getPluginManager().registerEvents(new doubleedged_sword(), this);
         AutoUpload.startReleaseChecker();
     }
 
