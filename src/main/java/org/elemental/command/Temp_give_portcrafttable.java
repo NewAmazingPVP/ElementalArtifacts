@@ -14,7 +14,7 @@ import org.bukkit.inventory.meta.ItemMeta;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Temp_give_axe implements CommandExecutor {
+public class Temp_give_portcrafttable implements CommandExecutor {
     @Override
     public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
         if (!(sender instanceof Player)) {
@@ -23,14 +23,11 @@ public class Temp_give_axe implements CommandExecutor {
         }
 
         Player player = (Player) sender;
-        ItemStack teamsel = new ItemStack(Material.NETHERITE_AXE);
+        ItemStack teamsel = new ItemStack(Material.CRAFTING_TABLE);
         ItemMeta SI = teamsel.getItemMeta();
-        SI.setDisplayName(ChatColor.GOLD + "" + ChatColor.BOLD + "Beheading Axe" + ChatColor.DARK_AQUA + " [Sword]");
+        SI.setDisplayName(ChatColor.GREEN + "" + ChatColor.BOLD + "Portable Crafting Table" + ChatColor.DARK_AQUA + " [Item]");
         List<String> DEFL = new ArrayList<>();
-        DEFL.add(ChatColor.RED + "Use this to show your power and execute people");
-        DEFL.add(ChatColor.RED + "to keep there heads or something idk...");
-        DEFL.add(ChatColor.DARK_RED + "lol...");
-        DEFL.add(ChatColor.AQUA + "Can Not Break!");
+        DEFL.add(ChatColor.YELLOW + "" + ChatColor.BOLD + "Right Click" + ChatColor.GOLD + " To open!");
         SI.setLore(DEFL);
         SI.setUnbreakable(true);
         teamsel.setItemMeta(SI);

@@ -21,7 +21,7 @@ public class Reaper_axe implements Listener {
         Player killer = victim.getKiller();
 
         if (killer != null && killer.getItemInHand().getType() == Material.NETHERITE_AXE && killer.getItemInHand().hasItemMeta()) {
-            if (killer.getItemInHand().getItemMeta().getDisplayName().equals(ChatColor.GOLD + "" + ChatColor.BOLD + "Beheading Axe" + ChatColor.DARK_AQUA + "[Sword]")) {
+            if (killer.getItemInHand().getItemMeta().getDisplayName().equals(ChatColor.GOLD + "" + ChatColor.BOLD + "Beheading Axe" + ChatColor.DARK_AQUA + " [Sword]")) {
                 ItemStack skull = new ItemStack(Material.PLAYER_HEAD);
                 SkullMeta skullMeta = (SkullMeta) skull.getItemMeta();
                 skullMeta.setOwningPlayer(victim);
@@ -46,7 +46,7 @@ public class Reaper_axe implements Listener {
             ItemMeta itemMeta = heldItem.getItemMeta();
             if (itemMeta != null && itemMeta.hasDisplayName()) {
                 String displayName = itemMeta.getDisplayName();
-                if (displayName.equals(ChatColor.GOLD + "" + ChatColor.BOLD + "Beheading Axe" + ChatColor.DARK_AQUA + "[Sword]")) {
+                if (displayName.equals(ChatColor.GOLD + "" + ChatColor.BOLD + "Beheading Axe" + ChatColor.DARK_AQUA + " [Sword]")) {
                     event.setCancelled(true);
                 }
             }
@@ -61,7 +61,7 @@ public class Reaper_axe implements Listener {
 
             ItemStack weapon = damagerPlayer.getInventory().getItemInMainHand();
             if (weapon != null && weapon.getItemMeta() != null && weapon.getItemMeta().getDisplayName() != null) {
-                if (weapon.getItemMeta().getDisplayName().equals(ChatColor.GOLD + "" + ChatColor.BOLD + "Beheading Axe" + ChatColor.DARK_AQUA + "[Sword]")) {
+                if (weapon.getItemMeta().getDisplayName().equals(ChatColor.GOLD + "" + ChatColor.BOLD + "Beheading Axe" + ChatColor.DARK_AQUA + " [Sword]")) {
                     event.setDamage(10000000);
                 }
             }

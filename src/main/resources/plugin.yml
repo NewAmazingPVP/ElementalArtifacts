@@ -9,3 +9,6 @@ commands:
   giveaxe:
     description: Gives you axe test
     usage: /giveaxe
+  giveportcraft:
+    description: Gives you porttable test
+    usage: /giveportcraft
