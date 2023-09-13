@@ -12,3 +12,6 @@ commands:
   giveportcraft:
     description: Gives you porttable test
     usage: /giveportcraft
+  givedoublesword:
+    description: Gives you doublesword test
+    usage: /givedoubledword
