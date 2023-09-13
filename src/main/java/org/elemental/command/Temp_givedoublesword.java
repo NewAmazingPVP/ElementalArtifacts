@@ -24,7 +24,7 @@ public class Temp_givedoublesword implements CommandExecutor {
         }
 
         Player player = (Player) sender;
-        ItemStack teamsel = new ItemStack(Material.CRAFTING_TABLE);
+        ItemStack teamsel = new ItemStack(Material.WOODEN_SWORD);
         ItemMeta SI = teamsel.getItemMeta();
         SI.setDisplayName(ChatColor.WHITE + "" + ChatColor.BOLD + "Double-Edged Sword" + ChatColor.DARK_AQUA + " [Sword]");
         List<String> DEFL = new ArrayList<>();
