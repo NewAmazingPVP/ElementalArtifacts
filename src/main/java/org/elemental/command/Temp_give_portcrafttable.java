@@ -31,6 +31,7 @@ public class Temp_give_portcrafttable implements CommandExecutor {
         SI.setLore(DEFL);
         SI.addEnchant(Enchantment.DURABILITY, 1, false);
         SI.addItemFlags(ItemFlag.HIDE_ENCHANTS);
+        SI.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
         teamsel.setItemMeta(SI);
 
         player.getInventory().addItem(teamsel);
