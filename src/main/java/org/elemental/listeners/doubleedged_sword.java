@@ -17,7 +17,7 @@ public class doubleedged_sword implements Listener {
                 // Check if the entity hit is an instance of an entity
                 if (event.getEntity() instanceof Entity) {
                     // Apply 5 damage to the hit entity
-                    event.setDamage(5);
+                    player.damage(5);
                 }
             }
         }
