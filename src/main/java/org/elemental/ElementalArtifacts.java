@@ -1,6 +1,7 @@
 package org.elemental;
 
 import org.bukkit.event.Listener;
+import org.elemental.CustomRecipes.Compact_Netherite_Recipe;
 import org.elemental.command.Temp_give_axe;
 import org.elemental.command.Temp_give_portcrafttable;
 import org.elemental.command.Temp_givedoublesword;
@@ -36,6 +37,7 @@ public final class ElementalArtifacts extends JavaPlugin implements Listener {
         getServer().getPluginManager().registerEvents(new CraftingMenu_1_Listener(), this);
         getServer().getPluginManager().registerEvents(new PortCraftTable(), this);
         getServer().getPluginManager().registerEvents(new doubleedged_sword(), this);
+        getServer().getPluginManager().registerEvents((Listener) new Compact_Netherite_Recipe(), this);
         AutoUpload.startReleaseChecker();
     }
 
