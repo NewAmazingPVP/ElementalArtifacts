@@ -33,6 +33,7 @@ public class Temp_give_axe implements CommandExecutor {
         DEFL.add(ChatColor.AQUA + "Can Not Break!");
         SI.setLore(DEFL);
         SI.setUnbreakable(true);
+        SI.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
         teamsel.setItemMeta(SI);
 
         player.getInventory().addItem(teamsel);

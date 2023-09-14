@@ -31,6 +31,7 @@ public class Temp_givedoublesword implements CommandExecutor {
         DEFL.add(ChatColor.RED + "Just don't use this...");
         SI.setLore(DEFL);
         SI.setUnbreakable(true);
+        SI.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
         teamsel.setItemMeta(SI);
 
         player.getInventory().addItem(teamsel);
