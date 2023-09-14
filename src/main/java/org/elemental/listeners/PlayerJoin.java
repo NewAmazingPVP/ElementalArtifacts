@@ -1,4 +1,4 @@
-package org.elemental.listener;
+package org.elemental.listeners;
 
 import org.bukkit.ChatColor;
 import org.bukkit.entity.Player;

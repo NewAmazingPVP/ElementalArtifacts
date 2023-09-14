@@ -1,12 +1,10 @@
 package org.elemental;
 
 import org.bukkit.event.Listener;
-import org.bukkit.plugin.Plugin;
-import org.elemental.CustomRecipes.ReaperAxe_Recipe;
 import org.elemental.command.Temp_give_axe;
 import org.elemental.command.Temp_give_portcrafttable;
 import org.elemental.command.Temp_givedoublesword;
-import org.elemental.listener.PlayerJoin;
+import org.elemental.listeners.PlayerJoin;
 
 import org.bukkit.plugin.java.JavaPlugin;
 import org.elemental.listeners.*;
