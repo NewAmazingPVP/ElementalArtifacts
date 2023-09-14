@@ -21,7 +21,7 @@ public class doubleedged_sword implements Listener {
             if (item.getType() == Material.DIAMOND_SWORD && item.hasItemMeta() && item.getItemMeta().hasDisplayName()
                     && item.getItemMeta().getDisplayName().equals(ChatColor.WHITE + "" + ChatColor.BOLD + "Double-Edged Sword" + ChatColor.DARK_AQUA + " [Sword]")) {
                 player.playSound(player.getLocation(), "minecraft:block.glass.break", 1.0f, 2.0f);
-                event.setDamage(7);
+                player.damage(7.0);
             }
         }
     }
