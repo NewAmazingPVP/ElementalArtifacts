@@ -17,6 +17,14 @@ public class doubleedged_sword implements Listener {
                 // Check if the entity hit is an instance of an entity
                 if (event.getEntity() instanceof Entity) {
                     // Apply 5 damage to the hit entity
+                    event.setCancelled(true);
+                    player.playSound(player.getLocation(), "minecraft:block.glass.break", 1.0f, 1.0f);
+                    player.stopSound("minecraft:entity.player.attack.crit");
+                    player.stopSound("entity.player.attack.knockback");
+                    player.stopSound("entity.player.attack.nodamage");
+                    player.stopSound("entity.player.attack.strong");
+                    player.stopSound("entity.player.attack.sweep");
+                    player.stopSound("entity.player.attack.weak");
                     player.damage(5);
                 }
             }
