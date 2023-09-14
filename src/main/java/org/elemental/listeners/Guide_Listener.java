@@ -55,6 +55,7 @@ public class Guide_Listener implements Listener {
                 ItemStack armor = new ItemStack(Material.DIAMOND_CHESTPLATE);
                 ItemMeta AMI = armor.getItemMeta();
                 AMI.setDisplayName(ChatColor.GREEN + "" + ChatColor.BOLD + "Armor");
+                AMI.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
                 armor.setItemMeta(AMI);
 
                 ItemStack back = new ItemStack(Material.ARROW);
@@ -70,6 +71,7 @@ public class Guide_Listener implements Listener {
                 ItemStack Weapons = new ItemStack(Material.DIAMOND_SWORD);
                 ItemMeta WWM = Weapons.getItemMeta();
                 WWM.setDisplayName(ChatColor.RED + "Weapons");
+                WWM.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
                 Weapons.setItemMeta(WWM);
 
 
@@ -133,11 +135,13 @@ public class Guide_Listener implements Listener {
                 ItemStack Swordsman = new ItemStack(Material.GOLDEN_SWORD);
                 ItemMeta SwordsmanM = Swordsman.getItemMeta();
                 SwordsmanM.setDisplayName(ChatColor.DARK_RED + "" + ChatColor.BOLD + "Swordsman");
+                SwordsmanM.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
                 Swordsman.setItemMeta(SwordsmanM);
 
                 ItemStack Armorer = new ItemStack(Material.LEATHER_CHESTPLATE);
                 ItemMeta ArmorerM = Armorer.getItemMeta();
                 ArmorerM.setDisplayName(ChatColor.DARK_GREEN + "" + ChatColor.BOLD + "Armorer");
+                ArmorerM.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
                 Armorer.setItemMeta(ArmorerM);
 
                 ItemStack Archer = new ItemStack(Material.BOW);
