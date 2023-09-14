@@ -2,3 +2,16 @@ name: ElementalArtifacts
 version: '1.0'
 main: org.elemental.ElementalArtifacts
 api-version: '1.20'
+commands:
+  EAGuide:
+    description: Gives you the plugin guide
+    usage: /ElementalArtifactsGuide
+  giveaxe:
+    description: Gives you axe test
+    usage: /giveaxe
+  giveportcraft:
+    description: Gives you porttable test
+    usage: /giveportcraft
+  givedoublesword:
+    description: Gives you doublesword test
+    usage: /givedoubledword

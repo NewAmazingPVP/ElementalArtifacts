@@ -10,7 +10,7 @@ import org.bukkit.event.entity.EntityDamageByEntityEvent;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.plugin.java.JavaPlugin;
 
-public class doubleedged_sword extends JavaPlugin implements Listener {
+public class doubleedged_sword implements Listener {
 
 
     @EventHandler
