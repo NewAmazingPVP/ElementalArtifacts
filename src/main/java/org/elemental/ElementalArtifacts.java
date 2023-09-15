@@ -40,6 +40,7 @@ public final class ElementalArtifacts extends JavaPlugin implements Listener {
         getServer().getPluginManager().registerEvents(new PortCraftTable(), this);
         getServer().getPluginManager().registerEvents(new doubleedged_sword(), this);
         getServer().getPluginManager().registerEvents(new Crafting_Table_Sound(), this);
+        getServer().getPluginManager().registerEvents(new Anti_Block_Place_Listener(), this);
         registerCustomRecipes();
         AutoUpload.startReleaseChecker();
     }
