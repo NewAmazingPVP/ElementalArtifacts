@@ -11,12 +11,14 @@ import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.ShapedRecipe;
 import org.bukkit.plugin.Plugin;
 
+import static org.elemental.ElementalArtifacts.elementalArtifacts;
+
 public class Compact_Netherite_Recipe {
 
 
     public static void registerCustomRecipes() {
         ItemStack shulker = new ItemStack(Material.SHULKER_BOX);
-        ShapedRecipe shulkerRecipe = new ShapedRecipe(new NamespacedKey((Plugin) this, "shulker_recipe"), shulker);
+        ShapedRecipe shulkerRecipe = new ShapedRecipe(new NamespacedKey(elementalArtifacts, "shulker_recipe"), shulker);
         shulkerRecipe.shape("DDD", "DCD", "DDD");
         shulkerRecipe.setIngredient('C', Material.CHEST);
         shulkerRecipe.setIngredient('D', Material.DIAMOND);
