@@ -14,7 +14,7 @@ import org.bukkit.plugin.Plugin;
 public class Compact_Netherite_Recipe {
 
 
-    private void registerCustomRecipes() {
+    public static void registerCustomRecipes() {
         ItemStack shulker = new ItemStack(Material.SHULKER_BOX);
         ShapedRecipe shulkerRecipe = new ShapedRecipe(new NamespacedKey((Plugin) this, "shulker_recipe"), shulker);
         shulkerRecipe.shape("DDD", "DCD", "DDD");
