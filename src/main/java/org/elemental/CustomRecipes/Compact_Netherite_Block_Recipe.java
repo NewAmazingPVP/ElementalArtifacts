@@ -39,7 +39,7 @@ public class Compact_Netherite_Block_Recipe {
         SI2.addItemFlags(ItemFlag.HIDE_ENCHANTS);
         compact2.setItemMeta(SI2);
 
-        ShapedRecipe shulkerRecipe2 = new ShapedRecipe(new NamespacedKey(elementalArtifacts, "test"), compact2);
+        ShapedRecipe shulkerRecipe2 = new ShapedRecipe(new NamespacedKey(elementalArtifacts, "shulkerRecipe2"), compact2);
         shulkerRecipe2.shape("DDD", "DDD", "DDD");
         shulkerRecipe2.setIngredient('D', new RecipeChoice.ExactChoice(compact));
         Bukkit.addRecipe(shulkerRecipe2);
