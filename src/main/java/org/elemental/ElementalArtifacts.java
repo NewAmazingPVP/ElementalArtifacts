@@ -12,6 +12,8 @@ import org.elemental.listeners.*;
 import org.elemental.command.Artifacts;
 import org.elemental.utility.AutoUpload;
 
+import static org.elemental.CustomRecipes.Compact_Netherite_Recipe.registerCustomRecipes;
+
 public final class ElementalArtifacts extends JavaPlugin implements Listener {
     public static ElementalArtifacts elementalArtifacts;
 
@@ -37,7 +39,7 @@ public final class ElementalArtifacts extends JavaPlugin implements Listener {
         getServer().getPluginManager().registerEvents(new CraftingMenu_1_Listener(), this);
         getServer().getPluginManager().registerEvents(new PortCraftTable(), this);
         getServer().getPluginManager().registerEvents(new doubleedged_sword(), this);
-        registerCustomRecipes(Compact_Netherite_Recipe);
+        registerCustomRecipes();
         AutoUpload.startReleaseChecker();
     }
 
