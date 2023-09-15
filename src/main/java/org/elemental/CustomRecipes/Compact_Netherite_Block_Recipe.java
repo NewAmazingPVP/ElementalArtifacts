@@ -25,8 +25,6 @@ public class Compact_Netherite_Block_Recipe {
 
     public static void registerCustomRecipes() {
         ItemStack compact = new ItemStack(Material.NETHERITE_INGOT);
-
-
         ItemMeta SI = compact.getItemMeta();
         SI.setDisplayName(ChatColor.GOLD + "" + ChatColor.BOLD + "Compact Netherite Ingot");
         SI.addEnchant(Enchantment.DURABILITY, 1, false);
@@ -41,10 +39,10 @@ public class Compact_Netherite_Block_Recipe {
         SI2.addItemFlags(ItemFlag.HIDE_ENCHANTS);
         compact2.setItemMeta(SI2);
 
-        ShapedRecipe shulkerRecipe = new ShapedRecipe(new NamespacedKey(elementalArtifacts, "test"), compact2);
-        shulkerRecipe.shape("DDD", "DDD", "DDD");
-        shulkerRecipe.setIngredient('D', new RecipeChoice.ExactChoice(compact));
-        Bukkit.addRecipe(shulkerRecipe);
+        ShapedRecipe shulkerRecipe2 = new ShapedRecipe(new NamespacedKey(elementalArtifacts, "test"), compact2);
+        shulkerRecipe2.shape("DDD", "DDD", "DDD");
+        shulkerRecipe2.setIngredient('D', new RecipeChoice.ExactChoice(compact));
+        Bukkit.addRecipe(shulkerRecipe2);
 
     }
 }
