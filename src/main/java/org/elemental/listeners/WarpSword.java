@@ -1,6 +1,8 @@
 package org.elemental.listeners;
 
 import org.bukkit.*;
+import org.bukkit.block.Block;
+import org.bukkit.block.BlockFace;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
@@ -30,9 +32,19 @@ public class WarpSword implements Listener {
                 cooldowns.put(player.getUniqueId(), System.currentTimeMillis() + (5 * 1000));
 
                 Vector direction = player.getLocation().getDirection().multiply(5);
+                Location destination = player.getLocation().add(direction);
+                Block feet = destination.getBlock();
+                Block chest = feet.getRelative(BlockFace.UP);
+                Block head = chest.getRelative(BlockFace.UP);
+
+                if (feet.getType() != Material.AIR || chest.getType() != Material.AIR || head.getType() != Material.AIR) {
+                    player.sendMessage(ChatColor.RED + "You cannot teleport through blocks!");
+                    return;
+                }
+
                 player.playSound(player.getLocation(), "minecraft:entity.enderman.teleport", 1.0f, 1.0f);
                 player.getWorld().spawnParticle(Particle.REDSTONE, player.getLocation(), 10, 0.6, 0.6, 0.6, new Particle.DustOptions(Color.BLACK, 3));
-                player.teleport(player.getLocation().add(direction));
+                player.teleport(destination);
             }
         }
     }
