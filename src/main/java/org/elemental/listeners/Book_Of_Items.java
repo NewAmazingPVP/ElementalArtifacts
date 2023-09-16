@@ -12,6 +12,9 @@ import org.bukkit.inventory.ItemFlag;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Book_Of_Items implements Listener {
 
     @EventHandler
@@ -33,7 +36,80 @@ public class Book_Of_Items implements Listener {
                     M1.setDisplayName(" ");
                     G1.setItemMeta(M1);
 
+                    ItemStack guide = new ItemStack(Material.BOOK);
+                    ItemMeta GI = guide.getItemMeta();
+                    GI.addEnchant(Enchantment.DURABILITY, 1, false);
+                    GI.addItemFlags(ItemFlag.HIDE_ENCHANTS);
+                    GI.setDisplayName(ChatColor.GOLD + "" + ChatColor.BOLD + "Elemental Artifacts Guide");
+                    guide.setItemMeta(GI);
 
+                    ItemStack Items = new ItemStack(Material.BOOK);
+                    ItemMeta II = Items.getItemMeta();
+                    II.setDisplayName(ChatColor.LIGHT_PURPLE + "" + ChatColor.BOLD + "Book Of Items");
+                    List<String> IEFL = new ArrayList<>();
+                    IEFL.add(ChatColor.DARK_RED + "This Is A Admin Item!");
+                    II.setLore(IEFL);
+                    II.addEnchant(Enchantment.DURABILITY, 1, false);
+                    II.addItemFlags(ItemFlag.HIDE_ENCHANTS);
+                    Items.setItemMeta(II);
+
+                    ItemStack Behead = new ItemStack(Material.NETHERITE_AXE);
+                    ItemMeta BSI = Behead.getItemMeta();
+                    BSI.setDisplayName(ChatColor.LIGHT_PURPLE + "" + ChatColor.BOLD + "Beheading Axe" + ChatColor.DARK_AQUA + " [Sword]");
+                    List<String> BDEFL = new ArrayList<>();
+                    BDEFL.add(ChatColor.RED + "Use this to show your power and execute people");
+                    BDEFL.add(ChatColor.RED + "to keep there heads or something idk...");
+                    BDEFL.add(ChatColor.DARK_RED + "lol.....");
+                    BSI.setLore(BDEFL);
+                    BSI.setUnbreakable(true);
+                    BSI.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
+                    Behead.setItemMeta(BSI);
+
+                    ItemStack port = new ItemStack(Material.CRAFTING_TABLE);
+                    ItemMeta PSI = port.getItemMeta();
+                    PSI.setDisplayName(ChatColor.GREEN + "" + ChatColor.BOLD + "Portable Crafting Table" + ChatColor.DARK_AQUA + " [Item]");
+                    List<String> PDEFL = new ArrayList<>();
+                    PDEFL.add(ChatColor.YELLOW + "" + ChatColor.BOLD + "Right Click" + ChatColor.GOLD + " To open!");
+                    PSI.setLore(PDEFL);
+                    PSI.addEnchant(Enchantment.DURABILITY, 1, false);
+                    PSI.addItemFlags(ItemFlag.HIDE_ENCHANTS);
+                    PSI.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
+                    port.setItemMeta(PSI);
+
+                    ItemStack warp = new ItemStack(Material.NETHERITE_SWORD);
+                    ItemMeta WSI = warp.getItemMeta();
+                    WSI.setDisplayName(ChatColor.DARK_PURPLE + "" + ChatColor.BOLD + "Warp Sword" + ChatColor.DARK_AQUA + " [Sword]");
+                    List<String> WDEFL = new ArrayList<>();
+                    WDEFL.add(ChatColor.YELLOW + "" + ChatColor.BOLD + "Right Click" + ChatColor.GOLD + " To Warp 15 Blocks!");
+                    WDEFL.add(ChatColor.RED + "If there is a block within 15 blocks of where you want to teleport, it will fail!");
+                    WSI.setLore(WDEFL);
+                    WSI.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
+                    WSI.setUnbreakable(true);
+                    warp.setItemMeta(WSI);
+
+                    ItemStack dsword = new ItemStack(Material.WOODEN_SWORD);
+                    ItemMeta DSI = dsword.getItemMeta();
+                    DSI.setDisplayName(ChatColor.WHITE + "" + ChatColor.BOLD + "Double-Edged Sword" + ChatColor.DARK_AQUA + " [Sword]");
+                    List<String> DDEFL = new ArrayList<>();
+                    DDEFL.add(ChatColor.RED + "Just don't use this...");
+                    DSI.setLore(DDEFL);
+                    DSI.setUnbreakable(true);
+                    DSI.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
+                    dsword.setItemMeta(DSI);
+
+                    ItemStack compact = new ItemStack(Material.NETHERITE_INGOT);
+                    ItemMeta SI = compact.getItemMeta();
+                    SI.setDisplayName(ChatColor.GOLD + "" + ChatColor.BOLD + "Compact Netherite Ingot");
+                    SI.addEnchant(Enchantment.DURABILITY, 1, false);
+                    SI.addItemFlags(ItemFlag.HIDE_ENCHANTS);
+                    compact.setItemMeta(SI);
+
+                    ItemStack compact2 = new ItemStack(Material.NETHERITE_BLOCK);
+                    ItemMeta SI2 = compact2.getItemMeta();
+                    SI2.setDisplayName(ChatColor.GOLD + "" + ChatColor.BOLD + "Compact Netherite Block");
+                    SI2.addEnchant(Enchantment.DURABILITY, 1, false);
+                    SI2.addItemFlags(ItemFlag.HIDE_ENCHANTS);
+                    compact2.setItemMeta(SI2);
 
                     Guide.setItem(0, G1);
                     Guide.setItem(1, G1);
@@ -45,6 +121,16 @@ public class Book_Of_Items implements Listener {
                     Guide.setItem(7, G1);
                     Guide.setItem(8, G1);
                     Guide.setItem(9, G1);
+
+                    Guide.setItem(10, guide);
+                    Guide.setItem(11, Items);
+                    Guide.setItem(12, Behead);
+                    Guide.setItem(13, port);
+                    Guide.setItem(14, warp);
+                    Guide.setItem(15, dsword);
+                    Guide.setItem(16, compact);
+                    Guide.setItem(17, compact2);
+
                     Guide.setItem(18, G1);
                     Guide.setItem(27, G1);
                     Guide.setItem(36, G1);
@@ -52,6 +138,7 @@ public class Book_Of_Items implements Listener {
                     Guide.setItem(26, G1);
                     Guide.setItem(0, G1);
                     Guide.setItem(35, G1);
+                    Guide.setItem(44, G1);
                     Guide.setItem(45, G1);
                     Guide.setItem(46, G1);
                     Guide.setItem(47, G1);

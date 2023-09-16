@@ -33,6 +33,7 @@ public class Book_Of_Items_Give implements CommandExecutor {
         SI.addItemFlags(ItemFlag.HIDE_ENCHANTS);
         teamsel.setItemMeta(SI);
 
+
         player.getInventory().addItem(teamsel);
         return true;
     }
