@@ -30,7 +30,7 @@ public class WarpSword implements Listener {
                         return;
                     }
                 }
-                cooldowns.put(player.getUniqueId(), System.currentTimeMillis() + (2 * 1000));
+                cooldowns.put(player.getUniqueId(), System.currentTimeMillis() + (0 * 1000));
 
                 Vector direction = player.getLocation().getDirection().multiply(15);
                 Location destination = player.getLocation().add(direction);
@@ -44,7 +44,7 @@ public class WarpSword implements Listener {
                     return;
                 }
 
-                player.playSound(player.getLocation(), "minecraft:entity.enderman.teleport", 1.0f, 1.0f);
+                player.playSound(player.getLocation(), "minecraft:entity.enderman.teleport", 10000000.0f, 1.0f);
                 player.getWorld().spawnParticle(Particle.REDSTONE, player.getLocation(), 10, 0.6, 0.6, 0.6, new Particle.DustOptions(Color.BLACK, 3));
                 player.teleport(destination);
             }
