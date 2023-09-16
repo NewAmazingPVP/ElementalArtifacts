@@ -65,6 +65,11 @@ public class SkillMenu_listener implements Listener {
                 MS.setDisplayName(ChatColor.DARK_AQUA + "" + ChatColor.BOLD + "Skill Points");
                 Skill.setItemMeta(MS);
 
+                ItemStack close = new ItemStack(Material.BARRIER);
+                ItemMeta CM = close.getItemMeta();
+                CM.setDisplayName(ChatColor.RED + "Close");
+                close.setItemMeta(CM);
+
 
                 Guide.setItem(0, G1);
                 Guide.setItem(1, G1);
@@ -92,7 +97,7 @@ public class SkillMenu_listener implements Listener {
                 Guide.setItem(23, G1);
                 Guide.setItem(24, G1);
                 Guide.setItem(25, G1);
-                Guide.setItem(26, G1);
+                Guide.setItem(26, close);
 
 
                 player.openInventory(Guide);
