@@ -129,7 +129,7 @@ public class Book_Of_Items implements Listener {
                     Guide.setItem(14, warp);
                     Guide.setItem(15, dsword);
                     Guide.setItem(16, compact);
-                    Guide.setItem(17, compact2);
+                    Guide.setItem(19, compact2);
 
                     Guide.setItem(18, G1);
                     Guide.setItem(27, G1);
