@@ -18,3 +18,6 @@ commands:
   givewarpsword:
     description: Gives Warp Sword test
     usage: /givewarpsword
+  bookofitems:
+    description: Gives the book of items. ONLY FOR ADMINS!
+    usage: /bookpfitems
