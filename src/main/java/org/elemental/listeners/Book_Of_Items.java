@@ -176,6 +176,19 @@ public class Book_Of_Items implements Listener {
                     ILM.addItemFlags(ItemFlag.HIDE_ENCHANTS);
                     infusedlapis.setItemMeta(ILM);
 
+                    ItemStack GodPot = new ItemStack(Material.PLAYER_HEAD);
+                    ItemMeta GPM = GodPot.getItemMeta();
+                    GPM.setDisplayName(ChatColor.LIGHT_PURPLE + "" + ChatColor.BOLD + "God Potion" + ChatColor.DARK_AQUA + " [Potion]");
+                    List<String> GPL = new ArrayList<>();
+                    GPL.add(ChatColor.DARK_PURPLE + "Very OP potion" + ChatColor.BLUE + " [10min]");
+                    GPL.add(ChatColor.DARK_PURPLE + "+ Speed 2");
+                    GPL.add(ChatColor.DARK_PURPLE + "+ Strength 2");
+                    GPL.add(ChatColor.DARK_PURPLE + "+ Regeneration 3");
+                    GPL.add(ChatColor.DARK_PURPLE + "+ Absorption 5");
+                    GPL.add(ChatColor.DARK_PURPLE + "+ Resistance 1");
+                    GPM.setLore(GPL);
+                    GodPot.setItemMeta(GPM);
+
                     Guide.setItem(0, G1);
                     Guide.setItem(1, G1);
                     Guide.setItem(2, G1);
@@ -201,6 +214,8 @@ public class Book_Of_Items implements Listener {
                     Guide.setItem(23, Mixedeye);
                     Guide.setItem(24, corruptedHandle);
                     Guide.setItem(25, infusedlapis);
+                    Guide.setItem(28, GodPot);
+
 
                     Guide.setItem(18, G1);
                     Guide.setItem(27, G1);
