@@ -18,6 +18,11 @@ public class Anti_Item_Thrower_Listener implements Listener {
             if (itemMaterial == Material.ENDER_PEARL || itemMaterial == Material.getMaterial(ChatColor.BLUE + "" + ChatColor.BOLD + "Fear Mongerer Pearl" + ChatColor.DARK_AQUA + " [Item]")) {
                 event.setCancelled(true);
             }
+            if (itemMaterial == Material.ENDER_EYE || itemMaterial == Material.getMaterial(ChatColor.BLUE + "" + ChatColor.BOLD + "Mixed Eye" + ChatColor.DARK_AQUA + " [Item]")) {
+                event.setCancelled(true);
+            }
         }
+
     }
+
 }
