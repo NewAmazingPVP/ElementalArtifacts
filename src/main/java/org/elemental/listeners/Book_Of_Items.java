@@ -28,6 +28,41 @@ public class Book_Of_Items implements Listener {
                     Inventory Guide = Bukkit.createInventory(p, 54, ChatColor.LIGHT_PURPLE + "" + ChatColor.BOLD + "Item Menu");
 
 
+                    ItemStack G1 = new ItemStack(Material.MAGENTA_STAINED_GLASS_PANE);
+                    ItemMeta M1 = G1.getItemMeta();
+                    M1.setDisplayName(" ");
+                    G1.setItemMeta(M1);
+
+
+
+                    Guide.setItem(0, G1);
+                    Guide.setItem(1, G1);
+                    Guide.setItem(2, G1);
+                    Guide.setItem(3, G1);
+                    Guide.setItem(4, G1);
+                    Guide.setItem(5, G1);
+                    Guide.setItem(6, G1);
+                    Guide.setItem(7, G1);
+                    Guide.setItem(8, G1);
+                    Guide.setItem(9, G1);
+                    Guide.setItem(18, G1);
+                    Guide.setItem(27, G1);
+                    Guide.setItem(36, G1);
+                    Guide.setItem(17, G1);
+                    Guide.setItem(26, G1);
+                    Guide.setItem(0, G1);
+                    Guide.setItem(35, G1);
+                    Guide.setItem(45, G1);
+                    Guide.setItem(46, G1);
+                    Guide.setItem(47, G1);
+                    Guide.setItem(48, G1);
+                    Guide.setItem(49, G1);
+                    Guide.setItem(50, G1);
+                    Guide.setItem(51, G1);
+                    Guide.setItem(52, G1);
+                    Guide.setItem(53, G1);
+
+
                     p.openInventory(Guide);
                 }
             }
