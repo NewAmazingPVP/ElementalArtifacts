@@ -30,7 +30,7 @@ public class WarpSword implements Listener {
                         return;
                     }
                 }
-                cooldowns.put(player.getUniqueId(), System.currentTimeMillis() + (0 * 1000));
+                cooldowns.put(player.getUniqueId(), System.currentTimeMillis() + (5 * 1000));
 
                 Vector direction = player.getLocation().getDirection().multiply(15);
                 Location destination = player.getLocation().add(direction);

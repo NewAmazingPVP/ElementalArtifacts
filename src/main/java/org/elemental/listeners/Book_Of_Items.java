@@ -1,5 +1,6 @@
 package org.elemental.listeners;
 
+import net.milkbowl.vault.chat.Chat;
 import org.bukkit.*;
 import org.bukkit.enchantments.Enchantment;
 import org.bukkit.entity.Player;
@@ -11,9 +12,11 @@ import org.bukkit.inventory.Inventory;
 import org.bukkit.inventory.ItemFlag;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
+import org.bukkit.inventory.meta.SkullMeta;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.UUID;
 
 public class Book_Of_Items implements Listener {
 
@@ -133,6 +136,46 @@ public class Book_Of_Items implements Listener {
                     FMPM.addItemFlags(ItemFlag.HIDE_ENCHANTS);
                     fearmongerperl.setItemMeta(FMPM);
 
+                    ItemStack OreMixture = new ItemStack(Material.PLAYER_HEAD);
+                    ItemMeta OFMPM = OreMixture.getItemMeta();
+                    OFMPM.setDisplayName(ChatColor.BLUE + "" + ChatColor.BOLD + "Ore Mixture" + ChatColor.DARK_AQUA + " [Item]");
+                    List<String> OML = new ArrayList<>();
+                    OML.add(ChatColor.DARK_PURPLE + "A mixture of a lot of ores.");
+                    OFMPM.setLore(OML);
+                    OFMPM.addEnchant(Enchantment.DURABILITY, 1, false);
+                    OFMPM.addItemFlags(ItemFlag.HIDE_ENCHANTS);
+                    OreMixture.setItemMeta(OFMPM);
+
+                    ItemStack Mixedeye = new ItemStack(Material.ENDER_EYE);
+                    ItemMeta MEYEM = Mixedeye.getItemMeta();
+                    MEYEM.setDisplayName(ChatColor.BLUE + "" + ChatColor.BOLD + "Mixed Eye" + ChatColor.DARK_AQUA + " [Item]");
+                    List<String> MEM = new ArrayList<>();
+                    MEM.add(ChatColor.DARK_PURPLE + "Crafted from the Fear Mongerer Eye");
+                    MEYEM.setLore(MEM);
+                    MEYEM.addEnchant(Enchantment.DURABILITY, 1, false);
+                    MEYEM.addItemFlags(ItemFlag.HIDE_ENCHANTS);
+                    Mixedeye.setItemMeta(MEYEM);
+
+                    ItemStack corruptedHandle = new ItemStack(Material.STICK);
+                    ItemMeta CHM = corruptedHandle.getItemMeta();
+                    CHM.setDisplayName(ChatColor.GOLD + "" + ChatColor.BOLD + "Corrupted Handle" + ChatColor.DARK_AQUA + " [Item]");
+                    List<String> CHL = new ArrayList<>();
+                    CHL.add(ChatColor.DARK_RED + "" + ChatColor.MAGIC + "curruptedtextlololol");
+                    CHM.setLore(CHL);
+                    CHM.addEnchant(Enchantment.DURABILITY, 1, false);
+                    CHM.addItemFlags(ItemFlag.HIDE_ENCHANTS);
+                    corruptedHandle.setItemMeta(CHM);
+
+                    ItemStack infusedlapis = new ItemStack(Material.LAPIS_LAZULI);
+                    ItemMeta ILM = infusedlapis.getItemMeta();
+                    ILM.setDisplayName(ChatColor.GREEN + "" + ChatColor.BOLD + "Infused Lapis" + ChatColor.DARK_AQUA + " [Item]");
+                    List<String> ILL = new ArrayList<>();
+                    ILL.add(ChatColor.DARK_PURPLE + "Used to craft magical things.");
+                    ILM.setLore(ILL);
+                    ILM.addEnchant(Enchantment.DURABILITY, 1, false);
+                    ILM.addItemFlags(ItemFlag.HIDE_ENCHANTS);
+                    infusedlapis.setItemMeta(ILM);
+
                     Guide.setItem(0, G1);
                     Guide.setItem(1, G1);
                     Guide.setItem(2, G1);
@@ -154,6 +197,10 @@ public class Book_Of_Items implements Listener {
                     Guide.setItem(19, compact2);
                     Guide.setItem(20, bindingchest);
                     Guide.setItem(21, fearmongerperl);
+                    Guide.setItem(22, OreMixture);
+                    Guide.setItem(23, Mixedeye);
+                    Guide.setItem(24, corruptedHandle);
+                    Guide.setItem(25, infusedlapis);
 
                     Guide.setItem(18, G1);
                     Guide.setItem(27, G1);
