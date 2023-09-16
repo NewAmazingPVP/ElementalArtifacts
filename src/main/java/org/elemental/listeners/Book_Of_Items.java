@@ -150,7 +150,7 @@ public class Book_Of_Items implements Listener {
                     ItemMeta MEYEM = Mixedeye.getItemMeta();
                     MEYEM.setDisplayName(ChatColor.BLUE + "" + ChatColor.BOLD + "Mixed Eye" + ChatColor.DARK_AQUA + " [Item]");
                     List<String> MEM = new ArrayList<>();
-                    MEM.add(ChatColor.DARK_PURPLE + "Crafted from the Fear Mongerer Eye");
+                    MEM.add(ChatColor.DARK_PURPLE + "Crafted from the Fear Mongerer Eye.");
                     MEYEM.setLore(MEM);
                     MEYEM.addEnchant(Enchantment.DURABILITY, 1, false);
                     MEYEM.addItemFlags(ItemFlag.HIDE_ENCHANTS);
