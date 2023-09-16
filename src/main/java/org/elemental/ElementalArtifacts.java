@@ -2,14 +2,11 @@ package org.elemental;
 
 import org.bukkit.event.Listener;
 import org.elemental.CustomRecipes.Compact_Netherite_Recipe;
-import org.elemental.command.Temp_give_axe;
-import org.elemental.command.Temp_give_portcrafttable;
-import org.elemental.command.Temp_givedoublesword;
+import org.elemental.command.*;
 import org.elemental.listeners.PlayerJoin;
 
 import org.bukkit.plugin.java.JavaPlugin;
 import org.elemental.listeners.*;
-import org.elemental.command.Artifacts;
 import org.elemental.utility.AutoUpload;
 
 import static org.elemental.CustomRecipes.Compact_Netherite_Recipe.registerCustomRecipes;
@@ -28,6 +25,7 @@ public final class ElementalArtifacts extends JavaPlugin implements Listener {
         getCommand("EAGuide").setExecutor(new Artifacts());
         getCommand("giveaxe").setExecutor(new Temp_give_axe());
         getCommand("givedoublesword").setExecutor(new Temp_givedoublesword());
+        getCommand("givewarpsword").setExecutor(new Temp_give_WarpSword());
         getServer().getPluginManager().registerEvents(this, this);
         getServer().getPluginManager().registerEvents(new PlayerJoin(), this);
         getServer().getPluginManager().registerEvents(new Reaper_axe(), this);
@@ -41,6 +39,7 @@ public final class ElementalArtifacts extends JavaPlugin implements Listener {
         getServer().getPluginManager().registerEvents(new doubleedged_sword(), this);
         getServer().getPluginManager().registerEvents(new Crafting_Table_Sound(), this);
         getServer().getPluginManager().registerEvents(new Anti_Block_Place_Listener(), this);
+        getServer().getPluginManager().registerEvents(new WarpSword(), this);
         registerCustomRecipes();
         AutoUpload.startReleaseChecker();
     }

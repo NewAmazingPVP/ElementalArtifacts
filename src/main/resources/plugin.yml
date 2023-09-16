@@ -15,3 +15,6 @@ commands:
   givedoublesword:
     description: Gives you doublesword test
     usage: /givedoubledword
+  givewarpsword:
+    description: Gives Warp Sword test
+    usage: /givewarpsword
