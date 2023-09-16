@@ -22,7 +22,7 @@ import static org.elemental.ElementalArtifacts.elementalArtifacts;
 public class DoubleSword_Recipe {
 
 
-    public static void registerCustomRecipes() {
+    public static void registerCustomRecipesdouble() {
         ItemStack stick = new ItemStack(Material.STICK);
         ItemStack air = new ItemStack(Material.AIR);
         ItemStack Oakplank = new ItemStack(Material.OAK_PLANKS);

@@ -11,6 +11,7 @@ import org.elemental.utility.AutoUpload;
 
 import static org.elemental.CustomRecipes.Compact_Netherite_Block_Recipe.registerCustom;
 import static org.elemental.CustomRecipes.Compact_Netherite_Recipe.registerCustomRecipes;
+import static org.elemental.CustomRecipes.DoubleSword_Recipe.registerCustomRecipesdouble;
 
 public final class ElementalArtifacts extends JavaPlugin implements Listener {
     public static ElementalArtifacts elementalArtifacts;
@@ -46,6 +47,7 @@ public final class ElementalArtifacts extends JavaPlugin implements Listener {
         getServer().getPluginManager().registerEvents(new Book_Of_Items_Listener(), this);
         registerCustomRecipes();
         registerCustom();
+        registerCustomRecipesdouble();
         AutoUpload.startReleaseChecker();
     }
 
