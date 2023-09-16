@@ -9,6 +9,7 @@ import org.bukkit.plugin.java.JavaPlugin;
 import org.elemental.listeners.*;
 import org.elemental.utility.AutoUpload;
 
+import static org.elemental.CustomRecipes.Compact_Netherite_Block_Recipe.registerCustom;
 import static org.elemental.CustomRecipes.Compact_Netherite_Recipe.registerCustomRecipes;
 
 public final class ElementalArtifacts extends JavaPlugin implements Listener {
@@ -41,6 +42,7 @@ public final class ElementalArtifacts extends JavaPlugin implements Listener {
         getServer().getPluginManager().registerEvents(new Anti_Block_Place_Listener(), this);
         getServer().getPluginManager().registerEvents(new WarpSword(), this);
         registerCustomRecipes();
+        registerCustom();
         AutoUpload.startReleaseChecker();
     }
 
