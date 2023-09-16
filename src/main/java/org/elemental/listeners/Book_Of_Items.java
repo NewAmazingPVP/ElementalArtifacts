@@ -111,6 +111,18 @@ public class Book_Of_Items implements Listener {
                     SI2.addItemFlags(ItemFlag.HIDE_ENCHANTS);
                     compact2.setItemMeta(SI2);
 
+                    ItemStack bindingchest = new ItemStack(Material.LEATHER_CHESTPLATE);
+                    ItemMeta BIM = bindingchest.getItemMeta();
+                    BIM.setDisplayName(ChatColor.WHITE + "" + ChatColor.BOLD + "Binding Armor Set" + ChatColor.DARK_AQUA + " [Armor]");
+                    List<String> BAL = new ArrayList<>();
+                    BAL.add(ChatColor.RED + "It can only come off if you Die!");
+                    BIM.setLore(BAL);
+                    BIM.addEnchant(Enchantment.BINDING_CURSE, 1, false);
+                    BIM.addItemFlags(ItemFlag.HIDE_ENCHANTS);
+                    BIM.setUnbreakable(true);
+                    BIM.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
+                    bindingchest.setItemMeta(BIM);
+
                     Guide.setItem(0, G1);
                     Guide.setItem(1, G1);
                     Guide.setItem(2, G1);
@@ -130,6 +142,8 @@ public class Book_Of_Items implements Listener {
                     Guide.setItem(15, dsword);
                     Guide.setItem(16, compact);
                     Guide.setItem(19, compact2);
+                    Guide.setItem(20, bindingchest);
+
 
                     Guide.setItem(18, G1);
                     Guide.setItem(27, G1);

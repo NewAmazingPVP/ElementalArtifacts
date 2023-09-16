@@ -38,7 +38,7 @@ public class Temp_give_bindingarmor implements CommandExecutor {
 
         ItemStack chest = new ItemStack(Material.LEATHER_CHESTPLATE);
         ItemMeta CBSI = chest.getItemMeta();
-        CBSI.setDisplayName(ChatColor.WHITE + "" + ChatColor.BOLD + "Binding Boots" + ChatColor.DARK_AQUA + " [Armor]");
+        CBSI.setDisplayName(ChatColor.WHITE + "" + ChatColor.BOLD + "Binding Chestplate" + ChatColor.DARK_AQUA + " [Armor]");
         List<String> CL = new ArrayList<>();
         CL.add(ChatColor.RED + "It can only come off if you Die!");
         CBSI.setLore(CL);
@@ -50,7 +50,7 @@ public class Temp_give_bindingarmor implements CommandExecutor {
 
         ItemStack legs = new ItemStack(Material.LEATHER_LEGGINGS);
         ItemMeta LCBSI = legs.getItemMeta();
-        LCBSI.setDisplayName(ChatColor.WHITE + "" + ChatColor.BOLD + "Binding Boots" + ChatColor.DARK_AQUA + " [Armor]");
+        LCBSI.setDisplayName(ChatColor.WHITE + "" + ChatColor.BOLD + "Binding Leggings" + ChatColor.DARK_AQUA + " [Armor]");
         List<String> LL = new ArrayList<>();
         LL.add(ChatColor.RED + "It can only come off if you Die!");
         LCBSI.setLore(LL);
@@ -62,7 +62,7 @@ public class Temp_give_bindingarmor implements CommandExecutor {
 
         ItemStack helm = new ItemStack(Material.CARVED_PUMPKIN);
         ItemMeta HLCBSI = helm.getItemMeta();
-        HLCBSI.setDisplayName(ChatColor.WHITE + "" + ChatColor.BOLD + "Binding Boots" + ChatColor.DARK_AQUA + " [Armor]");
+        HLCBSI.setDisplayName(ChatColor.WHITE + "" + ChatColor.BOLD + "Binding Helmet" + ChatColor.DARK_AQUA + " [Armor]");
         List<String> HLL = new ArrayList<>();
         HLL.add(ChatColor.RED + "It can only come off if you Die!");
         HLCBSI.setLore(HLL);
