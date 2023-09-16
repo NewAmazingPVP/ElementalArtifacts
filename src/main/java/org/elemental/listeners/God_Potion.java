@@ -24,7 +24,7 @@ public class God_Potion implements Listener {
         // Check if the player is holding an item named "1111111111111111"
         if (item != null && item.getType() == Material.PLAYER_HEAD && item.getItemMeta().hasDisplayName()
                 && item.getItemMeta().getDisplayName().equals(ChatColor.LIGHT_PURPLE + "" + ChatColor.BOLD + "God Potion" + ChatColor.DARK_AQUA + " [Potion]")) {
-
+            event.setCancelled(true);
             // Clear the item from the player's hand
             player.getInventory().setItemInMainHand(new ItemStack(Material.AIR));
 
@@ -40,14 +40,4 @@ public class God_Potion implements Listener {
             player.getWorld().spawnParticle(Particle.REDSTONE, player.getLocation(), 10, 0.6, 0.6, 0.6, new Particle.DustOptions(Color.PURPLE, 3));
         }
     }
-
-@EventHandler
-public void onBlockPlace(BlockPlaceEvent event) {
-    ItemStack item = event.getItemInHand();
-    ItemMeta meta = item.getItemMeta();
-
-    if (meta != null && meta.hasDisplayName() && meta.getDisplayName().equals(ChatColor.LIGHT_PURPLE + "" + ChatColor.BOLD + "God Potion" + ChatColor.DARK_AQUA + " [Potion]")) {
-        event.setCancelled(true);
-    }
-}
 }
