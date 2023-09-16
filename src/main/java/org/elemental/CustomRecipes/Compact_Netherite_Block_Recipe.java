@@ -16,7 +16,7 @@ import static org.elemental.ElementalArtifacts.elementalArtifacts;
 public class Compact_Netherite_Block_Recipe {
 
 
-    public void registerCustomRecipes() {
+    public static void registerCustom() {
 
 
 
@@ -26,7 +26,7 @@ public class Compact_Netherite_Block_Recipe {
         Bukkit.addRecipe(opPickaxeRecipe);
     }
 
-    private ItemStack createCompactNetheriteBlock() {
+    private static ItemStack createCompactNetheriteBlock() {
         ItemStack compact2 = new ItemStack(Material.NETHERITE_BLOCK);
         ItemMeta SI2 = compact2.getItemMeta();
         SI2.setDisplayName(ChatColor.GOLD + "" + ChatColor.BOLD + "Compact Netherite Block");
@@ -36,7 +36,7 @@ public class Compact_Netherite_Block_Recipe {
         return compact2;
     }
 
-    private ItemStack test(){
+    private static ItemStack test(){
         ItemStack compact = new ItemStack(Material.NETHERITE_INGOT);
         ItemMeta SI = compact.getItemMeta();
         SI.setDisplayName(ChatColor.GOLD + "" + ChatColor.BOLD + "Compact Netherite Ingot");
