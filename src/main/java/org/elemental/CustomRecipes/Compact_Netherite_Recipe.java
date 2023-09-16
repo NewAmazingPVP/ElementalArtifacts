@@ -34,7 +34,7 @@ public class Compact_Netherite_Recipe {
 
         ShapedRecipe shulkerRecipe = new ShapedRecipe(new NamespacedKey(elementalArtifacts, "shulker_recipe"), compact);
         shulkerRecipe.shape("DDD", "DDD", "DDD");
-        shulkerRecipe.setIngredient('D', Material.NETHERITE_INGOT);
+        shulkerRecipe.setIngredient('D', Material.NETHERITE_INGOT,2);
         Bukkit.addRecipe(shulkerRecipe);
 
     }
