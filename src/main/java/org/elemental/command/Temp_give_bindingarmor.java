@@ -30,13 +30,26 @@ public class Temp_give_bindingarmor implements CommandExecutor {
         List<String> BL = new ArrayList<>();
         BL.add(ChatColor.RED + "It can only come off if you Die!");
         BSI.setLore(BL);
-        BSI.addEnchant(Enchantment.BINDING_CURSE, 1, true);
+        BSI.addEnchant(Enchantment.BINDING_CURSE, 1, false);
         BSI.addItemFlags(ItemFlag.HIDE_ENCHANTS);
         BSI.setUnbreakable(true);
         BSI.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
         boots.setItemMeta(BSI);
 
+        ItemStack chest = new ItemStack(Material.LEATHER_CHESTPLATE);
+        ItemMeta CBSI = chest.getItemMeta();
+        CBSI.setDisplayName(ChatColor.WHITE + "" + ChatColor.BOLD + "Binding Boots" + ChatColor.DARK_AQUA + " [Armor]");
+        List<String> CL = new ArrayList<>();
+        CL.add(ChatColor.RED + "It can only come off if you Die!");
+        CBSI.setLore(CL);
+        CBSI.addEnchant(Enchantment.BINDING_CURSE, 1, false);
+        CBSI.addItemFlags(ItemFlag.HIDE_ENCHANTS);
+        CBSI.setUnbreakable(true);
+        CBSI.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
+        chest.setItemMeta(CBSI);
+
         player.getInventory().addItem(boots);
+        player.getInventory().addItem(chest);
         return true;
     }
 }
