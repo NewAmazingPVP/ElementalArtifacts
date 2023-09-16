@@ -21,3 +21,6 @@ commands:
   bookofitems:
     description: Gives the book of items. ONLY FOR ADMINS!
     usage: /bookpfitems
+  givebindingarmor:
+    description: Gives binding armor test
+    usage: /givebindingarmor
