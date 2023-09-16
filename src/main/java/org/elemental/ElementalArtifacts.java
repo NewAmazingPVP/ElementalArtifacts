@@ -47,7 +47,7 @@ public final class ElementalArtifacts extends JavaPlugin implements Listener {
         getServer().getPluginManager().registerEvents(new WarpSword(), this);
         getServer().getPluginManager().registerEvents(new Book_Of_Items(), this);
         getServer().getPluginManager().registerEvents(new Book_Of_Items_Listener(), this);
-        getServer().getPluginManager().registerEvents(new Anti_Item_Thrower_Listener(), this);
+        /*getServer().getPluginManager().registerEvents(new Anti_Item_Thrower_Listener(), this);*/
         registerCustomRecipes();
         registerCustom();
         registerCustomRecipesdouble();
