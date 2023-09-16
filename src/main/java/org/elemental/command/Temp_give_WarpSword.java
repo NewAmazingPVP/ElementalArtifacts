@@ -27,9 +27,10 @@ public class Temp_give_WarpSword implements CommandExecutor {
         ItemMeta SI = teamsel.getItemMeta();
         SI.setDisplayName(ChatColor.DARK_PURPLE + "" + ChatColor.BOLD + "Warp Sword" + ChatColor.DARK_AQUA + " [Sword]");
         List<String> DEFL = new ArrayList<>();
-        DEFL.add(ChatColor.YELLOW + "" + ChatColor.BOLD + "Right Click" + ChatColor.GOLD + " To Warp 5 Blocks!");
+        DEFL.add(ChatColor.YELLOW + "" + ChatColor.BOLD + "Right Click" + ChatColor.GOLD + " To Warp 15 Blocks!");
         SI.setLore(DEFL);
         SI.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
+        SI.setUnbreakable(true);
         teamsel.setItemMeta(SI);
 
         player.getInventory().addItem(teamsel);
