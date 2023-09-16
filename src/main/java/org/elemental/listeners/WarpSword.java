@@ -24,7 +24,8 @@ public class WarpSword implements Listener {
                 if(cooldowns.containsKey(player.getUniqueId())) {
                     if(cooldowns.get(player.getUniqueId()) > System.currentTimeMillis()){
                         long remainingTime = (cooldowns.get(player.getUniqueId()) - System.currentTimeMillis()) / 1000;
-                        player.sendMessage(ChatColor.RED + "You cannot use this for " + remainingTime + " more seconds.");
+                        /*player.sendMessage(ChatColor.RED + "You cannot use this for " + remainingTime + " more seconds.");*/
+                        player.sendMessage(ChatColor.RED + "This Item Is On Cooldown!");
                         player.playSound(player.getLocation(), "minecraft:entity.enderman.teleport", 1.0f, 0.0f);
                         return;
                     }
