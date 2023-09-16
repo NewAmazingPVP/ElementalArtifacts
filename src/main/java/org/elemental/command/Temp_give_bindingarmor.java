@@ -48,8 +48,34 @@ public class Temp_give_bindingarmor implements CommandExecutor {
         CBSI.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
         chest.setItemMeta(CBSI);
 
+        ItemStack legs = new ItemStack(Material.LEATHER_LEGGINGS);
+        ItemMeta LCBSI = legs.getItemMeta();
+        LCBSI.setDisplayName(ChatColor.WHITE + "" + ChatColor.BOLD + "Binding Boots" + ChatColor.DARK_AQUA + " [Armor]");
+        List<String> LL = new ArrayList<>();
+        LL.add(ChatColor.RED + "It can only come off if you Die!");
+        LCBSI.setLore(LL);
+        LCBSI.addEnchant(Enchantment.BINDING_CURSE, 1, false);
+        LCBSI.addItemFlags(ItemFlag.HIDE_ENCHANTS);
+        LCBSI.setUnbreakable(true);
+        LCBSI.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
+        legs.setItemMeta(LCBSI);
+
+        ItemStack helm = new ItemStack(Material.CARVED_PUMPKIN);
+        ItemMeta HLCBSI = helm.getItemMeta();
+        HLCBSI.setDisplayName(ChatColor.WHITE + "" + ChatColor.BOLD + "Binding Boots" + ChatColor.DARK_AQUA + " [Armor]");
+        List<String> HLL = new ArrayList<>();
+        HLL.add(ChatColor.RED + "It can only come off if you Die!");
+        HLCBSI.setLore(HLL);
+        HLCBSI.addEnchant(Enchantment.BINDING_CURSE, 1, false);
+        HLCBSI.addItemFlags(ItemFlag.HIDE_ENCHANTS);
+        HLCBSI.setUnbreakable(true);
+        HLCBSI.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
+        helm.setItemMeta(HLCBSI);
+
         player.getInventory().addItem(boots);
         player.getInventory().addItem(chest);
+        player.getInventory().addItem(legs);
+        player.getInventory().addItem(helm);
         return true;
     }
 }
