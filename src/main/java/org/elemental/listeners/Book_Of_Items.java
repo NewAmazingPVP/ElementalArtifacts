@@ -25,7 +25,7 @@ public class Book_Of_Items implements Listener {
                     Player p = event.getPlayer();
                     player.playSound(player.getLocation(), "minecraft:block.enchantment_table.use", 1.0f, 2.0f);
                     player.getWorld().spawnParticle(Particle.REDSTONE, player.getLocation(), 10, 0.6, 0.6, 0.6, new Particle.DustOptions(Color.ORANGE, 3));
-                    Inventory Guide = Bukkit.createInventory(p, 27, ChatColor.LIGHT_PURPLE + "" + ChatColor.BOLD + "Item Menu");
+                    Inventory Guide = Bukkit.createInventory(p, 54, ChatColor.LIGHT_PURPLE + "" + ChatColor.BOLD + "Item Menu");
 
 
                     p.openInventory(Guide);
