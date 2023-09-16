@@ -25,7 +25,7 @@ public class Temp_give_WarpSword implements CommandExecutor {
         Player player = (Player) sender;
         ItemStack teamsel = new ItemStack(Material.GOLDEN_SWORD);
         ItemMeta SI = teamsel.getItemMeta();
-        SI.setDisplayName(ChatColor.DARK_PURPLE + "" + ChatColor.BOLD + "Warp Sword" + ChatColor.DARK_AQUA + " [Item]");
+        SI.setDisplayName(ChatColor.DARK_PURPLE + "" + ChatColor.BOLD + "Warp Sword" + ChatColor.DARK_AQUA + " [Sword]");
         List<String> DEFL = new ArrayList<>();
         DEFL.add(ChatColor.YELLOW + "" + ChatColor.BOLD + "Right Click" + ChatColor.GOLD + " To Warp 5 Blocks!");
         SI.setLore(DEFL);
