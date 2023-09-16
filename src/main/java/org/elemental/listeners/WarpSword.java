@@ -27,7 +27,7 @@ public class WarpSword implements Listener {
                         return;
                     }
                 }
-                cooldowns.put(player.getUniqueId(), System.currentTimeMillis() + (30 * 1000));
+                cooldowns.put(player.getUniqueId(), System.currentTimeMillis() + (5 * 1000));
 
                 Vector direction = player.getLocation().getDirection().multiply(5);
                 player.playSound(player.getLocation(), "minecraft:entity.enderman.teleport", 1.0f, 1.0f);
