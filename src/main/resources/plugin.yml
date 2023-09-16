@@ -24,3 +24,6 @@ commands:
   givebindingarmor:
     description: Gives binding armor test
     usage: /givebindingarmor
+  givefearmongerpearl:
+    description: Gives you a fear mongerer pearl.
+    usage: /givefearmongerpearl
