@@ -15,7 +15,7 @@ import static org.elemental.ElementalArtifacts.elementalArtifacts;
 public class Compact_Netherite_Block_Recipe {
 
 
-    public ItemStack registerCustomRecipes() {
+    public void registerCustomRecipes() {
         ItemStack compact = new ItemStack(Material.NETHERITE_INGOT);
         ItemMeta SI = compact.getItemMeta();
         SI.setDisplayName(ChatColor.GOLD + "" + ChatColor.BOLD + "Compact Netherite Ingot");
