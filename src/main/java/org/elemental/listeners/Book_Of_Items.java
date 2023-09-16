@@ -123,6 +123,16 @@ public class Book_Of_Items implements Listener {
                     BIM.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
                     bindingchest.setItemMeta(BIM);
 
+                    ItemStack fearmongerperl = new ItemStack(Material.ENDER_PEARL);
+                    ItemMeta FMPM = fearmongerperl.getItemMeta();
+                    FMPM.setDisplayName(ChatColor.BLUE + "" + ChatColor.BOLD + "Fear Mongerer Pearl" + ChatColor.DARK_AQUA + " [Item]");
+                    List<String> FML = new ArrayList<>();
+                    FML.add(ChatColor.DARK_PURPLE + "Obtained from killing the Fear Mongerer!");
+                    FMPM.setLore(FML);
+                    FMPM.addEnchant(Enchantment.DURABILITY, 1, false);
+                    FMPM.addItemFlags(ItemFlag.HIDE_ENCHANTS);
+                    fearmongerperl.setItemMeta(FMPM);
+
                     Guide.setItem(0, G1);
                     Guide.setItem(1, G1);
                     Guide.setItem(2, G1);
@@ -143,7 +153,7 @@ public class Book_Of_Items implements Listener {
                     Guide.setItem(16, compact);
                     Guide.setItem(19, compact2);
                     Guide.setItem(20, bindingchest);
-
+                    Guide.setItem(21, fearmongerperl);
 
                     Guide.setItem(18, G1);
                     Guide.setItem(27, G1);
