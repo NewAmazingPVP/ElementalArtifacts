@@ -20,10 +20,10 @@ public class Compact_Netherite_Block_Recipe {
 
 
 
-        NamespacedKey opPickaxe = new NamespacedKey(elementalArtifacts, "op_pickaxe");
-        ShapelessRecipe opPickaxeRecipe = new ShapelessRecipe(opPickaxe, createCompactNetheriteBlock());
-        opPickaxeRecipe.addIngredient(1, test());
-        Bukkit.addRecipe(opPickaxeRecipe);
+        ShapedRecipe purpleBlockRecipe = new ShapedRecipe(new NamespacedKey(elementalArtifacts, "purple_block_recipe"), createCompactNetheriteBlock());
+        purpleBlockRecipe.shape("DDD", "DDD", "DDD");
+        purpleBlockRecipe.setIngredient('D', test());
+        Bukkit.addRecipe(purpleBlockRecipe);
     }
 
     private static ItemStack createCompactNetheriteBlock() {
