@@ -29,9 +29,9 @@ public class WarpSword implements Listener {
                         return;
                     }
                 }
-                cooldowns.put(player.getUniqueId(), System.currentTimeMillis() + (5 * 1000));
+                cooldowns.put(player.getUniqueId(), System.currentTimeMillis() + (2 * 1000));
 
-                Vector direction = player.getLocation().getDirection().multiply(5);
+                Vector direction = player.getLocation().getDirection().multiply(15);
                 Location destination = player.getLocation().add(direction);
                 Block feet = destination.getBlock();
                 Block chest = feet.getRelative(BlockFace.UP);
