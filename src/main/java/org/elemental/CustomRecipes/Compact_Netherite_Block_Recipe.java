@@ -8,6 +8,7 @@ import org.bukkit.enchantments.Enchantment;
 import org.bukkit.inventory.ItemFlag;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.ShapedRecipe;
+import org.bukkit.inventory.ShapelessRecipe;
 import org.bukkit.inventory.meta.ItemMeta;
 
 import static org.elemental.ElementalArtifacts.elementalArtifacts;
@@ -16,19 +17,13 @@ public class Compact_Netherite_Block_Recipe {
 
 
     public void registerCustomRecipes() {
-        ItemStack compact = new ItemStack(Material.NETHERITE_INGOT);
-        ItemMeta SI = compact.getItemMeta();
-        SI.setDisplayName(ChatColor.GOLD + "" + ChatColor.BOLD + "Compact Netherite Ingot");
-        SI.addEnchant(Enchantment.DURABILITY, 1, false);
-        SI.addItemFlags(ItemFlag.HIDE_ENCHANTS);
-        compact.setItemMeta(SI);
 
 
-        NamespacedKey customRecipeKey = new NamespacedKey(elementalArtifacts, "shulkerRecipe2");
-        ShapedRecipe shulkerRecipe2 = new ShapedRecipe(customRecipeKey, createCompactNetheriteBlock());
-        shulkerRecipe2.shape("DDD", "DDD", "DDD");
-        shulkerRecipe2.setIngredient('D', compact);
-        Bukkit.addRecipe(shulkerRecipe2);
+
+        NamespacedKey opPickaxe = new NamespacedKey(elementalArtifacts, "op_pickaxe");
+        ShapelessRecipe opPickaxeRecipe = new ShapelessRecipe(opPickaxe, createCompactNetheriteBlock());
+        opPickaxeRecipe.addIngredient(1, test());
+        Bukkit.addRecipe(opPickaxeRecipe);
     }
 
     private ItemStack createCompactNetheriteBlock() {
@@ -39,5 +34,15 @@ public class Compact_Netherite_Block_Recipe {
         SI2.addItemFlags(ItemFlag.HIDE_ENCHANTS);
         compact2.setItemMeta(SI2);
         return compact2;
+    }
+
+    private ItemStack test(){
+        ItemStack compact = new ItemStack(Material.NETHERITE_INGOT);
+        ItemMeta SI = compact.getItemMeta();
+        SI.setDisplayName(ChatColor.GOLD + "" + ChatColor.BOLD + "Compact Netherite Ingot");
+        SI.addEnchant(Enchantment.DURABILITY, 1, false);
+        SI.addItemFlags(ItemFlag.HIDE_ENCHANTS);
+        compact.setItemMeta(SI);
+        return compact;
     }
 }
