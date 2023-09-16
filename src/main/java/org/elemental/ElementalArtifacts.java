@@ -27,6 +27,7 @@ public final class ElementalArtifacts extends JavaPlugin implements Listener {
         getCommand("giveaxe").setExecutor(new Temp_give_axe());
         getCommand("givedoublesword").setExecutor(new Temp_givedoublesword());
         getCommand("givewarpsword").setExecutor(new Temp_give_WarpSword());
+        getCommand("bookofitems").setExecutor(new Book_Of_Items_Give());
         getServer().getPluginManager().registerEvents(this, this);
         getServer().getPluginManager().registerEvents(new PlayerJoin(), this);
         getServer().getPluginManager().registerEvents(new Reaper_axe(), this);
@@ -41,6 +42,7 @@ public final class ElementalArtifacts extends JavaPlugin implements Listener {
         getServer().getPluginManager().registerEvents(new Crafting_Table_Sound(), this);
         getServer().getPluginManager().registerEvents(new Anti_Block_Place_Listener(), this);
         getServer().getPluginManager().registerEvents(new WarpSword(), this);
+        getServer().getPluginManager().registerEvents(new Book_Of_Items(), this);
         registerCustomRecipes();
         registerCustom();
         AutoUpload.startReleaseChecker();

@@ -14,7 +14,7 @@ import org.bukkit.inventory.meta.ItemMeta;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Temp_give_axe implements CommandExecutor {
+public class Book_Of_Items_Give implements CommandExecutor {
     @Override
     public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
         if (!(sender instanceof Player)) {
@@ -23,16 +23,14 @@ public class Temp_give_axe implements CommandExecutor {
         }
 
         Player player = (Player) sender;
-        ItemStack teamsel = new ItemStack(Material.NETHERITE_AXE);
+        ItemStack teamsel = new ItemStack(Material.BOOK);
         ItemMeta SI = teamsel.getItemMeta();
-        SI.setDisplayName(ChatColor.LIGHT_PURPLE + "" + ChatColor.BOLD + "Beheading Axe" + ChatColor.DARK_AQUA + " [Sword]");
+        SI.setDisplayName(ChatColor.LIGHT_PURPLE + "" + ChatColor.BOLD + "Book Of Items");
         List<String> DEFL = new ArrayList<>();
-        DEFL.add(ChatColor.RED + "Use this to show your power and execute people");
-        DEFL.add(ChatColor.RED + "to keep there heads or something idk...");
-        DEFL.add(ChatColor.DARK_RED + "lol.....");
+        DEFL.add(ChatColor.DARK_RED + "This Is A Admin Item!");
         SI.setLore(DEFL);
-        SI.setUnbreakable(true);
-        SI.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
+        SI.addEnchant(Enchantment.DURABILITY, 1, false);
+        SI.addItemFlags(ItemFlag.HIDE_ENCHANTS);
         teamsel.setItemMeta(SI);
 
         player.getInventory().addItem(teamsel);
