@@ -28,14 +28,14 @@ public class Reaper_axe implements Listener {
                 skull.setItemMeta(skullMeta);
                 Particle.DustOptions dustOptions = new Particle.DustOptions(org.bukkit.Color.RED, 1.0f);
                 victim.getWorld().spawnParticle(Particle.REDSTONE, victim.getLocation(), 10, dustOptions);
-
+                String deathMessage = victim.getName() + ChatColor.DARK_RED + "" + ChatColor.BOLD + " Was Beheaded!";
+                for (Player player : Bukkit.getOnlinePlayers()) {
+                    player.sendMessage(deathMessage);
                 event.getDrops().add(skull);
 
             }
         }
-        String deathMessage = victim.getName() + ChatColor.DARK_RED + "" + ChatColor.BOLD + " Was Beheaded!";
-        for (Player player : Bukkit.getOnlinePlayers()) {
-            player.sendMessage(deathMessage);
+
         }
     }
 

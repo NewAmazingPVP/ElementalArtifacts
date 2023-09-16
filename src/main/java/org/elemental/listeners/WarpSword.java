@@ -39,6 +39,7 @@ public class WarpSword implements Listener {
 
                 if (feet.getType() != Material.AIR || chest.getType() != Material.AIR || head.getType() != Material.AIR) {
                     player.sendMessage(ChatColor.RED + "You cannot teleport through blocks!");
+                    player.playSound(player.getLocation(), "minecraft:entity.enderman.teleport", 1.0f, 0.0f);
                     return;
                 }
 
