@@ -1,7 +1,6 @@
 package org.elemental;
 
 import org.bukkit.event.Listener;
-import org.elemental.CustomRecipes.Compact_Netherite_Recipe;
 import org.elemental.command.*;
 import org.elemental.listeners.PlayerJoin;
 
@@ -30,7 +29,8 @@ public final class ElementalArtifacts extends JavaPlugin implements Listener {
         getCommand("givewarpsword").setExecutor(new Temp_give_WarpSword());
         getCommand("bookofitems").setExecutor(new Book_Of_Items_Give());
         getCommand("givebindingarmor").setExecutor(new Temp_give_bindingarmor());
-        getCommand("givefearmongerpearl").setExecutor(new Give_fearmongerpearl());
+        getCommand("givefearmongerpearl").setExecutor(new Temp_give_fearmongerpearl());
+        getCommand("givegodpotion").setExecutor(new Temp_give_god_potion());
         getServer().getPluginManager().registerEvents(this, this);
         getServer().getPluginManager().registerEvents(new PlayerJoin(), this);
         getServer().getPluginManager().registerEvents(new Reaper_axe(), this);
@@ -48,6 +48,7 @@ public final class ElementalArtifacts extends JavaPlugin implements Listener {
         getServer().getPluginManager().registerEvents(new Book_Of_Items(), this);
         getServer().getPluginManager().registerEvents(new Book_Of_Items_Listener(), this);
         getServer().getPluginManager().registerEvents(new Anti_Item_Thrower_Listener(), this);
+        getServer().getPluginManager().registerEvents(new God_Potion(), this);
         registerCustomRecipes();
         registerCustom();
         registerCustomRecipesdouble();
