@@ -27,7 +27,7 @@ public class God_Potion implements Listener {
         ItemStack item = player.getInventory().getItemInMainHand();
 
         // Check if the player is holding an item named "1111111111111111"
-        if (item != null && item.getType() == Material.PLAYER_HEAD && item.getItemMeta().hasDisplayName()
+        if (item != null && item.getType() == Material.HONEY_BOTTLE && item.getItemMeta().hasDisplayName()
                 && item.getItemMeta().getDisplayName().equals(ChatColor.LIGHT_PURPLE + "" + ChatColor.BOLD + "God Potion" + ChatColor.DARK_AQUA + " [Potion]")) {
             event.setCancelled(true);
             // Clear the item from the player's hand
