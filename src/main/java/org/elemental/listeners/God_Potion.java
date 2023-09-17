@@ -29,8 +29,13 @@ public class God_Potion implements Listener {
             player.getInventory().setItemInMainHand(new ItemStack(Material.AIR));
 
             // Apply speed 2 and strength 2 potion effects for 10 minutes
-            player.addPotionEffect(new PotionEffect(PotionEffectType.SPEED, 20 * 60 * 10, 1));
-            player.addPotionEffect(new PotionEffect(PotionEffectType.INCREASE_DAMAGE, 20 * 60 * 10, 1));
+            player.addPotionEffect(new PotionEffect(PotionEffectType.SPEED, 20 * 60 * 10, 2));
+            player.addPotionEffect(new PotionEffect(PotionEffectType.INCREASE_DAMAGE, 20 * 60 * 10, 2));
+            player.addPotionEffect(new PotionEffect(PotionEffectType.REGENERATION, 20 * 60 * 10, 3));
+            player.addPotionEffect(new PotionEffect(PotionEffectType.ABSORPTION, 20 * 60 * 10, 5));
+            player.addPotionEffect(new PotionEffect(PotionEffectType.DAMAGE_RESISTANCE, 20 * 60 * 10, 1));
+
+
             player.playSound(player.getLocation(), "minecraft:entity.elder_guardian.curse", 1.0f, 0.0f);
             player.getWorld().spawnParticle(Particle.REDSTONE, player.getLocation(), 10, 0.6, 0.6, 0.6, new Particle.DustOptions(Color.RED, 3));
             player.getWorld().spawnParticle(Particle.REDSTONE, player.getLocation(), 10, 0.6, 0.6, 0.6, new Particle.DustOptions(Color.ORANGE, 3));
