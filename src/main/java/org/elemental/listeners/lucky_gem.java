@@ -17,7 +17,7 @@ import static org.bukkit.Bukkit.getServer;
 public class lucky_gem implements Listener {
     @EventHandler
     public void onPlayerInteract(PlayerInteractEvent event) {
-        getServer().getPluginManager().registerEvents((Listener) this, (Plugin) this);
+        /*getServer().getPluginManager().registerEvents((Listener) this, (Plugin) this);*/
         Player player = event.getPlayer();
         ItemStack item = player.getInventory().getItemInMainHand();
 
@@ -37,27 +37,27 @@ public class lucky_gem implements Listener {
                     player.getInventory().setBoots(new ItemStack(Material.DIAMOND_BOOTS));
                     player.playSound(player.getLocation(), Sound.UI_TOAST_CHALLENGE_COMPLETE, 1.0f, 1.0f);
                     player.playSound(player.getLocation(), Sound.ENTITY_ENDER_DRAGON_GROWL, 1.0f, 1.0f);
-                    String titleText = ChatColor.AQUA + "" + ChatColor.BOLD + "+ Diamond Set";
+                    /*String titleText = ChatColor.AQUA + "" + ChatColor.BOLD + "+ Diamond Set";
                     int fadeIn = 10;
                     int stay = 40;
-                    int fadeOut = 10;
+                    int fadeOut = 10;*/
 
                 } else if (random <= 0.15) {
                     // Give a diamond block
                     player.getInventory().addItem(new ItemStack(Material.DIAMOND_BLOCK));
                     player.playSound(player.getLocation(), Sound.UI_TOAST_CHALLENGE_COMPLETE, 1.0f, 1.0f);
-                    String titleText = ChatColor.AQUA + "" + ChatColor.BOLD + "+ Diamond Block";
+                    /*String titleText = ChatColor.AQUA + "" + ChatColor.BOLD + "+ Diamond Block";
                     int fadeIn = 10;
                     int stay = 40;
-                    int fadeOut = 10;
+                    int fadeOut = 10;*/
                 } else if (random <= 0.25) {
                     // Give a god potion
                     player.getInventory().addItem(new ItemStack(Material.ENCHANTED_GOLDEN_APPLE));
                     player.playSound(player.getLocation(), Sound.UI_TOAST_CHALLENGE_COMPLETE, 1.0f, 1.0f);
-                    String titleText = ChatColor.GOLD + "" + ChatColor.BOLD + "+ God Apple";
+                    /*String titleText = ChatColor.GOLD + "" + ChatColor.BOLD + "+ God Apple";
                     int fadeIn = 10;
                     int stay = 40;
-                    int fadeOut = 10;
+                    int fadeOut = 10;*/
                 } else {
                     // Give leather armor
                     player.getInventory().setHelmet(new ItemStack(Material.LEATHER_HELMET));
@@ -65,11 +65,11 @@ public class lucky_gem implements Listener {
                     player.getInventory().setLeggings(new ItemStack(Material.LEATHER_LEGGINGS));
                     player.getInventory().setBoots(new ItemStack(Material.LEATHER_BOOTS));
                     player.playSound(player.getLocation(), Sound.ENTITY_CAT_AMBIENT, 1.0f, 0.0f);
-                    String titleText = ChatColor.DARK_RED + "" + ChatColor.BOLD + "+ Binding Armor";
+                    /*String titleText = ChatColor.DARK_RED + "" + ChatColor.BOLD + "+ Binding Armor";
                     String subtitleText = ChatColor.DARK_RED + "L              =D";
                     int fadeIn = 10;
                     int stay = 40;
-                    int fadeOut = 10;
+                    int fadeOut = 10;*/
                 }
             }
         }
