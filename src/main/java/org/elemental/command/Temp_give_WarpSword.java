@@ -28,7 +28,9 @@ public class Temp_give_WarpSword implements CommandExecutor {
         SI.setDisplayName(ChatColor.DARK_PURPLE + "" + ChatColor.BOLD + "Warp Sword" + ChatColor.DARK_AQUA + " [Sword]");
         List<String> DEFL = new ArrayList<>();
         DEFL.add(ChatColor.YELLOW + "" + ChatColor.BOLD + "Right Click" + ChatColor.GOLD + " To Warp 15 Blocks!");
-        DEFL.add(ChatColor.RED + "If there is a block within 15 blocks of where you want to teleport, it will fail!");
+        DEFL.add(ChatColor.RED + "If there is a block within 15 blocks");
+        DEFL.add(ChatColor.RED + "of where you want to teleport, it will fail!");
+        DEFL.add(ChatColor.YELLOW + "5sec Cooldown!");
         SI.setLore(DEFL);
         SI.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
         SI.setUnbreakable(true);
