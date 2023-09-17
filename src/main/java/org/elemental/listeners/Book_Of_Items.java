@@ -84,7 +84,9 @@ public class Book_Of_Items implements Listener {
                     WSI.setDisplayName(ChatColor.DARK_PURPLE + "" + ChatColor.BOLD + "Warp Sword" + ChatColor.DARK_AQUA + " [Sword]");
                     List<String> WDEFL = new ArrayList<>();
                     WDEFL.add(ChatColor.YELLOW + "" + ChatColor.BOLD + "Right Click" + ChatColor.GOLD + " To Warp 15 Blocks!");
-                    WDEFL.add(ChatColor.RED + "If there is a block within 15 blocks of where you want to teleport, it will fail!");
+                    WDEFL.add(ChatColor.RED + "If there is a block within 15 blocks");
+                    WDEFL.add(ChatColor.RED + "of where you want to teleport, it will fail!");
+                    WDEFL.add(ChatColor.YELLOW + "5sec Cooldown!");
                     WSI.setLore(WDEFL);
                     WSI.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
                     WSI.setUnbreakable(true);
@@ -184,8 +186,8 @@ public class Book_Of_Items implements Listener {
                     GPL.add(ChatColor.DARK_PURPLE + "+ Speed 2");
                     GPL.add(ChatColor.DARK_PURPLE + "+ Strength 2");
                     GPL.add(ChatColor.DARK_PURPLE + "+ Regeneration 3");
-                    GPL.add(ChatColor.DARK_PURPLE + "+ Absorption 5");
-                    GPL.add(ChatColor.DARK_PURPLE + "+ Resistance 1");
+                    GPL.add(ChatColor.DARK_PURPLE + "+ Absorption 4");
+                    GPL.add(ChatColor.DARK_PURPLE + "+ Resistance 2");
                     GPM.setLore(GPL);
                     GodPot.setItemMeta(GPM);
 
