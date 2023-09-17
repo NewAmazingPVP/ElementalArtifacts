@@ -31,8 +31,8 @@ public class Temp_give_god_potion implements CommandExecutor {
         GPL.add(ChatColor.DARK_PURPLE + "+ Speed 2");
         GPL.add(ChatColor.DARK_PURPLE + "+ Strength 2");
         GPL.add(ChatColor.DARK_PURPLE + "+ Regeneration 3");
-        GPL.add(ChatColor.DARK_PURPLE + "+ Absorption 5");
-        GPL.add(ChatColor.DARK_PURPLE + "+ Resistance 1");
+        GPL.add(ChatColor.DARK_PURPLE + "+ Absorption 4");
+        GPL.add(ChatColor.DARK_PURPLE + "+ Resistance 2");
         GPM.setLore(GPL);
         GodPot.setItemMeta(GPM);
 
