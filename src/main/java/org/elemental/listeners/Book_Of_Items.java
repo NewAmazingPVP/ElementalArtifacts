@@ -191,6 +191,17 @@ public class Book_Of_Items implements Listener {
                     GPM.setLore(GPL);
                     GodPot.setItemMeta(GPM);
 
+                    ItemStack LuvkyGem = new ItemStack(Material.EMERALD);
+                    ItemMeta LGM = LuvkyGem.getItemMeta();
+                    LGM.setDisplayName(ChatColor.GOLD + "" + ChatColor.BOLD + "Lucky Gem" + ChatColor.DARK_AQUA + " [Item]");
+                    List<String> LGL = new ArrayList<>();
+                    LGL.add(ChatColor.DARK_GREEN + "5% Chance of obtaining a full diamond set!");
+                    LGL.add(ChatColor.DARK_GREEN + "10% Chance of obtaining a diamond block!");
+                    LGL.add(ChatColor.DARK_GREEN + "10% Chance of obtaining a god apple!");
+                    LGL.add(ChatColor.DARK_RED + "75% Chance of being forced to use binding armor!");
+                    LGM.setLore(LGL);
+                    LuvkyGem.setItemMeta(LGM);
+
                     Guide.setItem(0, G1);
                     Guide.setItem(1, G1);
                     Guide.setItem(2, G1);
@@ -217,6 +228,7 @@ public class Book_Of_Items implements Listener {
                     Guide.setItem(24, corruptedHandle);
                     Guide.setItem(25, infusedlapis);
                     Guide.setItem(28, GodPot);
+                    Guide.setItem(29, LuvkyGem);
 
 
                     Guide.setItem(18, G1);
