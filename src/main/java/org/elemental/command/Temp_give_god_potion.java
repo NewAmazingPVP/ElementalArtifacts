@@ -37,8 +37,8 @@ public class Temp_give_god_potion implements CommandExecutor {
         GPM.setLore(GPL);
         /*SkullMeta skullMeta = (SkullMeta) GPM;
         skullMeta.setOwner("thirtyvirus"); // Replace "MHF_CustomHead" with the desired custom head ID
-        GodPot.setItemMeta(skullMeta);
-        GodPot.setItemMeta(GPM);*/
+        GodPot.setItemMeta(skullMeta);*/
+        GodPot.setItemMeta(GPM);
 
         player.getInventory().addItem(GodPot);
         return true;
