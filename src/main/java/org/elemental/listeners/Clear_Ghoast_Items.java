@@ -19,19 +19,13 @@ public class Clear_Ghoast_Items implements Listener {
 
         // Check if the clicked inventory is the player's inventory
         if (inventory.getType() == InventoryType.PLAYER) {
-            ItemStack[] contents = inventory.getContents();
+            ItemStack clickedItem = event.getCurrentItem();
 
-            // Iterate through the inventory and remove ghost items
-            for (int i = 0; i < contents.length; i++) {
-                ItemStack item = contents[i];
-
-                // Check if the item is a ghost item
-                if (item == null || item.getType() == Material.AIR) {
-                    inventory.setItem(i, null);
-                }
+            // Check if the clicked item is a ghost item (null or air)
+            if (clickedItem == null || clickedItem.getType() == Material.AIR) {
+                // Clear the clicked slot
+                event.setCurrentItem(null);
             }
-
-            player.updateInventory();
         }
     }
 }
