@@ -16,7 +16,8 @@ import org.elemental.ElementalArtifacts;
 import org.bukkit.plugin.java.JavaPlugin;
 import org.bukkit.scheduler.BukkitRunnable;
 
-import static org.bukkit.Bukkit.getServer;
+import org.bukkit.scheduler.BukkitRunnable;
+
 
 public class God_Potion implements Listener {
 
@@ -47,12 +48,6 @@ public class God_Potion implements Listener {
             player.getWorld().spawnParticle(Particle.REDSTONE, player.getLocation(), 10, 0.6, 0.6, 0.6, new Particle.DustOptions(Color.GREEN, 3));
             player.getWorld().spawnParticle(Particle.REDSTONE, player.getLocation(), 10, 0.6, 0.6, 0.6, new Particle.DustOptions(Color.BLUE, 3));
             player.getWorld().spawnParticle(Particle.REDSTONE, player.getLocation(), 10, 0.6, 0.6, 0.6, new Particle.DustOptions(Color.PURPLE, 3));
-
-            BukkitScheduler scheduler = getServer().getScheduler();
-            scheduler.runTaskLater((Plugin) this, () -> {
-                // Your code here
-                player.sendMessage("Delayed action executed!");
-            }, 1000);
 
         }
     }
