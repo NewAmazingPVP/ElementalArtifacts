@@ -138,7 +138,7 @@ public class Book_Of_Items implements Listener {
                     FMPM.addItemFlags(ItemFlag.HIDE_ENCHANTS);
                     fearmongerperl.setItemMeta(FMPM);
 
-                    ItemStack OreMixture = new ItemStack(Material.PLAYER_HEAD);
+                    ItemStack OreMixture = new ItemStack(Material.BONE_MEAL);
                     ItemMeta OFMPM = OreMixture.getItemMeta();
                     OFMPM.setDisplayName(ChatColor.BLUE + "" + ChatColor.BOLD + "Ore Mixture" + ChatColor.DARK_AQUA + " [Item]");
                     List<String> OML = new ArrayList<>();
@@ -178,7 +178,7 @@ public class Book_Of_Items implements Listener {
                     ILM.addItemFlags(ItemFlag.HIDE_ENCHANTS);
                     infusedlapis.setItemMeta(ILM);
 
-                    ItemStack GodPot = new ItemStack(Material.PLAYER_HEAD);
+                    ItemStack GodPot = new ItemStack(Material.HONEY_BOTTLE);
                     ItemMeta GPM = GodPot.getItemMeta();
                     GPM.setDisplayName(ChatColor.LIGHT_PURPLE + "" + ChatColor.BOLD + "God Potion" + ChatColor.DARK_AQUA + " [Potion]");
                     List<String> GPL = new ArrayList<>();
