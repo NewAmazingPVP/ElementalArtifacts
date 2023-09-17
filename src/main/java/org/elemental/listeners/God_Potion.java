@@ -52,8 +52,8 @@ public class God_Potion implements Listener {
             scheduler.runTaskLater((Plugin) this, () -> {
                 // Your code here
                 player.sendMessage("Delayed action executed!");
-            }, 5);
-            
+            }, 1000);
+
         }
     }
 }
