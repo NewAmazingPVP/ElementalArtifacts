@@ -10,6 +10,7 @@ import org.bukkit.entity.Player;
 import org.bukkit.inventory.ItemFlag;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
+import org.bukkit.inventory.meta.SkullMeta;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -34,6 +35,9 @@ public class Temp_give_god_potion implements CommandExecutor {
         GPL.add(ChatColor.DARK_PURPLE + "+ Absorption 4");
         GPL.add(ChatColor.DARK_PURPLE + "+ Resistance 2");
         GPM.setLore(GPL);
+        SkullMeta skullMeta = (SkullMeta) GPM;
+        skullMeta.setOwner("eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNTAzMjdmYjM0MzE5Zjg5YWM1YWI0OGI0ZDc5MjUxZjEzZjA2N2ViZWE3ZGE1Zjg4Yjc1ZjQ3OWE3Mzg5OTI0ZSJ9fX0"); // Replace "MHF_CustomHead" with the desired custom head ID
+        GodPot.setItemMeta(skullMeta);
         GodPot.setItemMeta(GPM);
 
         player.getInventory().addItem(GodPot);
