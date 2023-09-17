@@ -24,7 +24,7 @@ public class Temp_give_god_potion implements CommandExecutor {
         }
 
         Player player = (Player) sender;
-        ItemStack GodPot = new ItemStack(Material.PLAYER_HEAD);
+        ItemStack GodPot = new ItemStack(Material.HONEY_BOTTLE);
         ItemMeta GPM = GodPot.getItemMeta();
         GPM.setDisplayName(ChatColor.LIGHT_PURPLE + "" + ChatColor.BOLD + "God Potion" + ChatColor.DARK_AQUA + " [Potion]");
         List<String> GPL = new ArrayList<>();
@@ -35,10 +35,10 @@ public class Temp_give_god_potion implements CommandExecutor {
         GPL.add(ChatColor.DARK_PURPLE + "+ Absorption 4");
         GPL.add(ChatColor.DARK_PURPLE + "+ Resistance 2");
         GPM.setLore(GPL);
-        SkullMeta skullMeta = (SkullMeta) GPM;
+        /*SkullMeta skullMeta = (SkullMeta) GPM;
         skullMeta.setOwner("thirtyvirus"); // Replace "MHF_CustomHead" with the desired custom head ID
         GodPot.setItemMeta(skullMeta);
-        GodPot.setItemMeta(GPM);
+        GodPot.setItemMeta(GPM);*/
 
         player.getInventory().addItem(GodPot);
         return true;
