@@ -32,6 +32,7 @@ public class Temp_give_lucky_gem implements CommandExecutor {
         LGL.add(ChatColor.DARK_GREEN + "10% Chance of obtaining a diamond block!");
         LGL.add(ChatColor.DARK_GREEN + "10% Chance of obtaining a god apple!");
         LGL.add(ChatColor.DARK_RED + "75% Chance of being forced to use binding armor!");
+        LGL.add(ChatColor.DARK_RED + "This will reset any armor you have on! (Take armor off)");
         LGM.setLore(LGL);
         LuvkyGem.setItemMeta(LGM);
 
