@@ -28,5 +28,8 @@ commands:
     description: Gives you a fear mongerer pearl.
     usage: /givefearmongerpearl
   givegodpotion:
-    description: Gives  you got potion test
+    description: Gives you got potion test
     usage: /givegodpotion
+  giveluckygem:
+    description: Gives you a lucky gem test
+    usage: /giveluckygem
