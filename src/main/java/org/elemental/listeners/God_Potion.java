@@ -29,9 +29,9 @@ public class God_Potion implements Listener {
             player.getInventory().setItemInMainHand(new ItemStack(Material.AIR));
 
             // Apply speed 2 and strength 2 potion effects for 10 minutes
-            player.addPotionEffect(new PotionEffect(PotionEffectType.SPEED, 20 * 60 * 10, 2));
-            player.addPotionEffect(new PotionEffect(PotionEffectType.INCREASE_DAMAGE, 20 * 60 * 10, 2));
-            player.addPotionEffect(new PotionEffect(PotionEffectType.REGENERATION, 20 * 60 * 10, 3));
+            player.addPotionEffect(new PotionEffect(PotionEffectType.SPEED, 20 * 60 * 10, 1));
+            player.addPotionEffect(new PotionEffect(PotionEffectType.INCREASE_DAMAGE, 20 * 60 * 10, 1));
+            player.addPotionEffect(new PotionEffect(PotionEffectType.REGENERATION, 20 * 60 * 10, 2));
             player.addPotionEffect(new PotionEffect(PotionEffectType.ABSORPTION, 20 * 60 * 10, 5));
             player.addPotionEffect(new PotionEffect(PotionEffectType.DAMAGE_RESISTANCE, 20 * 60 * 10, 1));
 
