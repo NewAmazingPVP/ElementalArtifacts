@@ -213,8 +213,8 @@ public class Book_Of_Items implements Listener {
                     LLLL.add(ChatColor.DARK_GREEN + "Level 1/5");
                     LLLL.add(ChatColor.DARK_GREEN + "Can be leveled up!");
                     LLLS.setLore(LLLL);
-                    /*AttributeModifier modifier = new AttributeModifier(UUID.randomUUID(), "generic.attack_damage", 100, AttributeModifier.Operation.ADD_NUMBER, EquipmentSlot.HAND);
-                    meta.addAttributeModifier(Attribute.GENERIC_ATTACK_DAMAGE, modifier);*/
+                    AttributeModifier modifier = new AttributeModifier(UUID.randomUUID(), "generic.attack_damage", 7, AttributeModifier.Operation.ADD_NUMBER, EquipmentSlot.HAND);
+                    meta.addAttributeModifier(Attribute.GENERIC_ATTACK_DAMAGE, modifier);
                     SI.setUnbreakable(true);
                     LowLevelLightSword.setItemMeta(LLLS);
 
