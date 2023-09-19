@@ -207,7 +207,7 @@ public class Book_Of_Items implements Listener {
                     LuvkyGem.setItemMeta(LGM);
 
                     ItemStack LowLevelLightSword = new ItemStack(Material.WOODEN_SWORD);
-                    ItemMeta LLLS = LuvkyGem.getItemMeta();
+                    ItemMeta LLLS = LowLevelLightSword.getItemMeta();
                     LLLS.setDisplayName(ChatColor.GREEN + "" + ChatColor.BOLD + "Low Level Light Sword" + ChatColor.DARK_AQUA + " [Sword]");
                     List<String> LLLL = new ArrayList<>();
                     LLLL.add(ChatColor.DARK_GREEN + "Level 1/5");
@@ -216,10 +216,10 @@ public class Book_Of_Items implements Listener {
                     /*AttributeModifier modifier = new AttributeModifier(UUID.randomUUID(), "generic.attack_damage", 100, AttributeModifier.Operation.ADD_NUMBER, EquipmentSlot.HAND);
                     meta.addAttributeModifier(Attribute.GENERIC_ATTACK_DAMAGE, modifier);*/
                     SI.setUnbreakable(true);
-                    LuvkyGem.setItemMeta(LLLS);
+                    LowLevelLightSword.setItemMeta(LLLS);
 
                     ItemStack WeakLevelLightSword = new ItemStack(Material.IRON_SWORD);
-                    ItemMeta WLLS = LuvkyGem.getItemMeta();
+                    ItemMeta WLLS = WeakLevelLightSword.getItemMeta();
                     WLLS.setDisplayName(ChatColor.GREEN + "" + ChatColor.BOLD + "Weak Level Light Sword" + ChatColor.DARK_AQUA + " [Sword]");
                     List<String> WLLL = new ArrayList<>();
                     WLLL.add(ChatColor.DARK_GREEN + "Level 2/5");
@@ -227,7 +227,7 @@ public class Book_Of_Items implements Listener {
                     WLLL.add(ChatColor.YELLOW + "" + ChatColor.BOLD + "Right Click" + ChatColor.GREEN + " Heal 1HP");
                     WLLL.add(ChatColor.RED + "30sec Cooldown");
                     WLLS.setLore(WLLL);
-                    LuvkyGem.setItemMeta(WLLS);
+                    WeakLevelLightSword.setItemMeta(WLLS);
 
 
                     Guide.setItem(0, G1);
