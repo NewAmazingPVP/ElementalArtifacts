@@ -140,7 +140,7 @@ public class Book_Of_Items implements Listener {
                     FMPM.addItemFlags(ItemFlag.HIDE_ENCHANTS);
                     fearmongerperl.setItemMeta(FMPM);
 
-                    ItemStack OreMixture = new ItemStack(Material.BONE_MEAL);
+                    ItemStack OreMixture = new ItemStack(Material.PLAYER_HEAD);
                     ItemMeta OFMPM = OreMixture.getItemMeta();
                     OFMPM.setDisplayName(ChatColor.BLUE + "" + ChatColor.BOLD + "Ore Mixture" + ChatColor.DARK_AQUA + " [Item]");
                     List<String> OML = new ArrayList<>();
