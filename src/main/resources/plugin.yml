@@ -33,3 +33,6 @@ commands:
   giveluckygem:
     description: Gives you a lucky gem test
     usage: /giveluckygem
+  setprisoner:
+    description: Set a player as a prisoner
+    usage: /set prisoner <player>
