@@ -210,24 +210,67 @@ public class Book_Of_Items implements Listener {
                     ItemMeta LLLS = LowLevelLightSword.getItemMeta();
                     LLLS.setDisplayName(ChatColor.GREEN + "" + ChatColor.BOLD + "Low Level Light Sword" + ChatColor.DARK_AQUA + " [Sword]");
                     List<String> LLLL = new ArrayList<>();
-                    LLLL.add(ChatColor.DARK_GREEN + "Level 1/5");
+                    LLLL.add(ChatColor.DARK_RED + "Level 1/5");
                     LLLL.add(ChatColor.DARK_GREEN + "Can be leveled up!");
                     LLLS.setLore(LLLL);
-                    AttributeModifier modifier = new AttributeModifier(UUID.randomUUID(), "generic.attack_damage", 7, AttributeModifier.Operation.ADD_NUMBER, EquipmentSlot.HAND);
-                    meta.addAttributeModifier(Attribute.GENERIC_ATTACK_DAMAGE, modifier);
-                    SI.setUnbreakable(true);
+                    LLLS.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
+                    LLLS.setUnbreakable(true);
                     LowLevelLightSword.setItemMeta(LLLS);
 
                     ItemStack WeakLevelLightSword = new ItemStack(Material.IRON_SWORD);
                     ItemMeta WLLS = WeakLevelLightSword.getItemMeta();
-                    WLLS.setDisplayName(ChatColor.GREEN + "" + ChatColor.BOLD + "Weak Level Light Sword" + ChatColor.DARK_AQUA + " [Sword]");
+                    WLLS.setDisplayName(ChatColor.BLUE + "" + ChatColor.BOLD + "Weak Level Light Sword" + ChatColor.DARK_AQUA + " [Sword]");
                     List<String> WLLL = new ArrayList<>();
-                    WLLL.add(ChatColor.DARK_GREEN + "Level 2/5");
+                    WLLL.add(ChatColor.RED + "Level 2/5");
                     WLLL.add(ChatColor.DARK_GREEN + "Can be leveled up!");
                     WLLL.add(ChatColor.YELLOW + "" + ChatColor.BOLD + "Right Click" + ChatColor.GREEN + " Heal 1HP");
                     WLLL.add(ChatColor.RED + "30sec Cooldown");
                     WLLS.setLore(WLLL);
+                    WLLS.setUnbreakable(true);
+                    WLLS.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
                     WeakLevelLightSword.setItemMeta(WLLS);
+
+                    ItemStack StrongerLevelLightSword = new ItemStack(Material.GOLDEN_SWORD);
+                    ItemMeta SLLS = StrongerLevelLightSword.getItemMeta();
+                    SLLS.setDisplayName(ChatColor.DARK_PURPLE + "" + ChatColor.BOLD + "Stronger Level Light Sword" + ChatColor.DARK_AQUA + " [Sword]");
+                    List<String> SLLL = new ArrayList<>();
+                    SLLL.add(ChatColor.YELLOW + "Level 3/5");
+                    SLLL.add(ChatColor.DARK_GREEN + "Can be leveled up!");
+                    SLLL.add(ChatColor.YELLOW + "" + ChatColor.BOLD + "Right Click" + ChatColor.GREEN + " Heal 5HP");
+                    SLLL.add(ChatColor.RED + "30sec Cooldown");
+                    SLLS.setLore(SLLL);
+                    SLLS.setUnbreakable(true);
+                    SLLS.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
+                    StrongerLevelLightSword.setItemMeta(SLLS);
+
+                    ItemStack StrongLevelLightSword = new ItemStack(Material.DIAMOND_SWORD);
+                    ItemMeta SSLLS = StrongerLevelLightSword.getItemMeta();
+                    SSLLS.setDisplayName(ChatColor.GOLD + "" + ChatColor.BOLD + "Strong Level Light Sword" + ChatColor.DARK_AQUA + " [Sword]");
+                    List<String> SSLLL = new ArrayList<>();
+                    SSLLL.add(ChatColor.GREEN + "Level 4/5");
+                    SSLLL.add(ChatColor.DARK_GREEN + "Can be leveled up!");
+                    SSLLL.add(ChatColor.YELLOW + "" + ChatColor.BOLD + "Right Click" + ChatColor.GREEN + " Heal 10HP");
+                    SSLLL.add(ChatColor.RED + "20sec Cooldown");
+                    SSLLS.setLore(SSLLL);
+                    SSLLS.setUnbreakable(true);
+                    SSLLS.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
+                    StrongerLevelLightSword.setItemMeta(SSLLS);
+
+                    ItemStack EliteLevelLightSword = new ItemStack(Material.NETHERITE_SWORD);
+                    ItemMeta ELLS = StrongerLevelLightSword.getItemMeta();
+                    ELLS.setDisplayName(ChatColor.GOLD + "" + ChatColor.LIGHT_PURPLE + "Elite Level Light Sword" + ChatColor.DARK_AQUA + " [Sword]");
+                    List<String> ELLL = new ArrayList<>();
+                    ELLL.add(ChatColor.DARK_GREEN + "Level 5/5");
+                    ELLL.add(ChatColor.YELLOW + "" + ChatColor.BOLD + "MAX LEVEL!");
+                    ELLL.add(ChatColor.YELLOW + "" + ChatColor.BOLD + "Right Click" + ChatColor.GREEN + " Heal 10HP");
+                    ELLL.add(ChatColor.GREEN + " Deal 5 damage to all things around you in a 10 block radius!");
+                    ELLL.add(ChatColor.RED + "20sec Cooldown");
+                    ELLS.setLore(ELLL);
+                    ELLS.setUnbreakable(true);
+                    ELLS.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
+                    StrongerLevelLightSword.setItemMeta(ELLS);
+
+
 
 
                     Guide.setItem(0, G1);
@@ -259,6 +302,9 @@ public class Book_Of_Items implements Listener {
                     Guide.setItem(29, LuvkyGem);
                     Guide.setItem(30, LowLevelLightSword);
                     Guide.setItem(31, WeakLevelLightSword);
+                    Guide.setItem(32, StrongerLevelLightSword);
+                    Guide.setItem(33, StrongLevelLightSword);
+                    Guide.setItem(34, EliteLevelLightSword);
 
 
                     Guide.setItem(18, G1);
