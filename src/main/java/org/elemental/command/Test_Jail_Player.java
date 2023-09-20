@@ -1,5 +1,6 @@
 package org.elemental.command;
 
+import net.milkbowl.vault.chat.Chat;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.command.Command;
@@ -38,10 +39,10 @@ public class Test_Jail_Player implements CommandExecutor {
         }
 
         team.setColor(ChatColor.GOLD);
-        team.setPrefix(" [Prisoner]");
+        team.setPrefix("[Prisoner] ");
         team.addEntry(player.getName());
 
-        sender.sendMessage("Player " + playerName + " is now a prisoner !.");
+        sender.sendMessage(ChatColor.GOLD + playerName + " is now a prisoner !.");
         return true;
     }
 }

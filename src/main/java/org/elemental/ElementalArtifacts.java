@@ -53,6 +53,7 @@ public final class ElementalArtifacts extends JavaPlugin implements Listener {
         getServer().getPluginManager().registerEvents(new God_Potion(), this);
         getServer().getPluginManager().registerEvents(new Clear_Ghoast_Items(), this);
         getServer().getPluginManager().registerEvents(new lucky_gem(), this);
+        getServer().getPluginManager().registerEvents(new Test_Jail_Listener(), this);
         registerCustomRecipes();
         registerCustom();
         registerCustomRecipesdouble();
