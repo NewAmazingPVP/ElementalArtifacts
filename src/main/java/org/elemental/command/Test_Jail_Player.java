@@ -53,7 +53,7 @@ public class Test_Jail_Player implements CommandExecutor {
 
             ItemStack chestplate = new ItemStack(Material.LEATHER_CHESTPLATE);
             LeatherArmorMeta chestplateMeta = (LeatherArmorMeta) chestplate.getItemMeta();
-            Color color = Color.fromRGB(255, 0, 0); // Red color
+            chestplateMeta.setColor(Color.fromRGB(255, 165, 0));
             chestplateMeta.setUnbreakable(true);
             chestplate.setItemMeta(chestplateMeta);
 
