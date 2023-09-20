@@ -17,7 +17,9 @@ public class Test_Jail_Listener implements Listener {
     public void onPlayerJoin(PlayerJoinEvent event) {
         Player player = event.getPlayer();
         if (player.getScoreboard().getEntryTeam(player.getName()).getName().equalsIgnoreCase("prisoner")) {
-            // Set the armor
+
+            player.sendMessage("you have ben arrested");
+
             ItemStack chestplate = new ItemStack(Material.LEATHER_CHESTPLATE);
             LeatherArmorMeta chestplateMeta = (LeatherArmorMeta) chestplate.getItemMeta();
             chestplateMeta.setColor(Color.ORANGE);
@@ -36,12 +38,13 @@ public class Test_Jail_Listener implements Listener {
             bootsMeta.setUnbreakable(true);
             boots.setItemMeta(bootsMeta);
 
-            player.getInventory().setArmorContents(new ItemStack[]{null, chestplate, leggings, boots});
-            player.getInventory().setHelmet(null);
 
-            // Apply slowness effect
-            PotionEffect slownessEffect = new PotionEffect(PotionEffectType.SLOW, 40, 1);
-            player.addPotionEffect(slownessEffect);
+            player.getInventory().setHelmet(null);
+            player.getInventory().setChestplate(chestplate);
+            player.getInventory().setLeggings(leggings);
+            player.getInventory().setBoots(boots);
+
+
         }
     }
 }
