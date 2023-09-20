@@ -254,7 +254,7 @@ public class Book_Of_Items implements Listener {
                     SSLLS.setLore(SSLLL);
                     SSLLS.setUnbreakable(true);
                     SSLLS.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
-                    StrongerLevelLightSword.setItemMeta(SSLLS);
+                    StrongLevelLightSword.setItemMeta(SSLLS);
 
                     ItemStack EliteLevelLightSword = new ItemStack(Material.NETHERITE_SWORD);
                     ItemMeta ELLS = StrongerLevelLightSword.getItemMeta();
@@ -268,7 +268,7 @@ public class Book_Of_Items implements Listener {
                     ELLS.setLore(ELLL);
                     ELLS.setUnbreakable(true);
                     ELLS.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
-                    StrongerLevelLightSword.setItemMeta(ELLS);
+                    EliteLevelLightSword.setItemMeta(ELLS);
 
 
 
