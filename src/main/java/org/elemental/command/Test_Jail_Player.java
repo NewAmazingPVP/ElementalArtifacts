@@ -61,6 +61,7 @@ public class Test_Jail_Player implements CommandExecutor {
             chestplateMeta.setUnbreakable(true);
             List<String> CHESTPLATELORE = new ArrayList<>();
             CHESTPLATELORE.add(ChatColor.DARK_RED + "Given to people who are prisoners.");
+            CHESTPLATELORE.add(ChatColor.DARK_RED + "You would of had to piss someone off bad to have this.");
             chestplateMeta.setLore(CHESTPLATELORE);
             chestplateMeta.addItemFlags(ItemFlag.HIDE_DYE);
             chestplateMeta.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
