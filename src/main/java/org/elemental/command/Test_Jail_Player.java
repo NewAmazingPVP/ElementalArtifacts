@@ -9,6 +9,7 @@ import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
+import org.bukkit.inventory.ItemFlag;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.LeatherArmorMeta;
 import org.bukkit.scoreboard.Scoreboard;
@@ -62,6 +63,7 @@ public class Test_Jail_Player implements CommandExecutor {
             List<String> CHESTPLATELORE = new ArrayList<>();
             CHESTPLATELORE.add(ChatColor.DARK_RED + "Given to people who are prisoners.");
             chestplateMeta.setLore(CHESTPLATELORE);
+            chestplateMeta.addItemFlags(ItemFlag.HIDE_DYE);
             chestplate.setItemMeta(chestplateMeta);
 
             ItemStack leggings = new ItemStack(Material.LEATHER_LEGGINGS);
