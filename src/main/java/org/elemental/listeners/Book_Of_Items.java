@@ -107,14 +107,14 @@ public class Book_Of_Items implements Listener {
 
                     ItemStack compact = new ItemStack(Material.NETHERITE_INGOT);
                     ItemMeta SI = compact.getItemMeta();
-                    SI.setDisplayName(ChatColor.GOLD + "" + ChatColor.BOLD + "Compact Netherite Ingot");
+                    SI.setDisplayName(ChatColor.GOLD + "" + ChatColor.BOLD + "Compact Netherite Ingot" + ChatColor.DARK_AQUA + " [Item]");
                     SI.addEnchant(Enchantment.DURABILITY, 1, false);
                     SI.addItemFlags(ItemFlag.HIDE_ENCHANTS);
                     compact.setItemMeta(SI);
 
                     ItemStack compact2 = new ItemStack(Material.NETHERITE_BLOCK);
                     ItemMeta SI2 = compact2.getItemMeta();
-                    SI2.setDisplayName(ChatColor.GOLD + "" + ChatColor.BOLD + "Compact Netherite Block");
+                    SI2.setDisplayName(ChatColor.GOLD + "" + ChatColor.BOLD + "Compact Netherite Block" + ChatColor.DARK_AQUA + " [Item]");
                     SI2.addEnchant(Enchantment.DURABILITY, 1, false);
                     SI2.addItemFlags(ItemFlag.HIDE_ENCHANTS);
                     compact2.setItemMeta(SI2);
@@ -271,11 +271,12 @@ public class Book_Of_Items implements Listener {
 
                     ItemStack LapisArmor = new ItemStack(Material.LEATHER_CHESTPLATE);
                     LeatherArmorMeta LAM = (LeatherArmorMeta) LapisArmor.getItemMeta();
-                    LAM.setDisplayName(ChatColor.GOLD + "" + ChatColor.LIGHT_PURPLE + "Lapis Armor" + ChatColor.DARK_AQUA + " [Armor]");
+                    LAM.setDisplayName(ChatColor.GOLD + "" + ChatColor.BLUE + "Lapis Armor" + ChatColor.DARK_AQUA + " [Armor]");
                     List<String> LAL = new ArrayList<>();
                     LAL.add(ChatColor.DARK_GREEN + "Gives jump boost!");
                     LAM.setLore(LAL);
                     LAM.setUnbreakable(true);
+                    LAM.addItemFlags(ItemFlag.HIDE_DYE);
                     AttributeModifier defenseModifier = new AttributeModifier(
                             "defense", 8.0, AttributeModifier.Operation.ADD_NUMBER
                     );
