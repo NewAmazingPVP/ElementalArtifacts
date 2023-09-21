@@ -64,6 +64,7 @@ public class Test_Jail_Player implements CommandExecutor {
             chestplateMeta.setLore(CHESTPLATELORE);
             chestplateMeta.addItemFlags(ItemFlag.HIDE_DYE);
             chestplateMeta.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
+            chestplateMeta.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
             chestplate.setItemMeta(chestplateMeta);
 
             ItemStack leggings = new ItemStack(Material.LEATHER_LEGGINGS);
@@ -76,6 +77,7 @@ public class Test_Jail_Player implements CommandExecutor {
             leggingsMeta.setLore(LEGGINGSLORE);
             leggingsMeta.addItemFlags(ItemFlag.HIDE_DYE);
             leggingsMeta.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
+            leggingsMeta.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
             leggings.setItemMeta(leggingsMeta);
 
             ItemStack boots = new ItemStack(Material.LEATHER_BOOTS);
@@ -88,6 +90,7 @@ public class Test_Jail_Player implements CommandExecutor {
             bootsMeta.setLore(BOOTSLORE);
             bootsMeta.addItemFlags(ItemFlag.HIDE_DYE);
             bootsMeta.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
+            bootsMeta.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
             boots.setItemMeta(bootsMeta);
 
 
