@@ -54,7 +54,6 @@ public class Test_Jail_Player implements CommandExecutor {
 
         if (player.getScoreboard().getEntryTeam(player.getName()).getName().equalsIgnoreCase("prisoner")) {
 
-
             ItemStack chestplate = new ItemStack(Material.LEATHER_CHESTPLATE);
             LeatherArmorMeta chestplateMeta = (LeatherArmorMeta) chestplate.getItemMeta();
             chestplateMeta.setDisplayName(ChatColor.GOLD + "" + ChatColor.BOLD + "Prisoner Jumpsuit");
@@ -64,6 +63,7 @@ public class Test_Jail_Player implements CommandExecutor {
             CHESTPLATELORE.add(ChatColor.DARK_RED + "Given to people who are prisoners.");
             chestplateMeta.setLore(CHESTPLATELORE);
             chestplateMeta.addItemFlags(ItemFlag.HIDE_DYE);
+            chestplateMeta.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
             chestplate.setItemMeta(chestplateMeta);
 
             ItemStack leggings = new ItemStack(Material.LEATHER_LEGGINGS);
@@ -74,6 +74,8 @@ public class Test_Jail_Player implements CommandExecutor {
             List<String> LEGGINGSLORE = new ArrayList<>();
             LEGGINGSLORE.add(ChatColor.DARK_RED + "Given to people who are prisoners.");
             leggingsMeta.setLore(LEGGINGSLORE);
+            leggingsMeta.addItemFlags(ItemFlag.HIDE_DYE);
+            leggingsMeta.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
             leggings.setItemMeta(leggingsMeta);
 
             ItemStack boots = new ItemStack(Material.LEATHER_BOOTS);
@@ -84,6 +86,8 @@ public class Test_Jail_Player implements CommandExecutor {
             List<String> BOOTSLORE = new ArrayList<>();
             BOOTSLORE.add(ChatColor.DARK_RED + "Given to people who are prisoners.");
             bootsMeta.setLore(BOOTSLORE);
+            bootsMeta.addItemFlags(ItemFlag.HIDE_DYE);
+            bootsMeta.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
             boots.setItemMeta(bootsMeta);
 
 
