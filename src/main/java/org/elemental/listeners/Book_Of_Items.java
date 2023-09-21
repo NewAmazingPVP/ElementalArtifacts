@@ -318,7 +318,7 @@ public class Book_Of_Items implements Listener {
                     Guide.setItem(32, StrongerLevelLightSword);
                     Guide.setItem(33, StrongLevelLightSword);
                     Guide.setItem(34, EliteLevelLightSword);
-                    Guide.setItem(37, EliteLevelLightSword);
+                    Guide.setItem(37, LapisArmor);
 
 
                     Guide.setItem(18, G1);
