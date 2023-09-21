@@ -46,26 +46,26 @@ public class Test_Jail_Player implements CommandExecutor {
         team.setPrefix("[Prisoner] ");
         team.addEntry(player.getName());
 
-        sender.sendMessage(ChatColor.GOLD + playerName + " is now a prisoner !.");
+        sender.sendMessage(ChatColor.GOLD + playerName + " is now a prisoner !");
 
         if (player.getScoreboard().getEntryTeam(player.getName()).getName().equalsIgnoreCase("prisoner")) {
 
 
             ItemStack chestplate = new ItemStack(Material.LEATHER_CHESTPLATE);
             LeatherArmorMeta chestplateMeta = (LeatherArmorMeta) chestplate.getItemMeta();
-            chestplateMeta.setColor(Color.fromRGB(255, 165, 0));
+            chestplateMeta.setColor(Color.fromRGB(255, 99, 9));
             chestplateMeta.setUnbreakable(true);
             chestplate.setItemMeta(chestplateMeta);
 
             ItemStack leggings = new ItemStack(Material.LEATHER_LEGGINGS);
             LeatherArmorMeta leggingsMeta = (LeatherArmorMeta) leggings.getItemMeta();
-            leggingsMeta.setColor(Color.ORANGE);
+            leggingsMeta.setColor(Color.fromRGB(255, 99, 9));
             leggingsMeta.setUnbreakable(true);
             leggings.setItemMeta(leggingsMeta);
 
             ItemStack boots = new ItemStack(Material.LEATHER_BOOTS);
             LeatherArmorMeta bootsMeta = (LeatherArmorMeta) boots.getItemMeta();
-            bootsMeta.setColor(Color.ORANGE);
+            bootsMeta.setColor(Color.fromRGB(255, 99, 9));
             bootsMeta.setUnbreakable(true);
             boots.setItemMeta(bootsMeta);
 
