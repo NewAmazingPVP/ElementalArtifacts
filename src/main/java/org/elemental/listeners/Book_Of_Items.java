@@ -257,7 +257,7 @@ public class Book_Of_Items implements Listener {
                     StrongLevelLightSword.setItemMeta(SSLLS);
 
                     ItemStack EliteLevelLightSword = new ItemStack(Material.NETHERITE_SWORD);
-                    ItemMeta ELLS = StrongerLevelLightSword.getItemMeta();
+                    ItemMeta ELLS = EliteLevelLightSword.getItemMeta();
                     ELLS.setDisplayName(ChatColor.GOLD + "" + ChatColor.LIGHT_PURPLE + "Elite Level Light Sword" + ChatColor.DARK_AQUA + " [Sword]");
                     List<String> ELLL = new ArrayList<>();
                     ELLL.add(ChatColor.DARK_GREEN + "Level 5/5");
@@ -269,6 +269,20 @@ public class Book_Of_Items implements Listener {
                     ELLS.setUnbreakable(true);
                     ELLS.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
                     EliteLevelLightSword.setItemMeta(ELLS);
+
+                    /*ItemStack LapisArmor = new ItemStack(Material.NETHERITE_SWORD);
+                    ItemMeta ELLS = StrongerLevelLightSword.getItemMeta();
+                    ELLS.setDisplayName(ChatColor.GOLD + "" + ChatColor.LIGHT_PURPLE + "Elite Level Light Sword" + ChatColor.DARK_AQUA + " [Sword]");
+                    List<String> ELLL = new ArrayList<>();
+                    ELLL.add(ChatColor.DARK_GREEN + "Level 5/5");
+                    ELLL.add(ChatColor.YELLOW + "" + ChatColor.BOLD + "MAX LEVEL!");
+                    ELLL.add(ChatColor.YELLOW + "" + ChatColor.BOLD + "Right Click" + ChatColor.GREEN + " Heal 10HP");
+                    ELLL.add(ChatColor.GREEN + " Deal 5 damage to all things around you in a 10 block radius!");
+                    ELLL.add(ChatColor.RED + "20sec Cooldown");
+                    ELLS.setLore(ELLL);
+                    ELLS.setUnbreakable(true);
+                    ELLS.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
+                    EliteLevelLightSword.setItemMeta(ELLS);*/
 
 
 
