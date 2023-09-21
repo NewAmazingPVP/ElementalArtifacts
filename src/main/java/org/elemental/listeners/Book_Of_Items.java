@@ -15,6 +15,7 @@ import org.bukkit.inventory.Inventory;
 import org.bukkit.inventory.ItemFlag;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
+import org.bukkit.inventory.meta.LeatherArmorMeta;
 import org.bukkit.inventory.meta.SkullMeta;
 
 import java.util.ArrayList;
@@ -214,7 +215,6 @@ public class Book_Of_Items implements Listener {
                     LLLL.add(ChatColor.DARK_GREEN + "Can be leveled up!");
                     LLLS.setLore(LLLL);
                     LLLS.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
-                    LLLS.setUnbreakable(true);
                     LowLevelLightSword.setItemMeta(LLLS);
 
                     ItemStack WeakLevelLightSword = new ItemStack(Material.IRON_SWORD);
@@ -226,7 +226,6 @@ public class Book_Of_Items implements Listener {
                     WLLL.add(ChatColor.YELLOW + "" + ChatColor.BOLD + "Right Click" + ChatColor.GREEN + " Heal 1HP");
                     WLLL.add(ChatColor.RED + "30sec Cooldown");
                     WLLS.setLore(WLLL);
-                    WLLS.setUnbreakable(true);
                     WLLS.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
                     WeakLevelLightSword.setItemMeta(WLLS);
 
@@ -270,19 +269,19 @@ public class Book_Of_Items implements Listener {
                     ELLS.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
                     EliteLevelLightSword.setItemMeta(ELLS);
 
-                    /*ItemStack LapisArmor = new ItemStack(Material.NETHERITE_SWORD);
-                    ItemMeta ELLS = StrongerLevelLightSword.getItemMeta();
-                    ELLS.setDisplayName(ChatColor.GOLD + "" + ChatColor.LIGHT_PURPLE + "Elite Level Light Sword" + ChatColor.DARK_AQUA + " [Sword]");
-                    List<String> ELLL = new ArrayList<>();
-                    ELLL.add(ChatColor.DARK_GREEN + "Level 5/5");
-                    ELLL.add(ChatColor.YELLOW + "" + ChatColor.BOLD + "MAX LEVEL!");
-                    ELLL.add(ChatColor.YELLOW + "" + ChatColor.BOLD + "Right Click" + ChatColor.GREEN + " Heal 10HP");
-                    ELLL.add(ChatColor.GREEN + " Deal 5 damage to all things around you in a 10 block radius!");
-                    ELLL.add(ChatColor.RED + "20sec Cooldown");
-                    ELLS.setLore(ELLL);
-                    ELLS.setUnbreakable(true);
-                    ELLS.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
-                    EliteLevelLightSword.setItemMeta(ELLS);*/
+                    ItemStack LapisArmor = new ItemStack(Material.LEATHER_CHESTPLATE);
+                    LeatherArmorMeta LAM = (LeatherArmorMeta) LapisArmor.getItemMeta();
+                    LAM.setDisplayName(ChatColor.GOLD + "" + ChatColor.LIGHT_PURPLE + "Lapis Armor" + ChatColor.DARK_AQUA + " [Armor]");
+                    List<String> LAL = new ArrayList<>();
+                    LAL.add(ChatColor.DARK_GREEN + "Gives jump boost!");
+                    LAM.setLore(LAL);
+                    LAM.setUnbreakable(true);
+                    AttributeModifier defenseModifier = new AttributeModifier(
+                            "defense", 8.0, AttributeModifier.Operation.ADD_NUMBER
+                    );
+                    LapisArmor.addAttributeModifier(Attribute.GENERIC_ARMOR, defenseModifier);
+                    LAM.setColor(Color.fromRGB(0, 0, 255));
+                    LapisArmor.setItemMeta(LAM);
 
 
 
@@ -319,6 +318,7 @@ public class Book_Of_Items implements Listener {
                     Guide.setItem(32, StrongerLevelLightSword);
                     Guide.setItem(33, StrongLevelLightSword);
                     Guide.setItem(34, EliteLevelLightSword);
+                    Guide.setItem(37, EliteLevelLightSword);
 
 
                     Guide.setItem(18, G1);
