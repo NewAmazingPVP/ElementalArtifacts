@@ -282,13 +282,13 @@ public class Book_Of_Items implements Listener {
                     LapisArmor.setItemMeta(LAM);
 
                     ItemStack BottleOfLight = new ItemStack(Material.EXPERIENCE_BOTTLE);
-                    ItemMeta BOLM = EliteLevelLightSword.getItemMeta();
+                    ItemMeta BOLM = BottleOfLight.getItemMeta();
                     BOLM.setDisplayName(ChatColor.GOLD + "" + ChatColor.BLUE + "Bottle Of Light" + ChatColor.DARK_AQUA + " [Item]");
                     List<String> BOLL = new ArrayList<>();
                     BOLL.add(ChatColor.DARK_GREEN + "Full of light.");
                     BOLM.setLore(BOLL);
                     BOLM.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
-                    LapisArmor.setItemMeta(BOLM);
+                    BottleOfLight.setItemMeta(BOLM);
 
                     ItemStack MoreToCome = new ItemStack(Material.GRAY_DYE);
                     ItemMeta MTC = MoreToCome.getItemMeta();
