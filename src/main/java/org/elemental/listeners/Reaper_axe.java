@@ -62,7 +62,7 @@ public class Reaper_axe implements Listener {
             ItemStack weapon = damagerPlayer.getInventory().getItemInMainHand();
             if (weapon != null && weapon.getItemMeta() != null && weapon.getItemMeta().getDisplayName() != null) {
                 if (weapon.getItemMeta().getDisplayName().equals(ChatColor.LIGHT_PURPLE + "" + ChatColor.BOLD + "Beheading Axe" + ChatColor.DARK_AQUA + " [Sword]")) {
-                    event.setDamage(10000000);
+                    /*event.setDamage(10000000);*/
                 }
             }
         }

@@ -35,6 +35,7 @@ public class Book_Of_Items_Give implements CommandExecutor {
 
 
         player.getInventory().addItem(teamsel);
+        player.playSound(player.getLocation(), "minecraft:block.enchantment_table.use", 1.0f, 1.0f);
         return true;
     }
 }

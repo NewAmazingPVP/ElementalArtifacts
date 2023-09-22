@@ -280,7 +280,7 @@ public class Book_Of_Items implements Listener {
                     AttributeModifier defenseModifier = new AttributeModifier(
                             "defense", 8.0, AttributeModifier.Operation.ADD_NUMBER
                     );
-                    LapisArmor.addAttributeModifier(Attribute.GENERIC_ARMOR, defenseModifier);
+                    LAM.addAttributeModifier(Attribute.GENERIC_ARMOR, defenseModifier);
                     LAM.setColor(Color.fromRGB(0, 0, 255));
                     LapisArmor.setItemMeta(LAM);
 
