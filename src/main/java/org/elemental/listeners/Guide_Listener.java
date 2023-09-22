@@ -25,7 +25,7 @@ public class Guide_Listener implements Listener {
                 return;
             }
 
-            if (event.getCurrentItem().getType() == Material.CRAFTING_TABLE) {
+            if (event.getCurrentItem().getDisplayName().equalsIgnoreCase(ChatColor.DARK_AQUA + "" + ChatColor.BOLD + "Crafting Recipes") && event.getCurrentItem().getType() == Material.CRAFTING_TABLE) {
                 Player player = (Player) event.getView().getPlayer();
                 player.playSound(player.getLocation(), "minecraft:block.enchantment_table.use", 1.0f, 2.0f);
                 Inventory Guide = Bukkit.createInventory(player, 36, ChatColor.DARK_PURPLE + "" + ChatColor.BOLD + "Crafting Recipes");
@@ -117,7 +117,7 @@ public class Guide_Listener implements Listener {
 
             }
 
-            if (event.getCurrentItem().getType() == Material.END_CRYSTAL) {
+            if (event.getCurrentItem().getDisplayName().equalsIgnoreCase(ChatColor.DARK_AQUA + "" + ChatColor.BOLD + "Class") && event.getCurrentItem().getType() == Material.END_CRYSTAL) {
                 Player player = (Player) event.getView().getPlayer();
                 player.playSound(player.getLocation(), "minecraft:block.enchantment_table.use", 1.0f, 2.0f);
                 Inventory Guide = Bukkit.createInventory(player, 27, ChatColor.AQUA + "" + ChatColor.BOLD + "Class");
@@ -193,7 +193,7 @@ public class Guide_Listener implements Listener {
 
 
             }
-            if (event.getCurrentItem().getType() == Material.BEACON) {
+            if (event.getCurrentItem().getDisplayName().equalsIgnoreCase(ChatColor.DARK_AQUA + "" + ChatColor.BOLD + "Skill Points") && event.getCurrentItem().getType() == Material.BEACON) {
                 Player player = (Player) event.getView().getPlayer();
                 player.playSound(player.getLocation(), "minecraft:block.enchantment_table.use", 1.0f, 2.0f);
                 Inventory Guide = Bukkit.createInventory(player, 27, ChatColor.LIGHT_PURPLE + "" + ChatColor.BOLD + "Skill Points");
@@ -279,7 +279,7 @@ public class Guide_Listener implements Listener {
 
 
             }
-            if (event.getCurrentItem().getType() == Material.PAPER) {
+            if (event.getCurrentItem().getDisplayName().equalsIgnoreCase(ChatColor.DARK_AQUA + "" + ChatColor.BOLD + "Info") && event.getCurrentItem().getType() == Material.PAPER) {
                 Player player = (Player) event.getView().getPlayer();
                 player.playSound(player.getLocation(), "minecraft:block.enchantment_table.use", 1.0f, 2.0f);
                 Inventory Guide = Bukkit.createInventory(player, 27, ChatColor.BLUE + "" + ChatColor.BOLD + "Info");
@@ -359,7 +359,7 @@ public class Guide_Listener implements Listener {
 
             }
 
-            if (event.getCurrentItem().getType() == Material.BARRIER) {
+            if (event.getCurrentItem().getDisplayName().equalsIgnoreCase(ChatColor.RED + "Close") && event.getCurrentItem().getType() == Material.BARRIER) {
                 Player player = (Player) event.getView().getPlayer();
                 player.playSound(player.getLocation(), "minecraft:block.enchantment_table.use", 1.0f, 2.0f);
                 player.closeInventory();
