@@ -257,7 +257,7 @@ public class Book_Of_Items implements Listener {
 
                     ItemStack EliteLevelLightSword = new ItemStack(Material.NETHERITE_SWORD);
                     ItemMeta ELLS = EliteLevelLightSword.getItemMeta();
-                    ELLS.setDisplayName(ChatColor.GOLD + "" + ChatColor.LIGHT_PURPLE + "Elite Level Light Sword" + ChatColor.DARK_AQUA + " [Sword]");
+                    ELLS.setDisplayName(ChatColor.BOLD + "" + ChatColor.LIGHT_PURPLE + "Elite Level Light Sword" + ChatColor.DARK_AQUA + " [Sword]");
                     List<String> ELLL = new ArrayList<>();
                     ELLL.add(ChatColor.DARK_GREEN + "Level 5/5");
                     ELLL.add(ChatColor.YELLOW + "" + ChatColor.BOLD + "MAX LEVEL!");
@@ -280,6 +280,11 @@ public class Book_Of_Items implements Listener {
                     LAM.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
                     LAM.setColor(Color.fromRGB(0, 0, 255));
                     LapisArmor.setItemMeta(LAM);
+
+                    ItemStack MoreToCome = new ItemStack(Material.GRAY_DYE);
+                    ItemMeta MTC = MoreToCome.getItemMeta();
+                    MTC.setDisplayName(ChatColor.GOLD + "" + ChatColor.GREEN + ">>> More To Come <<<");
+                    MoreToCome.setItemMeta(MTC);
 
 
 
@@ -317,6 +322,7 @@ public class Book_Of_Items implements Listener {
                     Guide.setItem(33, StrongLevelLightSword);
                     Guide.setItem(34, EliteLevelLightSword);
                     Guide.setItem(37, LapisArmor);
+                    Guide.setItem(38, MoreToCome);
 
 
                     Guide.setItem(18, G1);
