@@ -271,7 +271,7 @@ public class Book_Of_Items implements Listener {
 
                     ItemStack LapisArmor = new ItemStack(Material.LEATHER_CHESTPLATE);
                     LeatherArmorMeta LAM = (LeatherArmorMeta) LapisArmor.getItemMeta();
-                    LAM.setDisplayName(ChatColor.GOLD + "" + ChatColor.BOLD + "Lapis Armor" + ChatColor.DARK_AQUA + " [Armor]");
+                    LAM.setDisplayName(ChatColor.BLUE + "" + ChatColor.BOLD + "Lapis Armor" + ChatColor.DARK_AQUA + " [Armor]");
                     List<String> LAL = new ArrayList<>();
                     LAL.add(ChatColor.DARK_GREEN + "Gives jump boost!");
                     LAM.setLore(LAL);
@@ -283,7 +283,7 @@ public class Book_Of_Items implements Listener {
 
                     ItemStack BottleOfLight = new ItemStack(Material.EXPERIENCE_BOTTLE);
                     ItemMeta BOLM = BottleOfLight.getItemMeta();
-                    BOLM.setDisplayName(ChatColor.GOLD + "" + ChatColor.BLUE + "Bottle Of Light" + ChatColor.DARK_AQUA + " [Item]");
+                    BOLM.setDisplayName(ChatColor.DARK_PURPLE + "" + ChatColor.BOLD + "Bottle Of Light" + ChatColor.DARK_AQUA + " [Item]");
                     List<String> BOLL = new ArrayList<>();
                     BOLL.add(ChatColor.DARK_GREEN + "Full of light.");
                     BOLM.setLore(BOLL);
