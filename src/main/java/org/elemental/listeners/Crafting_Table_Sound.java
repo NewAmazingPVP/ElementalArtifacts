@@ -12,6 +12,6 @@ public class Crafting_Table_Sound implements Listener {
     @EventHandler
     public void onCraft(CraftItemEvent event) {
         Player player = (Player) event.getWhoClicked();
-        player.playSound(player.getLocation(), Sound.BLOCK_NOTE_BLOCK_PLING, 1.0f, 1.0f);
+        player.playSound(player.getLocation(), Sound.BLOCK_NOTE_BLOCK_PLING, 1.0f, 2.0f);
     }
 }
