@@ -105,8 +105,8 @@ public class Info_Listener implements Listener {
 
 
             }
-
+            event.setCancelled(true);
         }
-        event.setCancelled(true);
+
     }
 }
