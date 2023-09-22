@@ -283,7 +283,7 @@ public class Book_Of_Items implements Listener {
 
                     ItemStack MoreToCome = new ItemStack(Material.GRAY_DYE);
                     ItemMeta MTC = MoreToCome.getItemMeta();
-                    MTC.setDisplayName(ChatColor.GOLD + "" + ChatColor.GREEN + ">>> More To Come <<<");
+                    MTC.setDisplayName(ChatColor.BOLD + "" + ChatColor.GREEN + ">>> More To Come <<<");
                     MoreToCome.setItemMeta(MTC);
 
 
