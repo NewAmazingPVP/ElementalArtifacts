@@ -25,13 +25,13 @@ public class SkillMenu_listener implements Listener {
                 return;
             }
 
-            if (event.getCurrentItem().getType() == Material.BARRIER) {
+            if (event.getCurrentItem().getDisplayName().equalsIgnoreCase(ChatColor.RED + "Close") && event.getCurrentItem().getType() == Material.ARROW) {
                 Player player = (Player) event.getView().getPlayer();
                 player.playSound(player.getLocation(), "minecraft:block.enchantment_table.use", 1.0f, 2.0f);
                 player.closeInventory();
 
             }
-            if (event.getCurrentItem().getType() == Material.ARROW) {
+            if (event.getCurrentItem().getDisplayName().equalsIgnoreCase(ChatColor.RED + "Back") && event.getCurrentItem().getType() == Material.ARROW) {
                 Player player = (Player) event.getView().getPlayer();
                 player.playSound(player.getLocation(), "minecraft:block.enchantment_table.use", 1.0f, 2.0f);
                 Inventory Guide = Bukkit.createInventory(player, 27, ChatColor.GOLD + "" + ChatColor.BOLD + "Elemental Artifacts Guide");
