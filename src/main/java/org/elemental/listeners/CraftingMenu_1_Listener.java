@@ -103,9 +103,14 @@ public class CraftingMenu_1_Listener implements Listener {
                 player.openInventory(Guide);
 
 
+            }
+            if (event.getCurrentItem().getType() == Material.DIAMOND_CHESTPLATE) {
+                Player player = (Player) event.getView().getPlayer();
+                player.playSound(player.getLocation(), "minecraft:block.enchantment_table.use", 1.0f, 2.0f);
+                player.closeInventory();
 
             }
-            event.setCancelled(true);
         }
+        event.setCancelled(true);
     }
 }
