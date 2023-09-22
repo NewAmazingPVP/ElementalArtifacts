@@ -110,7 +110,9 @@ public class CraftingMenu_1_Listener implements Listener {
                 player.closeInventory();
 
             }
+
         }
         event.setCancelled(true);
+        
     }
 }
