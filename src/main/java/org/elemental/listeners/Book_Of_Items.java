@@ -257,7 +257,7 @@ public class Book_Of_Items implements Listener {
 
                     ItemStack EliteLevelLightSword = new ItemStack(Material.NETHERITE_SWORD);
                     ItemMeta ELLS = EliteLevelLightSword.getItemMeta();
-                    ELLS.setDisplayName(ChatColor.BOLD + "" + ChatColor.LIGHT_PURPLE + "Elite Level Light Sword" + ChatColor.DARK_AQUA + " [Sword]");
+                    ELLS.setDisplayName(ChatColor.LIGHT_PURPLE + "" + ChatColor.BOLD + "Elite Level Light Sword" + ChatColor.DARK_AQUA + " [Sword]");
                     List<String> ELLL = new ArrayList<>();
                     ELLL.add(ChatColor.DARK_GREEN + "Level 5/5");
                     ELLL.add(ChatColor.YELLOW + "" + ChatColor.BOLD + "MAX LEVEL!");
@@ -271,7 +271,7 @@ public class Book_Of_Items implements Listener {
 
                     ItemStack LapisArmor = new ItemStack(Material.LEATHER_CHESTPLATE);
                     LeatherArmorMeta LAM = (LeatherArmorMeta) LapisArmor.getItemMeta();
-                    LAM.setDisplayName(ChatColor.GOLD + "" + ChatColor.BLUE + "Lapis Armor" + ChatColor.DARK_AQUA + " [Armor]");
+                    LAM.setDisplayName(ChatColor.GOLD + "" + ChatColor.BOLD + "Lapis Armor" + ChatColor.DARK_AQUA + " [Armor]");
                     List<String> LAL = new ArrayList<>();
                     LAL.add(ChatColor.DARK_GREEN + "Gives jump boost!");
                     LAM.setLore(LAL);
@@ -280,6 +280,15 @@ public class Book_Of_Items implements Listener {
                     LAM.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
                     LAM.setColor(Color.fromRGB(0, 0, 255));
                     LapisArmor.setItemMeta(LAM);
+
+                    ItemStack BottleOfLight = new ItemStack(Material.EXPERIENCE_BOTTLE);
+                    ItemMeta BOLM = EliteLevelLightSword.getItemMeta();
+                    BOLM.setDisplayName(ChatColor.GOLD + "" + ChatColor.BLUE + "Bottle Of Light" + ChatColor.DARK_AQUA + " [Item]");
+                    List<String> BOLL = new ArrayList<>();
+                    BOLL.add(ChatColor.DARK_GREEN + "Full of light.");
+                    BOLM.setLore(BOLL);
+                    BOLM.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
+                    LapisArmor.setItemMeta(BOLM);
 
                     ItemStack MoreToCome = new ItemStack(Material.GRAY_DYE);
                     ItemMeta MTC = MoreToCome.getItemMeta();
@@ -322,7 +331,8 @@ public class Book_Of_Items implements Listener {
                     Guide.setItem(33, StrongLevelLightSword);
                     Guide.setItem(34, EliteLevelLightSword);
                     Guide.setItem(37, LapisArmor);
-                    Guide.setItem(38, MoreToCome);
+                    Guide.setItem(38, BottleOfLight);
+                    Guide.setItem(39, MoreToCome);
 
 
                     Guide.setItem(18, G1);
