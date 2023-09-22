@@ -277,10 +277,7 @@ public class Book_Of_Items implements Listener {
                     LAM.setLore(LAL);
                     LAM.setUnbreakable(true);
                     LAM.addItemFlags(ItemFlag.HIDE_DYE);
-                    AttributeModifier defenseModifier = new AttributeModifier(
-                            "defense", 8.0, AttributeModifier.Operation.ADD_NUMBER
-                    );
-                    LAM.addAttributeModifier(Attribute.GENERIC_ARMOR, defenseModifier);
+                    LAM.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
                     LAM.setColor(Color.fromRGB(0, 0, 255));
                     LapisArmor.setItemMeta(LAM);
 

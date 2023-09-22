@@ -13,7 +13,7 @@ public class Anti_Block_Place_Listener implements Listener {
         ItemStack item = event.getItemInHand();
         ItemMeta meta = item.getItemMeta();
 
-        if (meta != null && meta.hasDisplayName() && meta.getDisplayName().equals(ChatColor.GOLD + "" + ChatColor.BOLD + "Compact Netherite Block")) {
+        if (meta != null && meta.hasDisplayName() && meta.getDisplayName().equals(ChatColor.GOLD + "" + ChatColor.BOLD + "Compact Netherite Block" + ChatColor.DARK_AQUA + " [Item]")) {
             event.setCancelled(true);
         }
     }
