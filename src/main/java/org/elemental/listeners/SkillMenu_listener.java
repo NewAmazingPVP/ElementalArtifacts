@@ -25,7 +25,7 @@ public class SkillMenu_listener implements Listener {
                 return;
             }
 
-            if (event.getCurrentItem().getDisplayName().equalsIgnoreCase(ChatColor.RED + "Close") && event.getCurrentItem().getType() == Material.ARROW) {
+            if (event.getCurrentItem().getDisplayName().equalsIgnoreCase(ChatColor.RED + "Close") && event.getCurrentItem().getType() == Material.BARRIER) {
                 Player player = (Player) event.getView().getPlayer();
                 player.playSound(player.getLocation(), "minecraft:block.enchantment_table.use", 1.0f, 2.0f);
                 player.closeInventory();
