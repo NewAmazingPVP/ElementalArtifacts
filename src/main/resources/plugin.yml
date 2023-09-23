@@ -39,3 +39,6 @@ commands:
   givegoldcoveredmeat:
     description: Gives you gold covered meat test
     usage: /givegoldcoveredmeat
+  netherite_leather:
+    description: Gives leather armor with the stats of netherite
+    usage: /netherite_leather

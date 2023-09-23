@@ -34,6 +34,7 @@ public final class ElementalArtifacts extends JavaPlugin implements Listener {
         getCommand("giveluckygem").setExecutor(new Temp_give_lucky_gem());
         getCommand("setprisoner").setExecutor(new Test_Jail_Player());
         getCommand("givegoldcoveredmeat").setExecutor(new Temp_give_goldcoveredmeat());
+        getCommand("netherite_leather").setExecutor(new Netherite_Leather_XD());
         getServer().getPluginManager().registerEvents(this, this);
         getServer().getPluginManager().registerEvents(new PlayerJoin(), this);
         getServer().getPluginManager().registerEvents(new Reaper_axe(), this);
