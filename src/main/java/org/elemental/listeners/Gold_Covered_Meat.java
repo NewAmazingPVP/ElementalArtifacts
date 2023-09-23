@@ -1,33 +1,28 @@
 package org.elemental.listeners;
-import org.bukkit.ChatColor;
+
 import org.bukkit.Material;
+import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
+import org.bukkit.event.block.Action;
 import org.bukkit.event.player.PlayerInteractEvent;
 import org.bukkit.inventory.ItemStack;
-import org.bukkit.inventory.meta.ItemMeta;
-import org.bukkit.entity.Player;
 
 public class Gold_Covered_Meat implements Listener {
 
     @EventHandler
     public void onPlayerInteract(PlayerInteractEvent event) {
-        if (event.getAction().name().contains("RIGHT")) {  // Check if right-click
-            Player player = event.getPlayer();
-            ItemStack item = event.getItem();
-            if (item != null && item.getType() != Material.COOKED_MUTTON) {
-                ItemMeta meta = item.getItemMeta();
-                if (meta != null && meta.hasDisplayName() && meta.getDisplayName().equals(ChatColor.GOLD + "" + ChatColor.BOLD + "Gold Covered Meat" + ChatColor.DARK_AQUA + " [Food]")) {
-                    ItemStack[] inventory = player.getInventory().getContents();
-                    if (player.getInventory().getItemInMainHand().getType() == Material.COOKED_MUTTON) {
-                        if (player.getInventory().getItemInMainHand().getAmount() > 1) {
-                            player.getInventory().getItemInMainHand().setAmount(player.getInventory().getItemInMainHand().getAmount() - 1);
-                        } else {
-                            player.getInventory().setItemInMainHand(null);
+        Player player = event.getPlayer();
+        ItemStack item = player.getInventory().getItemInMainHand();
 
-                        }
-                        player.sendMessage(ChatColor.GREEN + "lololololol");
-                    }
+        if (event.getAction() == Action.RIGHT_CLICK_AIR || event.getAction() == Action.RIGHT_CLICK_BLOCK) {
+            if (item.getType() == Material.COOKED_MUTTON && item.hasItemMeta() && item.getItemMeta().hasDisplayName()
+                    && item.getItemMeta().getDisplayName().equals("11111111111111")) {
+                if (item.getAmount() > 1) {
+                    item.setAmount(item.getAmount() - 1);
+                    player.getInventory().setItemInMainHand(item);
+                } else {
+                    player.getInventory().setItemInMainHand(null);
                 }
             }
         }
