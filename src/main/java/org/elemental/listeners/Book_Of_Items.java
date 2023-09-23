@@ -300,6 +300,16 @@ public class Book_Of_Items implements Listener {
                     RSM.addItemFlags(ItemFlag.HIDE_ENCHANTS);
                     ReaperSoul.setItemMeta(RSM);
 
+                    ItemStack goldcoveredmeat = new ItemStack(Material.CHARCOAL);
+                    ItemMeta GCMM = goldcoveredmeat.getItemMeta();
+                    GCMM.setDisplayName(ChatColor.GOLD + "" + ChatColor.BOLD + "Gold Covered Meat" + ChatColor.DARK_AQUA + " [Food]");
+                    List<String> GCML = new ArrayList<>();
+                    GCML.add(ChatColor.GOLD + "Can me eaten instantly!");
+                    GCMM.setLore(GCML);
+                    GCMM.addEnchant(Enchantment.DURABILITY, 1, false);
+                    GCMM.addItemFlags(ItemFlag.HIDE_ENCHANTS);
+                    goldcoveredmeat.setItemMeta(GCMM);
+
 
                     ItemStack MoreToCome = new ItemStack(Material.GRAY_DYE);
                     ItemMeta MTC = MoreToCome.getItemMeta();
@@ -344,7 +354,8 @@ public class Book_Of_Items implements Listener {
                     Guide.setItem(37, LapisArmor);
                     Guide.setItem(38, BottleOfLight);
                     Guide.setItem(39, ReaperSoul);
-                    Guide.setItem(40, MoreToCome);
+                    Guide.setItem(40, goldcoveredmeat);
+                    Guide.setItem(41, MoreToCome);
 
 
                     Guide.setItem(18, G1);
