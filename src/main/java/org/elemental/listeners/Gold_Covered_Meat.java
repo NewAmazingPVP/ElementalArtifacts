@@ -27,5 +27,23 @@ public class Gold_Covered_Meat implements Listener {
                 }
             }
         }
-    }
-}
+                ItemStack mainHandItem = player.getInventory().getItemInMainHand();
+                ItemStack offHandItem = player.getInventory().getItemInOffHand();
+
+                if (event.getAction() == Action.RIGHT_CLICK_AIR || event.getAction() == Action.RIGHT_CLICK_BLOCK) {
+                    if (offHandItem.getType() == Material.COOKED_MUTTON && offHandItem.hasItemMeta() && offHandItem.getItemMeta().hasDisplayName()
+                            && offHandItem.getItemMeta().getDisplayName().equals(ChatColor.GOLD + "" + ChatColor.BOLD + "Gold Covered Meat" + ChatColor.DARK_AQUA + " [Food]")) {
+                        if (offHandItem.getAmount() > 1) {
+                            offHandItem.setAmount(offHandItem.getAmount() - 1);
+                            player.getInventory().setItemInOffHand(offHandItem);
+                        } else {
+                            player.getInventory().setItemInOffHand(null);
+                        }
+                    }
+                }
+            }
+        }
+
+
+
+
