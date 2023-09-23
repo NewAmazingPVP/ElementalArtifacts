@@ -117,12 +117,39 @@ public class CraftingMenu_1_Listener implements Listener {
             if (event.getCurrentItem().getDisplayName().equalsIgnoreCase(ChatColor.DARK_BLUE + "" + ChatColor.BOLD + "Magic") && event.getCurrentItem().getType() == Material.STICK) {
                 Player player = (Player) event.getView().getPlayer();
                 player.playSound(player.getLocation(), "minecraft:block.enchantment_table.use", 1.0f, 2.0f);
-                Inventory Magic = Bukkit.createInventory(player, 27, ChatColor.BLUE + "" + ChatColor.BOLD + "Magic Recipes");
+                Inventory Magic = Bukkit.createInventory(player, 27, ChatColor.DARK_BLUE + "" + ChatColor.BOLD + "Magic Recipes");
 
 
 
                 player.openInventory(Magic);
 
+            }
+
+            if (event.getCurrentItem().getDisplayName().equalsIgnoreCase(ChatColor.GOLD + "" + ChatColor.BOLD + "Materials") && event.getCurrentItem().getType() == Material.NETHERITE_INGOT) {
+                Player player = (Player) event.getView().getPlayer();
+                player.playSound(player.getLocation(), "minecraft:block.enchantment_table.use", 1.0f, 2.0f);
+                Inventory Materials = Bukkit.createInventory(player, 27, ChatColor.GOLD + "" + ChatColor.BOLD + "Materials Recipes");
+
+
+                player.openInventory(Materials);
+            }
+
+            if (event.getCurrentItem().getDisplayName().equalsIgnoreCase(ChatColor.AQUA + "" + ChatColor.BOLD + "Miscellaneous") && event.getCurrentItem().getType() == Material.CLOCK) {
+                Player player = (Player) event.getView().getPlayer();
+                player.playSound(player.getLocation(), "minecraft:block.enchantment_table.use", 1.0f, 2.0f);
+                Inventory Miscellaneous = Bukkit.createInventory(player, 27, ChatColor.AQUA + "" + ChatColor.BOLD + "Miscellaneous Recipes");
+
+
+                player.openInventory(Miscellaneous);
+            }
+
+            if (event.getCurrentItem().getDisplayName().equalsIgnoreCase(ChatColor.RED + "" + ChatColor.BOLD + "Weapons") && event.getCurrentItem().getType() == Material.DIAMOND_SWORD) {
+                Player player = (Player) event.getView().getPlayer();
+                player.playSound(player.getLocation(), "minecraft:block.enchantment_table.use", 1.0f, 2.0f);
+                Inventory Weapons = Bukkit.createInventory(player, 27, ChatColor.RED + "" + ChatColor.BOLD + "Weapons Recipes");
+
+
+                player.openInventory(Weapons);
             }
             event.setCancelled(true);
 
