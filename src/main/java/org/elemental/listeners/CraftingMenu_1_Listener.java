@@ -104,10 +104,23 @@ public class CraftingMenu_1_Listener implements Listener {
 
 
             }
+            if (event.getCurrentItem().getDisplayName().equalsIgnoreCase(ChatColor.GREEN + "" + ChatColor.BOLD + "Armor") && event.getCurrentItem().getType() == Material.DIAMOND_CHESTPLATE) {
+                Player player = (Player) event.getView().getPlayer();
+                player.playSound(player.getLocation(), "minecraft:block.enchantment_table.use", 1.0f, 2.0f);
+                Inventory Guide = Bukkit.createInventory(player, 27, ChatColor.GREEN + "" + ChatColor.BOLD + "Armor Recipes");
+
+
+            }
+            if (event.getCurrentItem().getDisplayName().equalsIgnoreCase(ChatColor.DARK_BLUE + "" + ChatColor.BOLD + "Magic") && event.getCurrentItem().getType() == Material.STICK) {
+                Player player = (Player) event.getView().getPlayer();
+                player.playSound(player.getLocation(), "minecraft:block.enchantment_table.use", 1.0f, 2.0f);
+                Inventory Guide = Bukkit.createInventory(player, 27, ChatColor.BLUE + "" + ChatColor.BOLD + "Magic Recipes");
+
 
             }
             event.setCancelled(true);
+
         }
-
-
     }
+}
+
