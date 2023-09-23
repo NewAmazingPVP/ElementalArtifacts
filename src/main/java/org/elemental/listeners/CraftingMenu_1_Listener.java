@@ -130,6 +130,17 @@ public class CraftingMenu_1_Listener implements Listener {
                 player.playSound(player.getLocation(), "minecraft:block.enchantment_table.use", 1.0f, 2.0f);
                 Inventory Materials = Bukkit.createInventory(player, 27, ChatColor.GOLD + "" + ChatColor.BOLD + "Materials Recipes");
 
+                ItemStack Mixedeye = new ItemStack(Material.ENDER_EYE);
+                ItemMeta MEYEM = Mixedeye.getItemMeta();
+                MEYEM.setDisplayName(ChatColor.BLUE + "" + ChatColor.BOLD + "Mixed Eye" + ChatColor.DARK_AQUA + " [Item]");
+                List<String> MEM = new ArrayList<>();
+                MEM.add(ChatColor.DARK_PURPLE + "Crafted from the Fear Mongerer Eye." + ChatColor.DARK_RED + "ITEM NOT DONE");
+                MEYEM.setLore(MEM);
+                MEYEM.addEnchant(Enchantment.DURABILITY, 1, false);
+                MEYEM.addItemFlags(ItemFlag.HIDE_ENCHANTS);
+                Mixedeye.setItemMeta(MEYEM);
+
+                Materials.setItem(10, Mixedeye);
 
                 player.openInventory(Materials);
             }
