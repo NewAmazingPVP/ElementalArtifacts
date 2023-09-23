@@ -19,18 +19,14 @@ public class Gold_Covered_Meat implements Listener {
                 ItemMeta meta = item.getItemMeta();
                 if (meta != null && meta.hasDisplayName() && meta.getDisplayName().equals(ChatColor.GOLD + "" + ChatColor.BOLD + "Gold Covered Meat" + ChatColor.DARK_AQUA + " [Food]")) {
                     ItemStack[] inventory = player.getInventory().getContents();
-                    for (int i = 0; i < inventory.length; i++) {
-                        ItemStack stack = inventory[i];
-                        if (stack != null && stack.isSimilar(item)) {
-                            int amount = stack.getAmount();
-                            if (amount > 1) {
-                                stack.setAmount(amount - 1);
-                            } else {
-                                player.getInventory().setItem(i, null);
-                            }
-                            player.sendMessage(ChatColor.GREEN + "lololololol");
-                            break;
+                    if (player.getInventory().getItemInMainHand().getType() == Material.COOKED_MUTTON) {
+                        if (player.getInventory().getItemInMainHand().getAmount() > 1) {
+                            player.getInventory().getItemInMainHand().setAmount(player.getInventory().getItemInMainHand().getAmount() - 1);
+                        } else {
+                            player.getInventory().setItemInMainHand(null);
+
                         }
+                        player.sendMessage(ChatColor.GREEN + "lololololol");
                     }
                 }
             }
