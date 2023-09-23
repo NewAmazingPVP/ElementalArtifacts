@@ -128,7 +128,8 @@ public class Book_Of_Items implements Listener {
                     BIM.addEnchant(Enchantment.BINDING_CURSE, 1, false);
                     BIM.addItemFlags(ItemFlag.HIDE_ENCHANTS);
                     BIM.setUnbreakable(true);
-                    BIM.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
+                    BIM.addItemFlags(ItemFlag.HIDE_ATTRIBUTES, ItemFlag.HIDE_POTION_EFFECTS);
+
                     bindingchest.setItemMeta(BIM);
 
                     ItemStack fearmongerperl = new ItemStack(Material.ENDER_PEARL);
