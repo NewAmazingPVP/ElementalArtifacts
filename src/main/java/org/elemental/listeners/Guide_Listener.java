@@ -70,7 +70,7 @@ public class Guide_Listener implements Listener {
 
                 ItemStack Weapons = new ItemStack(Material.DIAMOND_SWORD);
                 ItemMeta WWM = Weapons.getItemMeta();
-                WWM.setDisplayName(ChatColor.RED + "Weapons");
+                WWM.setDisplayName(ChatColor.RED + "" + ChatColor.BOLD + "Weapons");
                 WWM.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
                 Weapons.setItemMeta(WWM);
 
