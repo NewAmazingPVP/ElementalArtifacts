@@ -20,6 +20,7 @@ public class Gold_Covered_Meat implements Listener {
             if (item.getType() == Material.COOKED_MUTTON && item.hasItemMeta() && item.getItemMeta().hasDisplayName()
                     && item.getItemMeta().getDisplayName().equals(ChatColor.GOLD + "" + ChatColor.BOLD + "Gold Covered Meat" + ChatColor.DARK_AQUA + " [Food]")) {
                 player.sendMessage("testmain");
+                event.setCancelled(true);
                 if (item.getAmount() > 1) {
                     item.setAmount(item.getAmount() - 1);
                     player.getInventory().setItemInMainHand(item);
@@ -35,6 +36,7 @@ public class Gold_Covered_Meat implements Listener {
                     if (offHandItem.getType() == Material.COOKED_MUTTON && offHandItem.hasItemMeta() && offHandItem.getItemMeta().hasDisplayName()
                             && offHandItem.getItemMeta().getDisplayName().equals(ChatColor.GOLD + "" + ChatColor.BOLD + "Gold Covered Meat" + ChatColor.DARK_AQUA + " [Food]")) {
                         player.sendMessage("testoff");
+                        event.setCancelled(true);
                         if (offHandItem.getAmount() > 1) {
                             offHandItem.setAmount(offHandItem.getAmount() - 1);
                             player.getInventory().setItemInOffHand(offHandItem);
