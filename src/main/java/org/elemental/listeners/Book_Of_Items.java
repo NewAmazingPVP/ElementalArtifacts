@@ -290,6 +290,17 @@ public class Book_Of_Items implements Listener {
                     BOLM.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
                     BottleOfLight.setItemMeta(BOLM);
 
+                    ItemStack ReaperSoul = new ItemStack(Material.CHARCOAL);
+                    ItemMeta RSM = ReaperSoul.getItemMeta();
+                    RSM.setDisplayName(ChatColor.GOLD + "" + ChatColor.BOLD + "Reaper Soul" + ChatColor.DARK_AQUA + " [Item]");
+                    List<String> RSL = new ArrayList<>();
+                    RSL.add(ChatColor.BLACK + "This item is made of nothing but dark matter.");
+                    RSM.setLore(RSL);
+                    RSM.addEnchant(Enchantment.DURABILITY, 1, false);
+                    RSM.addItemFlags(ItemFlag.HIDE_ENCHANTS);
+                    ReaperSoul.setItemMeta(RSM);
+
+
                     ItemStack MoreToCome = new ItemStack(Material.GRAY_DYE);
                     ItemMeta MTC = MoreToCome.getItemMeta();
                     MTC.setDisplayName(ChatColor.GREEN + "" + ChatColor.BOLD + ">>> More To Come <<<");
@@ -332,7 +343,8 @@ public class Book_Of_Items implements Listener {
                     Guide.setItem(34, EliteLevelLightSword);
                     Guide.setItem(37, LapisArmor);
                     Guide.setItem(38, BottleOfLight);
-                    Guide.setItem(39, MoreToCome);
+                    Guide.setItem(39, ReaperSoul);
+                    Guide.setItem(40, MoreToCome);
 
 
                     Guide.setItem(18, G1);
