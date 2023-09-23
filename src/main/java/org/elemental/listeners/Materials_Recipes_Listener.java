@@ -1,11 +1,22 @@
 package org.elemental.listeners;
 
-import org.bukkit.ChatColor;
+import org.bukkit.*;
+import org.bukkit.enchantments.Enchantment;
+import org.bukkit.entity.Player;
+import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.inventory.InventoryClickEvent;
+import org.bukkit.inventory.Inventory;
+import org.bukkit.inventory.ItemFlag;
+import org.bukkit.inventory.ItemStack;
+import org.bukkit.inventory.meta.ItemMeta;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class Materials_Recipes_Listener implements Listener {
 
+    @EventHandler
     public void onMenuClick(InventoryClickEvent event) {
         if (event.getView().getTitle().equalsIgnoreCase(ChatColor.GOLD + "" + ChatColor.BOLD + "Materials Recipes")) {
 
@@ -13,7 +24,9 @@ public class Materials_Recipes_Listener implements Listener {
             if (event.getCurrentItem() == null) {
                 return;
             }
+
             event.setCancelled(true);
         }
+
     }
 }
