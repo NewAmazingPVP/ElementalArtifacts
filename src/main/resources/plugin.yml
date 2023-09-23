@@ -36,3 +36,6 @@ commands:
   setprisoner:
     description: Set a player as a prisoner
     usage: /set prisoner <player>
+  givegoldcoveredmeat:
+    description: Gives you gold covered meat test
+    usage: /givegoldcoveredmeat
