@@ -22,6 +22,7 @@ public class Gold_Covered_Meat implements Listener {
                 if (item.getAmount() > 1) {
                     item.setAmount(item.getAmount() - 1);
                     player.getInventory().setItemInMainHand(item);
+                    player.sendMessage("testmain");
                 } else {
                     player.getInventory().setItemInMainHand(null);
                 }
@@ -36,6 +37,7 @@ public class Gold_Covered_Meat implements Listener {
                         if (offHandItem.getAmount() > 1) {
                             offHandItem.setAmount(offHandItem.getAmount() - 1);
                             player.getInventory().setItemInOffHand(offHandItem);
+                            player.sendMessage("testoff");
                         } else {
                             player.getInventory().setItemInOffHand(null);
                         }
