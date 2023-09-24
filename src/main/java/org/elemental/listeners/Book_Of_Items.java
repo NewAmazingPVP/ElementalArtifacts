@@ -333,7 +333,15 @@ public class Book_Of_Items implements Listener {
                     MTC.setDisplayName(ChatColor.GREEN + "" + ChatColor.BOLD + ">>> More To Come <<<");
                     MoreToCome.setItemMeta(MTC);
 
-
+                    ItemStack sextoy = new ItemStack(Material.END_ROD);
+                    ItemMeta STM = sextoy.getItemMeta();
+                    STM.setDisplayName(ChatColor.GOLD + "" + ChatColor.BOLD + "Sex Toy" + ChatColor.DARK_AQUA + " [Item]");
+                    List<String> STL = new ArrayList<>();
+                    STL.add(ChatColor.GOLD + ";]");
+                    STM.setLore(STL);
+                    STM.addEnchant(Enchantment.DURABILITY, 1, false);
+                    STM.addItemFlags(ItemFlag.HIDE_ENCHANTS);
+                    sextoy.setItemMeta(STM);
 
 
                     Guide.setItem(0, G1);
