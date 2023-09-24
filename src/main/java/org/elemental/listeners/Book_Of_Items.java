@@ -293,9 +293,9 @@ public class Book_Of_Items implements Listener {
 
                     ItemStack ReaperSoul = new ItemStack(Material.CHARCOAL);
                     ItemMeta RSM = ReaperSoul.getItemMeta();
-                    RSM.setDisplayName(ChatColor.GOLD + "" + ChatColor.BOLD + "Reaper Soul" + ChatColor.DARK_AQUA + " [Item]");
+                    RSM.setDisplayName(ChatColor.LIGHT_PURPLE + "" + ChatColor.BOLD + "Reaper Soul" + ChatColor.DARK_AQUA + " [Item]");
                     List<String> RSL = new ArrayList<>();
-                    RSL.add(ChatColor.BLACK + "This item is made of nothing but dark matter.");
+                    RSL.add(ChatColor.DARK_RED + "Obtained by sacrificing 4 people into lava!");
                     RSM.setLore(RSL);
                     RSM.addEnchant(Enchantment.DURABILITY, 1, false);
                     RSM.addItemFlags(ItemFlag.HIDE_ENCHANTS);
@@ -310,6 +310,22 @@ public class Book_Of_Items implements Listener {
                     GCMM.addEnchant(Enchantment.DURABILITY, 1, false);
                     GCMM.addItemFlags(ItemFlag.HIDE_ENCHANTS);
                     goldcoveredmeat.setItemMeta(GCMM);
+
+                    ItemStack SacrificingAxe = new ItemStack(Material.DIAMOND_AXE);
+                    ItemMeta SAM = SacrificingAxe.getItemMeta();
+                    SAM.setDisplayName(ChatColor.GOLD + "" + ChatColor.BOLD + "Sacrificing Axe" + ChatColor.DARK_AQUA + " [Sword]");
+                    List<String> SALLL = new ArrayList<>();
+                    SALLL.add(ChatColor.DARK_RED + "Obtained by sacrificing 4 people into lava!");
+                    SALLL.add(ChatColor.RED + "1- Get sacrificing armor to use");
+                    SALLL.add(ChatColor.RED + "2- Get sacrificing victim armor on everyone you are scaerficeing");
+                    SALLL.add(ChatColor.RED + "(Armor costs a lot and will be deleted!");
+                    SALLL.add(ChatColor.RED + "3- Use the sacrificing axe anf go f**king Aztec on them, and behead them!");
+                    SALLL.add(ChatColor.DARK_GREEN + "After this you will get the Reaper Soul");
+                    SALLL.add(ChatColor.DARK_GREEN + "Yes... this is hard to get but it will give a OP item");
+                    SAM.setLore(SALLL);
+                    SAM.setUnbreakable(true);
+                    SAM.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
+                    SacrificingAxe.setItemMeta(SAM);
 
 
                     ItemStack MoreToCome = new ItemStack(Material.GRAY_DYE);
@@ -356,7 +372,8 @@ public class Book_Of_Items implements Listener {
                     Guide.setItem(38, BottleOfLight);
                     Guide.setItem(39, ReaperSoul);
                     Guide.setItem(40, goldcoveredmeat);
-                    Guide.setItem(41, MoreToCome);
+                    Guide.setItem(41, SacrificingAxe);
+                    Guide.setItem(42, MoreToCome);
 
 
                     Guide.setItem(18, G1);
