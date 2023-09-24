@@ -39,7 +39,7 @@ public class Temp_give_sacerficeing_armor implements CommandExecutor {
         SVCM.setColor(Color.fromRGB(0, 0, 255));
         SacrificingVictimChest.setItemMeta(SVCM);
 
-        ItemStack SacrificingVictimLegs = new ItemStack(Material.LEATHER_CHESTPLATE);
+        ItemStack SacrificingVictimLegs = new ItemStack(Material.LEATHER_LEGGINGS);
         LeatherArmorMeta SVLM = (LeatherArmorMeta) SacrificingVictimLegs.getItemMeta();
         SVLM.setDisplayName(ChatColor.WHITE + "" + ChatColor.BOLD + "Sacrificing Victim Leggings" + ChatColor.DARK_AQUA + " [Armor]");
         List<String> SVLL = new ArrayList<>();
@@ -51,7 +51,7 @@ public class Temp_give_sacerficeing_armor implements CommandExecutor {
         SVLM.setColor(Color.fromRGB(0, 0, 255));
         SacrificingVictimLegs.setItemMeta(SVLM);
 
-        ItemStack SacrificingVictimBoots = new ItemStack(Material.LEATHER_CHESTPLATE);
+        ItemStack SacrificingVictimBoots = new ItemStack(Material.LEATHER_BOOTS);
         LeatherArmorMeta SVBM = (LeatherArmorMeta) SacrificingVictimBoots.getItemMeta();
         SVBM.setDisplayName(ChatColor.WHITE + "" + ChatColor.BOLD + "Sacrificing Victim Boots" + ChatColor.DARK_AQUA + " [Armor]");
         List<String> SVBL = new ArrayList<>();
