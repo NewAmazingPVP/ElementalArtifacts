@@ -51,13 +51,21 @@ public class God_Potion implements Listener {
             player.getWorld().strikeLightningEffect(event.getPlayer().getLocation());
 
 
-                if (event.getPlayer().getInventory().getItemInOffHand().getType() == Material.HONEY_BOTTLE) {
-                    if (event.getAction().name().contains("RIGHT_CLICK")) {
-                        if (event.getPlayer().getInventory().getItemInOffHand().getItemMeta().getDisplayName().equals(ChatColor.LIGHT_PURPLE + "" + ChatColor.BOLD + "God Potion" + ChatColor.DARK_AQUA + " [Potion]")) {
-                            event.setCancelled(true);
-                        }
+            if (event.getPlayer().getInventory().getItemInOffHand().getType() == Material.HONEY_BOTTLE) {
+                if (event.getAction().name().contains("RIGHT_CLICK")) {
+                    if (event.getPlayer().getInventory().getItemInOffHand().getItemMeta().getDisplayName().equals(ChatColor.LIGHT_PURPLE + "" + ChatColor.BOLD + "God Potion" + ChatColor.DARK_AQUA + " [Potion]")) {
+                        event.setCancelled(true);
                     }
                 }
             }
         }
+        if (event.getPlayer().getInventory().getItemInOffHand().getType() == Material.HONEY_BOTTLE) {
+            if (event.getAction().name().contains("RIGHT_CLICK")) {
+                if (event.getPlayer().getInventory().getItemInOffHand().getItemMeta().getDisplayName().equals(ChatColor.LIGHT_PURPLE + "" + ChatColor.BOLD + "God Potion" + ChatColor.DARK_AQUA + " [Potion]")) {
+                    event.setCancelled(true);
+                }
+            }
+        }
     }
+}
+
