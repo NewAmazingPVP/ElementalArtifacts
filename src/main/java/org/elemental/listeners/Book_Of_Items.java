@@ -335,7 +335,7 @@ public class Book_Of_Items implements Listener {
 
                     ItemStack SacrificingVictimArmor = new ItemStack(Material.LEATHER_CHESTPLATE);
                     LeatherArmorMeta SVAM = (LeatherArmorMeta) SacrificingVictimArmor.getItemMeta();
-                    SVAM.setDisplayName(ChatColor.BLUE + "" + ChatColor.BOLD + "Sacrificing Victim Armor" + ChatColor.DARK_AQUA + " [Armor]");
+                    SVAM.setDisplayName(ChatColor.WHITE + "" + ChatColor.BOLD + "Sacrificing Victim Armor" + ChatColor.DARK_AQUA + " [Armor]");
                     List<String> SVAL = new ArrayList<>();
                     SVAL.add(ChatColor.RED + "If you have this on then you are being sacrificed!");
                     SVAM.setLore(SVAL);
