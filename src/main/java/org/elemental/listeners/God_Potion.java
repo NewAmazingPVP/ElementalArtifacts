@@ -26,7 +26,7 @@ public class God_Potion implements Listener {
         Player player = event.getPlayer();
         ItemStack item = player.getInventory().getItemInMainHand();
 
-        // Check if the player is holding an item named "1111111111111111"
+        // Check if the player is holding an item named "fuck_me"
         if (item != null && item.getType() == Material.HONEY_BOTTLE && item.getItemMeta().hasDisplayName()
                 && item.getItemMeta().getDisplayName().equals(ChatColor.LIGHT_PURPLE + "" + ChatColor.BOLD + "God Potion" + ChatColor.DARK_AQUA + " [Potion]")) {
             event.setCancelled(true);
@@ -48,7 +48,7 @@ public class God_Potion implements Listener {
             player.getWorld().spawnParticle(Particle.REDSTONE, player.getLocation(), 10, 0.6, 0.6, 0.6, new Particle.DustOptions(Color.GREEN, 3));
             player.getWorld().spawnParticle(Particle.REDSTONE, player.getLocation(), 10, 0.6, 0.6, 0.6, new Particle.DustOptions(Color.BLUE, 3));
             player.getWorld().spawnParticle(Particle.REDSTONE, player.getLocation(), 10, 0.6, 0.6, 0.6, new Particle.DustOptions(Color.PURPLE, 3));
-            player.getWorld().strikeLightning(player.getLocation());
+            player.getWorld().strikeLightningEffect(event.getPlayer().getLocation());
 
         }
     }
