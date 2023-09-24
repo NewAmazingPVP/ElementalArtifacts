@@ -295,7 +295,7 @@ public class Book_Of_Items implements Listener {
                     ItemMeta RSM = ReaperSoul.getItemMeta();
                     RSM.setDisplayName(ChatColor.LIGHT_PURPLE + "" + ChatColor.BOLD + "Reaper Soul" + ChatColor.DARK_AQUA + " [Item]");
                     List<String> RSL = new ArrayList<>();
-                    RSL.add(ChatColor.DARK_RED + "Obtained by sacrificing 4 people into lava!");
+                    RSL.add(ChatColor.DARK_RED + "Obtained by sacrificing 4 people!");
                     RSM.setLore(RSL);
                     RSM.addEnchant(Enchantment.DURABILITY, 1, false);
                     RSM.addItemFlags(ItemFlag.HIDE_ENCHANTS);
@@ -318,7 +318,7 @@ public class Book_Of_Items implements Listener {
                     SALLL.add(ChatColor.DARK_RED + "Obtained by sacrificing 4 people into lava!");
                     SALLL.add(ChatColor.RED + "1- Get sacrificing armor to use");
                     SALLL.add(ChatColor.RED + "2- Get sacrificing victim armor on everyone you are scaerficeing");
-                    SALLL.add(ChatColor.RED + "(Armor costs a lot and will be deleted!");
+                    SALLL.add(ChatColor.RED + "(Armor costs a lot and will be deleted!)");
                     SALLL.add(ChatColor.RED + "3- Use the sacrificing axe anf go f**king Aztec on them, and behead them!");
                     SALLL.add(ChatColor.DARK_GREEN + "After this you will get the Reaper Soul");
                     SALLL.add(ChatColor.DARK_GREEN + "Yes... this is hard to get but it will give a OP item");
