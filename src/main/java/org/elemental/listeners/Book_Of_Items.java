@@ -333,15 +333,17 @@ public class Book_Of_Items implements Listener {
                     MTC.setDisplayName(ChatColor.GREEN + "" + ChatColor.BOLD + ">>> More To Come <<<");
                     MoreToCome.setItemMeta(MTC);
 
-                    ItemStack sextoy = new ItemStack(Material.END_ROD);
-                    ItemMeta STM = sextoy.getItemMeta();
-                    STM.setDisplayName(ChatColor.GOLD + "" + ChatColor.BOLD + "Sex Toy" + ChatColor.DARK_AQUA + " [Item]");
-                    List<String> STL = new ArrayList<>();
-                    STL.add(ChatColor.GOLD + ";]");
-                    STM.setLore(STL);
-                    STM.addEnchant(Enchantment.DURABILITY, 1, false);
-                    STM.addItemFlags(ItemFlag.HIDE_ENCHANTS);
-                    sextoy.setItemMeta(STM);
+                    ItemStack SacrificingVictimArmor = new ItemStack(Material.LEATHER_CHESTPLATE);
+                    LeatherArmorMeta SVAM = (LeatherArmorMeta) SacrificingVictimArmor.getItemMeta();
+                    SVAM.setDisplayName(ChatColor.BLUE + "" + ChatColor.BOLD + "Sacrificing Victim Armor" + ChatColor.DARK_AQUA + " [Armor]");
+                    List<String> SVAL = new ArrayList<>();
+                    SVAL.add(ChatColor.RED + "If you have this on then you are being sacrificed!");
+                    SVAM.setLore(SVAL);
+                    SVAM.setUnbreakable(true);
+                    SVAM.addItemFlags(ItemFlag.HIDE_DYE);
+                    SVAM.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
+                    SVAM.setColor(Color.fromRGB(0, 0, 255));
+                    SacrificingVictimArmor.setItemMeta(SVAM);
 
 
                     Guide.setItem(0, G1);
@@ -381,7 +383,7 @@ public class Book_Of_Items implements Listener {
                     Guide.setItem(39, ReaperSoul);
                     Guide.setItem(40, goldcoveredmeat);
                     Guide.setItem(41, SacrificingAxe);
-                    Guide.setItem(42, MoreToCome);
+                    Guide.setItem(42, SacrificingVictimArmor);
 
 
                     Guide.setItem(18, G1);
