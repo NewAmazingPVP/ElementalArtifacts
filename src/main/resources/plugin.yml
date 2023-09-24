@@ -42,3 +42,6 @@ commands:
   netherite_leather:
     description: Gives leather armor with the stats of netherite
     usage: /netherite_leather
+  givesacerficeingarmor:
+    description: Gives sacerficeing armor test
+    usage: /givesacerficeingarmor
