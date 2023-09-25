@@ -39,7 +39,7 @@ public class Materials_Recipes_Listener implements Listener {
                 ItemMeta FMPM = fearmongerperl.getItemMeta();
                 FMPM.setDisplayName(ChatColor.BLUE + "" + ChatColor.BOLD + "Fear Mongerer Pearl" + ChatColor.DARK_AQUA + " [Item]");
                 List<String> FML = new ArrayList<>();
-                FML.add(ChatColor.DARK_PURPLE + "Obtained from killing the Fear Mongerer!");
+                FML.add(ChatColor.DARK_PURPLE + "Obtained from killing Enderman!");
                 FMPM.setLore(FML);
                 FMPM.addEnchant(Enchantment.DURABILITY, 1, false);
                 FMPM.addItemFlags(ItemFlag.HIDE_ENCHANTS);
