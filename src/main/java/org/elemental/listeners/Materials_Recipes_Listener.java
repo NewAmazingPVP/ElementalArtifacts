@@ -66,6 +66,7 @@ public class Materials_Recipes_Listener implements Listener {
                 Mixedeye.setItemMeta(MEYEM);
 
                 ItemStack Emerald = new ItemStack(Material.EMERALD);
+                Emerald.setAmount(20);
 
                 Guide.setItem(0, G1);
                 Guide.setItem(1, G1);
