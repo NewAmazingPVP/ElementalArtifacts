@@ -15,7 +15,7 @@ public class ALL_RECIPIE_GUIDE_LISTENER implements Listener {
 
     @EventHandler
     public void onMenuClick(InventoryClickEvent event) {
-        if (event.getView().getTitle().equalsIgnoreCase(ChatColor.GOLD + "" + ChatColor.BOLD + "Recipes")) {
+        if (event.getView().getTitle().equalsIgnoreCase(ChatColor.GOLD + "" + ChatColor.BOLD + "Recipe")) {
 
 
             if (event.getCurrentItem() == null) {
