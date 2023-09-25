@@ -117,7 +117,7 @@ public class CraftingMenu_1_Listener implements Listener {
             if (event.getCurrentItem().getDisplayName().equalsIgnoreCase(ChatColor.DARK_BLUE + "" + ChatColor.BOLD + "Magic") && event.getCurrentItem().getType() == Material.STICK) {
                 Player player = (Player) event.getView().getPlayer();
                 player.playSound(player.getLocation(), "minecraft:block.enchantment_table.use", 1.0f, 2.0f);
-                Inventory Magic = Bukkit.createInventory(player, 27, ChatColor.DARK_BLUE + "" + ChatColor.BOLD + "Magic Recipes");
+                Inventory Magic = Bukkit.createInventory(player, 36, ChatColor.DARK_BLUE + "" + ChatColor.BOLD + "Magic Recipes");
 
 
 
@@ -226,7 +226,7 @@ public class CraftingMenu_1_Listener implements Listener {
 
 
                 Materials.setItem(17, G1);
-                Materials.setItem(18, Back);
+                Materials.setItem(18, G1);
                 Materials.setItem(19, G1);
                 Materials.setItem(20, G1);
                 Materials.setItem(21, G1);
@@ -235,6 +235,15 @@ public class CraftingMenu_1_Listener implements Listener {
                 Materials.setItem(24, G1);
                 Materials.setItem(25, G1);
                 Materials.setItem(26, G1);
+                Materials.setItem(27, Back);
+                Materials.setItem(28, G1);
+                Materials.setItem(29, G1);
+                Materials.setItem(30, G1);
+                Materials.setItem(31, G1);
+                Materials.setItem(32, G1);
+                Materials.setItem(33, G1);
+                Materials.setItem(34, G1);
+                Materials.setItem(35, G1);
 
                 player.openInventory(Materials);
             }
