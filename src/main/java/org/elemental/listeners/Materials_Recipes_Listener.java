@@ -35,6 +35,38 @@ public class Materials_Recipes_Listener implements Listener {
                 M1.setDisplayName(" ");
                 G1.setItemMeta(M1);
 
+                ItemStack fearmongerperl = new ItemStack(Material.ENDER_PEARL);
+                ItemMeta FMPM = fearmongerperl.getItemMeta();
+                FMPM.setDisplayName(ChatColor.BLUE + "" + ChatColor.BOLD + "Fear Mongerer Pearl" + ChatColor.DARK_AQUA + " [Item]");
+                List<String> FML = new ArrayList<>();
+                FML.add(ChatColor.DARK_PURPLE + "Obtained from killing the Fear Mongerer!");
+                FMPM.setLore(FML);
+                FMPM.addEnchant(Enchantment.DURABILITY, 1, false);
+                FMPM.addItemFlags(ItemFlag.HIDE_ENCHANTS);
+                fearmongerperl.setItemMeta(FMPM);
+
+                ItemStack OreMixture = new ItemStack(Material.BONE_MEAL);
+                ItemMeta OFMPM = OreMixture.getItemMeta();
+                OFMPM.setDisplayName(ChatColor.BLUE + "" + ChatColor.BOLD + "Ore Mixture" + ChatColor.DARK_AQUA + " [Item]");
+                List<String> OML = new ArrayList<>();
+                OML.add(ChatColor.DARK_PURPLE + "A mixture of a lot of ores.");
+                OFMPM.setLore(OML);
+                OFMPM.addEnchant(Enchantment.DURABILITY, 1, false);
+                OFMPM.addItemFlags(ItemFlag.HIDE_ENCHANTS);
+                OreMixture.setItemMeta(OFMPM);
+
+                ItemStack Mixedeye = new ItemStack(Material.ENDER_EYE);
+                ItemMeta MEYEM = Mixedeye.getItemMeta();
+                MEYEM.setDisplayName(ChatColor.BLUE + "" + ChatColor.BOLD + "Mixed Eye" + ChatColor.DARK_AQUA + " [Item]");
+                List<String> MEM = new ArrayList<>();
+                MEM.add(ChatColor.DARK_PURPLE + "Crafted from the Fear Mongerer Eye.");
+                MEYEM.setLore(MEM);
+                MEYEM.addEnchant(Enchantment.DURABILITY, 1, false);
+                MEYEM.addItemFlags(ItemFlag.HIDE_ENCHANTS);
+                Mixedeye.setItemMeta(MEYEM);
+
+                ItemStack Emerald = new ItemStack(Material.EMERALD);
+
                 Guide.setItem(0, G1);
                 Guide.setItem(1, G1);
                 Guide.setItem(2, G1);
@@ -70,6 +102,19 @@ public class Materials_Recipes_Listener implements Listener {
                 Guide.setItem(42, G1);
                 Guide.setItem(43, G1);
                 Guide.setItem(44, G1);
+
+                Guide.setItem(11, Emerald);
+                Guide.setItem(12, OreMixture);
+                Guide.setItem(13, Emerald);
+                Guide.setItem(20, OreMixture);
+                Guide.setItem(21, fearmongerperl);
+                Guide.setItem(22, OreMixture);
+                Guide.setItem(29, Emerald);
+                Guide.setItem(30, OreMixture);
+                Guide.setItem(31, Emerald);
+
+                Guide.setItem(24, Mixedeye);
+
 
 
                 player.openInventory(Guide);
