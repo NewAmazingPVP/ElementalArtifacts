@@ -16,6 +16,7 @@ public class PlayerJoin implements Listener {
         player.playSound(player.getLocation(), Sound.ENTITY_PLAYER_LEVELUP, 1.0f, 1.0f);
         player.sendMessage(ChatColor.GOLD + "" + ChatColor.BOLD + "--------------------------------------------");
         player.sendMessage(ChatColor.LIGHT_PURPLE + "" + ChatColor.BOLD + "Use /eaguide to get the guide!");
+        player.sendMessage(ChatColor.LIGHT_PURPLE + "" + ChatColor.BOLD + "Use /bookofitems to get the book of items!");
         player.sendMessage(ChatColor.GOLD + "" + ChatColor.BOLD + "--------------------------------------------");
     }
 }
