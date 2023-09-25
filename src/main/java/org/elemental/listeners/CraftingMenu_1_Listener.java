@@ -140,7 +140,95 @@ public class CraftingMenu_1_Listener implements Listener {
                 MEYEM.addItemFlags(ItemFlag.HIDE_ENCHANTS);
                 Mixedeye.setItemMeta(MEYEM);
 
+                ItemStack G1 = new ItemStack(Material.ORANGE_STAINED_GLASS_PANE);
+                ItemMeta M1 = G1.getItemMeta();
+                M1.setDisplayName(" ");
+                G1.setItemMeta(M1);
+
+                ItemStack compact = new ItemStack(Material.NETHERITE_INGOT);
+                ItemMeta SI = compact.getItemMeta();
+                SI.setDisplayName(ChatColor.GOLD + "" + ChatColor.BOLD + "Compact Netherite Ingot" + ChatColor.DARK_AQUA + " [Item]");
+                SI.addEnchant(Enchantment.DURABILITY, 1, false);
+                SI.addItemFlags(ItemFlag.HIDE_ENCHANTS);
+                compact.setItemMeta(SI);
+
+                ItemStack compact2 = new ItemStack(Material.NETHERITE_BLOCK);
+                ItemMeta SI2 = compact2.getItemMeta();
+                SI2.setDisplayName(ChatColor.GOLD + "" + ChatColor.BOLD + "Compact Netherite Block" + ChatColor.DARK_AQUA + " [Item]");
+                SI2.addEnchant(Enchantment.DURABILITY, 1, false);
+                SI2.addItemFlags(ItemFlag.HIDE_ENCHANTS);
+                compact2.setItemMeta(SI2);
+
+                ItemStack fearmongerperl = new ItemStack(Material.ENDER_PEARL);
+                ItemMeta FMPM = fearmongerperl.getItemMeta();
+                FMPM.setDisplayName(ChatColor.BLUE + "" + ChatColor.BOLD + "Fear Mongerer Pearl" + ChatColor.DARK_AQUA + " [Item]");
+                List<String> FML = new ArrayList<>();
+                FML.add(ChatColor.DARK_PURPLE + "Obtained from killing the Fear Mongerer!" + ChatColor.DARK_RED + "ITEM NOT DONE");
+                FMPM.setLore(FML);
+                FMPM.addEnchant(Enchantment.DURABILITY, 1, false);
+                FMPM.addItemFlags(ItemFlag.HIDE_ENCHANTS);
+                fearmongerperl.setItemMeta(FMPM);
+
+                ItemStack OreMixture = new ItemStack(Material.BONE_MEAL);
+                ItemMeta OFMPM = OreMixture.getItemMeta();
+                OFMPM.setDisplayName(ChatColor.BLUE + "" + ChatColor.BOLD + "Ore Mixture" + ChatColor.DARK_AQUA + " [Item]");
+                List<String> OML = new ArrayList<>();
+                OML.add(ChatColor.DARK_PURPLE + "A mixture of a lot of ores." + ChatColor.DARK_RED + "ITEM NOT DONE");
+                OFMPM.setLore(OML);
+                OFMPM.addEnchant(Enchantment.DURABILITY, 1, false);
+                OFMPM.addItemFlags(ItemFlag.HIDE_ENCHANTS);
+                OreMixture.setItemMeta(OFMPM);
+
+                ItemStack corruptedHandle = new ItemStack(Material.STICK);
+                ItemMeta CHM = corruptedHandle.getItemMeta();
+                CHM.setDisplayName(ChatColor.GOLD + "" + ChatColor.BOLD + "Corrupted Handle" + ChatColor.DARK_AQUA + " [Item]");
+                List<String> CHL = new ArrayList<>();
+                CHL.add(ChatColor.DARK_RED + "" + ChatColor.MAGIC + "curruptedtextlololol" + ChatColor.DARK_RED + "ITEM NOT DONE");
+                CHM.setLore(CHL);
+                CHM.addEnchant(Enchantment.DURABILITY, 1, false);
+                CHM.addItemFlags(ItemFlag.HIDE_ENCHANTS);
+                corruptedHandle.setItemMeta(CHM);
+
+                ItemStack infusedlapis = new ItemStack(Material.LAPIS_LAZULI);
+                ItemMeta ILM = infusedlapis.getItemMeta();
+                ILM.setDisplayName(ChatColor.GREEN + "" + ChatColor.BOLD + "Infused Lapis" + ChatColor.DARK_AQUA + " [Item]");
+                List<String> ILL = new ArrayList<>();
+                ILL.add(ChatColor.DARK_PURPLE + "Used to craft magical things." + ChatColor.DARK_RED + "ITEM NOT DONE");
+                ILM.setLore(ILL);
+                ILM.addEnchant(Enchantment.DURABILITY, 1, false);
+                ILM.addItemFlags(ItemFlag.HIDE_ENCHANTS);
+                infusedlapis.setItemMeta(ILM);
+
+
+                Materials.setItem(0, G1);
+                Materials.setItem(1, G1);
+                Materials.setItem(2, G1);
+                Materials.setItem(3, G1);
+                Materials.setItem(4, G1);
+                Materials.setItem(5, G1);
+                Materials.setItem(6, G1);
+                Materials.setItem(7, G1);
+                Materials.setItem(8, G1);
+                Materials.setItem(9, G1);
                 Materials.setItem(10, Mixedeye);
+                Materials.setItem(11, compact);
+                Materials.setItem(12, compact2);
+                Materials.setItem(13, fearmongerperl);
+                Materials.setItem(14, OreMixture);
+                Materials.setItem(14, corruptedHandle);
+                Materials.setItem(14, infusedlapis);
+
+
+                Materials.setItem(17, G1);
+                Materials.setItem(18, G1);
+                Materials.setItem(19, G1);
+                Materials.setItem(20, G1);
+                Materials.setItem(21, G1);
+                Materials.setItem(22, G1);
+                Materials.setItem(23, G1);
+                Materials.setItem(34, G1);
+                Materials.setItem(25, G1);
+                Materials.setItem(26, G1);
 
                 player.openInventory(Materials);
             }
