@@ -129,6 +129,16 @@ public class Materials_Recipes_Listener implements Listener {
                 M1.setDisplayName(" ");
                 G1.setItemMeta(M1);
 
+                ItemStack compact = new ItemStack(Material.NETHERITE_INGOT);
+                ItemMeta SI = compact.getItemMeta();
+                SI.setDisplayName(ChatColor.GOLD + "" + ChatColor.BOLD + "Compact Netherite Ingot" + ChatColor.DARK_AQUA + " [Item]");
+                SI.addEnchant(Enchantment.DURABILITY, 1, false);
+                SI.addItemFlags(ItemFlag.HIDE_ENCHANTS);
+                compact.setItemMeta(SI);
+
+                ItemStack netherite = new ItemStack(Material.NETHERITE_INGOT);
+                netherite.setAmount(2);
+
                 Guide.setItem(0, G1);
                 Guide.setItem(1, G1);
                 Guide.setItem(2, G1);
@@ -165,6 +175,17 @@ public class Materials_Recipes_Listener implements Listener {
                 Guide.setItem(43, G1);
                 Guide.setItem(44, G1);
 
+                Guide.setItem(11, netherite);
+                Guide.setItem(12, netherite);
+                Guide.setItem(13, netherite);
+                Guide.setItem(20, netherite);
+                Guide.setItem(21, netherite);
+                Guide.setItem(22, netherite);
+                Guide.setItem(29, netherite);
+                Guide.setItem(30, netherite);
+                Guide.setItem(31, netherite);
+
+                Guide.setItem(24, compact);
 
                 player.openInventory(Guide);
 
@@ -179,6 +200,20 @@ public class Materials_Recipes_Listener implements Listener {
                 M1.setDisplayName(" ");
                 G1.setItemMeta(M1);
 
+                ItemStack compact = new ItemStack(Material.NETHERITE_INGOT);
+                ItemMeta SI = compact.getItemMeta();
+                SI.setDisplayName(ChatColor.GOLD + "" + ChatColor.BOLD + "Compact Netherite Ingot" + ChatColor.DARK_AQUA + " [Item]");
+                SI.addEnchant(Enchantment.DURABILITY, 1, false);
+                SI.addItemFlags(ItemFlag.HIDE_ENCHANTS);
+                compact.setItemMeta(SI);
+
+                ItemStack compact2 = new ItemStack(Material.NETHERITE_BLOCK);
+                ItemMeta SI2 = compact2.getItemMeta();
+                SI2.setDisplayName(ChatColor.GOLD + "" + ChatColor.BOLD + "Compact Netherite Block" + ChatColor.DARK_AQUA + " [Item]");
+                SI2.addEnchant(Enchantment.DURABILITY, 1, false);
+                SI2.addItemFlags(ItemFlag.HIDE_ENCHANTS);
+                compact2.setItemMeta(SI2);
+
                 Guide.setItem(0, G1);
                 Guide.setItem(1, G1);
                 Guide.setItem(2, G1);
@@ -214,6 +249,18 @@ public class Materials_Recipes_Listener implements Listener {
                 Guide.setItem(42, G1);
                 Guide.setItem(43, G1);
                 Guide.setItem(44, G1);
+
+                Guide.setItem(11, compact);
+                Guide.setItem(12, compact);
+                Guide.setItem(13, compact);
+                Guide.setItem(20, compact);
+                Guide.setItem(21, compact);
+                Guide.setItem(22, compact);
+                Guide.setItem(29, compact);
+                Guide.setItem(30, compact);
+                Guide.setItem(31, compact);
+
+                Guide.setItem(24, compact2);
 
 
                 player.openInventory(Guide);
