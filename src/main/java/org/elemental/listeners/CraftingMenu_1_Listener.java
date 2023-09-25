@@ -163,7 +163,7 @@ public class CraftingMenu_1_Listener implements Listener {
                 ItemMeta FMPM = fearmongerperl.getItemMeta();
                 FMPM.setDisplayName(ChatColor.BLUE + "" + ChatColor.BOLD + "Fear Mongerer Pearl" + ChatColor.DARK_AQUA + " [Item]");
                 List<String> FML = new ArrayList<>();
-                FML.add(ChatColor.DARK_PURPLE + "Obtained from killing the Fear Mongerer!");
+                FML.add(ChatColor.DARK_PURPLE + "Obtained from killing Enderman!");
                 FMPM.setLore(FML);
                 FMPM.addEnchant(Enchantment.DURABILITY, 1, false);
                 FMPM.addItemFlags(ItemFlag.HIDE_ENCHANTS);
@@ -219,7 +219,7 @@ public class CraftingMenu_1_Listener implements Listener {
                 Materials.setItem(10, Mixedeye);
                 Materials.setItem(11, compact);
                 Materials.setItem(12, compact2);
-                Materials.setItem(13, fearmongerperl);
+                Materials.setItem(13, G1);
                 Materials.setItem(14, OreMixture);
                 Materials.setItem(15, corruptedHandle);
                 Materials.setItem(16, infusedlapis);
