@@ -30,7 +30,7 @@ public class Guide_Listener implements Listener {
                 player.playSound(player.getLocation(), "minecraft:block.enchantment_table.use", 1.0f, 2.0f);
                 Inventory Guide = Bukkit.createInventory(player, 36, ChatColor.DARK_PURPLE + "" + ChatColor.BOLD + "Crafting Recipes");
 
-                ItemStack G1 = new ItemStack(Material.ORANGE_STAINED_GLASS_PANE);
+                ItemStack G1 = new ItemStack(Material.PURPLE_STAINED_GLASS_PANE);
                 ItemMeta M1 = G1.getItemMeta();
                 M1.setDisplayName(" ");
                 G1.setItemMeta(M1);
@@ -122,7 +122,7 @@ public class Guide_Listener implements Listener {
                 player.playSound(player.getLocation(), "minecraft:block.enchantment_table.use", 1.0f, 2.0f);
                 Inventory Guide = Bukkit.createInventory(player, 27, ChatColor.AQUA + "" + ChatColor.BOLD + "Class");
 
-                ItemStack G2 = new ItemStack(Material.LIME_STAINED_GLASS_PANE);
+                ItemStack G2 = new ItemStack(Material.PURPLE_STAINED_GLASS_PANE);
                 ItemMeta M2 = G2.getItemMeta();
                 M2.setDisplayName(" ");
                 G2.setItemMeta(M2);
@@ -198,7 +198,7 @@ public class Guide_Listener implements Listener {
                 player.playSound(player.getLocation(), "minecraft:block.enchantment_table.use", 1.0f, 2.0f);
                 Inventory Guide = Bukkit.createInventory(player, 27, ChatColor.LIGHT_PURPLE + "" + ChatColor.BOLD + "Skill Points");
 
-                ItemStack G2 = new ItemStack(Material.GREEN_STAINED_GLASS_PANE);
+                ItemStack G2 = new ItemStack(Material.PURPLE_STAINED_GLASS_PANE);
                 ItemMeta M2 = G2.getItemMeta();
                 M2.setDisplayName(" ");
                 G2.setItemMeta(M2);
@@ -311,7 +311,7 @@ public class Guide_Listener implements Listener {
                 HowToPlayM.setLore(HowToPlaylore);
                 HowToPlay.setItemMeta(HowToPlayM);
 
-                ItemStack G3 = new ItemStack(Material.CYAN_STAINED_GLASS_PANE);
+                ItemStack G3 = new ItemStack(Material.PURPLE_STAINED_GLASS_PANE);
                 ItemMeta M3 = G3.getItemMeta();
                 M3.setDisplayName(" ");
                 G3.setItemMeta(M3);
