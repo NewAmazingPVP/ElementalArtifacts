@@ -107,7 +107,7 @@ public class CraftingMenu_1_Listener implements Listener {
             if (event.getCurrentItem().getDisplayName().equalsIgnoreCase(ChatColor.GREEN + "" + ChatColor.BOLD + "Armor") && event.getCurrentItem().getType() == Material.DIAMOND_CHESTPLATE) {
                 Player player = (Player) event.getView().getPlayer();
                 player.playSound(player.getLocation(), "minecraft:block.enchantment_table.use", 1.0f, 2.0f);
-                Inventory Armor = Bukkit.createInventory(player, 27, ChatColor.GREEN + "" + ChatColor.BOLD + "Armor Recipes");
+                Inventory Armor = Bukkit.createInventory(player, 36, ChatColor.GREEN + "" + ChatColor.BOLD + "Armor Recipes");
 
 
 
@@ -128,7 +128,7 @@ public class CraftingMenu_1_Listener implements Listener {
             if (event.getCurrentItem().getDisplayName().equalsIgnoreCase(ChatColor.GOLD + "" + ChatColor.BOLD + "Materials") && event.getCurrentItem().getType() == Material.NETHERITE_INGOT) {
                 Player player = (Player) event.getView().getPlayer();
                 player.playSound(player.getLocation(), "minecraft:block.enchantment_table.use", 1.0f, 2.0f);
-                Inventory Materials = Bukkit.createInventory(player, 27, ChatColor.GOLD + "" + ChatColor.BOLD + "Materials Recipes");
+                Inventory Materials = Bukkit.createInventory(player, 36, ChatColor.GOLD + "" + ChatColor.BOLD + "Materials Recipes");
 
                 ItemStack Mixedeye = new ItemStack(Material.ENDER_EYE);
                 ItemMeta MEYEM = Mixedeye.getItemMeta();
@@ -251,7 +251,7 @@ public class CraftingMenu_1_Listener implements Listener {
             if (event.getCurrentItem().getDisplayName().equalsIgnoreCase(ChatColor.AQUA + "" + ChatColor.BOLD + "Miscellaneous") && event.getCurrentItem().getType() == Material.CLOCK) {
                 Player player = (Player) event.getView().getPlayer();
                 player.playSound(player.getLocation(), "minecraft:block.enchantment_table.use", 1.0f, 2.0f);
-                Inventory Miscellaneous = Bukkit.createInventory(player, 27, ChatColor.AQUA + "" + ChatColor.BOLD + "Miscellaneous Recipes");
+                Inventory Miscellaneous = Bukkit.createInventory(player, 36, ChatColor.AQUA + "" + ChatColor.BOLD + "Miscellaneous Recipes");
 
 
                 player.openInventory(Miscellaneous);
@@ -260,7 +260,7 @@ public class CraftingMenu_1_Listener implements Listener {
             if (event.getCurrentItem().getDisplayName().equalsIgnoreCase(ChatColor.RED + "" + ChatColor.BOLD + "Weapons") && event.getCurrentItem().getType() == Material.DIAMOND_SWORD) {
                 Player player = (Player) event.getView().getPlayer();
                 player.playSound(player.getLocation(), "minecraft:block.enchantment_table.use", 1.0f, 2.0f);
-                Inventory Weapons = Bukkit.createInventory(player, 27, ChatColor.RED + "" + ChatColor.BOLD + "Weapons Recipes");
+                Inventory Weapons = Bukkit.createInventory(player, 36, ChatColor.RED + "" + ChatColor.BOLD + "Weapons Recipes");
 
 
                 player.openInventory(Weapons);
