@@ -134,7 +134,7 @@ public class CraftingMenu_1_Listener implements Listener {
                 ItemMeta MEYEM = Mixedeye.getItemMeta();
                 MEYEM.setDisplayName(ChatColor.BLUE + "" + ChatColor.BOLD + "Mixed Eye" + ChatColor.DARK_AQUA + " [Item]");
                 List<String> MEM = new ArrayList<>();
-                MEM.add(ChatColor.DARK_PURPLE + "Crafted from the Fear Mongerer Eye." + ChatColor.DARK_RED + "ITEM NOT DONE");
+                MEM.add(ChatColor.DARK_PURPLE + "Crafted from the Fear Mongerer Eye.");
                 MEYEM.setLore(MEM);
                 MEYEM.addEnchant(Enchantment.DURABILITY, 1, false);
                 MEYEM.addItemFlags(ItemFlag.HIDE_ENCHANTS);
@@ -163,7 +163,7 @@ public class CraftingMenu_1_Listener implements Listener {
                 ItemMeta FMPM = fearmongerperl.getItemMeta();
                 FMPM.setDisplayName(ChatColor.BLUE + "" + ChatColor.BOLD + "Fear Mongerer Pearl" + ChatColor.DARK_AQUA + " [Item]");
                 List<String> FML = new ArrayList<>();
-                FML.add(ChatColor.DARK_PURPLE + "Obtained from killing the Fear Mongerer!" + ChatColor.DARK_RED + "ITEM NOT DONE");
+                FML.add(ChatColor.DARK_PURPLE + "Obtained from killing the Fear Mongerer!");
                 FMPM.setLore(FML);
                 FMPM.addEnchant(Enchantment.DURABILITY, 1, false);
                 FMPM.addItemFlags(ItemFlag.HIDE_ENCHANTS);
@@ -173,7 +173,7 @@ public class CraftingMenu_1_Listener implements Listener {
                 ItemMeta OFMPM = OreMixture.getItemMeta();
                 OFMPM.setDisplayName(ChatColor.BLUE + "" + ChatColor.BOLD + "Ore Mixture" + ChatColor.DARK_AQUA + " [Item]");
                 List<String> OML = new ArrayList<>();
-                OML.add(ChatColor.DARK_PURPLE + "A mixture of a lot of ores." + ChatColor.DARK_RED + "ITEM NOT DONE");
+                OML.add(ChatColor.DARK_PURPLE + "A mixture of a lot of ores.");
                 OFMPM.setLore(OML);
                 OFMPM.addEnchant(Enchantment.DURABILITY, 1, false);
                 OFMPM.addItemFlags(ItemFlag.HIDE_ENCHANTS);
@@ -183,7 +183,7 @@ public class CraftingMenu_1_Listener implements Listener {
                 ItemMeta CHM = corruptedHandle.getItemMeta();
                 CHM.setDisplayName(ChatColor.GOLD + "" + ChatColor.BOLD + "Corrupted Handle" + ChatColor.DARK_AQUA + " [Item]");
                 List<String> CHL = new ArrayList<>();
-                CHL.add(ChatColor.DARK_RED + "" + ChatColor.MAGIC + "curruptedtextlololol" + ChatColor.DARK_RED + "ITEM NOT DONE");
+                CHL.add(ChatColor.DARK_RED + "" + ChatColor.MAGIC + "curruptedtextlololol");
                 CHM.setLore(CHL);
                 CHM.addEnchant(Enchantment.DURABILITY, 1, false);
                 CHM.addItemFlags(ItemFlag.HIDE_ENCHANTS);
@@ -193,7 +193,7 @@ public class CraftingMenu_1_Listener implements Listener {
                 ItemMeta ILM = infusedlapis.getItemMeta();
                 ILM.setDisplayName(ChatColor.GREEN + "" + ChatColor.BOLD + "Infused Lapis" + ChatColor.DARK_AQUA + " [Item]");
                 List<String> ILL = new ArrayList<>();
-                ILL.add(ChatColor.DARK_PURPLE + "Used to craft magical things." + ChatColor.DARK_RED + "ITEM NOT DONE");
+                ILL.add(ChatColor.DARK_PURPLE + "Used to craft magical things.");
                 ILM.setLore(ILL);
                 ILM.addEnchant(Enchantment.DURABILITY, 1, false);
                 ILM.addItemFlags(ItemFlag.HIDE_ENCHANTS);
