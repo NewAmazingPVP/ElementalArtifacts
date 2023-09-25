@@ -107,6 +107,15 @@ public class ALL_RECIPIE_GUIDE_LISTENER implements Listener {
                 BackM.setDisplayName(ChatColor.RED + "Back");
                 Back.setItemMeta(BackM);
 
+                ItemStack BottleOfLight = new ItemStack(Material.EXPERIENCE_BOTTLE);
+                ItemMeta BOLM = BottleOfLight.getItemMeta();
+                BOLM.setDisplayName(ChatColor.DARK_PURPLE + "" + ChatColor.BOLD + "Bottle Of Light" + ChatColor.DARK_AQUA + " [Item]");
+                List<String> BOLL = new ArrayList<>();
+                BOLL.add(ChatColor.DARK_GREEN + "Full of light.");
+                BOLM.setLore(BOLL);
+                BOLM.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
+                BottleOfLight.setItemMeta(BOLM);
+
 
 
                 Materials.setItem(0, G1);
@@ -122,7 +131,7 @@ public class ALL_RECIPIE_GUIDE_LISTENER implements Listener {
                 Materials.setItem(10, Mixedeye);
                 Materials.setItem(11, compact);
                 Materials.setItem(12, compact2);
-                Materials.setItem(13, fearmongerperl);
+                Materials.setItem(13, BottleOfLight);
                 Materials.setItem(14, OreMixture);
                 Materials.setItem(15, corruptedHandle);
                 Materials.setItem(16, infusedlapis);
