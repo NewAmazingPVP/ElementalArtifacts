@@ -215,8 +215,8 @@ public class CraftingMenu_1_Listener implements Listener {
                 Materials.setItem(12, compact2);
                 Materials.setItem(13, fearmongerperl);
                 Materials.setItem(14, OreMixture);
-                Materials.setItem(14, corruptedHandle);
-                Materials.setItem(14, infusedlapis);
+                Materials.setItem(15, corruptedHandle);
+                Materials.setItem(16, infusedlapis);
 
 
                 Materials.setItem(17, G1);
