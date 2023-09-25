@@ -68,6 +68,11 @@ public class Materials_Recipes_Listener implements Listener {
                 ItemStack Emerald = new ItemStack(Material.EMERALD);
                 Emerald.setAmount(20);
 
+                ItemStack Back = new ItemStack(Material.ARROW);
+                ItemMeta BackM = Back.getItemMeta();
+                BackM.setDisplayName(ChatColor.RED + "Back");
+                Back.setItemMeta(BackM);
+
                 Guide.setItem(0, G1);
                 Guide.setItem(1, G1);
                 Guide.setItem(2, G1);
@@ -94,7 +99,7 @@ public class Materials_Recipes_Listener implements Listener {
                 Guide.setItem(33, G1);
                 Guide.setItem(34, G1);
                 Guide.setItem(35, G1);
-                Guide.setItem(36, G1);
+                Guide.setItem(36, Back);
                 Guide.setItem(37, G1);
                 Guide.setItem(38, G1);
                 Guide.setItem(39, G1);
@@ -139,6 +144,11 @@ public class Materials_Recipes_Listener implements Listener {
                 ItemStack netherite = new ItemStack(Material.NETHERITE_INGOT);
                 netherite.setAmount(2);
 
+                ItemStack Back = new ItemStack(Material.ARROW);
+                ItemMeta BackM = Back.getItemMeta();
+                BackM.setDisplayName(ChatColor.RED + "Back");
+                Back.setItemMeta(BackM);
+
                 Guide.setItem(0, G1);
                 Guide.setItem(1, G1);
                 Guide.setItem(2, G1);
@@ -165,7 +175,7 @@ public class Materials_Recipes_Listener implements Listener {
                 Guide.setItem(33, G1);
                 Guide.setItem(34, G1);
                 Guide.setItem(35, G1);
-                Guide.setItem(36, G1);
+                Guide.setItem(36, Back);
                 Guide.setItem(37, G1);
                 Guide.setItem(38, G1);
                 Guide.setItem(39, G1);
@@ -214,6 +224,11 @@ public class Materials_Recipes_Listener implements Listener {
                 SI2.addItemFlags(ItemFlag.HIDE_ENCHANTS);
                 compact2.setItemMeta(SI2);
 
+                ItemStack Back = new ItemStack(Material.ARROW);
+                ItemMeta BackM = Back.getItemMeta();
+                BackM.setDisplayName(ChatColor.RED + "Back");
+                Back.setItemMeta(BackM);
+
                 Guide.setItem(0, G1);
                 Guide.setItem(1, G1);
                 Guide.setItem(2, G1);
@@ -240,7 +255,7 @@ public class Materials_Recipes_Listener implements Listener {
                 Guide.setItem(33, G1);
                 Guide.setItem(34, G1);
                 Guide.setItem(35, G1);
-                Guide.setItem(36, G1);
+                Guide.setItem(36, Back);
                 Guide.setItem(37, G1);
                 Guide.setItem(38, G1);
                 Guide.setItem(39, G1);
@@ -275,6 +290,11 @@ public class Materials_Recipes_Listener implements Listener {
                 M1.setDisplayName(" ");
                 G1.setItemMeta(M1);
 
+                ItemStack Back = new ItemStack(Material.ARROW);
+                ItemMeta BackM = Back.getItemMeta();
+                BackM.setDisplayName(ChatColor.RED + "Back");
+                Back.setItemMeta(BackM);
+
                 Guide.setItem(0, G1);
                 Guide.setItem(1, G1);
                 Guide.setItem(2, G1);
@@ -301,7 +321,7 @@ public class Materials_Recipes_Listener implements Listener {
                 Guide.setItem(33, G1);
                 Guide.setItem(34, G1);
                 Guide.setItem(35, G1);
-                Guide.setItem(36, G1);
+                Guide.setItem(36, Back);
                 Guide.setItem(37, G1);
                 Guide.setItem(38, G1);
                 Guide.setItem(39, G1);
@@ -324,6 +344,11 @@ public class Materials_Recipes_Listener implements Listener {
                 M1.setDisplayName(" ");
                 G1.setItemMeta(M1);
 
+                ItemStack Back = new ItemStack(Material.ARROW);
+                ItemMeta BackM = Back.getItemMeta();
+                BackM.setDisplayName(ChatColor.RED + "Back");
+                Back.setItemMeta(BackM);
+
                 Guide.setItem(0, G1);
                 Guide.setItem(1, G1);
                 Guide.setItem(2, G1);
@@ -350,7 +375,7 @@ public class Materials_Recipes_Listener implements Listener {
                 Guide.setItem(33, G1);
                 Guide.setItem(34, G1);
                 Guide.setItem(35, G1);
-                Guide.setItem(36, G1);
+                Guide.setItem(36, Back);
                 Guide.setItem(37, G1);
                 Guide.setItem(38, G1);
                 Guide.setItem(39, G1);
@@ -373,6 +398,11 @@ public class Materials_Recipes_Listener implements Listener {
                 M1.setDisplayName(" ");
                 G1.setItemMeta(M1);
 
+                ItemStack Back = new ItemStack(Material.ARROW);
+                ItemMeta BackM = Back.getItemMeta();
+                BackM.setDisplayName(ChatColor.RED + "Back");
+                Back.setItemMeta(BackM);
+
                 Guide.setItem(0, G1);
                 Guide.setItem(1, G1);
                 Guide.setItem(2, G1);
@@ -399,7 +429,7 @@ public class Materials_Recipes_Listener implements Listener {
                 Guide.setItem(33, G1);
                 Guide.setItem(34, G1);
                 Guide.setItem(35, G1);
-                Guide.setItem(36, G1);
+                Guide.setItem(36, Back);
                 Guide.setItem(37, G1);
                 Guide.setItem(38, G1);
                 Guide.setItem(39, G1);
@@ -422,6 +452,11 @@ public class Materials_Recipes_Listener implements Listener {
                 M1.setDisplayName(" ");
                 G1.setItemMeta(M1);
 
+                ItemStack Back = new ItemStack(Material.ARROW);
+                ItemMeta BackM = Back.getItemMeta();
+                BackM.setDisplayName(ChatColor.RED + "Back");
+                Back.setItemMeta(BackM);
+
                 Guide.setItem(0, G1);
                 Guide.setItem(1, G1);
                 Guide.setItem(2, G1);
@@ -448,7 +483,7 @@ public class Materials_Recipes_Listener implements Listener {
                 Guide.setItem(33, G1);
                 Guide.setItem(34, G1);
                 Guide.setItem(35, G1);
-                Guide.setItem(36, G1);
+                Guide.setItem(36, Back);
                 Guide.setItem(37, G1);
                 Guide.setItem(38, G1);
                 Guide.setItem(39, G1);
