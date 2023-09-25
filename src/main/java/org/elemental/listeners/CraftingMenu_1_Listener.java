@@ -226,7 +226,7 @@ public class CraftingMenu_1_Listener implements Listener {
                 Materials.setItem(21, G1);
                 Materials.setItem(22, G1);
                 Materials.setItem(23, G1);
-                Materials.setItem(34, G1);
+                Materials.setItem(24, G1);
                 Materials.setItem(25, G1);
                 Materials.setItem(26, G1);
 
