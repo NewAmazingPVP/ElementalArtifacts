@@ -199,6 +199,11 @@ public class CraftingMenu_1_Listener implements Listener {
                 ILM.addItemFlags(ItemFlag.HIDE_ENCHANTS);
                 infusedlapis.setItemMeta(ILM);
 
+                ItemStack Back = new ItemStack(Material.ARROW);
+                ItemMeta BackM = Back.getItemMeta();
+                BackM.setDisplayName(ChatColor.RED + "Back");
+                Back.setItemMeta(BackM);
+
 
 
                 Materials.setItem(0, G1);
@@ -221,7 +226,7 @@ public class CraftingMenu_1_Listener implements Listener {
 
 
                 Materials.setItem(17, G1);
-                Materials.setItem(18, G1);
+                Materials.setItem(18, Back);
                 Materials.setItem(19, G1);
                 Materials.setItem(20, G1);
                 Materials.setItem(21, G1);
