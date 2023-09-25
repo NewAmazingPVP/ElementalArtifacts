@@ -30,7 +30,7 @@ public class Materials_Recipes_Listener implements Listener {
                 player.playSound(player.getLocation(), "minecraft:block.enchantment_table.use", 1.0f, 2.0f);
                 Inventory Guide = Bukkit.createInventory(player, 45, ChatColor.GOLD + "" + ChatColor.BOLD + "Recipe");
 
-                ItemStack G1 = new ItemStack(Material.CYAN_STAINED_GLASS_PANE);
+                ItemStack G1 = new ItemStack(Material.BLUE_STAINED_GLASS_PANE);
                 ItemMeta M1 = G1.getItemMeta();
                 M1.setDisplayName(" ");
                 G1.setItemMeta(M1);
