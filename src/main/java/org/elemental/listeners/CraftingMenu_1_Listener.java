@@ -200,6 +200,7 @@ public class CraftingMenu_1_Listener implements Listener {
                 infusedlapis.setItemMeta(ILM);
 
 
+
                 Materials.setItem(0, G1);
                 Materials.setItem(1, G1);
                 Materials.setItem(2, G1);
