@@ -46,8 +46,8 @@ public class Materials_Recipes_Listener implements Listener {
                 Guide.setItem(8, G1);
                 Guide.setItem(9, G1);
                 Guide.setItem(10, G1);
-                Guide.setItem(11, G1);
 
+                Guide.setItem(14, G1);
                 Guide.setItem(15, G1);
                 Guide.setItem(16, G1);
                 Guide.setItem(17, G1);
