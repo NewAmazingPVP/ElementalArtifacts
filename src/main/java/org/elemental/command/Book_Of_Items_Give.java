@@ -27,7 +27,7 @@ public class Book_Of_Items_Give implements CommandExecutor {
         ItemMeta SI = teamsel.getItemMeta();
         SI.setDisplayName(ChatColor.LIGHT_PURPLE + "" + ChatColor.BOLD + "Book Of Items");
         List<String> DEFL = new ArrayList<>();
-        DEFL.add(ChatColor.DARK_RED + "This Is A Admin Item!");
+        DEFL.add(ChatColor.DARK_GREEN + "This shows every item");
         SI.setLore(DEFL);
         SI.addEnchant(Enchantment.DURABILITY, 1, false);
         SI.addItemFlags(ItemFlag.HIDE_ENCHANTS);
