@@ -19,7 +19,7 @@ commands:
     description: Gives Warp Sword test
     usage: /givewarpsword
   bookofitems:
-    description: Gives the book of items. ONLY FOR ADMINS!
+    description: Gives the book of items.
     usage: /bookpfitems
   givebindingarmor:
     description: Gives binding armor test

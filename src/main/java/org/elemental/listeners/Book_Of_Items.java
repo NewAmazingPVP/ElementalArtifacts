@@ -53,7 +53,7 @@ public class Book_Of_Items implements Listener {
                     ItemMeta II = Items.getItemMeta();
                     II.setDisplayName(ChatColor.LIGHT_PURPLE + "" + ChatColor.BOLD + "Book Of Items");
                     List<String> IEFL = new ArrayList<>();
-                    IEFL.add(ChatColor.DARK_RED + "This Is A Admin Item!");
+                    IEFL.add(ChatColor.DARK_GREEN + "This shows every item");
                     II.setLore(IEFL);
                     II.addEnchant(Enchantment.DURABILITY, 1, false);
                     II.addItemFlags(ItemFlag.HIDE_ENCHANTS);
