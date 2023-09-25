@@ -280,7 +280,7 @@ public class Materials_Recipes_Listener implements Listener {
 
                 player.openInventory(Guide);
             }
-            if (event.getCurrentItem().getDisplayName().equalsIgnoreCase(ChatColor.BLUE + "" + ChatColor.BOLD + "Fear Mongerer Pearl" + ChatColor.DARK_AQUA + " [Item]") && event.getCurrentItem().getType() == Material.ENDER_PEARL) {
+            if (event.getCurrentItem().getDisplayName().equalsIgnoreCase(ChatColor.DARK_PURPLE + "" + ChatColor.BOLD + "Bottle Of Light" + ChatColor.DARK_AQUA + " [Item]") && event.getCurrentItem().getType() == Material.EXPERIENCE_BOTTLE) {
                 Player player = (Player) event.getView().getPlayer();
                 player.playSound(player.getLocation(), "minecraft:block.enchantment_table.use", 1.0f, 2.0f);
                 Inventory Guide = Bukkit.createInventory(player, 45, ChatColor.GOLD + "" + ChatColor.BOLD + "Recipe");
