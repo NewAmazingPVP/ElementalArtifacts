@@ -345,6 +345,16 @@ public class Book_Of_Items implements Listener {
                     SVAM.setColor(Color.fromRGB(0, 0, 255));
                     SacrificingVictimArmor.setItemMeta(SVAM);
 
+                    ItemStack Light = new ItemStack(Material.DIAMOND_AXE);
+                    ItemMeta LIM = Light.getItemMeta();
+                    LIM.setDisplayName(ChatColor.DARK_PURPLE + "" + ChatColor.BOLD + "Light" + ChatColor.DARK_AQUA + " [Item]");
+                    List<String> LIL = new ArrayList<>();
+                    LIL.add(ChatColor.DARK_GREEN + "Obtained from killing blazes!");
+                    LIM.setLore(LIL);
+                    LIM.setUnbreakable(true);
+                    LIM.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
+                    Light.setItemMeta(LIM);
+
 
                     Guide.setItem(0, G1);
                     Guide.setItem(1, G1);
@@ -382,8 +392,8 @@ public class Book_Of_Items implements Listener {
                     Guide.setItem(38, BottleOfLight);
                     Guide.setItem(39, ReaperSoul);
                     Guide.setItem(40, goldcoveredmeat);
-                    /*Guide.setItem(41, SacrificingAxe);
-                    Guide.setItem(42, SacrificingVictimArmor);*/
+                    Guide.setItem(41, Light);
+                    /*Guide.setItem(42, SacrificingVictimArmor);*/
 
 
                     Guide.setItem(18, G1);
