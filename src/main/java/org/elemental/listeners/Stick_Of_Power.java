@@ -19,7 +19,7 @@ public class Stick_Of_Power implements Listener {
         ItemStack item = player.getInventory().getItemInMainHand();
 
         if (event.getAction() == Action.RIGHT_CLICK_AIR || event.getAction() == Action.RIGHT_CLICK_BLOCK) {
-            if (item != null && item.getType() == Material.STICK && item.getItemMeta().getDisplayName().equals(ChatColor.GOLD + "" + ChatColor.BOLD + "Stick Of Power" + ChatColor.DARK_AQUA + " [Wand]")) {
+            if (item != null && item.getType() == Material.STICK && item.getItemMeta().getDisplayName().equals(ChatColor.GOLD + "" + ChatColor.BOLD + "Montu's Staff" + ChatColor.DARK_AQUA + " [Wand]")) {
                 Location playerLocation = player.getLocation();
                 World world = player.getWorld();
                 player.sendMessage("test");
