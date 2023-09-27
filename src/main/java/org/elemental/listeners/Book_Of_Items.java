@@ -405,7 +405,7 @@ public class Book_Of_Items implements Listener {
                     Guide.setItem(39, ReaperSoul);
                     Guide.setItem(40, goldcoveredmeat);
                     Guide.setItem(41, Light);
-                    /*Guide.setItem(42, SacrificingVictimArmor);*/
+                    Guide.setItem(42, StickOfPower);
 
 
                     Guide.setItem(18, G1);
