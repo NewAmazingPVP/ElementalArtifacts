@@ -360,7 +360,8 @@ public class Book_Of_Items implements Listener {
                     SOPM.setDisplayName(ChatColor.GOLD + "" + ChatColor.BOLD + "Montu's Staff" + ChatColor.DARK_AQUA + " [Wand]");
                     List<String> SOPL = new ArrayList<>();
                     SOPL.add(ChatColor.YELLOW + "" + ChatColor.BOLD + "Right Click");
-                    SOPL.add(ChatColor.GREEN + "Spawn a sonic wave that will damage any mob in its range" + ChatColor.RED + "(3)");
+                    SOPL.add(ChatColor.GREEN + "Spawn a sonic wave that will");
+                    SOPL.add(ChatColor.GREEN + "damage any mob in its range" + ChatColor.RED + "(3)");
                     SOPL.add(ChatColor.BLUE + "+2 damage if you have full lapis armor on!");
                     SOPM.setLore(SOPL);
                     GCMM.addEnchant(Enchantment.DURABILITY, 1, false);
