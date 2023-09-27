@@ -25,7 +25,7 @@ public class Temp_give_stickofpower implements CommandExecutor {
         Player player = (Player) sender;
         ItemStack StickOfPower  = new ItemStack(Material.STICK);
         ItemMeta SOPM = StickOfPower.getItemMeta();
-        SOPM.setDisplayName(ChatColor.GOLD + "" + ChatColor.BOLD + "Stick Of Power" + ChatColor.DARK_AQUA + " [Wand]");
+        SOPM.setDisplayName(ChatColor.GOLD + "" + ChatColor.BOLD + "Montu's Staff" + ChatColor.DARK_AQUA + " [Wand]");
         List<String> SOPL = new ArrayList<>();
         SOPL.add(ChatColor.YELLOW + "" + ChatColor.BOLD + "Right Click");
         SOPL.add(ChatColor.GREEN + "Spawn a sonic wave that will damage any mob in its range" + ChatColor.RED + "(3)");
