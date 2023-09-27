@@ -29,7 +29,7 @@ public class Temp_give_stickofpower implements CommandExecutor {
         List<String> SOPL = new ArrayList<>();
         SOPL.add(ChatColor.YELLOW + "" + ChatColor.BOLD + "Right Click");
         SOPL.add(ChatColor.GREEN + "Spawn a sonic wave that will");
-        SOPL.add(ChatColor.GREEN + "damage any mob in its range" + ChatColor.RED + "" + ChatColor.BOLD + " 3♥");
+        SOPL.add(ChatColor.GREEN + "damage any mob in its range" + ChatColor.RED + "" + ChatColor.BOLD + " 3❤");
         SOPL.add(ChatColor.BLUE + "+2 damage if you have full lapis armor on!");
         SOPM.setLore(SOPL);
         SOPM.addEnchant(Enchantment.DURABILITY, 1, false);
