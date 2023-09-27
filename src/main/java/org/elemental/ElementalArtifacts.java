@@ -61,6 +61,7 @@ public final class ElementalArtifacts extends JavaPlugin implements Listener {
         getServer().getPluginManager().registerEvents(new Gold_Covered_Meat(), this);
         getServer().getPluginManager().registerEvents(new Sacerficeing_armor(), this);
         getServer().getPluginManager().registerEvents(new ALL_RECIPIE_GUIDE_LISTENER(), this);
+        getServer().getPluginManager().registerEvents(new Stick_Of_Power(), this);
         registerCustomRecipes();
         registerCustom();
         registerCustomRecipesdouble();
