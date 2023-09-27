@@ -45,3 +45,6 @@ commands:
   givesacerficeingarmor:
     description: Gives sacerficeing armor test
     usage: /givesacerficeingarmor
+  givestickofpower:
+    description: Gives stick of power test
+    usage: /givestickofpower

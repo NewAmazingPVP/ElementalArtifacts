@@ -345,7 +345,7 @@ public class Book_Of_Items implements Listener {
                     SVAM.setColor(Color.fromRGB(0, 0, 255));
                     SacrificingVictimArmor.setItemMeta(SVAM);
 
-                    ItemStack Light = new ItemStack(Material.DIAMOND_AXE);
+                    ItemStack Light = new ItemStack(Material.LIGHT);
                     ItemMeta LIM = Light.getItemMeta();
                     LIM.setDisplayName(ChatColor.DARK_PURPLE + "" + ChatColor.BOLD + "Light" + ChatColor.DARK_AQUA + " [Item]");
                     List<String> LIL = new ArrayList<>();
@@ -354,6 +354,18 @@ public class Book_Of_Items implements Listener {
                     LIM.setUnbreakable(true);
                     LIM.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
                     Light.setItemMeta(LIM);
+
+                    ItemStack StickOfPower  = new ItemStack(Material.STICK);
+                    ItemMeta SOPM = StickOfPower.getItemMeta();
+                    SOPM.setDisplayName(ChatColor.GOLD + "" + ChatColor.BOLD + "Stick Of Power" + ChatColor.DARK_AQUA + " [Wand]");
+                    List<String> SOPL = new ArrayList<>();
+                    SOPL.add(ChatColor.YELLOW + "" + ChatColor.BOLD + "Right Click");
+                    SOPL.add(ChatColor.GREEN + "Spawn a sonic wave that will damage any mob in its range" + ChatColor.RED + "(3)");
+                    SOPL.add(ChatColor.BLUE + "+2 damage if you have full lapis armor on!");
+                    SOPM.setLore(SOPL);
+                    GCMM.addEnchant(Enchantment.DURABILITY, 1, false);
+                    GCMM.addItemFlags(ItemFlag.HIDE_ENCHANTS);
+                    StickOfPower.setItemMeta(SOPM);
 
 
                     Guide.setItem(0, G1);
