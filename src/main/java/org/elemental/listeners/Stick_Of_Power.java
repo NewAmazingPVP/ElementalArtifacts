@@ -32,9 +32,12 @@ public class Stick_Of_Power implements Listener {
             }
         }
 
-        if(event.getAction() == Action.RIGHT_CLICK_AIR || event.getAction() == Action.RIGHT_CLICK_BLOCK) {
-            if(event.getPlayer().isSneaking()) {
-                event.getPlayer().sendMessage("Shift Right");
+        Player player = event.getPlayer();
+        ItemStack item = player.getInventory().getItemInHand();
+
+        if (item != null && item.getType() == Material.STICK && item.hasItemMeta() && item.getItemMeta().hasDisplayName() && item.getItemMeta().getDisplayName().equals(ChatColor.GOLD + "" + ChatColor.BOLD + "Montu's Staff" + ChatColor.DARK_AQUA + " [Wand]")) {
+            if (player.isSneaking()) {
+                player.sendMessage("Shift Right");
             }
         }
     }
