@@ -1,5 +1,6 @@
 package org.elemental.listeners;
 
+import org.bukkit.ChatColor;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
@@ -16,7 +17,7 @@ public class Montu_Staff_Shift_Left implements Listener {
         // Check if the player is holding the item "1111111111111"
         ItemStack itemInHand = player.getInventory().getItemInMainHand();
         ItemMeta meta = itemInHand.getItemMeta();
-        if (meta != null && meta.hasDisplayName() && meta.getDisplayName().equals("1111111111111")) {
+        if (meta != null && meta.hasDisplayName() && meta.getDisplayName().equals(ChatColor.GOLD + "" + ChatColor.BOLD + "Montu's Staff" + ChatColor.DARK_AQUA + " [Wand]")) {
             // Check if the player is crouching
             if (player.isSneaking()) {
                 // Check if the player is left-clicking
