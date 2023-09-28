@@ -28,8 +28,17 @@ public class Stick_Of_Power implements Listener {
             // Check if the item is a stick and is named "1111111111111111"
             if (item != null && item.getType() == Material.STICK && item.hasItemMeta() && item.getItemMeta().hasDisplayName() && item.getItemMeta().getDisplayName().equals(ChatColor.GOLD + "" + ChatColor.BOLD + "Montu's Staff" + ChatColor.DARK_AQUA + " [Wand]")) {
                 // Send a message to the player
-                event.getPlayer().sendMessage("Test");
+                event.getPlayer().sendMessage("Right");
+            }
+        }
+
+        if(event.getAction() == Action.RIGHT_CLICK_AIR || event.getAction() == Action.RIGHT_CLICK_BLOCK) {
+            if(event.getPlayer().isSneaking()) {
+                event.getPlayer().sendMessage("Shift Right");
             }
         }
     }
 }
+
+
+
