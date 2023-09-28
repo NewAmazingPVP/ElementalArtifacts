@@ -11,14 +11,15 @@ import org.bukkit.inventory.ItemStack;
 public class Montu_Staff_Shift_Right implements Listener {
     @EventHandler
     public void onPlayerInteract(PlayerInteractEvent event) {
-        Player player = event.getPlayer();
-        ItemStack item = player.getInventory().getItemInHand();
-
-        if (item != null && item.getType() == Material.STICK && item.hasItemMeta() && item.getItemMeta().hasDisplayName() && item.getItemMeta().getDisplayName().equals(ChatColor.GOLD + "" + ChatColor.BOLD + "Montu's Staff" + ChatColor.DARK_AQUA + " [Wand]")) {
+        if (event.getAction().isRightClick()) {
+            Player player = event.getPlayer();
             if (player.isSneaking()) {
-                player.sendMessage("Shift Right");
+                ItemStack itemInHand = player.getInventory().getItemInMainHand();
+                if (itemInHand != null && itemInHand.getType() == Material.STICK && itemInHand.hasItemMeta() && itemInHand.getItemMeta().hasDisplayName() && itemInHand.getItemMeta().getDisplayName().equals(ChatColor.GOLD + "" + ChatColor.BOLD + "Montu's Staff" + ChatColor.DARK_AQUA + " [Wand]")) {
+                    player.sendMessage("Shift Right");
+                }
             }
         }
     }
-
 }
+
