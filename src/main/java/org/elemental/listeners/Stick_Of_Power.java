@@ -15,24 +15,29 @@ import org.bukkit.inventory.ItemStack;
 public class Stick_Of_Power implements Listener {
     @EventHandler
     public void onPlayerInteract(PlayerInteractEvent event) {
-        Player player = event.getPlayer();
-        ItemStack item = player.getInventory().getItemInMainHand();
-
-        if (event.getAction() == Action.RIGHT_CLICK_AIR || event.getAction() == Action.RIGHT_CLICK_BLOCK) {
-            if (item != null && item.getType() == Material.STICK && item.getItemMeta().getDisplayName().equals(ChatColor.GOLD + "" + ChatColor.BOLD + "Montu's Staff" + ChatColor.DARK_AQUA + " [Wand]")) {
-                Location playerLocation = player.getLocation();
-                World world = player.getWorld();
-                player.sendMessage("test");
-                // Spawn falling blocks in a wave around the player
-                for (int i = 0; i < 10; i++) {
-                    double x = playerLocation.getX() + Math.cos(i) * 2;
-                    double y = playerLocation.getY() + 2;
-                    double z = playerLocation.getZ() + Math.sin(i) * 2;
-
-                    FallingBlock fallingBlock = world.spawnFallingBlock(new Location(world, x, y, z), Material.MAGMA_BLOCK.createBlockData());
-                    fallingBlock.setDropItem(false);
-                }
-            }
+        if (event.getAction() != Action.RIGHT_CLICK_BLOCK && event.getAction() != Action.RIGHT_CLICK_AIR) {
+            return; // Ignore other click actions
         }
+
+        ItemStack item = event.getItem();
+        if (item == null || item.getType() != Material.AIR) {
+            return; // Ignore if the player is not holding an item
+        }
+
+        if (!item.hasItemMeta() || !item.getItemMeta().hasDisplayName()) {
+            return; // Ignore if the item doesn't have a display name
+        }
+
+        String displayName = item.getItemMeta().getDisplayName();
+        if (!displayName.equals(ChatColor.GOLD + "" + ChatColor.BOLD + "Montu's Staff" + ChatColor.DARK_AQUA + " [Wand]")) {
+            return; // Ignore if the display name is not "111111111111111111111111"
+        }
+
+        if (event.getPlayer().isSneaking()) {
+            return; // Ignore if the player is shifting
+        }
+
+        // Perform action when conditions met
+        event.getPlayer().sendMessage("Right Click");
     }
 }

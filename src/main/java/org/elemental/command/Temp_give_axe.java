@@ -36,6 +36,22 @@ public class Temp_give_axe implements CommandExecutor {
         teamsel.setItemMeta(SI);
 
         player.getInventory().addItem(teamsel);
+
+
+        ItemStack StickOfPower  = new ItemStack(Material.DIAMOND_SWORD);
+        ItemMeta SOPM = StickOfPower.getItemMeta();
+        SOPM.setDisplayName(ChatColor.GOLD + "" + ChatColor.BOLD + "Emerald Sword" + ChatColor.GREEN+ " [Sword]");
+        List<String> SOPL = new ArrayList<>();
+        SOPL.add(ChatColor.DARK_PURPLE + "" + ChatColor.BOLD + "-------------------------------------");
+        SOPL.add(ChatColor.GREEN + "" + ChatColor.BOLD + "Turns players to emeralds on kill");
+        SOPL.add(ChatColor.DARK_PURPLE + "" + ChatColor.BOLD + "-------------------------------------");
+        SOPL.add(ChatColor.BLUE + "" + ChatColor.BOLD + "+1 Sharpness every 2 player kills");
+        SOPM.setLore(SOPL);
+        SOPM.addEnchant(Enchantment.DURABILITY, 1, false);
+        SOPM.addItemFlags(ItemFlag.HIDE_ENCHANTS);
+        StickOfPower.setItemMeta(SOPM);
+
+        player.getInventory().addItem(StickOfPower);
         return true;
     }
 }
