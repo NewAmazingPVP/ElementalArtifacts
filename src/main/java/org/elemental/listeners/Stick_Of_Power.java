@@ -15,10 +15,20 @@ import org.bukkit.inventory.ItemStack;
 public class Stick_Of_Power implements Listener {
     @EventHandler
     public void onPlayerInteract(PlayerInteractEvent event) {
-        if (event.getAction().name().contains("RIGHT_CLICK") && !event.getPlayer().isSneaking()) {
+        // Check if the player is sneaking (crouching)
+        if (event.getPlayer().isSneaking()) {
+            return;
+        }
+
+        // Check if the player is right-clicking
+        if (event.getAction() == Action.RIGHT_CLICK_AIR || event.getAction() == Action.RIGHT_CLICK_BLOCK) {
+            // Get the item in the player's hand
             ItemStack item = event.getItem();
-            if (item != null && item.getType() == Material.NAME_TAG && item.hasItemMeta() && item.getItemMeta().getDisplayName().equals(ChatColor.GOLD + "" + ChatColor.BOLD + "Montu's Staff" + ChatColor.DARK_AQUA + " [Wand]")) {
-                event.getPlayer().sendMessage("Right Click");
+
+            // Check if the item is a stick and is named "1111111111111111"
+            if (item != null && item.getType() == Material.STICK && item.hasItemMeta() && item.getItemMeta().hasDisplayName() && item.getItemMeta().getDisplayName().equals(ChatColor.GOLD + "" + ChatColor.BOLD + "Montu's Staff" + ChatColor.DARK_AQUA + " [Wand]")) {
+                // Send a message to the player
+                event.getPlayer().sendMessage("Test");
             }
         }
     }
