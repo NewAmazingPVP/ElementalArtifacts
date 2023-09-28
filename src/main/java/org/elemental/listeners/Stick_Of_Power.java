@@ -16,13 +16,9 @@ public class Stick_Of_Power implements Listener {
     @EventHandler
     public void onPlayerInteract(PlayerInteractEvent event) {
         if (event.getAction().name().contains("RIGHT_CLICK") && !event.getPlayer().isSneaking()) {
-            if (event.getItem() != null && event.getItem().getType() == Material.AIR) {
-                if (event.getItem().getItemMeta() != null && event.getItem().getItemMeta().hasDisplayName()) {
-                    String itemName = event.getItem().getItemMeta().getDisplayName();
-                    if (itemName.equals(ChatColor.GOLD + "" + ChatColor.BOLD + "Montu's Staff" + ChatColor.DARK_AQUA + " [Wand]")) {
-                        event.getPlayer().sendMessage("Right Click");
-                    }
-                }
+            ItemStack item = event.getItem();
+            if (item != null && item.getType() == Material.NAME_TAG && item.hasItemMeta() && item.getItemMeta().getDisplayName().equals(ChatColor.GOLD + "" + ChatColor.BOLD + "Montu's Staff" + ChatColor.DARK_AQUA + " [Wand]")) {
+                event.getPlayer().sendMessage("Right Click");
             }
         }
     }
