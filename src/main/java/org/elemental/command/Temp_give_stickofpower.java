@@ -29,13 +29,13 @@ public class Temp_give_stickofpower implements CommandExecutor {
         List<String> SOPL = new ArrayList<>();
         SOPL.add(ChatColor.DARK_PURPLE + "" + ChatColor.BOLD + "-------------------------------------");
         SOPL.add(ChatColor.YELLOW + "" + ChatColor.BOLD + "Right Click");
+        SOPL.add(ChatColor.GREEN + "Warp 5 blocks where you are looking!");
+        SOPL.add(ChatColor.BLUE + "+1 range if you have full lapis armor on!");
+        SOPL.add(ChatColor.DARK_PURPLE + "" + ChatColor.BOLD + "-------------------------------------");
+        SOPL.add(ChatColor.YELLOW + "" + ChatColor.BOLD + "Shift Right Click" + ChatColor.DARK_AQUA + " (10sec Cooldown)");
         SOPL.add(ChatColor.GREEN + "Spawn a sonic wave that will");
         SOPL.add(ChatColor.GREEN + "damage any mob in its range!" + ChatColor.RED + " 3❤");
         SOPL.add(ChatColor.BLUE + "+2 damage if you have full lapis armor on!");
-        SOPL.add(ChatColor.DARK_PURPLE + "" + ChatColor.BOLD + "-------------------------------------");
-        SOPL.add(ChatColor.YELLOW + "" + ChatColor.BOLD + "Shift Right Click");
-        SOPL.add(ChatColor.GREEN + "Warp 5 blocks where you are looking!");
-        SOPL.add(ChatColor.BLUE + "+1 range if you have full lapis armor on!");
         SOPL.add(ChatColor.DARK_PURPLE + "" + ChatColor.BOLD + "-------------------------------------");
         SOPL.add(ChatColor.YELLOW + "" + ChatColor.BOLD + "Left Click");
         SOPL.add(ChatColor.GREEN + "Shoots a beam 6 blocks out that deals damage!" + ChatColor.RED + " 1❤");
