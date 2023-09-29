@@ -54,8 +54,11 @@ public class Montu_Staff_Left implements Listener {
                         for (int i = 0; i < 15; i++) {
                             executorService.schedule(() -> {
                             location.add(direction);
-                            player.getWorld().spawnParticle(Particle.REDSTONE, location, 0, new Particle.DustOptions(Color.PURPLE, 1.0F));
-                            player.getWorld().spawnParticle(Particle.REDSTONE, location, 0, new Particle.DustOptions(Color.BLACK, 2.0F));
+                                for (Player player2 : Bukkit.getOnlinePlayers()) {
+                                    player2.getWorld().spawnParticle(Particle.REDSTONE, location, 0, new Particle.DustOptions(Color.PURPLE, 1.0F));
+                                    player2.getWorld().spawnParticle(Particle.REDSTONE, location, 0, new Particle.DustOptions(Color.BLACK, 2.0F));
+                                }
+
 
 
                             }, 2000, TimeUnit.MICROSECONDS);
