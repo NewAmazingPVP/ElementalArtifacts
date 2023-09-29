@@ -45,7 +45,6 @@ public class Montu_Staff_Left implements Listener {
                         long cooldownEnd = System.currentTimeMillis() + 1000;
                         cooldowns.put(player.getUniqueId(), cooldownEnd);
 
-                        player.sendMessage("Left");
                         player.playSound(player.getLocation(), Sound.BLOCK_BEACON_POWER_SELECT, 1.0f, 2.0f);
                         player.playSound(player.getLocation(), Sound.ENTITY_FIREWORK_ROCKET_TWINKLE, 1.0f, 2.0f);
                         Location location = player.getEyeLocation().add(0, 0.2, 0);
@@ -70,6 +69,7 @@ public class Montu_Staff_Left implements Listener {
                                         // If the distance is less than or equal to 15 blocks, damage the entity
                                         if (distance <= 15) {
                                             ((LivingEntity) entity).damage(2);
+                                            player.playSound(player.getLocation(), Sound.BLOCK_NOTE_BLOCK_PLING, 1.0f, 2.0f);
                                         }
                                     }
                                 }
