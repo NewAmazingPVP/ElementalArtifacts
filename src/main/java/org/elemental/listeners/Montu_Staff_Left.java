@@ -64,7 +64,15 @@ public class Montu_Staff_Left implements Listener {
 
                                 for (Entity entity : location.getWorld().getNearbyEntities(location, 15, 15, 15)) {
                                     if (entity instanceof LivingEntity) {
-                                        ((LivingEntity) entity).damage(2);
+                                        // Calculate the distance between the player and the entity
+                                        double distance = player.getLocation().distance(entity.getLocation());
+
+                                        // If the distance is less than or equal to 15 blocks, damage the entity
+                                        if (distance <= 15) {
+                                            ((LivingEntity) entity).damage(2);
+                                        }
+                                    }
+                                }
                                     }
                                 }
                             }
@@ -73,8 +81,7 @@ public class Montu_Staff_Left implements Listener {
                 }
             }
         }
-    }
-}
+
 
 
 
