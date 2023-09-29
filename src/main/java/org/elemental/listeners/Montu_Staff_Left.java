@@ -33,9 +33,9 @@ public class Montu_Staff_Left implements Listener {
                         player.playSound(player.getLocation(), Sound.ITEM_FLINTANDSTEEL_USE, 1.0f, 2.0f);
                         Location location = player.getLocation();
                         Vector direction = player.getLocation().getDirection();
-                        for (int i = 1; i < 15; i++) {
+                        for (int i = 0; i < 15; i++) {
                             location.add(direction);
-                            player.getWorld().spawnParticle(Particle.REDSTONE, location, 0, new Particle.DustOptions(Color.PURPLE, 1.0F));
+                            player.getWorld().spawnParticle(Particle.REDSTONE, location, 0, new Particle.DustOptions(Color.RED, 3.0F));
                         }
                     }
                 }
