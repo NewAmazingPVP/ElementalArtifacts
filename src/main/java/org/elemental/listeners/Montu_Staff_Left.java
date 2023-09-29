@@ -20,6 +20,10 @@ import org.bukkit.event.block.Action;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.entity.Entity;
 
+import java.util.concurrent.Executors;
+import java.util.concurrent.ScheduledExecutorService;
+import java.util.concurrent.TimeUnit;
+
 
 public class Montu_Staff_Left implements Listener {
     @EventHandler
@@ -45,29 +49,23 @@ public class Montu_Staff_Left implements Listener {
                         player.playSound(player.getLocation(), Sound.BLOCK_BEACON_POWER_SELECT, 1.0f, 2.0f);
                         Location location = player.getEyeLocation().add(0, 0.2, 0);
                         Vector direction = player.getLocation().getDirection();
+                        ScheduledExecutorService executorService = Executors.newSingleThreadScheduledExecutor();
                         for (int i = 0; i < 15; i++) {
+                            executorService.schedule(() -> {
                             location.add(direction);
                             player.getWorld().spawnParticle(Particle.REDSTONE, location, 0, new Particle.DustOptions(Color.PURPLE, 1.0F));
                             player.getWorld().spawnParticle(Particle.REDSTONE, location, 0, new Particle.DustOptions(Color.BLACK, 2.0F));
-                            Vector direction2 = player.getLocation().getDirection();
-                            double range = 15;
-                            for (Entity entity : player.getNearbyEntities(range, range, range)) {
-                                Vector entityVector = entity.getLocation().subtract(player.getLocation()).toVector();
-                                if (entityVector.normalize().equals(direction2.normalize())) {
-                                    /*entity.setLastDamage(2);
-                                    entity.setLastDamager(player);*/
-                                    Event event2 = new EntityDamageByEntityEvent(entity, player, EntityDamageEvent.DamageCause.ENTITY_ATTACK, 2);
-                                    Bukkit.getServer().getPluginManager().callEvent(event2);
 
+
+                            }, 200, TimeUnit.MICROSECONDS);
+                        }
                                 }
                             }
                         }
                     }
                 }
             }
-        }
-    }
-}
+
 
 
 
