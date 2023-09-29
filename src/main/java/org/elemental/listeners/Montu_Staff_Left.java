@@ -59,6 +59,8 @@ public class Montu_Staff_Left implements Listener {
                                     Event event2 = new EntityDamageByEntityEvent(entity, player, EntityDamageEvent.DamageCause.ENTITY_ATTACK, 2);
                                     Bukkit.getServer().getPluginManager().callEvent(event2);
 
+                                }
+                            }
                         }
                     }
                 }
