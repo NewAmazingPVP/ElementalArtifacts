@@ -7,6 +7,7 @@ import org.bukkit.event.Listener;
 import org.bukkit.event.block.Action;
 import org.bukkit.event.player.PlayerInteractEvent;
 import org.bukkit.inventory.ItemStack;
+import org.bukkit.util.Vector;
 
 
 public class Montu_Staff_Left implements Listener {
@@ -30,10 +31,11 @@ public class Montu_Staff_Left implements Listener {
                         player.playSound(player.getLocation(), Sound.ITEM_FLINTANDSTEEL_USE, 1.0f, 2.0f);
                         player.playSound(player.getLocation(), Sound.ITEM_FLINTANDSTEEL_USE, 1.0f, 2.0f);
                         player.playSound(player.getLocation(), Sound.ITEM_FLINTANDSTEEL_USE, 1.0f, 2.0f);
-                        Location location = event.getPlayer().getEyeLocation();
+                        Location location = player.getLocation();
+                        Vector direction = player.getLocation().getDirection();
                         for (int i = 0; i < 7; i++) {
-                            location.getWorld().spawnParticle(Particle.REDSTONE, location, 1, 0, 0, 0, 0);
-                            location.add(location.getDirection());
+                            location.add(direction);
+                            player.getWorld().spawnParticle(Particle.REDSTONE, location, 0, new Particle.DustOptions(Color.PURPLE, 1.0F));
                         }
                     }
                 }
@@ -41,4 +43,8 @@ public class Montu_Staff_Left implements Listener {
         }
     }
 }
+
+            
+
+
 
