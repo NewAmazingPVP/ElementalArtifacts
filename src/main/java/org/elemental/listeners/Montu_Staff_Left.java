@@ -1,6 +1,8 @@
 package org.elemental.listeners;
 
 import org.bukkit.*;
+import org.bukkit.entity.Entity;
+import org.bukkit.entity.LivingEntity;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
@@ -59,6 +61,12 @@ public class Montu_Staff_Left implements Listener {
                             for (Player player2 : Bukkit.getOnlinePlayers()) {
                                 player2.getWorld().spawnParticle(Particle.REDSTONE, location, 0, new Particle.DustOptions(Color.PURPLE, 2.0F));
                                 player2.getWorld().spawnParticle(Particle.REDSTONE, location, 0, new Particle.DustOptions(Color.BLACK, 3.0F));
+
+                                for (Entity entity : location.getWorld().getNearbyEntities(location, 15, 15, 15)) {
+                                    if (entity instanceof LivingEntity) {
+                                        ((LivingEntity) entity).damage(2);
+                                    }
+                                }
                             }
                         }
                     }
