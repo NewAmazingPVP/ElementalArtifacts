@@ -53,7 +53,7 @@ public class Montu_Staff_Left implements Listener {
                         ScheduledExecutorService executorService = Executors.newSingleThreadScheduledExecutor();
                         for (int i = 0; i < 15; i++) {
                             try {
-                                Thread.sleep(50); // Sleep for 200 milliseconds (0.2 seconds)
+                                Thread.sleep(30); // Sleep for 200 milliseconds (0.2 seconds)
                             } catch (InterruptedException e) {
                                 e.printStackTrace();
                             }
@@ -62,6 +62,7 @@ public class Montu_Staff_Left implements Listener {
                             for (Player player2 : Bukkit.getOnlinePlayers()) {
                                 player2.getWorld().spawnParticle(Particle.REDSTONE, location, 0, new Particle.DustOptions(Color.PURPLE, 2.0F));
                                 player2.getWorld().spawnParticle(Particle.REDSTONE, location, 0, new Particle.DustOptions(Color.BLACK, 3.0F));
+                                player2.getWorld().spawnParticle(Particle.FLASH, location, 0, new Particle.DustOptions(Color.BLACK, 3.0F));
 
 
 
