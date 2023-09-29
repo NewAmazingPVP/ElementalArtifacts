@@ -30,7 +30,7 @@ public class Montu_Staff_Left implements Listener {
                 long cooldownEnd = cooldowns.get(player.getUniqueId());
                 if (System.currentTimeMillis() < cooldownEnd) {
                     // player is still in cooldown
-                    player.sendMessage(ChatColor.RED + "Please slow down.");
+                    player.playSound(player.getLocation(), Sound.ITEM_FLINTANDSTEEL_USE, 1.0f, 2.0f);
                     return;
                 }
             }
