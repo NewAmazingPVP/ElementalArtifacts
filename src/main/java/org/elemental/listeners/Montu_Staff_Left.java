@@ -52,23 +52,23 @@ public class Montu_Staff_Left implements Listener {
                         Vector direction = player.getLocation().getDirection();
                         ScheduledExecutorService executorService = Executors.newSingleThreadScheduledExecutor();
                         for (int i = 0; i < 15; i++) {
-                            executorService.schedule(() -> {
+
                             location.add(direction);
-                                for (Player player2 : Bukkit.getOnlinePlayers()) {
-                                    player2.getWorld().spawnParticle(Particle.REDSTONE, location, 0, new Particle.DustOptions(Color.PURPLE, 1.0F));
-                                    player2.getWorld().spawnParticle(Particle.REDSTONE, location, 0, new Particle.DustOptions(Color.BLACK, 2.0F));
-                                }
+                            for (Player player2 : Bukkit.getOnlinePlayers()) {
+                                player2.getWorld().spawnParticle(Particle.REDSTONE, location, 0, new Particle.DustOptions(Color.PURPLE, 1.0F));
+                                player2.getWorld().spawnParticle(Particle.REDSTONE, location, 0, new Particle.DustOptions(Color.BLACK, 2.0F));
 
 
-
-                            }, 2000, TimeUnit.MICROSECONDS);
-                        }
-                                }
                             }
                         }
                     }
                 }
             }
+        }
+    }
+}
+
+
 
 
 
