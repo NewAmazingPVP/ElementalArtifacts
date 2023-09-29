@@ -65,6 +65,7 @@ public final class ElementalArtifacts extends JavaPlugin implements Listener {
         getServer().getPluginManager().registerEvents(new Montu_Staff_Shift_Right(), this);
         getServer().getPluginManager().registerEvents(new Montu_Staff_Left(), this);
         getServer().getPluginManager().registerEvents(new Montu_Staff_Shift_Left(), this);
+        getServer().getPluginManager().registerEvents(new Montu_Staff_OtherItemCode(), this);
         registerCustomRecipes();
         registerCustom();
         registerCustomRecipesdouble();
