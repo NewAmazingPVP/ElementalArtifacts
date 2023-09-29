@@ -52,11 +52,17 @@ public class Montu_Staff_Left implements Listener {
                         Vector direction = player.getLocation().getDirection();
                         ScheduledExecutorService executorService = Executors.newSingleThreadScheduledExecutor();
                         for (int i = 0; i < 15; i++) {
+                            try {
+                                Thread.sleep(200); // Sleep for 200 milliseconds (0.2 seconds)
+                            } catch (InterruptedException e) {
+                                e.printStackTrace();
+                            }
 
                             location.add(direction);
                             for (Player player2 : Bukkit.getOnlinePlayers()) {
                                 player2.getWorld().spawnParticle(Particle.REDSTONE, location, 0, new Particle.DustOptions(Color.PURPLE, 1.0F));
                                 player2.getWorld().spawnParticle(Particle.REDSTONE, location, 0, new Particle.DustOptions(Color.BLACK, 2.0F));
+
 
 
                             }
