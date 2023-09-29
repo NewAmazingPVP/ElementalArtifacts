@@ -47,6 +47,7 @@ public class Montu_Staff_Left implements Listener {
                         player.playSound(player.getLocation(), Sound.ITEM_FLINTANDSTEEL_USE, 1.0f, 2.0f);
                         player.playSound(player.getLocation(), Sound.ITEM_FLINTANDSTEEL_USE, 1.0f, 2.0f);*/
                         player.playSound(player.getLocation(), Sound.BLOCK_BEACON_POWER_SELECT, 1.0f, 2.0f);
+                        player.playSound(player.getLocation(), Sound.ENTITY_FIREWORK_ROCKET_TWINKLE, 1.0f, 2.0f);
                         Location location = player.getEyeLocation().add(0, 0.2, 0);
                         Vector direction = player.getLocation().getDirection();
                         ScheduledExecutorService executorService = Executors.newSingleThreadScheduledExecutor();
@@ -57,7 +58,7 @@ public class Montu_Staff_Left implements Listener {
                             player.getWorld().spawnParticle(Particle.REDSTONE, location, 0, new Particle.DustOptions(Color.BLACK, 2.0F));
 
 
-                            }, 200, TimeUnit.MICROSECONDS);
+                            }, 600, TimeUnit.MICROSECONDS);
                         }
                                 }
                             }
