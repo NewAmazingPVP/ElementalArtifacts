@@ -58,7 +58,7 @@ public class Montu_Staff_Left implements Listener {
                             player.getWorld().spawnParticle(Particle.REDSTONE, location, 0, new Particle.DustOptions(Color.BLACK, 2.0F));
 
 
-                            }, 600, TimeUnit.MICROSECONDS);
+                            }, 2000, TimeUnit.MICROSECONDS);
                         }
                                 }
                             }
