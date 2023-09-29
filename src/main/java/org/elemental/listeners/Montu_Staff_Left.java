@@ -1,6 +1,8 @@
 package org.elemental.listeners;
 
 import org.bukkit.ChatColor;
+import org.bukkit.Color;
+import org.bukkit.Particle;
 import org.bukkit.Sound;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
@@ -8,6 +10,7 @@ import org.bukkit.event.Listener;
 import org.bukkit.event.block.Action;
 import org.bukkit.event.player.PlayerInteractEvent;
 import org.bukkit.inventory.ItemStack;
+
 
 public class Montu_Staff_Left implements Listener {
     @EventHandler
@@ -30,6 +33,17 @@ public class Montu_Staff_Left implements Listener {
                         player.playSound(player.getLocation(), Sound.ITEM_FLINTANDSTEEL_USE, 1.0f, 2.0f);
                         player.playSound(player.getLocation(), Sound.ITEM_FLINTANDSTEEL_USE, 1.0f, 2.0f);
                         player.playSound(player.getLocation(), Sound.ITEM_FLINTANDSTEEL_USE, 1.0f, 2.0f);
+                        double x = player.getLocation().getX();
+                        double y = player.getLocation().getY();
+                        double z = player.getLocation().getZ();
+                        double dx = player.getLocation().getDirection().getX();
+                        double dy = player.getLocation().getDirection().getY();
+                        double dz = player.getLocation().getDirection().getZ();
+
+                        for (int i = 0; i < 7; i++) {
+                            player.spawnParticle(Particle.REDSTONE, x + dx * i, y + dy * i, z + dz * i, 0, 0, 0, 0, new Particle.DustOptions(Color.PURPLE, 1.0f));
+                        }
+
                     }
                 }
             }
