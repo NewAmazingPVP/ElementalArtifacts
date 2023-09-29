@@ -31,7 +31,7 @@ public class Montu_Staff_Left implements Listener {
                         player.playSound(player.getLocation(), Sound.ITEM_FLINTANDSTEEL_USE, 1.0f, 2.0f);
                         player.playSound(player.getLocation(), Sound.ITEM_FLINTANDSTEEL_USE, 1.0f, 2.0f);
                         player.playSound(player.getLocation(), Sound.ITEM_FLINTANDSTEEL_USE, 1.0f, 2.0f);
-                        Location location = player.getLocation();
+                        Location location = player.getEyeLocation().add(0, 1, 0);
                         Vector direction = player.getLocation().getDirection();
                         for (int i = 0; i < 15; i++) {
                             location.add(direction);
