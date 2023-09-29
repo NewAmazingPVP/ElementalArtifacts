@@ -8,7 +8,6 @@ import org.bukkit.event.block.Action;
 import org.bukkit.event.player.PlayerInteractEvent;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
-import org.bukkit.scheduler.BukkitRunnable;
 import org.bukkit.util.Vector;
 
 import java.util.HashMap;
@@ -31,6 +30,7 @@ public class Montu_Staff_Left implements Listener {
                 long cooldownEnd = cooldowns.get(player.getUniqueId());
                 if (System.currentTimeMillis() < cooldownEnd) {
                     // player is still in cooldown
+                    player.sendMessage(ChatColor.RED + "Please slow down.");
                     return;
                 }
             }
@@ -40,7 +40,7 @@ public class Montu_Staff_Left implements Listener {
                     String name = itemInHand.getItemMeta().getDisplayName();
                     if (name.equals(ChatColor.GOLD + "" + ChatColor.BOLD + "Montu's Staff" + ChatColor.DARK_AQUA + " [Wand]")) {
                         // 1000 milliseconds = 1 second
-                        long cooldownEnd = System.currentTimeMillis() + 31;
+                        long cooldownEnd = System.currentTimeMillis() + 1000;
                         cooldowns.put(player.getUniqueId(), cooldownEnd);
 
                         player.sendMessage("Left");
