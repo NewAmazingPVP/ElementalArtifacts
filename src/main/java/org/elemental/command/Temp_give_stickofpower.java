@@ -41,8 +41,7 @@ public class Temp_give_stickofpower implements CommandExecutor {
         SOPL.add(ChatColor.GREEN + "Shoots a beam 15 blocks out that deals damage!" + ChatColor.RED + " 1 Damage");
         SOPL.add(ChatColor.BLUE + "+.5 damage if you have lapis armor on!");
         SOPL.add(ChatColor.DARK_PURPLE + "" + ChatColor.BOLD + "-------------------------------------");
-        SOPL.add(ChatColor.YELLOW + "" + ChatColor.BOLD + "Shift Left Click");
-        SOPL.add(ChatColor.YELLOW + "" + ChatColor.BOLD + "Shift Right Click" + ChatColor.DARK_AQUA + " (30sec Cooldown)");
+        SOPL.add(ChatColor.YELLOW + "" + ChatColor.BOLD + "Shift Left Click" + ChatColor.DARK_AQUA + " (30sec Cooldown)");
         SOPL.add(ChatColor.GREEN + "Spawn a comet wave that will hit the ground");
         SOPL.add(ChatColor.GREEN + "and damage any mob in its range!" + ChatColor.RED + " 7 Damage");
         SOPL.add(ChatColor.BLUE + "+2 damage if you have full lapis armor on!");
