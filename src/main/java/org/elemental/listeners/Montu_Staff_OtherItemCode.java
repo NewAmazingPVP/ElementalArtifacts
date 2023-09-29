@@ -13,6 +13,7 @@ import java.net.http.WebSocket;
 public class Montu_Staff_OtherItemCode implements Listener {
     @EventHandler
     public void onBlockPlace(PlayerInteractEvent event) {
+        if (event.getAction().name().contains("LEFT_CLICK") && event.getItem() != null) {
         ItemStack item = event.getItem();
         ItemMeta meta = item.getItemMeta();
 
