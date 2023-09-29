@@ -14,11 +14,12 @@ public class Montu_Staff_OtherItemCode implements Listener {
     @EventHandler
     public void onBlockPlace(PlayerInteractEvent event) {
         if (event.getAction().name().contains("LEFT_CLICK") && event.getItem() != null) {
-        ItemStack item = event.getItem();
-        ItemMeta meta = item.getItemMeta();
+            ItemStack item = event.getItem();
+            ItemMeta meta = item.getItemMeta();
 
-        if (meta != null && meta.hasDisplayName() && meta.getDisplayName().equals(ChatColor.GOLD + "" + ChatColor.BOLD + "Montu's Staff" + ChatColor.DARK_AQUA + " [Wand]")) {
-            event.setCancelled(true);
+            if (meta != null && meta.hasDisplayName() && meta.getDisplayName().equals(ChatColor.GOLD + "" + ChatColor.BOLD + "Montu's Staff" + ChatColor.DARK_AQUA + " [Wand]")) {
+                event.setCancelled(true);
+            }
         }
     }
 }
