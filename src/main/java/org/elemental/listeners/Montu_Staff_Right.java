@@ -29,7 +29,7 @@ public class Montu_Staff_Right implements Listener {
             // Check if the item is a stick and is named "1111111111111111"
             if (item != null && item.getType() == Material.STICK && item.hasItemMeta() && item.getItemMeta().hasDisplayName() && item.getItemMeta().getDisplayName().equals(ChatColor.GOLD + "" + ChatColor.BOLD + "Montu's Staff" + ChatColor.DARK_AQUA + " [Wand]")) {
                 // Send a message to the player
-                
+
                 player.playSound(player.getLocation(), Sound.ENTITY_ENDERMAN_TELEPORT, 999999999999.0f, 2.0f);
 
                 Location playerLocation = player.getLocation();
