@@ -30,7 +30,7 @@ public class Montu_Staff_Right implements Listener {
             if (item != null && item.getType() == Material.STICK && item.hasItemMeta() && item.getItemMeta().hasDisplayName() && item.getItemMeta().getDisplayName().equals(ChatColor.GOLD + "" + ChatColor.BOLD + "Montu's Staff" + ChatColor.DARK_AQUA + " [Wand]")) {
                 // Send a message to the player
                 event.getPlayer().sendMessage("Right");
-                player.playSound(player.getLocation(), Sound.ENTITY_ENDERMAN_TELEPORT, 99999999999999999999.0f, 2.0f);
+                player.playSound(player.getLocation(), Sound.ENTITY_ENDERMAN_TELEPORT, 999999999999.0f, 2.0f);
 
                 Location playerLocation = player.getLocation();
                 Vector direction = playerLocation.getDirection().normalize().multiply(5); // Multiply by 5 to teleport 5 blocks
