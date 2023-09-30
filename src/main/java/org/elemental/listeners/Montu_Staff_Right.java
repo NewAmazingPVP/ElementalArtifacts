@@ -32,7 +32,7 @@ public class Montu_Staff_Right implements Listener {
                 event.getPlayer().sendMessage("Right");
                 player.playSound(player.getLocation(), Sound.ENTITY_ENDERMAN_TELEPORT, 999999999999.0f, 2.0f);
 
-                /*Location playerLocation = player.getLocation();
+                Location playerLocation = player.getLocation();
                 Vector direction = playerLocation.getDirection().normalize().multiply(5); // Multiply by 5 to teleport 5 blocks
                 Location destination = playerLocation.add(direction);
 
@@ -44,7 +44,7 @@ public class Montu_Staff_Right implements Listener {
                         destination.setY(destination.getY() + 1);
                     }
                 }
-                player.teleport(destination);*/
+                player.teleport(destination);
             }
         }
 
