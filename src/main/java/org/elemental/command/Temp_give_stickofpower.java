@@ -27,7 +27,7 @@ public class Temp_give_stickofpower implements CommandExecutor {
         ItemMeta SOPM = StickOfPower.getItemMeta();
         SOPM.setDisplayName(ChatColor.GOLD + "" + ChatColor.BOLD + "Montu's Staff" + ChatColor.DARK_AQUA + " [Wand]");
         List<String> SOPL = new ArrayList<>();
-        SOPL.add(ChatColor.DARK_PURPLE + "" + ChatColor.BOLD + "-------------------------------------");
+        SOPL.add(" ");
         SOPL.add(ChatColor.DARK_BLUE + "Only works if you have full lapis armor on!");
         SOPL.add(ChatColor.DARK_PURPLE + "" + ChatColor.BOLD + "-------------------------------------");
         SOPL.add(ChatColor.YELLOW + "" + ChatColor.BOLD + "Right Click" + ChatColor.DARK_AQUA + " (15sec Cooldown)");
