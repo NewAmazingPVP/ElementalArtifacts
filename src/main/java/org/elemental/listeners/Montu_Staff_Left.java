@@ -45,7 +45,8 @@ public class Montu_Staff_Left implements Listener {
                         long cooldownEnd = System.currentTimeMillis() + 1000;
                         cooldowns.put(player.getUniqueId(), cooldownEnd);
 
-                        player.sendMessage(ChatColor.DARK_PURPLE + "You Used Beam!" + ChatColor.YELLOW + "" +ChatColor.BOLD + " Left Click");
+                        
+                        event.getPlayer().sendActionBar(ChatColor.DARK_PURPLE + "You Used Beam!" + ChatColor.YELLOW + "" +ChatColor.BOLD + " Left Click");
                         player.playSound(player.getLocation(), Sound.BLOCK_BEACON_POWER_SELECT, 1.0f, 2.0f);
                         player.playSound(player.getLocation(), Sound.ENTITY_FIREWORK_ROCKET_TWINKLE, 1.0f, 2.0f);
                         Location location = player.getEyeLocation().add(0, 0.2, 0);
