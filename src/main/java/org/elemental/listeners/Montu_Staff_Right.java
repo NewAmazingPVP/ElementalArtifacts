@@ -1,6 +1,7 @@
 package org.elemental.listeners;
 
 import org.bukkit.ChatColor;
+import org.bukkit.Location;
 import org.bukkit.Material;
 import org.bukkit.Sound;
 import org.bukkit.entity.Player;
@@ -9,6 +10,7 @@ import org.bukkit.event.Listener;
 import org.bukkit.event.block.Action;
 import org.bukkit.event.player.PlayerInteractEvent;
 import org.bukkit.inventory.ItemStack;
+import org.bukkit.util.Vector;
 
 public class Montu_Staff_Right implements Listener {
     @EventHandler
@@ -28,7 +30,24 @@ public class Montu_Staff_Right implements Listener {
             if (item != null && item.getType() == Material.STICK && item.hasItemMeta() && item.getItemMeta().hasDisplayName() && item.getItemMeta().getDisplayName().equals(ChatColor.GOLD + "" + ChatColor.BOLD + "Montu's Staff" + ChatColor.DARK_AQUA + " [Wand]")) {
                 // Send a message to the player
                 event.getPlayer().sendMessage("Right");
-                player.playSound(player.getLocation(), Sound.ENTITY_ENDERMAN_TELEPORT, 1.0f, 2.0f);
+                player.playSound(player.getLocation(), Sound.ENTITY_ENDERMAN_TELEPORT, 99999999999999999999.0f, 2.0f);
+
+                Location playerLocation = player.getLocation();
+                Vector direction = playerLocation.getDirection().normalize().multiply(5); // Multiply by 5 to teleport 5 blocks
+                Location destination = playerLocation.add(direction);
+
+                // Check if the destination is a solid block
+                if (destination.getBlock().getType().isSolid()) {
+                    // Teleport to the nearest block that is not solid
+                    destination.setY(destination.getY() + 1);
+                    while (destination.getBlock().getType().isSolid()) {
+                        destination.setY(destination.getY() + 1);
+                    }
+                }
+                player.teleport(destination);
+            }
+        }
+
             }
         }
     }
