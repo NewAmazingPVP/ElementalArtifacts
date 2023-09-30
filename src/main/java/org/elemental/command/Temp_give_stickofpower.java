@@ -30,7 +30,7 @@ public class Temp_give_stickofpower implements CommandExecutor {
         SOPL.add(ChatColor.DARK_PURPLE + "" + ChatColor.BOLD + "-------------------------------------");
         SOPL.add(ChatColor.DARK_BLUE + "Only works if you have full lapis armor on!");
         SOPL.add(ChatColor.DARK_PURPLE + "" + ChatColor.BOLD + "-------------------------------------");
-        SOPL.add(ChatColor.YELLOW + "" + ChatColor.BOLD + "Right Click");
+        SOPL.add(ChatColor.YELLOW + "" + ChatColor.BOLD + "Right Click" + ChatColor.DARK_AQUA + " (15sec Cooldown)");
         SOPL.add(ChatColor.GREEN + "Warp 5 blocks where you are looking!");
         SOPL.add(ChatColor.DARK_PURPLE + "" + ChatColor.BOLD + "-------------------------------------");
         SOPL.add(ChatColor.YELLOW + "" + ChatColor.BOLD + "Shift Right Click" + ChatColor.DARK_AQUA + " (10sec Cooldown)");
