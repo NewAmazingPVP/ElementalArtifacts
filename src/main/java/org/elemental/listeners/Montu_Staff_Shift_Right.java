@@ -22,13 +22,13 @@ public class Montu_Staff_Shift_Right implements Listener {
 
                     player.playSound(player.getLocation(), Sound.ENTITY_GENERIC_EXPLODE, 1.0f, 0.0f);
                     player.playSound(player.getLocation(), Sound.ENTITY_GENERIC_EXPLODE, 1.0f, 1.0f);
-                    Player p = event.getPlayer();
-                    Location loc = p.getLocation();
-                    for (double angle = 0; angle < 2 * Math.PI; angle += Math.PI / 16) {
-                        double x = loc.getX() + Math.cos(angle) * 2;
-                        double z = loc.getZ() + Math.sin(angle) * 2;
-                        Location blockLoc = new Location(p.getWorld(), x, loc.getY(), z);
-                        FallingBlock fallingBlock = p.getWorld().spawnFallingBlock(blockLoc, Material.MAGMA_BLOCK, (byte) 0);
+                    Location location = player.getLocation();
+                    for (int i = -1; i <= 1; i++) {
+                        for (int j = -1; j <= 1; j++) {
+                            Location newLocation = location.clone().add(i, 0, j);
+                            FallingBlock fallingBlock = player.getWorld().spawnFallingBlock(newLocation, Material.MAGMA_BLOCK.createBlockData());
+                            fallingBlock.setDropItem(false);
+                        }
                     }
                 }
             }
