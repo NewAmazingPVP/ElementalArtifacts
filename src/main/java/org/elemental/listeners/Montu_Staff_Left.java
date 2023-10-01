@@ -34,6 +34,7 @@ public class Montu_Staff_Left implements Listener {
                     // player is still in cooldown
                     player.playSound(player.getLocation(), Sound.ITEM_FLINTANDSTEEL_USE, 1.0f, 2.0f);
                     event.getPlayer().sendActionBar(ChatColor.DARK_RED + "On Cooldown!" + ChatColor.YELLOW + "" +ChatColor.BOLD + " Left Click");
+                    player.sendMessage("test12345");
                     return;
                 }
             }
