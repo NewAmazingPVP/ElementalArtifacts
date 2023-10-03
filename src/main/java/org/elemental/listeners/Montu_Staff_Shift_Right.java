@@ -35,9 +35,9 @@ public class Montu_Staff_Shift_Right implements Listener {
                         fallingBlock.setDropItem(false);
 
                         // Move the falling block to a random location around the player
-                        int x = random.nextInt(10) - 5;
-                        int y = random.nextInt(10) - 5;
-                        int z = random.nextInt(10) - 5;
+                        int x = random.nextInt(2) - 5;
+                        int y = random.nextInt(2) - 5;
+                        int z = random.nextInt(2) - 5;
                         fallingBlock.teleport(playerLocation.add(x, y, z));
 
                         // Create another FallingBlock entity with the same properties
