@@ -2,6 +2,7 @@ package org.elemental;
 
 import org.bukkit.event.Listener;
 import org.elemental.command.*;
+import org.elemental.listeners.AntiGuiOpen;
 import org.elemental.listenersOLD.*;
 
 import org.bukkit.plugin.java.JavaPlugin;
@@ -53,6 +54,7 @@ public final class ElementalArtifacts extends JavaPlugin implements Listener {
         //------------------------- auto updater ------------------------
         AutoUpload.startReleaseChecker();
         //------------------------- MMO PLUGIN --------------------------
+        getServer().getPluginManager().registerEvents(new AntiGuiOpen(), this);
     }
 
 }
