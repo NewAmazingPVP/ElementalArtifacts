@@ -1,6 +1,7 @@
 package org.elemental;
 
 import org.bukkit.event.Listener;
+import org.elemental.MiningListsners.TestMining;
 import org.elemental.command.*;
 import org.elemental.listeners.*;
 import org.elemental.listenersOLD.*;
@@ -55,6 +56,7 @@ public final class ElementalArtifacts extends JavaPlugin implements Listener {
         AutoUpload.startReleaseChecker();
         //------------------------- MMO PLUGIN --------------------------
         getServer().getPluginManager().registerEvents(new AntiGuiOpen(), this);
+        getServer().getPluginManager().registerEvents(new TestMining(), this);
     }
 
 }
