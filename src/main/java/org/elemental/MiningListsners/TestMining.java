@@ -16,15 +16,24 @@ public class TestMining implements Listener {
     @EventHandler
     public void onPlayerMine(BlockBreakEvent event) {
         Player player = event.getPlayer();
-        event.setCancelled(true);
         ItemStack itemInHand = event.getPlayer().getInventory().getItemInMainHand();
         if (itemInHand.getType() == Material.IRON_PICKAXE) {
-            player.playSound(player.getLocation(), Sound.ENTITY_EXPERIENCE_ORB_PICKUP, 2.0f, 0.0f);
+            event.setCancelled(true);
+            player.playSound(player.getLocation(), Sound.ENTITY_EXPERIENCE_ORB_PICKUP, 2.0f, 2.0f);
+            ItemStack diamondtest = new ItemStack(Material.RAW_IRON);
+            player.getInventory().addItem(diamondtest);
+        }
+        if (itemInHand.getType() == Material.DIAMOND_PICKAXE) {
+            event.setCancelled(true);
+            player.playSound(player.getLocation(), Sound.ENTITY_EXPERIENCE_ORB_PICKUP, 2.0f, 2.0f);
             ItemStack diamondtest = new ItemStack(Material.DIAMOND);
             player.getInventory().addItem(diamondtest);
-
         }
-
-
+        if (itemInHand.getType() == Material.STICK) {
+            event.setCancelled(true);
+            player.playSound(player.getLocation(), Sound.ENTITY_EXPERIENCE_ORB_PICKUP, 2.0f, 2.0f);
+            ItemStack diamondtest = new ItemStack(Material.DIRT);
+            player.getInventory().addItem(diamondtest);
+        }
     }
 }
