@@ -2,15 +2,12 @@ package org.elemental;
 
 import org.bukkit.event.Listener;
 import org.elemental.command.*;
-import org.elemental.listeners.PlayerJoin;
+import org.elemental.listenersOLD.*;
 
 import org.bukkit.plugin.java.JavaPlugin;
-import org.elemental.listeners.*;
 import org.elemental.utility.AutoUpload;
 
-import static org.elemental.CustomRecipes.Compact_Netherite_Block_Recipe.registerCustom;
 import static org.elemental.CustomRecipes.Compact_Netherite_Recipe.registerCustomRecipes;
-import static org.elemental.CustomRecipes.DoubleSword_Recipe.registerCustomRecipesdouble;
 
 public final class ElementalArtifacts extends JavaPlugin implements Listener {
     public static ElementalArtifacts elementalArtifacts;
@@ -22,21 +19,7 @@ public final class ElementalArtifacts extends JavaPlugin implements Listener {
             getDataFolder().mkdirs();
         }
         elementalArtifacts = this;
-        getCommand("giveportcraft").setExecutor(new Temp_give_portcrafttable());
-        getCommand("EAGuide").setExecutor(new Artifacts());
-        getCommand("giveaxe").setExecutor(new Temp_give_axe());
-        getCommand("givedoublesword").setExecutor(new Temp_givedoublesword());
-        getCommand("givewarpsword").setExecutor(new Temp_give_WarpSword());
-        getCommand("bookofitems").setExecutor(new Book_Of_Items_Give());
-        getCommand("givebindingarmor").setExecutor(new Temp_give_bindingarmor());
-        getCommand("givefearmongerpearl").setExecutor(new Temp_give_fearmongerpearl());
-        getCommand("givegodpotion").setExecutor(new Temp_give_god_potion());
-        getCommand("giveluckygem").setExecutor(new Temp_give_lucky_gem());
-        getCommand("setprisoner").setExecutor(new Test_Jail_Player());
-        getCommand("givegoldcoveredmeat").setExecutor(new Temp_give_goldcoveredmeat());
-        getCommand("netherite_leather").setExecutor(new Netherite_Leather_XD());
-        getCommand("givesacerficeingarmor").setExecutor(new Temp_give_sacerficeing_armor());
-        getCommand("givestickofpower").setExecutor(new Temp_give_stickofpower());
+        /*getCommand("EAGuide").setExecutor(new Artifacts());
         getServer().getPluginManager().registerEvents(this, this);
         getServer().getPluginManager().registerEvents(new PlayerJoin(), this);
         getServer().getPluginManager().registerEvents(new Reaper_axe(), this);
@@ -66,10 +49,10 @@ public final class ElementalArtifacts extends JavaPlugin implements Listener {
         getServer().getPluginManager().registerEvents(new Montu_Staff_Left(), this);
         getServer().getPluginManager().registerEvents(new Montu_Staff_Shift_Left(), this);
         getServer().getPluginManager().registerEvents(new Montu_Staff_OtherItemCode(), this);
-        registerCustomRecipes();
-        registerCustom();
-        registerCustomRecipesdouble();
+        registerCustomRecipes();*/
+        //------------------------- auto updater ------------------------
         AutoUpload.startReleaseChecker();
+        //------------------------- MMO PLUGIN --------------------------
     }
 
 }
