@@ -1,15 +1,12 @@
 package org.elemental;
 
 import org.bukkit.event.Listener;
-import org.elemental.MiningListsners.TestMining;
-import org.elemental.command.*;
+import org.elemental.MiningListsners.Loot_Block_Mine;
+import org.elemental.command.GivePlasmaBlockPick_1;
 import org.elemental.listeners.*;
-import org.elemental.listenersOLD.*;
 
 import org.bukkit.plugin.java.JavaPlugin;
 import org.elemental.utility.AutoUpload;
-
-import static org.elemental.CustomRecipes.Compact_Netherite_Recipe.registerCustomRecipes;
 
 public final class ElementalArtifacts extends JavaPlugin implements Listener {
     public static ElementalArtifacts elementalArtifacts;
@@ -55,8 +52,9 @@ public final class ElementalArtifacts extends JavaPlugin implements Listener {
         //------------------------- auto updater ------------------------
         AutoUpload.startReleaseChecker();
         //------------------------- MMO PLUGIN --------------------------
+        getCommand("GivePlasmaPick_1").setExecutor(new GivePlasmaBlockPick_1());
         getServer().getPluginManager().registerEvents(new AntiGuiOpen(), this);
-        getServer().getPluginManager().registerEvents(new TestMining(), this);
+        getServer().getPluginManager().registerEvents(new Loot_Block_Mine(), this);
     }
 
 }
