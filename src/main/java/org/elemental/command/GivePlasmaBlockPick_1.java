@@ -33,10 +33,11 @@ public class GivePlasmaBlockPick_1 implements CommandExecutor {
         SI.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
         List<String> BL = new ArrayList<>();
         BL.add(ChatColor.LIGHT_PURPLE + "Use this to break" + ChatColor.DARK_AQUA + "" + ChatColor.BOLD + " Plasma Blocks");
+        BL.add(" ");
         BL.add(ChatColor.RED + "Pickaxe is so old that it will");
         BL.add(ChatColor.RED + "slow your mining when you use it!");
         BL.add(" ");
-        BL.add(ChatColor.YELLOW + "" + ChatColor.BOLD + "Right Click" + ChatColor.GREEN + " To view recipe!");
+        BL.add(ChatColor.YELLOW + "" + ChatColor.BOLD + "Right Click" + ChatColor.GREEN + " To view T1 recipe!");
         SI.setLore(BL);
         pick.setItemMeta(SI);
 
