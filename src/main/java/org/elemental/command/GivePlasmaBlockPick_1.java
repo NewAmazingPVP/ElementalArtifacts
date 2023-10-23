@@ -16,6 +16,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class GivePlasmaBlockPick_1 implements CommandExecutor {
+
     @Override
     public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
         if (!(sender instanceof Player)) {
@@ -24,6 +25,15 @@ public class GivePlasmaBlockPick_1 implements CommandExecutor {
         }
 
         Player player = (Player) sender;
+
+
+
+        player.getInventory().addItem(createCustomPickaxe());
+        player.playSound(player.getLocation(), Sound.BLOCK_NOTE_BLOCK_PLING, 2.0f, 0.0f);
+        return true;
+    }
+
+    private static ItemStack createCustomPickaxe() {
         ItemStack pick = new ItemStack(Material.WOODEN_PICKAXE);
         ItemMeta SI = pick.getItemMeta();
         SI.addEnchant(Enchantment.DURABILITY, 1, false);
@@ -42,9 +52,6 @@ public class GivePlasmaBlockPick_1 implements CommandExecutor {
         SI.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
         pick.setItemMeta(SI);
 
-
-        player.getInventory().addItem(pick);
-        player.playSound(player.getLocation(), Sound.BLOCK_NOTE_BLOCK_PLING, 2.0f, 0.0f);
-        return true;
+        return pick;
     }
 }
