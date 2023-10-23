@@ -29,6 +29,7 @@ public class Loot_Block_Mine implements Listener {
             if (event.getBlock().getType() == Material.AMETHYST_BLOCK) {
                 player.playSound(player.getLocation(), Sound.BLOCK_BEACON_DEACTIVATE, 2.0f, 2.0f);
                 player.sendMessage(ChatColor.DARK_AQUA + "[Plasma Block Broken]");
+                event.getBlock().getWorld().spawnParticle(Particle.SPELL_WITCH, event.getBlock().getLocation(), 10);
                 if (Math.random() < 1.0) {
                     event.getBlock().getWorld().dropItemNaturally(event.getBlock().getLocation(), new ItemStack(Material.AIR, 0));
 
@@ -80,6 +81,9 @@ public class Loot_Block_Mine implements Listener {
                     Player p = event.getPlayer();
                     player.playSound(player.getLocation(), Sound.UI_BUTTON_CLICK, 2.0f, 1.0f);
                     Inventory Guide = Bukkit.createInventory(p, 54, ChatColor.LIGHT_PURPLE + "" + ChatColor.BOLD + "Plasma Block Pickaxe T2");
+
+
+                    p.openInventory(Guide);
                 }
             }
         }
