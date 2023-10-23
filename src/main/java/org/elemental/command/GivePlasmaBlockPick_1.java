@@ -33,7 +33,7 @@ public class GivePlasmaBlockPick_1 implements CommandExecutor {
         return true;
     }
 
-    private static ItemStack createCustomPickaxe() {
+    public static ItemStack createCustomPickaxe() {
         ItemStack pick = new ItemStack(Material.WOODEN_PICKAXE);
         ItemMeta SI = pick.getItemMeta();
         SI.addEnchant(Enchantment.DURABILITY, 1, false);
