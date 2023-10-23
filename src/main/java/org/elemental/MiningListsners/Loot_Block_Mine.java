@@ -80,7 +80,7 @@ public class Loot_Block_Mine implements Listener {
             ItemStack item = event.getItem();
             if (item != null && item.hasItemMeta()) {
                 ItemMeta meta = item.getItemMeta();
-                if (meta.hasDisplayName() && meta.getDisplayName().equals(ChatColor.AQUA + "" + ChatColor.BOLD + "Plasma Block Pickaxe")) {
+                if (meta.hasDisplayName() && meta.getDisplayName().equals(ChatColor.AQUA + "" + ChatColor.BOLD + "Plasma Block Pickaxe" + ChatColor.LIGHT_PURPLE + " T1")) {
                     Player p = event.getPlayer();
                     player.playSound(player.getLocation(), Sound.UI_BUTTON_CLICK, 2.0f, 1.0f);
                     Inventory Guide = Bukkit.createInventory(p, 45, ChatColor.LIGHT_PURPLE + "" + ChatColor.BOLD + "Plasma Block Pickaxe T2");
