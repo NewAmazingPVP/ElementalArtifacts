@@ -1,15 +1,14 @@
 package org.elemental.MiningListsners;
 
-import org.bukkit.ChatColor;
-import org.bukkit.Material;
-import org.bukkit.Particle;
-import org.bukkit.Sound;
+import org.bukkit.*;
 import org.bukkit.enchantments.Enchantment;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
+import org.bukkit.event.block.Action;
 import org.bukkit.event.block.BlockBreakEvent;
 import org.bukkit.event.player.PlayerInteractEvent;
+import org.bukkit.inventory.Inventory;
 import org.bukkit.inventory.ItemFlag;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
@@ -72,6 +71,17 @@ public class Loot_Block_Mine implements Listener {
         ItemStack itemInHand = player.getInventory().getItemInMainHand();
         if (itemInHand != null && itemInHand.getType() == Material.WOODEN_PICKAXE && itemInHand.hasItemMeta() && itemInHand.getItemMeta().hasDisplayName() && itemInHand.getItemMeta().getDisplayName().equals(ChatColor.AQUA + "" + ChatColor.BOLD + "Plasma Block Pickaxe")) {
             player.addPotionEffect(new PotionEffect(PotionEffectType.SLOW_DIGGING, 70, 1));
+        }
+        if (event.getAction().equals(Action.RIGHT_CLICK_AIR) || event.getAction().equals(Action.RIGHT_CLICK_BLOCK)) {
+            ItemStack item = event.getItem();
+            if (item != null && item.hasItemMeta()) {
+                ItemMeta meta = item.getItemMeta();
+                if (meta.hasDisplayName() && meta.getDisplayName().equals(ChatColor.AQUA + "" + ChatColor.BOLD + "Plasma Block Pickaxe")) {
+                    Player p = event.getPlayer();
+                    player.playSound(player.getLocation(), Sound.UI_BUTTON_CLICK, 2.0f, 1.0f);
+                    Inventory Guide = Bukkit.createInventory(p, 54, ChatColor.LIGHT_PURPLE + "" + ChatColor.BOLD + "Plasma Block Pickaxe T2");
+                }
+            }
         }
     }
 }
