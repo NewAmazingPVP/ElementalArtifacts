@@ -9,6 +9,7 @@ import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.block.BlockBreakEvent;
+import org.bukkit.event.player.PlayerInteractEvent;
 import org.bukkit.inventory.ItemFlag;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
@@ -45,7 +46,9 @@ public class Loot_Block_Mine implements Listener {
 
                     player.getInventory().addItem(plasmascrap);
 
-                } else if (Math.random() < 0.5) {
+                }
+
+                if (Math.random() < 0.5) {
                     event.getBlock().getWorld().dropItemNaturally(event.getBlock().getLocation(), new ItemStack(Material.AIR, 0));
 
                     ItemStack plasmaenergy = new ItemStack(Material.NETHER_STAR);
@@ -64,6 +67,14 @@ public class Loot_Block_Mine implements Listener {
 
 
             }
+        }
+    }
+
+    @EventHandler
+    public void onPlayerMine(PlayerInteractEvent event) {
+        Player player = event.getPlayer();
+        ItemStack itemInHand = player.getInventory().getItemInMainHand();
+        if (itemInHand != null && itemInHand.getType() == Material.WOODEN_PICKAXE && itemInHand.hasItemMeta() && itemInHand.getItemMeta().hasDisplayName() && itemInHand.getItemMeta().getDisplayName().equals(ChatColor.AQUA + "" + ChatColor.BOLD + "Plasma Block Pickaxe")) {
             player.addPotionEffect(new PotionEffect(PotionEffectType.SLOW_DIGGING, 5, 1));
         }
     }
