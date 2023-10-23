@@ -37,9 +37,10 @@ public class GivePlasmaBlockPick_1 implements CommandExecutor {
         BL.add(ChatColor.RED + "Pickaxe is so old that it will");
         BL.add(ChatColor.RED + "slow your mining when you use it!");
         BL.add(" ");
-        BL.add(ChatColor.YELLOW + "" + ChatColor.BOLD + "Right Click" + ChatColor.GREEN + " To view T1 recipe!");
+        BL.add(ChatColor.YELLOW + "" + ChatColor.BOLD + "Right Click" + ChatColor.GREEN + " To view T2 recipe!");
         SI.setLore(BL);
         pick.setItemMeta(SI);
+        SI.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
 
         player.getInventory().addItem(pick);
         player.playSound(player.getLocation(), Sound.BLOCK_NOTE_BLOCK_PLING, 2.0f, 0.0f);

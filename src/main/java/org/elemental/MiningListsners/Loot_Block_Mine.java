@@ -62,6 +62,9 @@ public class Loot_Block_Mine implements Listener {
                     player.getInventory().addItem(plasmaenergy);
                 }
             }
+            if (event.getBlock().getType() != Material.AMETHYST_BLOCK) {
+                event.setCancelled(true);
+            }
         }
     }
 
@@ -88,3 +91,7 @@ public class Loot_Block_Mine implements Listener {
         }
     }
 }
+
+
+
+
