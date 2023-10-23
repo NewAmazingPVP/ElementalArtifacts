@@ -25,7 +25,6 @@ public class Loot_Block_Mine implements Listener {
         Player player = event.getPlayer();
         ItemStack itemInHand = player.getInventory().getItemInMainHand();
         if (itemInHand != null && itemInHand.getType() == Material.WOODEN_PICKAXE && itemInHand.hasItemMeta() && itemInHand.getItemMeta().hasDisplayName() && itemInHand.getItemMeta().getDisplayName().equals(ChatColor.AQUA + "" + ChatColor.BOLD + "Plasma Block Pickaxe")) {
-            event.setCancelled(true);
             if (event.getBlock().getType() == Material.AMETHYST_BLOCK) {
                 player.playSound(player.getLocation(), Sound.BLOCK_BEACON_DEACTIVATE, 2.0f, 2.0f);
                 player.sendMessage(ChatColor.DARK_AQUA + "[Plasma Block Broken]");
