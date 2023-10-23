@@ -62,8 +62,9 @@ public class Loot_Block_Mine implements Listener {
                 }
                 player.sendMessage(ChatColor.DARK_AQUA + "[Plasma Block Broken]");
 
-                player.addPotionEffect(new PotionEffect(PotionEffectType.SLOW_DIGGING, 5, 1));
+
             }
+            player.addPotionEffect(new PotionEffect(PotionEffectType.SLOW_DIGGING, 5, 1));
         }
     }
 }
