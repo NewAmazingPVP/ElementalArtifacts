@@ -12,6 +12,8 @@ import org.bukkit.event.block.BlockBreakEvent;
 import org.bukkit.inventory.ItemFlag;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
+import org.bukkit.potion.PotionEffect;
+import org.bukkit.potion.PotionEffectType;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -37,7 +39,7 @@ public class Loot_Block_Mine implements Listener {
                     SI.setUnbreakable(true);
                     SI.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
                     List<String> BL = new ArrayList<>();
-                    BL.add(ChatColor.DARK_GREEN + "Use this to craft things and charge up some items!");
+                    BL.add(ChatColor.DARK_GREEN + "Use this to craft and charge up some items!");
                     SI.setLore(BL);
                     plasmascrap.setItemMeta(SI);
 
@@ -52,16 +54,16 @@ public class Loot_Block_Mine implements Listener {
                     SI.setUnbreakable(true);
                     SI.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
                     List<String> BL = new ArrayList<>();
-                    BL.add(ChatColor.DARK_GREEN + "Used to craft things.");
+                    BL.add(ChatColor.DARK_GREEN + "Used to craft.");
                     SI.setLore(BL);
                     plasmaenergy.setItemMeta(SI);
 
                     player.getInventory().addItem(plasmaenergy);
                 }
                 player.sendMessage(ChatColor.DARK_AQUA + "[Plasma Block Broken]");
-                player.spawnParticle(Particle.CLOUD, player.getLocation().add(0.5, 1.0, 0.5), 10);
-            }
 
+                player.addPotionEffect(new PotionEffect(PotionEffectType.SLOW_DIGGING, 5, 1));
+            }
         }
     }
 }
