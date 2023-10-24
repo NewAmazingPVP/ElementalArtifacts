@@ -28,12 +28,12 @@ public class GivePlasmaBlockPick_1 implements CommandExecutor {
 
 
 
-        player.getInventory().addItem(createCustomPickaxe());
+        player.getInventory().addItem(PlasmaPic_1());
         player.playSound(player.getLocation(), Sound.BLOCK_NOTE_BLOCK_PLING, 2.0f, 0.0f);
         return true;
     }
 
-    public static ItemStack createCustomPickaxe() {
+    public static ItemStack PlasmaPic_1() {
         ItemStack pick = new ItemStack(Material.WOODEN_PICKAXE);
         ItemMeta SI = pick.getItemMeta();
         SI.addEnchant(Enchantment.DURABILITY, 1, false);
