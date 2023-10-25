@@ -32,4 +32,35 @@ public class PremadeItems {
 
         return pick;
     }
+
+    public static ItemStack plasmascrap() {
+
+        ItemStack plasmascrap = new ItemStack(Material.LAPIS_LAZULI);
+        ItemMeta SI = plasmascrap.getItemMeta();
+        SI.addEnchant(Enchantment.DURABILITY, 1, false);
+        SI.addItemFlags(ItemFlag.HIDE_ENCHANTS);
+        SI.setDisplayName(ChatColor.DARK_AQUA + "" + ChatColor.BOLD + "Plasma scrap" + ChatColor.BLUE + "" + ChatColor.BOLD + " [Uncommon]");
+        SI.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
+        List<String> BL = new ArrayList<>();
+        BL.add(ChatColor.DARK_GREEN + "Use this to craft and charge up some items!");
+        SI.setLore(BL);
+        plasmascrap.setItemMeta(SI);
+
+        return plasmascrap;
+    }
+
+    public static ItemStack plasmaenergy(){
+
+        ItemStack plasmaenergy = new ItemStack(Material.NETHER_STAR);
+        ItemMeta SI = plasmaenergy.getItemMeta();
+        SI.setDisplayName(ChatColor.DARK_AQUA + "" + ChatColor.BOLD + "Plasma energy" + ChatColor.DARK_BLUE + "" + ChatColor.BOLD + " [Rare]");
+        SI.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
+        List<String> BL = new ArrayList<>();
+        BL.add(ChatColor.DARK_GREEN + "Used to craft.");
+        SI.setLore(BL);
+        plasmaenergy.setItemMeta(SI);
+
+        return plasmaenergy;
+    }
 }
+

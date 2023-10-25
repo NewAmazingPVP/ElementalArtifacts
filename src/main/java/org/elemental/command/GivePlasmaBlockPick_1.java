@@ -28,9 +28,8 @@ public class GivePlasmaBlockPick_1 implements CommandExecutor {
 
         Player player = (Player) sender;
 
-
-
         player.getInventory().addItem(PlasmaPic_1());
+
         player.playSound(player.getLocation(), Sound.BLOCK_NOTE_BLOCK_PLING, 2.0f, 0.0f);
         return true;
     }
