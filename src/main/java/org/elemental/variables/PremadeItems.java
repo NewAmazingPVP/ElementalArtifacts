@@ -54,7 +54,7 @@ public class PremadeItems {
 
         ItemStack plasmaenergy = new ItemStack(Material.AMETHYST_SHARD);
         ItemMeta SI = plasmaenergy.getItemMeta();
-        SI.setDisplayName(ChatColor.DARK_AQUA + "" + ChatColor.BOLD + "Plasma energy" + ChatColor.DARK_BLUE + "" + ChatColor.BOLD + " [Rare]");
+        SI.setDisplayName(ChatColor.DARK_AQUA + "" + ChatColor.BOLD + "Plasma energy shard" + ChatColor.DARK_BLUE + "" + ChatColor.BOLD + " [Rare]");
         SI.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
         List<String> BL = new ArrayList<>();
         BL.add(ChatColor.DARK_GREEN + "Used to craft.");
