@@ -19,6 +19,8 @@ import org.elemental.utility.AutoUpload;
 import java.util.ArrayList;
 import java.util.List;
 
+import static org.elemental.WorldParticles.TeleportParticles.test;
+
 public final class ElementalArtifacts extends JavaPlugin implements Listener {
     public static ElementalArtifacts elementalArtifacts;
 

@@ -11,8 +11,9 @@ public class TeleportParticles {
         new BukkitRunnable() {
             @Override
             public void run() {
+                elementalArtifacts.getServer().broadcastMessage("Alr so this works ig every 20 ticks or every second ");
             }
-        }.runTaskLater(elementalArtifacts, 20*60*15);
+        }.runTaskLater(elementalArtifacts, 20);
     }
 
 }
