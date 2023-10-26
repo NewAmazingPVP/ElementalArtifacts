@@ -14,10 +14,8 @@ public class TeleportParticles {
         new BukkitRunnable() {
             @Override
             public void run() {
-                Location mapEdgeloc1 = new Location(Bukkit.getWorld("world"), 50.0, -20.0, -120.0);
-                World world = ...;
-                Location location = new Location(world, 100, 100, 100);
-                world.spawnParticle(Particle.FLAME, location, 10);
+                Location location = new Location(Bukkit.getWorld("world"), 50.0, -20.0, -120.0);
+                Bukkit.getWorld("world").spawnParticle(Particle.FLAME, location, 10);
             }
         }.runTaskTimer(elementalArtifacts, 0, 20);
     }
