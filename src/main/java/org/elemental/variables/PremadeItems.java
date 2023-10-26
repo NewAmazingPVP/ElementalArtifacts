@@ -70,7 +70,7 @@ public class PremadeItems {
         ItemMeta SI = starDustChisel_1.getItemMeta();
         SI.addEnchant(Enchantment.DURABILITY, 1, false);
         SI.addItemFlags(ItemFlag.HIDE_ENCHANTS);
-        SI.setDisplayName(ChatColor.AQUA + "" + ChatColor.BOLD + "Star Dust Chisel" + ChatColor.LIGHT_PURPLE + " T1");
+        SI.setDisplayName(ChatColor.AQUA + "" + ChatColor.BOLD + "Star Dust Chisel");
         SI.setUnbreakable(true);
         SI.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
         List<String> BL = new ArrayList<>();
