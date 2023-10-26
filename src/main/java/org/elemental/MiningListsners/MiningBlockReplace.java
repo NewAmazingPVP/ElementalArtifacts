@@ -15,7 +15,6 @@ public class MiningBlockReplace implements Listener {
         public void onBlockBreak(BlockBreakEvent event) {
             Block block = event.getBlock();
             if (block.getType() == Material.STONE) {
-                event.setCancelled(true);
                 new BukkitRunnable() {
                     @Override
                     public void run() {
