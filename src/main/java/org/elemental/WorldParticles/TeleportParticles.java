@@ -20,7 +20,7 @@ public class TeleportParticles {
         new BukkitRunnable() {
             @Override
             public void run() {
-                Location location = new Location(Bukkit.getWorld("world"), x, y, z);
+                Location location = new Location(Bukkit.getWorld("world"), 265.0, 105.0, -28.0);
                 location.getWorld().spawnParticle(Particle.VILLAGER_HAPPY, location, 1, 0, 0, 0, 0);
 
                 y += SPEED;
