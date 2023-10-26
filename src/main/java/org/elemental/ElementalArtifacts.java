@@ -19,6 +19,8 @@ import org.elemental.utility.AutoUpload;
 import java.util.ArrayList;
 import java.util.List;
 
+import static org.elemental.WorldParticles.TeleportParticles.test;
+
 
 public final class ElementalArtifacts extends JavaPlugin implements Listener {
     public static ElementalArtifacts elementalArtifacts;
@@ -71,7 +73,7 @@ public final class ElementalArtifacts extends JavaPlugin implements Listener {
         getServer().getPluginManager().registerEvents(new Loot_Block_Mine(), this);
         getServer().getPluginManager().registerEvents(new Star_Dust_Mine(), this);
         //-------------------------Item functions -----------------------
-
+        test();
     }
 }
     
