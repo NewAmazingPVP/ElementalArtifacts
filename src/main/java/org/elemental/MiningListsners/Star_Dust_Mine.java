@@ -4,6 +4,7 @@ import org.bukkit.ChatColor;
 import org.bukkit.Material;
 import org.bukkit.Particle;
 import org.bukkit.Sound;
+import org.bukkit.block.Block;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
@@ -26,6 +27,8 @@ public class Star_Dust_Mine implements Listener {
                 player.stopSound(Sound.BLOCK_STONE_BREAK);
                 event.getBlock().getWorld().spawnParticle(Particle.CLOUD, event.getBlock().getLocation(), 10);
                 player.addPotionEffect(new PotionEffect(PotionEffectType.BLINDNESS, 20, 5));
+                Block block = event.getBlock();
+                block.setType(Material.DEEPSLATE);
                 if (Math.random() < 1.0) {
                     event.getBlock().getWorld().dropItemNaturally(event.getBlock().getLocation(), new ItemStack(Material.AIR, 0));
 
