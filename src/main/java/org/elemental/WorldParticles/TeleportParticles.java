@@ -4,17 +4,15 @@ import org.bukkit.Bukkit;
 import org.bukkit.entity.Player;
 import org.bukkit.scheduler.BukkitRunnable;
 
-public class TeleportParticles{
+import static org.elemental.ElementalArtifacts.elementalArtifacts;
 
-    private class MessageSenderTask extends BukkitRunnable {
-        @Override
-        public void run() {
-            // Get all online players
-            for (Player player : Bukkit.getOnlinePlayers()) {
-                // Send a message to each player
-                player.sendMessage("Hello, players!");
+public class TeleportParticles {
+    public static void test(){
+        new BukkitRunnable() {
+            @Override
+            public void run() {
             }
-        }
+        }.runTaskLater(elementalArtifacts, 20*60*15);
     }
 
 }
