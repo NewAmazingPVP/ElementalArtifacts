@@ -13,7 +13,7 @@ public class TeleportParticles {
             public void run() {
                 elementalArtifacts.getServer().broadcastMessage("Alr so this works ig every 20 ticks or every second ");
             }
-        }.runTaskLater(elementalArtifacts, 20);
+        }.runTaskTimer(elementalArtifacts, 0, 20);
     }
 
 }
