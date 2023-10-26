@@ -8,6 +8,7 @@ import org.bukkit.inventory.ItemFlag;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
 import org.elemental.MiningListsners.Loot_Block_Mine;
+import org.elemental.MiningListsners.MiningBlockReplace;
 import org.elemental.MiningListsners.Star_Dust_Mine;
 import org.elemental.command.GivePlasmaBlockPick_1;
 import org.elemental.command.GiveStarDistMine_1;
@@ -72,6 +73,7 @@ public final class ElementalArtifacts extends JavaPlugin implements Listener {
         getServer().getPluginManager().registerEvents(new AntiGuiOpen(), this);
         getServer().getPluginManager().registerEvents(new Loot_Block_Mine(), this);
         getServer().getPluginManager().registerEvents(new Star_Dust_Mine(), this);
+        getServer().getPluginManager().registerEvents(new MiningBlockReplace(), this);
         //-------------------------Item functions -----------------------
         test();
     }
