@@ -20,12 +20,12 @@ public class Star_Dust_Mine implements Listener {
     public void onPlayerMine(BlockBreakEvent event) {
         Player player = event.getPlayer();
         ItemStack itemInHand = player.getInventory().getItemInMainHand();
-        if (itemInHand != null && itemInHand.getType() == Material.ARROW && itemInHand.hasItemMeta() && itemInHand.getItemMeta().hasDisplayName() && itemInHand.getItemMeta().getDisplayName().equals(ChatColor.AQUA + "" + ChatColor.BOLD + "Star Dust Chisel" + ChatColor.LIGHT_PURPLE + " T1")) {
+        if (itemInHand != null && itemInHand.getType() == Material.ARROW && itemInHand.hasItemMeta() && itemInHand.getItemMeta().hasDisplayName() && itemInHand.getItemMeta().getDisplayName().equals(ChatColor.AQUA + "" + ChatColor.BOLD + "Star Dust Chisel")) {
             if (event.getBlock().getType() == Material.DEAD_BUBBLE_CORAL_BLOCK) {
                 player.playSound(player.getLocation(), Sound.ENTITY_FIREWORK_ROCKET_TWINKLE, 2.0f, 1.0f);
                 player.stopSound(Sound.BLOCK_STONE_BREAK);
                 event.getBlock().getWorld().spawnParticle(Particle.CLOUD, event.getBlock().getLocation(), 10);
-                player.addPotionEffect(new PotionEffect(PotionEffectType.BLINDNESS, 40, 5));
+                player.addPotionEffect(new PotionEffect(PotionEffectType.BLINDNESS, 20, 5));
                 if (Math.random() < 1.0) {
                     event.getBlock().getWorld().dropItemNaturally(event.getBlock().getLocation(), new ItemStack(Material.AIR, 0));
 
@@ -36,6 +36,7 @@ public class Star_Dust_Mine implements Listener {
                 if (Math.random() < 0.10) {
                     event.getBlock().getWorld().dropItemNaturally(event.getBlock().getLocation(), new ItemStack(Material.AIR, 0));
 
+                    player.sendMessage(ChatColor.LIGHT_PURPLE + "" + ChatColor.BOLD + "X2 Drops");
                     player.getInventory().addItem(starDust());
                 }
             }
