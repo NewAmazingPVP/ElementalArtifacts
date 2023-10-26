@@ -8,7 +8,9 @@ import org.bukkit.inventory.ItemFlag;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
 import org.elemental.MiningListsners.Loot_Block_Mine;
+import org.elemental.MiningListsners.Star_Dust_Mine;
 import org.elemental.command.GivePlasmaBlockPick_1;
+import org.elemental.command.GiveStarDistMine_1;
 import org.elemental.listeners.*;
 
 import org.bukkit.plugin.java.JavaPlugin;
@@ -62,8 +64,11 @@ public final class ElementalArtifacts extends JavaPlugin implements Listener {
         AutoUpload.startReleaseChecker();
         //------------------------- MMO PLUGIN --------------------------
         getCommand("GivePlasmaPick_1").setExecutor(new GivePlasmaBlockPick_1());
+        getCommand("GiveStarDustCH").setExecutor(new GiveStarDistMine_1());
+
         getServer().getPluginManager().registerEvents(new AntiGuiOpen(), this);
         getServer().getPluginManager().registerEvents(new Loot_Block_Mine(), this);
+        getServer().getPluginManager().registerEvents(new Star_Dust_Mine(), this);
         //-------------------------Item functions -----------------------
 
     }

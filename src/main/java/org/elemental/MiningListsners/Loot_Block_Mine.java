@@ -33,6 +33,7 @@ public class Loot_Block_Mine implements Listener {
                 player.sendMessage(ChatColor.DARK_AQUA + "[Plasma Block Broken]");
                 event.getBlock().getWorld().spawnParticle(Particle.SPELL_WITCH, event.getBlock().getLocation(), 10);
                 player.addPotionEffect(new PotionEffect(PotionEffectType.CONFUSION, 100, 5));
+                player.stopSound(Sound.BLOCK_AMETHYST_BLOCK_BREAK);
                 if (Math.random() < 1.0) {
                     event.getBlock().getWorld().dropItemNaturally(event.getBlock().getLocation(), new ItemStack(Material.AIR, 0));
 
