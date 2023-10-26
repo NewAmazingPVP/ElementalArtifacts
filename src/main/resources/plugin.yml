@@ -9,3 +9,6 @@ commands:
   GivePlasmaPick_1:
     description: Gives Plasma Pick t1
     usage: /giveplasmapick_1
+  GiveStarDustCH:
+    description: Gives star dust mining tool
+    usage: /givestardustmine_1
