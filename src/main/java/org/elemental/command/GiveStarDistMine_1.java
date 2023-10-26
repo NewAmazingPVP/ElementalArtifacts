@@ -31,7 +31,6 @@ public class GiveStarDistMine_1 implements CommandExecutor {
 
         player.getInventory().addItem(starDustChisel_1());
 
-        player.getWorld().spawnEntity(player.getLocation(), EntityType.PLAYER);
 
 
         player.playSound(player.getLocation(), Sound.BLOCK_NOTE_BLOCK_PLING, 2.0f, 0.0f);
