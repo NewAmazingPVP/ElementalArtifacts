@@ -7,6 +7,7 @@ import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.enchantments.Enchantment;
+import org.bukkit.entity.EntityType;
 import org.bukkit.entity.Player;
 import org.bukkit.inventory.ItemFlag;
 import org.bukkit.inventory.ItemStack;
@@ -29,6 +30,8 @@ public class GiveStarDistMine_1 implements CommandExecutor {
         Player player = (Player) sender;
 
         player.getInventory().addItem(starDustChisel_1());
+
+        player.getWorld().spawnEntity(player.getLocation(), EntityType.PLAYER);
 
 
         player.playSound(player.getLocation(), Sound.BLOCK_NOTE_BLOCK_PLING, 2.0f, 0.0f);
