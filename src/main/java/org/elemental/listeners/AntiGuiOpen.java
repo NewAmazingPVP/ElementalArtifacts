@@ -24,5 +24,4 @@ public class AntiGuiOpen implements Listener {
             }
         }
     }
-
 }

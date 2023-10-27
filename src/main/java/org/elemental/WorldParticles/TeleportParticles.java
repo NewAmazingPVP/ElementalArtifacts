@@ -29,7 +29,7 @@ public class TeleportParticles {
 
 
             }
-        }.runTaskTimer(elementalArtifacts, 0, 10);
+        }.runTaskTimer(elementalArtifacts, 0, 1);
     }
 
 }
