@@ -19,9 +19,7 @@ public class TeleportParticles {
             @Override
             public void run() {
                 Location location = new Location(Bukkit.getWorld("world"), 265.0, 105.0, -28.0);
-                Bukkit.getWorld("world").spawnParticle(Particle.REDSTONE, location, 10);
-
-
+                Bukkit.getWorld("world").spawnParticle(Particle.COMPOSTER, location, 10);
 
 
 
