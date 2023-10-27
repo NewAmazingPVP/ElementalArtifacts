@@ -19,15 +19,9 @@ public class TeleportParticles {
             @Override
             public void run() {
                 Location location = new Location(Bukkit.getWorld("world"), 265.0, 105.0, -28.0);
+                Bukkit.getWorld("world").spawnParticle(Particle.REDSTONE, location, 10);
 
-                double x = Math.random() * 2 - 1;
-                double y = Math.random() * 2 - 1;
-                double z = Math.random() * 2 - 1;
-                Vector direction = new Vector(x, y, z);
-                // Create DustOptions with green color and default size
-               // Particle.DustOptions dustOptions = new Particle.DustOptions(Color.fromRGB(0, 255, 0), 1.0f);
-                //location.getWorld().spawnParticle(Particle.REDSTONE, location, 1, dustOptions, direction);
-                location.getWorld().spawnParticle(Particle.REDSTONE, location, 5, direction);
+
 
 
 
