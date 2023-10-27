@@ -12,7 +12,27 @@ import static org.elemental.ElementalArtifacts.elementalArtifacts;
 public class TeleportParticles {
 
 
+
     public static void test(){
+        new BukkitRunnable() {
+            @Override
+            public void run() {
+                Location location = new Location(Bukkit.getWorld("world"), 265.0, 105.0, -28.0);
+                Bukkit.getWorld("world").spawnParticle(Particle.CLOUD, location, 10);
+
+                Particle.DustOptions dustOptions = new Particle.DustOptions(Color.GREEN, 1.0f);
+                location.getWorld().spawnParticle(Particle.REDSTONE, location, 10, dustOptions);
+
+
+
+
+            }
+        }.runTaskTimer(elementalArtifacts, 0, 10);
+    }
+
+}
+
+    /*public static void test(){
 
         //get random info from server
         Collection<? extends Player> onlinePlayers = Bukkit.getOnlinePlayers();
@@ -39,28 +59,4 @@ public class TeleportParticles {
             }
         }.runTaskTimer(elementalArtifacts, 0, 10);
     }
-}
-
-
-
-
-
-
-
-/*public class TeleportParticles {
-    public static void test(){
-        new BukkitRunnable() {
-            @Override
-            public void run() {
-                Location location = new Location(Bukkit.getWorld("world"), 265.0, 105.0, -28.0);
-                Bukkit.getWorld("world").spawnParticle(Particle.CLOUD, location, 10);
-
-
-
-
-
-            }
-        }.runTaskTimer(elementalArtifacts, 0, 20);
-    }
-
 }*/
