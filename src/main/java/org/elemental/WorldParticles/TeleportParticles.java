@@ -11,25 +11,40 @@ import static org.elemental.ElementalArtifacts.elementalArtifacts;
 
 
 public class TeleportParticles {
-    private static final double SPEED = 0.1;
-    private static double y = 0;
-    private static double x = 0;
-    private static double z = 0;
-
     public static void test(){
         new BukkitRunnable() {
+            int t = 0;
+            double x = 0, y = 0, z = 0;
+            double radius = 1.0;
+            double height = 0.0;
+            double dHeight = 0.1;
+            double dRadius = 0.05;
+            double angle = 0.0;
+            double dAngle = 0.1;
+            int particleCount = 100;
+
             @Override
             public void run() {
-                Location location = new Location(Bukkit.getWorld("world"), 265.0, 105.0, -28.0);
-                location.getWorld().spawnParticle(Particle.VILLAGER_HAPPY, location, 1, 0, 0, 0, 0);
+                if (t >= particleCount) {
+                    cancel();
+                    return;
+                }
 
-                y += SPEED;
-                x += SPEED;
-                z += SPEED;
+                double newX = x + radius * Math.cos(angle);
+                double newY = y + height;
+                double newZ = z + radius * Math.sin(angle);
+
+                Location location = new Location(Bukkit.getWorld("world"), 265.0, 105.0, -28.0);;
+                location.getWorld().spawnParticle(Particle.SPELL_WITCH, location, 1);
+
+                angle += dAngle;
+                height += dHeight;
+                radius -= dRadius;
+                t++;
             }
         }.runTaskTimer(elementalArtifacts, 0, 20);
     }
-}
+}}
 
 
 
