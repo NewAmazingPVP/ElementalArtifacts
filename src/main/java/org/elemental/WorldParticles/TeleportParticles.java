@@ -3,6 +3,7 @@ package org.elemental.WorldParticles;
 import org.bukkit.*;
 import org.bukkit.entity.Player;
 import org.bukkit.scheduler.BukkitRunnable;
+import org.bukkit.util.Vector;
 
 import java.util.Collection;
 
@@ -18,11 +19,15 @@ public class TeleportParticles {
             @Override
             public void run() {
                 Location location = new Location(Bukkit.getWorld("world"), 265.0, 105.0, -28.0);
-                Bukkit.getWorld("world").spawnParticle(Particle.CLOUD, location, 10);
 
-                Particle.DustOptions dustOptions = new Particle.DustOptions(Color.GREEN, 1.0f);
-                location.getWorld().spawnParticle(Particle.REDSTONE, location, 10, dustOptions);
-
+                double x = Math.random() * 2 - 1;
+                double y = Math.random() * 2 - 1;
+                double z = Math.random() * 2 - 1;
+                Vector direction = new Vector(x, y, z);
+                // Create DustOptions with green color and default size
+               // Particle.DustOptions dustOptions = new Particle.DustOptions(Color.fromRGB(0, 255, 0), 1.0f);
+                //location.getWorld().spawnParticle(Particle.REDSTONE, location, 1, dustOptions, direction);
+                location.getWorld().spawnParticle(Particle.REDSTONE, location, 5, direction);
 
 
 
