@@ -1,9 +1,6 @@
 package org.elemental.listeners;
 
-import org.bukkit.Bukkit;
-import org.bukkit.ChatColor;
-import org.bukkit.Material;
-import org.bukkit.Sound;
+import org.bukkit.*;
 import org.bukkit.block.Block;
 import org.bukkit.enchantments.Enchantment;
 import org.bukkit.entity.Player;
@@ -16,6 +13,8 @@ import org.bukkit.inventory.Inventory;
 import org.bukkit.inventory.ItemFlag;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
+import org.bukkit.potion.PotionEffect;
+import org.bukkit.potion.PotionEffectType;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -30,12 +29,19 @@ public class CustomEnchantTable implements Listener {
             if(block.getType() == Material.ENCHANTING_TABLE){
                 event.setCancelled(true);
                 player.playSound(player.getLocation(), Sound.BLOCK_END_PORTAL_FRAME_FILL, 2.0f, 0.0f);
+                player.addPotionEffect(new PotionEffect(PotionEffectType.BLINDNESS, 20, 5));
+                player.sendMessage(ChatColor.RED + "[Test] Custom enchant table opened");
                 Inventory alter = Bukkit.createInventory(player, 54, ChatColor.LIGHT_PURPLE + "" + ChatColor.BOLD + "Ability Altar");
 
-                ItemStack G1 = new ItemStack(Material.PURPLE_STAINED_GLASS_PANE);
+                ItemStack G1 = new ItemStack(Material.PINK_STAINED_GLASS_PANE);
                 ItemMeta M1 = G1.getItemMeta();
                 M1.setDisplayName(" ");
                 G1.setItemMeta(M1);
+
+                ItemStack G2 = new ItemStack(Material.PURPLE_STAINED_GLASS_PANE);
+                ItemMeta M2 = G2.getItemMeta();
+                M2.setDisplayName(" ");
+                G2.setItemMeta(M2);
 
                 ItemStack high = new ItemStack(Material.GOLD_BLOCK);
                 ItemMeta HCU = high.getItemMeta();
@@ -46,7 +52,7 @@ public class CustomEnchantTable implements Listener {
                 HCL.add(" ");
                 HCL.add(ChatColor.DARK_RED + "" + ChatColor.BOLD + "Cost:" + "" + ChatColor.GOLD + "" + ChatColor.BOLD + " 100,000" + ChatColor.DARK_RED + " and an" + ChatColor.AQUA + "" + ChatColor.BOLD + " Energy Chip");
                 HCL.add(" ");
-                HCL.add(ChatColor.GREEN + "Has a chance to give T4-5 abilities");
+                HCL.add(ChatColor.GREEN + "Has a chance to give" + ChatColor.DARK_PURPLE + "" + ChatColor.BOLD + " T4-5" + ChatColor.GREEN + " abilities");
                 HCL.add(ChatColor.GREEN + "and a chance to give" + ChatColor.LIGHT_PURPLE + "" + ChatColor.BOLD + " Mythic Abilities");
                 HCL.add(" ");
                 HCU.setLore(HCL);
@@ -61,7 +67,7 @@ public class CustomEnchantTable implements Listener {
                 MCL.add(" ");
                 MCL.add(ChatColor.DARK_RED + "" + ChatColor.BOLD + "Cost:" + "" + ChatColor.GOLD + "" + ChatColor.BOLD + " 50,000");
                 MCL.add(" ");
-                MCL.add(ChatColor.GREEN + "Has a chance to give T3-5 abilities");
+                MCL.add(ChatColor.GREEN + "Has a chance to give" + ChatColor.DARK_PURPLE + "" + ChatColor.BOLD + " T3-5" + ChatColor.GREEN + " abilities");
                 MCL.add(" ");
                 MCU.setLore(MCL);
                 mid.setItemMeta(MCU);
@@ -75,30 +81,30 @@ public class CustomEnchantTable implements Listener {
                 LCL.add(" ");
                 LCL.add(ChatColor.DARK_RED + "" + ChatColor.BOLD + "Cost:" + "" + ChatColor.GOLD + "" + ChatColor.BOLD + " 1,000");
                 LCL.add(" ");
-                LCL.add(ChatColor.GREEN + "Has a chance to give T1-2 abilities");
+                LCL.add(ChatColor.GREEN + "Has a chance to give" + ChatColor.DARK_PURPLE + "" + ChatColor.BOLD + " T1-2" + ChatColor.GREEN + " abilities");
                 LCL.add(" ");
                 LCU.setLore(LCL);
                 low.setItemMeta(LCU);
 
-                alter.setItem(0, G1);
-                alter.setItem(1, G1);
-                alter.setItem(2, G1);
-                alter.setItem(3, G1);
-                alter.setItem(4, G1);
-                alter.setItem(5, G1);
-                alter.setItem(6, G1);
-                alter.setItem(7, G1);
-                alter.setItem(8, G1);
+                alter.setItem(0, G2);
+                alter.setItem(1, G2);
+                alter.setItem(2, G2);
+                alter.setItem(3, G2);
+                alter.setItem(4, G2);
+                alter.setItem(5, G2);
+                alter.setItem(6, G2);
+                alter.setItem(7, G2);
+                alter.setItem(8, G2);
 
                 alter.setItem(9, G1);
                 alter.setItem(10, G1);
                 alter.setItem(11, G1);
                 alter.setItem(12, G1);
                 alter.setItem(13, G1);
-                alter.setItem(14, G1);
-                alter.setItem(15, high);
-                alter.setItem(16, mid);
-                alter.setItem(17, low);
+                alter.setItem(14, high);
+                alter.setItem(15, mid);
+                alter.setItem(16, low);
+                alter.setItem(17, G1);
 
                 alter.setItem(18, G1);
                 //alter.setItem(19, G1);
@@ -130,18 +136,15 @@ public class CustomEnchantTable implements Listener {
                 alter.setItem(43, G1);
                 alter.setItem(44, G1);
 
-                alter.setItem(45, G1);
-                alter.setItem(46, G1);
-                alter.setItem(47, G1);
-                alter.setItem(48, G1);
-                alter.setItem(49, G1);
-                alter.setItem(50, G1);
-                alter.setItem(51, G1);
-                alter.setItem(52, G1);
-                alter.setItem(53, G1);
-
-
-
+                alter.setItem(45, G2);
+                alter.setItem(46, G2);
+                alter.setItem(47, G2);
+                alter.setItem(48, G2);
+                alter.setItem(49, G2);
+                alter.setItem(50, G2);
+                alter.setItem(51, G2);
+                alter.setItem(52, G2);
+                alter.setItem(53, G2);
 
 
                 player.openInventory(alter);
