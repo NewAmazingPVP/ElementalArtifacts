@@ -29,8 +29,7 @@ public class CustomEnchantTable implements Listener {
             if(block.getType() == Material.ENCHANTING_TABLE){
                 event.setCancelled(true);
                 player.playSound(player.getLocation(), Sound.BLOCK_END_PORTAL_FRAME_FILL, 2.0f, 0.0f);
-                player.addPotionEffect(new PotionEffect(PotionEffectType.BLINDNESS, 20, 5,true));
-                player.sendMessage(ChatColor.RED + "[Test] Custom enchant table opened");
+                player.addPotionEffect(new PotionEffect(PotionEffectType.BLINDNESS, 20, 5,false));
                 Inventory alter = Bukkit.createInventory(player, 54, ChatColor.LIGHT_PURPLE + "" + ChatColor.BOLD + "Ability Altar");
 
                 ItemStack G1 = new ItemStack(Material.PINK_STAINED_GLASS_PANE);
