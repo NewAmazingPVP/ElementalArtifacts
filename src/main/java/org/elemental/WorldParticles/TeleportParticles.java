@@ -31,7 +31,7 @@ public class TeleportParticles {
 
 
 
-                
+
 
             }
         }.runTaskTimer(elementalArtifacts, 0, 10);

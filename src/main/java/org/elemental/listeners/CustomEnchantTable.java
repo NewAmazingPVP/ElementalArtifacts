@@ -80,15 +80,25 @@ public class CustomEnchantTable implements Listener {
                 LCU.setLore(LCL);
                 low.setItemMeta(LCU);
 
-                alter.setItem(0, high);
-                alter.setItem(1, mid);
-                alter.setItem(2, low);
+                alter.setItem(0, G1);
+                alter.setItem(1, G1);
+                alter.setItem(2, G1);
                 alter.setItem(3, G1);
                 alter.setItem(4, G1);
                 alter.setItem(5, G1);
                 alter.setItem(6, G1);
                 alter.setItem(7, G1);
                 alter.setItem(8, G1);
+
+                alter.setItem(9, G1);
+                alter.setItem(10, G1);
+                alter.setItem(11, G1);
+                alter.setItem(12, high);
+                alter.setItem(13, G1);
+                alter.setItem(14, mid);
+                alter.setItem(15, G1);
+                alter.setItem(16, low);
+                alter.setItem(17, G1);
 
 
 
