@@ -96,18 +96,18 @@ public class CustomEnchantTable implements Listener {
 
                 alter.setItem(9, G1);
                 alter.setItem(10, G1);
-                alter.setItem(11, G1);
+                alter.setItem(11, high);
                 alter.setItem(12, G1);
-                alter.setItem(13, G1);
-                alter.setItem(14, high);
-                alter.setItem(15, mid);
-                alter.setItem(16, low);
+                alter.setItem(13, mid);
+                alter.setItem(14, G1);
+                alter.setItem(15, low);
+                alter.setItem(16, G1);
                 alter.setItem(17, G1);
 
                 alter.setItem(18, G1);
-                //alter.setItem(19, G1);
-                //alter.setItem(20, G1);
-                //alter.setItem(21, G1);
+                alter.setItem(19, G1);
+                alter.setItem(20, G1);
+                alter.setItem(21, G1);
                 alter.setItem(22, G1);
                 alter.setItem(23, G1);
                 alter.setItem(24, G1);
@@ -116,9 +116,9 @@ public class CustomEnchantTable implements Listener {
 
                 alter.setItem(27, G1);
                 //alter.setItem(28, G1);
-                //alter.setItem(29, G1);
-                //alter.setItem(30, G1);
-                alter.setItem(31, G1);
+                alter.setItem(29, G1);
+                alter.setItem(30, G1);
+                //alter.setItem(31, G1);
                 alter.setItem(32, G1);
                 alter.setItem(33, G1);
                 alter.setItem(34, G1);
