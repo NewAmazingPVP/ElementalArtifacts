@@ -31,12 +31,10 @@ public class TeleportParticles {
 
 
 
-
-                Location alter1 = new Location(Bukkit.getWorld("world"), 329.5, 105.5, -45.5);
-                Bukkit.getWorld("world").spawnParticle(Particle.CLOUD, alter1, 10);
+                
 
             }
-        }.runTaskTimer(elementalArtifacts, 0, 1);
+        }.runTaskTimer(elementalArtifacts, 0, 10);
     }
 }
 
