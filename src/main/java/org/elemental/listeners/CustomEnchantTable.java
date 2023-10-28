@@ -29,7 +29,7 @@ public class CustomEnchantTable implements Listener {
             if(block.getType() == Material.ENCHANTING_TABLE){
                 event.setCancelled(true);
                 player.playSound(player.getLocation(), Sound.BLOCK_END_PORTAL_FRAME_FILL, 2.0f, 0.0f);
-                Inventory alter = Bukkit.createInventory(player, 45, ChatColor.LIGHT_PURPLE + "" + ChatColor.BOLD + "Ability Altar");
+                Inventory alter = Bukkit.createInventory(player, 54, ChatColor.LIGHT_PURPLE + "" + ChatColor.BOLD + "Ability Altar");
 
                 ItemStack G1 = new ItemStack(Material.PINK_STAINED_GLASS_PANE);
                 ItemMeta M1 = G1.getItemMeta();
@@ -124,16 +124,26 @@ public class CustomEnchantTable implements Listener {
                 alter.setItem(34, G1);
                 alter.setItem(35, G1);
 
-                alter.setItem(36, G2);
-                alter.setItem(37, G2);
-                alter.setItem(38, G2);
-                alter.setItem(39, G2);
-                alter.setItem(40, G2);
-                alter.setItem(41, G2);
-                alter.setItem(42, G2);
-                alter.setItem(43, G2);
-                alter.setItem(44, G2);
-                
+                alter.setItem(36, G1);
+                alter.setItem(37, G1);
+                alter.setItem(38, G1);
+                alter.setItem(39, G1);
+                alter.setItem(40, G1);
+                alter.setItem(41, G1);
+                alter.setItem(42, G1);
+                alter.setItem(43, G1);
+                alter.setItem(44, G1);
+
+                alter.setItem(45, G2);
+                alter.setItem(46, G2);
+                alter.setItem(47, G2);
+                alter.setItem(48, G2);
+                alter.setItem(49, G2);
+                alter.setItem(50, G2);
+                alter.setItem(51, G2);
+                alter.setItem(52, G2);
+                alter.setItem(53, G2);
+
 
 
                 player.openInventory(alter);
