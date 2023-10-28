@@ -1,12 +1,8 @@
 package org.elemental;
 
-import org.bukkit.ChatColor;
-import org.bukkit.Material;
-import org.bukkit.enchantments.Enchantment;
+import org.bukkit.Bukkit;
+import org.bukkit.Location;
 import org.bukkit.event.Listener;
-import org.bukkit.inventory.ItemFlag;
-import org.bukkit.inventory.ItemStack;
-import org.bukkit.inventory.meta.ItemMeta;
 import org.elemental.MiningListsners.Loot_Block_Mine;
 import org.elemental.MiningListsners.MiningBlockReplace;
 import org.elemental.MiningListsners.Star_Dust_Mine;
@@ -16,9 +12,6 @@ import org.elemental.listeners.*;
 
 import org.bukkit.plugin.java.JavaPlugin;
 import org.elemental.utility.AutoUpload;
-
-import java.util.ArrayList;
-import java.util.List;
 
 import static org.elemental.WorldParticles.TeleportParticles.test;
 
@@ -70,13 +63,14 @@ public final class ElementalArtifacts extends JavaPlugin implements Listener {
         getCommand("GivePlasmaPick_1").setExecutor(new GivePlasmaBlockPick_1());
         getCommand("GiveStarDustCH").setExecutor(new GiveStarDistMine_1());
 
-        getServer().getPluginManager().registerEvents(new AntiGuiOpen(), this);
+        getServer().getPluginManager().registerEvents(new AntiAnvilOpen(), this);
         getServer().getPluginManager().registerEvents(new Loot_Block_Mine(), this);
         getServer().getPluginManager().registerEvents(new Star_Dust_Mine(), this);
         getServer().getPluginManager().registerEvents(new MiningBlockReplace(), this);
-        getServer().getPluginManager().registerEvents(new NoArmorStandInteract(), this);
         //-------------------------Item functions -----------------------
         test();
+        //-------------------------NPC and other entities ---------------
+        Location npc1 = new Location(Bukkit.getWorld("world"), 324, 104, -35);
     }
 }
     
