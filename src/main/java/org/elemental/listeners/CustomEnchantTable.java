@@ -160,7 +160,6 @@ public class CustomEnchantTable implements Listener {
                 return;
             }
 
-            if (event.getCurrentItem().getDisplayName().equalsIgnoreCase(ChatColor.GREEN + "" + ChatColor.BOLD + "------ Normal Sacrifice ------")) {
                 Player player = (Player) event.getView().getPlayer();
 
 
@@ -178,7 +177,6 @@ public class CustomEnchantTable implements Listener {
             }
         }
     }
-}
 
 
 
