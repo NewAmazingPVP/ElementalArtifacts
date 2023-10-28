@@ -1,6 +1,7 @@
 name: ElementalArtifacts
 version: '${project.version}'
 main: org.elemental.ElementalArtifacts
+softdepend: [Citizens]
 api-version: '1.20'
 commands:
   EAGuide:
