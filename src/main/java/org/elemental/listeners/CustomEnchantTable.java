@@ -29,7 +29,7 @@ public class CustomEnchantTable implements Listener {
             Block block = event.getClickedBlock();
             if(block.getType() == Material.ENCHANTING_TABLE){
                 event.setCancelled(true);
-                player.playSound(player.getLocation(), Sound.BLOCK_END_PORTAL_FRAME_FILL, 2.0f, 2.0f);
+                player.playSound(player.getLocation(), Sound.BLOCK_END_PORTAL_FRAME_FILL, 2.0f, 0.0f);
                 Inventory alter = Bukkit.createInventory(player, 54, ChatColor.LIGHT_PURPLE + "" + ChatColor.BOLD + "Ability Altar");
 
                 ItemStack G1 = new ItemStack(Material.PURPLE_STAINED_GLASS_PANE);
@@ -44,7 +44,7 @@ public class CustomEnchantTable implements Listener {
                 HCU.setDisplayName(ChatColor.LIGHT_PURPLE + "" + ChatColor.BOLD + "------ God Roll ------");
                 List<String> HCL = new ArrayList<>();
                 HCL.add(" ");
-                HCL.add(ChatColor.DARK_RED + "" + ChatColor.BOLD + "Cost:" + "" + ChatColor.GOLD + "" + ChatColor.BOLD + " 100,000" + ChatColor.DARK_RED + " and a" + ChatColor.AQUA + "" + ChatColor.BOLD + " Energy Chip");
+                HCL.add(ChatColor.DARK_RED + "" + ChatColor.BOLD + "Cost:" + "" + ChatColor.GOLD + "" + ChatColor.BOLD + " 100,000" + ChatColor.DARK_RED + " and an" + ChatColor.AQUA + "" + ChatColor.BOLD + " Energy Chip");
                 HCL.add(" ");
                 HCL.add(ChatColor.GREEN + "Has a chance to give T4-5 abilities");
                 HCL.add(ChatColor.GREEN + "and a chance to give" + ChatColor.LIGHT_PURPLE + "" + ChatColor.BOLD + " Mythic Abilities");
