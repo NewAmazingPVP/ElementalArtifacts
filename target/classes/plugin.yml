@@ -1,50 +1,15 @@
 name: ElementalArtifacts
 version: '1.0'
 main: org.elemental.ElementalArtifacts
+softdepend: [Citizens]
 api-version: '1.20'
 commands:
   EAGuide:
     description: Gives you the plugin guide
     usage: /ElementalArtifactsGuide
-  giveaxe:
-    description: Gives you axe test
-    usage: /giveaxe
-  giveportcraft:
-    description: Gives you porttable test
-    usage: /giveportcraft
-  givedoublesword:
-    description: Gives you doublesword test
-    usage: /givedoubledword
-  givewarpsword:
-    description: Gives Warp Sword test
-    usage: /givewarpsword
-  bookofitems:
-    description: Gives the book of items.
-    usage: /bookpfitems
-  givebindingarmor:
-    description: Gives binding armor test
-    usage: /givebindingarmor
-  givefearmongerpearl:
-    description: Gives you a fear mongerer pearl.
-    usage: /givefearmongerpearl
-  givegodpotion:
-    description: Gives you got potion test
-    usage: /givegodpotion
-  giveluckygem:
-    description: Gives you a lucky gem test
-    usage: /giveluckygem
-  setprisoner:
-    description: Set a player as a prisoner
-    usage: /set prisoner <player>
-  givegoldcoveredmeat:
-    description: Gives you gold covered meat test
-    usage: /givegoldcoveredmeat
-  netherite_leather:
-    description: Gives leather armor with the stats of netherite
-    usage: /netherite_leather
-  givesacerficeingarmor:
-    description: Gives sacerficeing armor test
-    usage: /givesacerficeingarmor
-  givestickofpower:
-    description: Gives stick of power test
-    usage: /givestickofpower
+  GivePlasmaPick_1:
+    description: Gives Plasma Pick t1
+    usage: /giveplasmapick_1
+  GiveStarDustCH:
+    description: Gives star dust mining tool
+    usage: /givestardustmine_1
