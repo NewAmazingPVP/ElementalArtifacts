@@ -22,11 +22,11 @@ import java.util.List;
 public class CustomEnchantTable implements Listener {
 
     @EventHandler
-    public void onPlayerInteract(PlayerInteractEvent event){
+    public void onPlayerInteract(PlayerInteractEvent event) {
         Player player = event.getPlayer();
-        if(event.getAction() == Action.RIGHT_CLICK_BLOCK){
+        if (event.getAction() == Action.RIGHT_CLICK_BLOCK) {
             Block block = event.getClickedBlock();
-            if(block.getType() == Material.ENCHANTING_TABLE){
+            if (block.getType() == Material.ENCHANTING_TABLE) {
                 event.setCancelled(true);
                 player.playSound(player.getLocation(), Sound.BLOCK_END_PORTAL_FRAME_FILL, 2.0f, 0.0f);
                 Inventory alter = Bukkit.createInventory(player, 54, ChatColor.LIGHT_PURPLE + "" + ChatColor.BOLD + "Ability Altar");
@@ -45,7 +45,7 @@ public class CustomEnchantTable implements Listener {
                 ItemMeta HCU = high.getItemMeta();
                 HCU.addEnchant(Enchantment.DURABILITY, 1, false);
                 HCU.addItemFlags(ItemFlag.HIDE_ENCHANTS);
-                HCU.setDisplayName(ChatColor.LIGHT_PURPLE + "" + ChatColor.BOLD + "------ God Roll ------");
+                HCU.setDisplayName(ChatColor.LIGHT_PURPLE + "" + ChatColor.BOLD + "------ Sacrifice Roll ------");
                 List<String> HCL = new ArrayList<>();
                 HCL.add(" ");
                 HCL.add(ChatColor.DARK_RED + "" + ChatColor.BOLD + "Cost:" + "" + ChatColor.GOLD + "" + ChatColor.BOLD + " 100,000" + ChatColor.DARK_RED + " and an" + ChatColor.AQUA + "" + ChatColor.BOLD + " Energy Chip");
@@ -60,7 +60,7 @@ public class CustomEnchantTable implements Listener {
                 ItemMeta MCU = mid.getItemMeta();
                 MCU.addEnchant(Enchantment.DURABILITY, 1, false);
                 MCU.addItemFlags(ItemFlag.HIDE_ENCHANTS);
-                MCU.setDisplayName(ChatColor.DARK_PURPLE + "" + ChatColor.BOLD + "------ Rare Roll ------");
+                MCU.setDisplayName(ChatColor.DARK_PURPLE + "" + ChatColor.BOLD + "------ Sacrifice Roll ------");
                 List<String> MCL = new ArrayList<>();
                 MCL.add(" ");
                 MCL.add(ChatColor.DARK_RED + "" + ChatColor.BOLD + "Cost:" + "" + ChatColor.GOLD + "" + ChatColor.BOLD + " 50,000");
@@ -74,7 +74,7 @@ public class CustomEnchantTable implements Listener {
                 ItemMeta LCU = low.getItemMeta();
                 LCU.addEnchant(Enchantment.DURABILITY, 1, false);
                 LCU.addItemFlags(ItemFlag.HIDE_ENCHANTS);
-                LCU.setDisplayName(ChatColor.GREEN + "" + ChatColor.BOLD + "------ Normal Roll ------");
+                LCU.setDisplayName(ChatColor.GREEN + "" + ChatColor.BOLD + "------ Sacrifice Roll ------");
                 List<String> LCL = new ArrayList<>();
                 LCL.add(" ");
                 LCL.add(ChatColor.DARK_RED + "" + ChatColor.BOLD + "Cost:" + "" + ChatColor.GOLD + "" + ChatColor.BOLD + " 1,000");
@@ -83,6 +83,7 @@ public class CustomEnchantTable implements Listener {
                 LCL.add(" ");
                 LCU.setLore(LCL);
                 low.setItemMeta(LCU);
+
 
                 alter.setItem(0, G2);
                 alter.setItem(1, G2);
@@ -117,10 +118,10 @@ public class CustomEnchantTable implements Listener {
                 alter.setItem(27, G1);
                 //alter.setItem(28, G1);
                 alter.setItem(29, G1);
-                alter.setItem(30, G1);
-                //alter.setItem(31, G1);
+                //alter.setItem(30, G1);
+                alter.setItem(31, G1);
                 alter.setItem(32, G1);
-                alter.setItem(33, G1);
+                //alter.setItem(33, G1);
                 alter.setItem(34, G1);
                 alter.setItem(35, G1);
 
@@ -145,7 +146,6 @@ public class CustomEnchantTable implements Listener {
                 alter.setItem(53, G2);
 
 
-
                 player.openInventory(alter);
             }
         }
@@ -160,7 +160,13 @@ public class CustomEnchantTable implements Listener {
                 return;
             }
 
-            event.setCancelled(true);
+            if (event.getCurrentItem().getDisplayName().equalsIgnoreCase(ChatColor.RED + "Back") && event.getCurrentItem().getType() == Material.ARROW) {
+                Player player = (Player) event.getView().getPlayer();
+                player.playSound(player.getLocation(), "minecraft:block.enchantment_table.use", 1.0f, 2.0f);
+
+
+                event.setCancelled(true);
+            }
         }
     }
 }
