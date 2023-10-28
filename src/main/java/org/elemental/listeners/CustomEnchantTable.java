@@ -30,6 +30,8 @@ public class CustomEnchantTable implements Listener {
                 ItemMeta M1 = G1.getItemMeta();
                 M1.setDisplayName(" ");
                 G1.setItemMeta(M1);
+
+                player.openInventory(alter);
             }
         }
     }
