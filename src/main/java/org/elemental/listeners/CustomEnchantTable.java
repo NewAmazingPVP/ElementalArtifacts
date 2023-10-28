@@ -29,7 +29,7 @@ public class CustomEnchantTable implements Listener {
             Block block = event.getClickedBlock();
             if(block.getType() == Material.ENCHANTING_TABLE){
                 event.setCancelled(true);
-                player.playSound(player.getLocation(), Sound.BLOCK_PORTAL_TRIGGER, 2.0f, 2.0f);
+                player.playSound(player.getLocation(), Sound.BLOCK_END_PORTAL_FRAME_FILL, 2.0f, 2.0f);
                 Inventory alter = Bukkit.createInventory(player, 54, ChatColor.LIGHT_PURPLE + "" + ChatColor.BOLD + "Ability Altar");
 
                 ItemStack G1 = new ItemStack(Material.PURPLE_STAINED_GLASS_PANE);
