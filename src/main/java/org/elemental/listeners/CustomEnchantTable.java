@@ -45,7 +45,7 @@ public class CustomEnchantTable implements Listener {
                 ItemMeta HCU = high.getItemMeta();
                 HCU.addEnchant(Enchantment.DURABILITY, 1, false);
                 HCU.addItemFlags(ItemFlag.HIDE_ENCHANTS);
-                HCU.setDisplayName(ChatColor.LIGHT_PURPLE + "" + ChatColor.BOLD + "------ Sacrifice Roll ------");
+                HCU.setDisplayName(ChatColor.LIGHT_PURPLE + "" + ChatColor.BOLD + "------ High Level Sacrifice ------");
                 List<String> HCL = new ArrayList<>();
                 HCL.add(" ");
                 HCL.add(ChatColor.DARK_RED + "" + ChatColor.BOLD + "Cost:" + "" + ChatColor.GOLD + "" + ChatColor.BOLD + " 100,000" + ChatColor.DARK_RED + " and an" + ChatColor.AQUA + "" + ChatColor.BOLD + " Energy Chip");
@@ -60,7 +60,7 @@ public class CustomEnchantTable implements Listener {
                 ItemMeta MCU = mid.getItemMeta();
                 MCU.addEnchant(Enchantment.DURABILITY, 1, false);
                 MCU.addItemFlags(ItemFlag.HIDE_ENCHANTS);
-                MCU.setDisplayName(ChatColor.DARK_PURPLE + "" + ChatColor.BOLD + "------ Sacrifice Roll ------");
+                MCU.setDisplayName(ChatColor.DARK_PURPLE + "" + ChatColor.BOLD + "------ Rare Sacrifice ------");
                 List<String> MCL = new ArrayList<>();
                 MCL.add(" ");
                 MCL.add(ChatColor.DARK_RED + "" + ChatColor.BOLD + "Cost:" + "" + ChatColor.GOLD + "" + ChatColor.BOLD + " 50,000");
@@ -74,7 +74,7 @@ public class CustomEnchantTable implements Listener {
                 ItemMeta LCU = low.getItemMeta();
                 LCU.addEnchant(Enchantment.DURABILITY, 1, false);
                 LCU.addItemFlags(ItemFlag.HIDE_ENCHANTS);
-                LCU.setDisplayName(ChatColor.GREEN + "" + ChatColor.BOLD + "------ Sacrifice Roll ------");
+                LCU.setDisplayName(ChatColor.GREEN + "" + ChatColor.BOLD + "------ Normal Sacrifice ------");
                 List<String> LCL = new ArrayList<>();
                 LCL.add(" ");
                 LCL.add(ChatColor.DARK_RED + "" + ChatColor.BOLD + "Cost:" + "" + ChatColor.GOLD + "" + ChatColor.BOLD + " 1,000");
@@ -160,12 +160,21 @@ public class CustomEnchantTable implements Listener {
                 return;
             }
 
-            if (event.getCurrentItem().getDisplayName().equalsIgnoreCase(ChatColor.RED + "Back") && event.getCurrentItem().getType() == Material.ARROW) {
+            if (event.getCurrentItem().getDisplayName().equalsIgnoreCase(ChatColor.GREEN + "" + ChatColor.BOLD + "------ Normal Sacrifice ------")) {
                 Player player = (Player) event.getView().getPlayer();
-                player.playSound(player.getLocation(), "minecraft:block.enchantment_table.use", 1.0f, 2.0f);
 
 
-                event.setCancelled(true);
+                ItemStack clickedItem = event.getCurrentItem();
+                if (clickedItem.hasItemMeta()) {
+                    List<String> lore = clickedItem.getItemMeta().getLore();
+                    if (lore.contains(ChatColor.LIGHT_PURPLE + "Use this to break" + ChatColor.DARK_PURPLE + "" + ChatColor.BOLD + " Star Dust!")) {
+                        player.playSound(player.getLocation(), Sound.ENTITY_ITEM_PICKUP, 1.0f, 1.0f);
+                    } else {
+                        event.setCancelled(true);
+
+
+                    }
+                }
             }
         }
     }
