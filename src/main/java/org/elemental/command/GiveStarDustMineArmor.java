@@ -7,7 +7,8 @@ import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 
-import static org.elemental.variables.PremadeItems.StarDustMineArmor;
+import static org.elemental.variables.PremadeItems.*;
+
 
 public class GiveStarDustMineArmor implements CommandExecutor {
 
@@ -20,7 +21,9 @@ public class GiveStarDustMineArmor implements CommandExecutor {
 
         Player player = (Player) sender;
 
-        player.getInventory().addItem(StarDustMineArmor());
+        player.getInventory().addItem(StarDustMineArmor_CP());
+        player.getInventory().addItem(StarDustMineArmor_LG());
+        player.getInventory().addItem(StarDustMineArmor_BT());
 
         player.playSound(player.getLocation(), Sound.BLOCK_NOTE_BLOCK_PLING, 2.0f, 0.0f);
         return true;
