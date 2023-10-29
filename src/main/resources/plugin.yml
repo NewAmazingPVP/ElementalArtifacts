@@ -13,3 +13,6 @@ commands:
   GiveStarDustCH:
     description: Gives star dust mining tool
     usage: /givestardustmine_1
+  GiveStarDustMineArmor:
+    description: Gives star dust mine armor
+    usage: /givestardustminearmor

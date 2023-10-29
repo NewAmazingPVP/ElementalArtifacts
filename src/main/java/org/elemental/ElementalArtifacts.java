@@ -8,6 +8,7 @@ import org.elemental.MiningListsners.MiningBlockReplace;
 import org.elemental.MiningListsners.Star_Dust_Mine;
 import org.elemental.command.GivePlasmaBlockPick_1;
 import org.elemental.command.GiveStarDistMine_1;
+import org.elemental.command.GiveStarDustMineArmor;
 import org.elemental.listeners.*;
 
 import org.bukkit.plugin.java.JavaPlugin;
@@ -62,13 +63,13 @@ public final class ElementalArtifacts extends JavaPlugin implements Listener {
         //------------------------- MMO PLUGIN --------------------------
         getCommand("GivePlasmaPick_1").setExecutor(new GivePlasmaBlockPick_1());
         getCommand("GiveStarDustCH").setExecutor(new GiveStarDistMine_1());
+        getCommand("GiveStarDustMineArmor").setExecutor(new GiveStarDustMineArmor());
 
         getServer().getPluginManager().registerEvents(new AntiAnvilOpen(), this);
         getServer().getPluginManager().registerEvents(new Loot_Block_Mine(), this);
         getServer().getPluginManager().registerEvents(new Star_Dust_Mine(), this);
         getServer().getPluginManager().registerEvents(new MiningBlockReplace(), this);
         getServer().getPluginManager().registerEvents(new CustomEnchantTable(), this);
-        getServer().getPluginManager().registerEvents(new Test_vaueable(), this);
         //-------------------------Item functions -----------------------
         test();
         //-------------------------NPC and other entities ---------------
