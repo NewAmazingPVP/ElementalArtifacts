@@ -70,6 +70,8 @@ public final class ElementalArtifacts extends JavaPlugin implements Listener {
         getServer().getPluginManager().registerEvents(new Star_Dust_Mine(), this);
         getServer().getPluginManager().registerEvents(new MiningBlockReplace(), this);
         getServer().getPluginManager().registerEvents(new CustomEnchantTable(), this);
+        getServer().getPluginManager().registerEvents(new Scrap_Melter(), this);
+
         //-------------------------Item functions -----------------------
         test();
         //-------------------------NPC and other entities ---------------
