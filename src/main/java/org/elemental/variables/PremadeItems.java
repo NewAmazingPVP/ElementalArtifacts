@@ -98,7 +98,7 @@ public class PremadeItems {
         return starDust;
     }
 
-    public static ItemStack StarDustMineArmor() {
+    public static ItemStack StarDustMineArmor_CP() {
 
         ItemStack StarDustMineChest = new ItemStack(Material.LEATHER_CHESTPLATE);
         LeatherArmorMeta chest = (LeatherArmorMeta) StarDustMineChest.getItemMeta();
@@ -114,6 +114,12 @@ public class PremadeItems {
         chest.setLore(SCL);
         StarDustMineChest.setItemMeta(chest);
 
+
+        return StarDustMineChest;
+    }
+
+    public static ItemStack StarDustMineArmor_LG() {
+
         ItemStack StarDustMineLegs = new ItemStack(Material.LEATHER_LEGGINGS);
         LeatherArmorMeta legs = (LeatherArmorMeta) StarDustMineLegs.getItemMeta();
         legs.setColor(Color.BLUE);
@@ -128,6 +134,10 @@ public class PremadeItems {
         legs.setLore(SLL);
         StarDustMineLegs.setItemMeta(legs);
 
+        return StarDustMineLegs;
+    }
+
+    public static ItemStack StarDustMineArmor_BT() {
         ItemStack StarDustMineBoots = new ItemStack(Material.LEATHER_BOOTS);
         LeatherArmorMeta boots = (LeatherArmorMeta) StarDustMineBoots.getItemMeta();
         boots.setColor(Color.BLUE);
@@ -139,11 +149,10 @@ public class PremadeItems {
         SBL.add(" ");
         SBL.add(ChatColor.DARK_GREEN + "Low level armor used in the mines.");
         SBL.add(" ");
-        boots.setLore(SLL);
+        boots.setLore(SBL);
         StarDustMineBoots.setItemMeta(boots);
 
-
-        return StarDustMineChest;
+        return StarDustMineBoots;
     }
 }
 
