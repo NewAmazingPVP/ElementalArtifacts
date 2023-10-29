@@ -154,5 +154,21 @@ public class PremadeItems {
 
         return StarDustMineBoots;
     }
+
+    public static ItemStack low_level_chip(){
+
+        ItemStack lowlevelchip = new ItemStack(Material.DETECTOR_RAIL);
+        ItemMeta SI = lowlevelchip.getItemMeta();
+        SI.setDisplayName(ChatColor.GREEN + "" + ChatColor.BOLD + "Low Level Chip" + ChatColor.BLUE + "" + ChatColor.BOLD + " [Uncommon]");
+        SI.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
+        List<String> BL = new ArrayList<>();
+        BL.add(ChatColor.DARK_GREEN + " ");
+        BL.add(ChatColor.DARK_GREEN + "Use at the scrap recycler for low level drops .");
+        SI.setLore(BL);
+        lowlevelchip.setItemMeta(SI);
+
+        return lowlevelchip;
+
+    }
 }
 
