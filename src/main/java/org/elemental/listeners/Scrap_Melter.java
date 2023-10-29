@@ -16,7 +16,7 @@ public class Scrap_Melter implements Listener {
         Player player = event.getPlayer();
         if (event.getAction() == Action.RIGHT_CLICK_BLOCK) {
             Block block = event.getClickedBlock();
-            if (block.getType() == Material.BLAST_FURNACE) {
+            if (block.getType() == Material.FURNACE) {
                 event.setCancelled(true);
                 Furnace furnace = (Furnace) block.getState();
                 furnace.setCookTime(Short.MAX_VALUE);
