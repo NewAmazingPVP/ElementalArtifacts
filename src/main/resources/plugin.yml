@@ -16,3 +16,6 @@ commands:
   GiveStarDustMineArmor:
     description: Gives star dust mine armor
     usage: /givestardustminearmor
+  Spawn_NPC_Mechanic:
+    description: Spawns the NPC mechanic
+    usage: /spawnnpcmechanic
