@@ -160,23 +160,16 @@ public class CustomEnchantTable implements Listener {
                 return;
             }
 
-                Player player = (Player) event.getView().getPlayer();
+                event.setCancelled(true);
 
 
-                ItemStack clickedItem = event.getCurrentItem();
-                if (clickedItem.hasItemMeta()) {
-                    List<String> lore = clickedItem.getItemMeta().getLore();
-                    if (lore.contains(ChatColor.LIGHT_PURPLE + "Use this to break" + ChatColor.DARK_PURPLE + "" + ChatColor.BOLD + " Star Dust!")) {
-                        player.playSound(player.getLocation(), Sound.ENTITY_ITEM_PICKUP, 1.0f, 1.0f);
-                    } else {
-                        event.setCancelled(true);
+
 
 
                     }
                 }
             }
-        }
-    }
+
 
 
 
