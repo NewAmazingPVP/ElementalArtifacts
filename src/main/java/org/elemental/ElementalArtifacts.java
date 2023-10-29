@@ -9,6 +9,7 @@ import org.elemental.MiningListsners.Star_Dust_Mine;
 import org.elemental.command.GivePlasmaBlockPick_1;
 import org.elemental.command.GiveStarDistMine_1;
 import org.elemental.command.GiveStarDustMineArmor;
+import org.elemental.command.Spawn_NPC_Mechanic;
 import org.elemental.listeners.*;
 
 import org.bukkit.plugin.java.JavaPlugin;
@@ -64,6 +65,8 @@ public final class ElementalArtifacts extends JavaPlugin implements Listener {
         getCommand("GivePlasmaPick_1").setExecutor(new GivePlasmaBlockPick_1());
         getCommand("GiveStarDustCH").setExecutor(new GiveStarDistMine_1());
         getCommand("GiveStarDustMineArmor").setExecutor(new GiveStarDustMineArmor());
+        getCommand("Spawn_NPC_Mechanic").setExecutor(new Spawn_NPC_Mechanic());
+
 
         getServer().getPluginManager().registerEvents(new AntiAnvilOpen(), this);
         getServer().getPluginManager().registerEvents(new Loot_Block_Mine(), this);
