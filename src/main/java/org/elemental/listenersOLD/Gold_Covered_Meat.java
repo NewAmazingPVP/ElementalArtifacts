@@ -34,26 +34,26 @@ public class Gold_Covered_Meat implements Listener {
                 }
             }
         }
-                ItemStack mainHandItem = player.getInventory().getItemInMainHand();
-                ItemStack offHandItem = player.getInventory().getItemInOffHand();
+        ItemStack mainHandItem = player.getInventory().getItemInMainHand();
+        ItemStack offHandItem = player.getInventory().getItemInOffHand();
 
-                if (event.getAction() == Action.RIGHT_CLICK_AIR || event.getAction() == Action.RIGHT_CLICK_BLOCK) {
-                    if (offHandItem.getType() == Material.COOKED_MUTTON && offHandItem.hasItemMeta() && offHandItem.getItemMeta().hasDisplayName()
-                            && offHandItem.getItemMeta().getDisplayName().equals(ChatColor.GOLD + "" + ChatColor.BOLD + "Gold Covered Meat" + ChatColor.DARK_AQUA + " [Food]")) {
-                        player.playSound(player.getLocation(), Sound.ENTITY_GENERIC_EAT, 1.0f, 1.0f);
-                        player.setSaturation(10);
-                        player.addPotionEffect(new PotionEffect(PotionEffectType.ABSORPTION, 20 * 60 * 10, 5));
-                        event.setCancelled(true);
-                        if (offHandItem.getAmount() > 1) {
-                            offHandItem.setAmount(offHandItem.getAmount() - 1);
-                            player.getInventory().setItemInOffHand(offHandItem);
-                        } else {
-                            player.getInventory().setItemInOffHand(null);
-                        }
-                    }
+        if (event.getAction() == Action.RIGHT_CLICK_AIR || event.getAction() == Action.RIGHT_CLICK_BLOCK) {
+            if (offHandItem.getType() == Material.COOKED_MUTTON && offHandItem.hasItemMeta() && offHandItem.getItemMeta().hasDisplayName()
+                    && offHandItem.getItemMeta().getDisplayName().equals(ChatColor.GOLD + "" + ChatColor.BOLD + "Gold Covered Meat" + ChatColor.DARK_AQUA + " [Food]")) {
+                player.playSound(player.getLocation(), Sound.ENTITY_GENERIC_EAT, 1.0f, 1.0f);
+                player.setSaturation(10);
+                player.addPotionEffect(new PotionEffect(PotionEffectType.ABSORPTION, 20 * 60 * 10, 5));
+                event.setCancelled(true);
+                if (offHandItem.getAmount() > 1) {
+                    offHandItem.setAmount(offHandItem.getAmount() - 1);
+                    player.getInventory().setItemInOffHand(offHandItem);
+                } else {
+                    player.getInventory().setItemInOffHand(null);
                 }
             }
         }
+    }
+}
 
 
 

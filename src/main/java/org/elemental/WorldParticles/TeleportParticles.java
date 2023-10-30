@@ -1,11 +1,9 @@
 package org.elemental.WorldParticles;
 
-import org.bukkit.*;
-import org.bukkit.entity.Player;
+import org.bukkit.Bukkit;
+import org.bukkit.Location;
+import org.bukkit.Particle;
 import org.bukkit.scheduler.BukkitRunnable;
-import org.bukkit.util.Vector;
-
-import java.util.Collection;
 
 import static org.elemental.ElementalArtifacts.elementalArtifacts;
 
@@ -13,8 +11,7 @@ import static org.elemental.ElementalArtifacts.elementalArtifacts;
 public class TeleportParticles {
 
 
-
-    public static void test(){
+    public static void test() {
         new BukkitRunnable() {
             @Override
             public void run() {
@@ -26,11 +23,6 @@ public class TeleportParticles {
                 Bukkit.getWorld("world").spawnParticle(Particle.COMPOSTER, location2, 10);
                 Bukkit.getWorld("world").spawnParticle(Particle.COMPOSTER, location3, 10);
                 Bukkit.getWorld("world").spawnParticle(Particle.COMPOSTER, location4, 10);
-
-
-
-
-
 
 
             }

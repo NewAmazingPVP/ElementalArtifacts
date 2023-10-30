@@ -3,8 +3,8 @@ package org.elemental.listenersOLD;
 import org.bukkit.*;
 import org.bukkit.enchantments.Enchantment;
 import org.bukkit.entity.Player;
-import org.bukkit.event.Listener;
 import org.bukkit.event.EventHandler;
+import org.bukkit.event.Listener;
 import org.bukkit.event.block.Action;
 import org.bukkit.event.player.PlayerInteractEvent;
 import org.bukkit.inventory.Inventory;
@@ -62,8 +62,6 @@ public class Guide implements Listener {
                     close.setItemMeta(CM);
 
 
-
-
                     Guide.setItem(0, G1);
                     Guide.setItem(1, G1);
                     Guide.setItem(2, G1);
@@ -91,7 +89,6 @@ public class Guide implements Listener {
                     Guide.setItem(24, G1);
                     Guide.setItem(25, G1);
                     Guide.setItem(26, close);
-
 
 
                     p.openInventory(Guide);

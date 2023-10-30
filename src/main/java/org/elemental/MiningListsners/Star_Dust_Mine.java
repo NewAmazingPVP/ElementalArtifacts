@@ -13,7 +13,7 @@ import org.bukkit.inventory.ItemStack;
 import org.bukkit.potion.PotionEffect;
 import org.bukkit.potion.PotionEffectType;
 
-import static org.elemental.variables.PremadeItems.*;
+import static org.elemental.variables.PremadeItems.starDust;
 
 public class Star_Dust_Mine implements Listener {
 

@@ -1,6 +1,8 @@
 package org.elemental.listenersOLD;
 
-import org.bukkit.*;
+import org.bukkit.Bukkit;
+import org.bukkit.ChatColor;
+import org.bukkit.Material;
 import org.bukkit.enchantments.Enchantment;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
@@ -110,7 +112,6 @@ public class CraftingMenu_1_Listener implements Listener {
                 Inventory Armor = Bukkit.createInventory(player, 36, ChatColor.GREEN + "" + ChatColor.BOLD + "Armor Recipes");
 
 
-
                 player.openInventory(Armor);
 
             }
@@ -118,7 +119,6 @@ public class CraftingMenu_1_Listener implements Listener {
                 Player player = (Player) event.getView().getPlayer();
                 player.playSound(player.getLocation(), "minecraft:block.enchantment_table.use", 1.0f, 2.0f);
                 Inventory Magic = Bukkit.createInventory(player, 36, ChatColor.DARK_BLUE + "" + ChatColor.BOLD + "Magic Recipes");
-
 
 
                 player.openInventory(Magic);
@@ -212,7 +212,6 @@ public class CraftingMenu_1_Listener implements Listener {
                 BOLM.setLore(BOLL);
                 BOLM.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
                 BottleOfLight.setItemMeta(BOLM);
-
 
 
                 Materials.setItem(0, G1);

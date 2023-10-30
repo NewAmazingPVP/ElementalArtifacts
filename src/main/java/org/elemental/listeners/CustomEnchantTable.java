@@ -1,6 +1,9 @@
 package org.elemental.listeners;
 
-import org.bukkit.*;
+import org.bukkit.Bukkit;
+import org.bukkit.ChatColor;
+import org.bukkit.Material;
+import org.bukkit.Sound;
 import org.bukkit.block.Block;
 import org.bukkit.enchantments.Enchantment;
 import org.bukkit.entity.Player;
@@ -13,8 +16,6 @@ import org.bukkit.inventory.Inventory;
 import org.bukkit.inventory.ItemFlag;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
-import org.bukkit.potion.PotionEffect;
-import org.bukkit.potion.PotionEffectType;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -48,10 +49,10 @@ public class CustomEnchantTable implements Listener {
                 HCU.setDisplayName(ChatColor.LIGHT_PURPLE + "" + ChatColor.BOLD + "------ High Level Sacrifice ------");
                 List<String> HCL = new ArrayList<>();
                 HCL.add(" ");
-                HCL.add(ChatColor.DARK_RED + "" + ChatColor.BOLD + "Cost:" + "" + ChatColor.GOLD + "" + ChatColor.BOLD + " 100,000" + ChatColor.DARK_RED + " and an" + ChatColor.AQUA + "" + ChatColor.BOLD + " Energy Chip");
+                HCL.add(ChatColor.DARK_RED + "" + ChatColor.BOLD + "Cost:" + ChatColor.GOLD + ChatColor.BOLD + " 100,000" + ChatColor.DARK_RED + " and an" + ChatColor.AQUA + ChatColor.BOLD + " Energy Chip");
                 HCL.add(" ");
-                HCL.add(ChatColor.GREEN + "Has a chance to give" + ChatColor.DARK_PURPLE + "" + ChatColor.BOLD + " T4-5" + ChatColor.GREEN + " abilities");
-                HCL.add(ChatColor.GREEN + "and a chance to give" + ChatColor.LIGHT_PURPLE + "" + ChatColor.BOLD + " Mythic Abilities");
+                HCL.add(ChatColor.GREEN + "Has a chance to give" + ChatColor.DARK_PURPLE + ChatColor.BOLD + " T4-5" + ChatColor.GREEN + " abilities");
+                HCL.add(ChatColor.GREEN + "and a chance to give" + ChatColor.LIGHT_PURPLE + ChatColor.BOLD + " Mythic Abilities");
                 HCL.add(" ");
                 HCU.setLore(HCL);
                 high.setItemMeta(HCU);
@@ -63,9 +64,9 @@ public class CustomEnchantTable implements Listener {
                 MCU.setDisplayName(ChatColor.DARK_PURPLE + "" + ChatColor.BOLD + "------ Rare Sacrifice ------");
                 List<String> MCL = new ArrayList<>();
                 MCL.add(" ");
-                MCL.add(ChatColor.DARK_RED + "" + ChatColor.BOLD + "Cost:" + "" + ChatColor.GOLD + "" + ChatColor.BOLD + " 50,000");
+                MCL.add(ChatColor.DARK_RED + "" + ChatColor.BOLD + "Cost:" + ChatColor.GOLD + ChatColor.BOLD + " 50,000");
                 MCL.add(" ");
-                MCL.add(ChatColor.GREEN + "Has a chance to give" + ChatColor.DARK_PURPLE + "" + ChatColor.BOLD + " T3-5" + ChatColor.GREEN + " abilities");
+                MCL.add(ChatColor.GREEN + "Has a chance to give" + ChatColor.DARK_PURPLE + ChatColor.BOLD + " T3-5" + ChatColor.GREEN + " abilities");
                 MCL.add(" ");
                 MCU.setLore(MCL);
                 mid.setItemMeta(MCU);
@@ -77,9 +78,9 @@ public class CustomEnchantTable implements Listener {
                 LCU.setDisplayName(ChatColor.GREEN + "" + ChatColor.BOLD + "------ Normal Sacrifice ------");
                 List<String> LCL = new ArrayList<>();
                 LCL.add(" ");
-                LCL.add(ChatColor.DARK_RED + "" + ChatColor.BOLD + "Cost:" + "" + ChatColor.GOLD + "" + ChatColor.BOLD + " 1,000");
+                LCL.add(ChatColor.DARK_RED + "" + ChatColor.BOLD + "Cost:" + ChatColor.GOLD + ChatColor.BOLD + " 1,000");
                 LCL.add(" ");
-                LCL.add(ChatColor.GREEN + "Has a chance to give" + ChatColor.DARK_PURPLE + "" + ChatColor.BOLD + " T1-2" + ChatColor.GREEN + " abilities");
+                LCL.add(ChatColor.GREEN + "Has a chance to give" + ChatColor.DARK_PURPLE + ChatColor.BOLD + " T1-2" + ChatColor.GREEN + " abilities");
                 LCL.add(" ");
                 LCU.setLore(LCL);
                 low.setItemMeta(LCU);
@@ -160,15 +161,12 @@ public class CustomEnchantTable implements Listener {
                 return;
             }
 
-                event.setCancelled(true);
+            event.setCancelled(true);
 
 
-
-
-
-                    }
-                }
-            }
+        }
+    }
+}
 
 
 

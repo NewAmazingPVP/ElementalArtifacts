@@ -48,15 +48,14 @@ public class Montu_Staff_Right implements Listener {
                         destination.setY(destination.getY() + 1);
 
 
-
                     }
                 }
                 player.teleport(destination);
             }
         }
 
-            }
-        }
+    }
+}
 
 
 

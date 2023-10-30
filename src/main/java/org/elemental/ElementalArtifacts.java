@@ -3,6 +3,7 @@ package org.elemental;
 import org.bukkit.Bukkit;
 import org.bukkit.Location;
 import org.bukkit.event.Listener;
+import org.bukkit.plugin.java.JavaPlugin;
 import org.elemental.MiningListsners.Loot_Block_Mine;
 import org.elemental.MiningListsners.MiningBlockReplace;
 import org.elemental.MiningListsners.Star_Dust_Mine;
@@ -10,9 +11,9 @@ import org.elemental.command.GivePlasmaBlockPick_1;
 import org.elemental.command.GiveStarDistMine_1;
 import org.elemental.command.GiveStarDustMineArmor;
 import org.elemental.command.Spawn_NPC_Mechanic;
-import org.elemental.listeners.*;
-
-import org.bukkit.plugin.java.JavaPlugin;
+import org.elemental.listeners.AntiAnvilOpen;
+import org.elemental.listeners.CustomEnchantTable;
+import org.elemental.listeners.Scrap_Melter;
 import org.elemental.utility.AutoUpload;
 
 import static org.elemental.WorldParticles.TeleportParticles.test;

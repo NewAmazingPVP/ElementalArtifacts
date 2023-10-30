@@ -11,17 +11,17 @@ import static org.elemental.ElementalArtifacts.elementalArtifacts;
 
 public class MiningBlockReplace implements Listener {
 
-        @EventHandler
-        public void onBlockBreak(BlockBreakEvent event) {
-            Block block = event.getBlock();
-            if (block.getType() == Material.DEAD_BUBBLE_CORAL_BLOCK) {
-                new BukkitRunnable() {
-                    @Override
-                    public void run() {
-                        block.setType(Material.DEAD_BUBBLE_CORAL_BLOCK);
-                    }
-                }.runTaskLater(elementalArtifacts, 200); // 20 ticks = 1 second
-            }
+    @EventHandler
+    public void onBlockBreak(BlockBreakEvent event) {
+        Block block = event.getBlock();
+        if (block.getType() == Material.DEAD_BUBBLE_CORAL_BLOCK) {
+            new BukkitRunnable() {
+                @Override
+                public void run() {
+                    block.setType(Material.DEAD_BUBBLE_CORAL_BLOCK);
+                }
+            }.runTaskLater(elementalArtifacts, 200); // 20 ticks = 1 second
         }
     }
+}
 

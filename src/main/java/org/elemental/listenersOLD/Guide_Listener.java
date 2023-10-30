@@ -1,6 +1,8 @@
 package org.elemental.listenersOLD;
 
-import org.bukkit.*;
+import org.bukkit.Bukkit;
+import org.bukkit.ChatColor;
+import org.bukkit.Material;
 import org.bukkit.enchantments.Enchantment;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
@@ -188,7 +190,6 @@ public class Guide_Listener implements Listener {
                 Guide.setItem(26, close);
 
 
-
                 player.openInventory(Guide);
 
 
@@ -290,13 +291,13 @@ public class Guide_Listener implements Listener {
                 CreditsM.addEnchant(Enchantment.DURABILITY, 1, false);
                 CreditsM.addItemFlags(ItemFlag.HIDE_ENCHANTS);
                 List<String> lore = new ArrayList<>();
-                lore.add(ChatColor.DARK_PURPLE + "" + ChatColor.STRIKETHROUGH + "" + ChatColor.BOLD + "=========================");
+                lore.add(ChatColor.DARK_PURPLE + "" + ChatColor.STRIKETHROUGH + ChatColor.BOLD + "=========================");
                 lore.add(" ");
                 lore.add(ChatColor.GOLD + "" + ChatColor.BOLD + "Comet99   " + ChatColor.AQUA + "[Developer]   [Game Design]");
                 lore.add(" ");
                 lore.add(ChatColor.GOLD + "" + ChatColor.BOLD + "NewAmazingPVP   " + ChatColor.AQUA + "[Developer]   [Game Design]");
                 lore.add(" ");
-                lore.add(ChatColor.DARK_PURPLE + "" + ChatColor.STRIKETHROUGH + "" + ChatColor.BOLD + "=========================");
+                lore.add(ChatColor.DARK_PURPLE + "" + ChatColor.STRIKETHROUGH + ChatColor.BOLD + "=========================");
                 CreditsM.setLore(lore);
                 Credits.setItemMeta(CreditsM);
 

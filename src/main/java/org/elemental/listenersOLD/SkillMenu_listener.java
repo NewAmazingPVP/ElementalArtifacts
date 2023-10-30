@@ -1,6 +1,8 @@
 package org.elemental.listenersOLD;
 
-import org.bukkit.*;
+import org.bukkit.Bukkit;
+import org.bukkit.ChatColor;
+import org.bukkit.Material;
 import org.bukkit.enchantments.Enchantment;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
@@ -10,9 +12,6 @@ import org.bukkit.inventory.Inventory;
 import org.bukkit.inventory.ItemFlag;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
-
-import java.util.ArrayList;
-import java.util.List;
 
 public class SkillMenu_listener implements Listener {
 
@@ -101,7 +100,6 @@ public class SkillMenu_listener implements Listener {
 
 
                 player.openInventory(Guide);
-
 
 
             }

@@ -23,7 +23,7 @@ public class PremadeItems {
         SI.setUnbreakable(true);
         SI.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
         List<String> BL = new ArrayList<>();
-        BL.add(ChatColor.LIGHT_PURPLE + "Use this to break" + ChatColor.DARK_AQUA + "" + ChatColor.BOLD + " Plasma Blocks!");
+        BL.add(ChatColor.LIGHT_PURPLE + "Use this to break" + ChatColor.DARK_AQUA + ChatColor.BOLD + " Plasma Blocks!");
         BL.add(" ");
         BL.add(ChatColor.RED + "Pickaxe is so old that it will");
         BL.add(ChatColor.RED + "slow your mining when you use it!");
@@ -42,7 +42,7 @@ public class PremadeItems {
         ItemMeta SI = plasmascrap.getItemMeta();
         SI.addEnchant(Enchantment.DURABILITY, 1, false);
         SI.addItemFlags(ItemFlag.HIDE_ENCHANTS);
-        SI.setDisplayName(ChatColor.DARK_AQUA + "" + ChatColor.BOLD + "Plasma scrap" + ChatColor.BLUE + "" + ChatColor.BOLD + " [Uncommon]");
+        SI.setDisplayName(ChatColor.DARK_AQUA + "" + ChatColor.BOLD + "Plasma scrap" + ChatColor.BLUE + ChatColor.BOLD + " [Uncommon]");
         SI.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
         List<String> BL = new ArrayList<>();
         BL.add(ChatColor.DARK_GREEN + "Use this to craft and charge up some items!");
@@ -56,7 +56,7 @@ public class PremadeItems {
 
         ItemStack plasmaenergy = new ItemStack(Material.AMETHYST_SHARD);
         ItemMeta SI = plasmaenergy.getItemMeta();
-        SI.setDisplayName(ChatColor.DARK_AQUA + "" + ChatColor.BOLD + "Plasma energy shard" + ChatColor.DARK_BLUE + "" + ChatColor.BOLD + " [Rare]");
+        SI.setDisplayName(ChatColor.DARK_AQUA + "" + ChatColor.BOLD + "Plasma energy shard" + ChatColor.DARK_BLUE + ChatColor.BOLD + " [Rare]");
         SI.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
         List<String> BL = new ArrayList<>();
         BL.add(ChatColor.DARK_GREEN + "Used to craft.");
@@ -76,7 +76,7 @@ public class PremadeItems {
         SI.setUnbreakable(true);
         SI.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
         List<String> BL = new ArrayList<>();
-        BL.add(ChatColor.LIGHT_PURPLE + "Use this to break" + ChatColor.DARK_PURPLE + "" + ChatColor.BOLD + " Star Dust!");
+        BL.add(ChatColor.LIGHT_PURPLE + "Use this to break" + ChatColor.DARK_PURPLE + ChatColor.BOLD + " Star Dust!");
         SI.setLore(BL);
         SI.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
         starDustChisel_1.setItemMeta(SI);
@@ -88,7 +88,7 @@ public class PremadeItems {
 
         ItemStack starDust = new ItemStack(Material.NETHER_STAR);
         ItemMeta SI = starDust.getItemMeta();
-        SI.setDisplayName(ChatColor.DARK_AQUA + "" + ChatColor.BOLD + "Star Dust" + ChatColor.DARK_BLUE + "" + ChatColor.BOLD + " [Rare]");
+        SI.setDisplayName(ChatColor.DARK_AQUA + "" + ChatColor.BOLD + "Star Dust" + ChatColor.DARK_BLUE + ChatColor.BOLD + " [Rare]");
         SI.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
         List<String> BL = new ArrayList<>();
         BL.add(ChatColor.DARK_GREEN + "Used to craft things and level up.");
@@ -155,11 +155,11 @@ public class PremadeItems {
         return StarDustMineBoots;
     }
 
-    public static ItemStack low_level_chip(){
+    public static ItemStack low_level_chip() {
 
         ItemStack lowlevelchip = new ItemStack(Material.DETECTOR_RAIL);
         ItemMeta SI = lowlevelchip.getItemMeta();
-        SI.setDisplayName(ChatColor.GREEN + "" + ChatColor.BOLD + "Low Level Chip" + ChatColor.BLUE + "" + ChatColor.BOLD + " [Uncommon]");
+        SI.setDisplayName(ChatColor.GREEN + "" + ChatColor.BOLD + "Low Level Chip" + ChatColor.BLUE + ChatColor.BOLD + " [Uncommon]");
         SI.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
         List<String> BL = new ArrayList<>();
         BL.add(ChatColor.DARK_GREEN + " ");

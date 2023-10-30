@@ -1,26 +1,20 @@
 package org.elemental.listenersOLD;
 
-import net.milkbowl.vault.chat.Chat;
 import org.bukkit.*;
-import org.bukkit.attribute.Attribute;
-import org.bukkit.attribute.AttributeModifier;
 import org.bukkit.enchantments.Enchantment;
 import org.bukkit.entity.Player;
-import org.bukkit.event.Listener;
 import org.bukkit.event.EventHandler;
+import org.bukkit.event.Listener;
 import org.bukkit.event.block.Action;
 import org.bukkit.event.player.PlayerInteractEvent;
-import org.bukkit.inventory.EquipmentSlot;
 import org.bukkit.inventory.Inventory;
 import org.bukkit.inventory.ItemFlag;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
 import org.bukkit.inventory.meta.LeatherArmorMeta;
-import org.bukkit.inventory.meta.SkullMeta;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.UUID;
 
 public class Book_Of_Items implements Listener {
 
@@ -355,7 +349,7 @@ public class Book_Of_Items implements Listener {
                     LIM.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
                     Light.setItemMeta(LIM);
 
-                    ItemStack StickOfPower  = new ItemStack(Material.STICK);
+                    ItemStack StickOfPower = new ItemStack(Material.STICK);
                     ItemMeta SOPM = StickOfPower.getItemMeta();
                     SOPM.setDisplayName(ChatColor.GOLD + "" + ChatColor.BOLD + "Montu's Staff" + ChatColor.DARK_AQUA + " [Wand]");
                     List<String> SOPL = new ArrayList<>();
@@ -431,6 +425,6 @@ public class Book_Of_Items implements Listener {
                     p.openInventory(Guide);
                 }
             }
-            }
         }
     }
+}

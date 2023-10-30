@@ -117,7 +117,6 @@ public class ALL_RECIPIE_GUIDE_LISTENER implements Listener {
                 BottleOfLight.setItemMeta(BOLM);
 
 
-
                 Materials.setItem(0, G1);
                 Materials.setItem(1, G1);
                 Materials.setItem(2, G1);
@@ -158,8 +157,6 @@ public class ALL_RECIPIE_GUIDE_LISTENER implements Listener {
                 Materials.setItem(35, G1);
 
                 player.openInventory(Materials);
-
-
 
 
             }

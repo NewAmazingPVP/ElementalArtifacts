@@ -13,11 +13,11 @@ import org.bukkit.event.player.PlayerInteractEvent;
 public class AntiAnvilOpen implements Listener {
 
     @EventHandler
-    public void onPlayerInteract(PlayerInteractEvent event){
+    public void onPlayerInteract(PlayerInteractEvent event) {
         Player player = event.getPlayer();
-        if(event.getAction() == Action.RIGHT_CLICK_BLOCK){
+        if (event.getAction() == Action.RIGHT_CLICK_BLOCK) {
             Block block = event.getClickedBlock();
-            if(block.getType() == Material.ANVIL){
+            if (block.getType() == Material.ANVIL) {
                 event.setCancelled(true);
                 player.sendMessage(ChatColor.RED + "This is currently disabled!");
                 player.playSound(player.getLocation(), Sound.ENTITY_ENDERMAN_TELEPORT, 2.0f, 0.0f);

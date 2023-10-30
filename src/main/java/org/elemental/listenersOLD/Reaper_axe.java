@@ -1,17 +1,18 @@
 package org.elemental.listenersOLD;
 
-import org.bukkit.*;
+import org.bukkit.Bukkit;
+import org.bukkit.ChatColor;
+import org.bukkit.Material;
+import org.bukkit.Particle;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.block.BlockBreakEvent;
 import org.bukkit.event.entity.EntityDamageByEntityEvent;
 import org.bukkit.event.entity.PlayerDeathEvent;
-import org.bukkit.event.player.PlayerInteractEntityEvent;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
 import org.bukkit.inventory.meta.SkullMeta;
-import org.bukkit.plugin.java.JavaPlugin;
 
 public class Reaper_axe implements Listener {
 
@@ -28,13 +29,13 @@ public class Reaper_axe implements Listener {
                 skull.setItemMeta(skullMeta);
                 Particle.DustOptions dustOptions = new Particle.DustOptions(org.bukkit.Color.RED, 1.0f);
                 victim.getWorld().spawnParticle(Particle.REDSTONE, victim.getLocation(), 10, dustOptions);
-                String deathMessage = victim.getName() + ChatColor.DARK_RED + "" + ChatColor.BOLD + " Was Beheaded!";
+                String deathMessage = victim.getName() + ChatColor.DARK_RED + ChatColor.BOLD + " Was Beheaded!";
                 for (Player player : Bukkit.getOnlinePlayers()) {
                     player.sendMessage(deathMessage);
-                event.getDrops().add(skull);
+                    event.getDrops().add(skull);
 
+                }
             }
-        }
 
         }
     }
