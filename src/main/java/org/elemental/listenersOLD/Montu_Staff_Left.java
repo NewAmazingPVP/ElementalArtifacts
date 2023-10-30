@@ -1,25 +1,21 @@
 package org.elemental.listenersOLD;
 
 import org.bukkit.*;
-import org.bukkit.entity.Entity;
-import org.bukkit.entity.LivingEntity;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.block.Action;
 import org.bukkit.event.player.PlayerInteractEvent;
 import org.bukkit.inventory.ItemStack;
-import org.bukkit.inventory.meta.ItemMeta;
 import org.bukkit.util.Vector;
 
 import java.util.HashMap;
-import java.util.Map;
 import java.util.UUID;
 import java.util.concurrent.Executors;
 import java.util.concurrent.ScheduledExecutorService;
 
 public class Montu_Staff_Left implements Listener {
-    private HashMap<UUID, Long> cooldowns = new HashMap<>();
+    private final HashMap<UUID, Long> cooldowns = new HashMap<>();
 
     @EventHandler
     public void onPlayerInteract(PlayerInteractEvent event) {
@@ -36,7 +32,7 @@ public class Montu_Staff_Left implements Listener {
                             if (System.currentTimeMillis() < cooldownEnd) {
                                 // player is still in cooldown
                                 player.playSound(player.getLocation(), Sound.ITEM_FLINTANDSTEEL_USE, 1.0f, 2.0f);
-                                event.getPlayer().sendActionBar(ChatColor.DARK_RED + "On Cooldown!" + ChatColor.YELLOW + "" + ChatColor.BOLD + " Left Click");
+                                event.getPlayer().sendActionBar(ChatColor.DARK_RED + "On Cooldown!" + ChatColor.YELLOW + ChatColor.BOLD + " Left Click");
                                 player.sendMessage("Cooldown successful");
                                 return;
                             }
@@ -51,7 +47,7 @@ public class Montu_Staff_Left implements Listener {
                                     cooldowns.put(player.getUniqueId(), cooldownEnd);
 
 
-                                    event.getPlayer().sendActionBar(ChatColor.DARK_PURPLE + "You Used Beam!" + ChatColor.YELLOW + "" + ChatColor.BOLD + " Left Click");
+                                    event.getPlayer().sendActionBar(ChatColor.DARK_PURPLE + "You Used Beam!" + ChatColor.YELLOW + ChatColor.BOLD + " Left Click");
                                     player.playSound(player.getLocation(), Sound.BLOCK_BEACON_POWER_SELECT, 1.0f, 2.0f);
                                     player.playSound(player.getLocation(), Sound.ENTITY_FIREWORK_ROCKET_TWINKLE, 1.0f, 2.0f);
                                     Location location = player.getEyeLocation().add(0, 0.2, 0);

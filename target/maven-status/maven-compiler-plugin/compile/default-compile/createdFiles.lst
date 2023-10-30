@@ -1,13 +1,14 @@
 org\elemental\listenersOLD\Book_Of_Items_Listener.class
 org\elemental\listenersOLD\Montu_Staff_OtherItemCode.class
 org\elemental\listenersOLD\CraftingMenu_1_Listener.class
+org\elemental\command\Spawn_NPC_Mechanic.class
 org\elemental\listenersOLD\Gold_Covered_Meat.class
-org\elemental\listeners\AntiGuiOpen.class
 org\elemental\listenersOLD\PlayerJoin.class
 org\elemental\listenersOLD\ALL_RECIPIE_GUIDE_LISTENER.class
 org\elemental\scoreboard\FastBoardBase$ObjectiveMode.class
 org\elemental\scoreboard\FastReflection$PacketConstructor.class
 org\elemental\WorldParticles\TeleportParticles$1.class
+org\elemental\listeners\CustomEnchantTable.class
 org\elemental\listenersOLD\Sacerficeing_armor.class
 org\elemental\listenersOLD\Guide.class
 org\elemental\command\GivePlasmaBlockPick_1.class
@@ -17,7 +18,6 @@ org\elemental\listenersOLD\lucky_gem.class
 org\elemental\scoreboard\FastBoard.class
 org\elemental\listenersOLD\ClassMenu_Listener.class
 org\elemental\listenersOLD\SkillMenu_listener.class
-org\elemental\command\SummonNpc_Mechanic.class
 org\elemental\ElementalArtifacts.class
 org\elemental\MiningListsners\Star_Dust_Mine.class
 org\elemental\listenersOLD\Reaper_axe.class
@@ -30,6 +30,7 @@ org\elemental\listenersOLD\God_Potion.class
 org\elemental\listenersOLD\Montu_Staff_Right.class
 org\elemental\WorldParticles\TeleportParticles.class
 org\elemental\listenersOLD\PortCraftTable.class
+org\elemental\listeners\AntiAnvilOpen.class
 org\elemental\command\GiveStarDistMine_1.class
 org\elemental\listenersOLD\Info_Listener.class
 org\elemental\scoreboard\FastBoardBase$TeamMode.class
@@ -44,10 +45,12 @@ org\elemental\listenersOLD\Book_Of_Items.class
 org\elemental\MiningListsners\MiningBlockReplace.class
 org\elemental\CustomRecipes\Compact_Netherite_Recipe.class
 org\elemental\command\Artifacts.class
+org\elemental\listeners\Scrap_Melter.class
 org\elemental\listenersOLD\WarpSword.class
 org\elemental\utility\AutoUpload.class
 org\elemental\listenersOLD\Materials_Recipes_Listener.class
 org\elemental\listenersOLD\doubleedged_sword.class
+org\elemental\command\GiveStarDustMineArmor.class
 org\elemental\MiningListsners\MiningBlockReplace$1.class
 org\elemental\utility\AutoUpload$1.class
 org\elemental\scoreboard\FastBoardBase$ScoreboardAction.class

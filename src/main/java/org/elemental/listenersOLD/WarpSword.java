@@ -14,15 +14,15 @@ import java.util.UUID;
 
 public class WarpSword implements Listener {
 
-    private HashMap<UUID, Long> cooldowns = new HashMap<UUID, Long>();
+    private final HashMap<UUID, Long> cooldowns = new HashMap<UUID, Long>();
 
     @EventHandler
     public void onRightClick(PlayerInteractEvent event) {
         Player player = event.getPlayer();
         if (event.getAction().toString().contains("RIGHT") && player.getItemInHand().getType() != Material.AIR) {
             if (player.getItemInHand().getItemMeta().getDisplayName().equals(ChatColor.DARK_PURPLE + "" + ChatColor.BOLD + "Warp Sword" + ChatColor.DARK_AQUA + " [Sword]")) {
-                if(cooldowns.containsKey(player.getUniqueId())) {
-                    if(cooldowns.get(player.getUniqueId()) > System.currentTimeMillis()){
+                if (cooldowns.containsKey(player.getUniqueId())) {
+                    if (cooldowns.get(player.getUniqueId()) > System.currentTimeMillis()) {
                         long remainingTime = (cooldowns.get(player.getUniqueId()) - System.currentTimeMillis()) / 1000;
                         player.sendMessage(ChatColor.RED + "You cannot use this for " + remainingTime + " more seconds.");
                         /*player.sendMessage(ChatColor.RED + "This Item Is On Cooldown!");*/

@@ -7,17 +7,13 @@ import org.bukkit.enchantments.Enchantment;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
-import org.bukkit.event.block.BlockPlaceEvent;
 import org.bukkit.event.player.PlayerInteractEvent;
 import org.bukkit.inventory.ItemFlag;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
-import org.bukkit.plugin.Plugin;
 
 import java.util.ArrayList;
 import java.util.List;
-
-import static org.bukkit.Bukkit.getServer;
 
 public class lucky_gem implements Listener {
     @EventHandler
@@ -109,7 +105,6 @@ public class lucky_gem implements Listener {
                     HLCBSI.setUnbreakable(true);
                     HLCBSI.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
                     helm.setItemMeta(HLCBSI);
-
 
 
                     player.getInventory().setHelmet(new ItemStack(helm));
