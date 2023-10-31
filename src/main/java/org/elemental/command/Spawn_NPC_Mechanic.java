@@ -2,6 +2,7 @@ package org.elemental.command;
 
 import net.citizensnpcs.api.CitizensAPI;
 import net.citizensnpcs.api.npc.NPC;
+import net.citizensnpcs.trait.SkinTrait;
 import org.bukkit.ChatColor;
 import org.bukkit.Location;
 import org.bukkit.Sound;
@@ -25,6 +26,9 @@ public class Spawn_NPC_Mechanic implements CommandExecutor {
 
 
         NPC npc = CitizensAPI.getNPCRegistry().createNPC(EntityType.PLAYER, ChatColor.LIGHT_PURPLE + "" + ChatColor.BOLD + "Mechanic");
+
+        SkinTrait skinTrait = npc.getTrait(SkinTrait.class);
+        skinTrait.setSkinName("comet99");
         npc.spawn(loc);
 
 
