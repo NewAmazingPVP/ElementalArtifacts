@@ -102,7 +102,7 @@ public class PremadeItems {
 
         ItemStack StarDustMineChest = new ItemStack(Material.LEATHER_CHESTPLATE);
         LeatherArmorMeta chest = (LeatherArmorMeta) StarDustMineChest.getItemMeta();
-        chest.setColor(Color.BLUE);
+        chest.setColor(Color.PURPLE);
         chest.setDisplayName(ChatColor.BLUE + "" + ChatColor.BOLD + "Star Dust Mines Chestplate");
         chest.setUnbreakable(true);
         chest.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
@@ -122,7 +122,7 @@ public class PremadeItems {
 
         ItemStack StarDustMineLegs = new ItemStack(Material.LEATHER_LEGGINGS);
         LeatherArmorMeta legs = (LeatherArmorMeta) StarDustMineLegs.getItemMeta();
-        legs.setColor(Color.BLUE);
+        legs.setColor(Color.PURPLE);
         legs.setDisplayName(ChatColor.BLUE + "" + ChatColor.BOLD + "Star Dust Mines Leggings");
         legs.setUnbreakable(true);
         legs.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
@@ -140,7 +140,7 @@ public class PremadeItems {
     public static ItemStack StarDustMineArmor_BT() {
         ItemStack StarDustMineBoots = new ItemStack(Material.LEATHER_BOOTS);
         LeatherArmorMeta boots = (LeatherArmorMeta) StarDustMineBoots.getItemMeta();
-        boots.setColor(Color.BLUE);
+        boots.setColor(Color.PURPLE);
         boots.setDisplayName(ChatColor.BLUE + "" + ChatColor.BOLD + "Star Dust Mines Boots");
         boots.setUnbreakable(true);
         boots.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);

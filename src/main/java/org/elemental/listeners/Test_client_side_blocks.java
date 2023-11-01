@@ -15,7 +15,7 @@ public class Test_client_side_blocks implements Listener {
 
     @EventHandler
     public void onPlayerInteract(PlayerInteractEvent event) {
-        if (event.hasBlock() && event.getClickedBlock().getType() == Material.AIR) {
+        if (event.hasBlock() && event.getClickedBlock().getType() == Material.DEEPSLATE) {
             lastPlayer = event.getPlayer();
         }
     }
