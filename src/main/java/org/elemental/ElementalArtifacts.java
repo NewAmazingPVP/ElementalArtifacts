@@ -14,6 +14,7 @@ import org.elemental.command.Spawn_NPC_Mechanic;
 import org.elemental.listeners.AntiAnvilOpen;
 import org.elemental.listeners.CustomEnchantTable;
 import org.elemental.listeners.Scrap_Melter;
+import org.elemental.listeners.Test_client_side_blocks;
 import org.elemental.utility.AutoUpload;
 
 import static org.elemental.WorldParticles.TeleportParticles.test;
@@ -75,6 +76,8 @@ public final class ElementalArtifacts extends JavaPlugin implements Listener {
         getServer().getPluginManager().registerEvents(new MiningBlockReplace(), this);
         getServer().getPluginManager().registerEvents(new CustomEnchantTable(), this);
         getServer().getPluginManager().registerEvents(new Scrap_Melter(), this);
+        getServer().getPluginManager().registerEvents(new Test_client_side_blocks(), this);
+
 
         //-------------------------Item functions -----------------------
         test();
