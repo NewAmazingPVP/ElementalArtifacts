@@ -34,7 +34,7 @@ public class StarDustMineArmor implements Listener {
                                     player.sendMessage("test");
 
                                     if (player.isSneaking()) {
-                                        player.setWalkSpeed(3);
+                                        player.setWalkSpeed(20);
                                         new BukkitRunnable() {
                                             @Override
                                             public void run() {
