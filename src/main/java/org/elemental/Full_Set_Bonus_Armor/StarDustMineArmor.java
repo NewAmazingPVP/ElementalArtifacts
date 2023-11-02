@@ -33,7 +33,7 @@ public class StarDustMineArmor implements Listener {
                                 if (meta3 != null && meta3.getDisplayName().equals(ChatColor.BLUE + "" + ChatColor.BOLD + "Star Dust Mines Boots")) {
                                     player.sendMessage("test");
                                     if (player.isSneaking()) {
-                                        player.setWalkSpeed(3);
+                                        player.setWalkSpeed(15);
                                         new BukkitRunnable() {
                                             @Override
                                             public void run() {
