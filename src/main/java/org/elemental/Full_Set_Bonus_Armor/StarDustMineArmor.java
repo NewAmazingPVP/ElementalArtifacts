@@ -19,7 +19,15 @@ public class StarDustMineArmor implements Listener {
             if (chestplate != null && chestplate.getType().equals(Material.LEATHER_CHESTPLATE)) {
                 ItemMeta meta = chestplate.getItemMeta();
                 if (meta != null && meta.getDisplayName().equals(ChatColor.BLUE + "" + ChatColor.BOLD + "Star Dust Mines Chestplate")) {
-                    player.sendMessage("test");
+                    if (chestplate != null && chestplate.getType().equals(Material.LEATHER_LEGGINGS)) {
+                        if (meta != null && meta.getDisplayName().equals(ChatColor.BLUE + "" + ChatColor.BOLD + "Star Dust Mines Leggings")) {
+                            if (chestplate != null && chestplate.getType().equals(Material.LEATHER_BOOTS)) {
+                                if (meta != null && meta.getDisplayName().equals(ChatColor.BLUE + "" + ChatColor.BOLD + "Star Dust Mines Boots")) {
+                                    player.sendMessage("test");
+                                }
+                            }
+                        }
+                    }
                 }
             }
         }
