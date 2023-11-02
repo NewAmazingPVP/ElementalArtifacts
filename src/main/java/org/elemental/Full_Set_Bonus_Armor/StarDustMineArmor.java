@@ -16,13 +16,18 @@ public class StarDustMineArmor implements Listener {
         Player player = event.getPlayer();
         if (event.isSneaking()) {
             ItemStack chestplate = player.getInventory().getChestplate();
+            ItemStack leggings = player.getInventory().getLeggings();
+            ItemStack boots = player.getInventory().getBoots();
+
+            ItemMeta meta = chestplate.getItemMeta();
+            ItemMeta meta2 = leggings.getItemMeta();
+            ItemMeta meta3 = boots.getItemMeta();
             if (chestplate != null && chestplate.getType().equals(Material.LEATHER_CHESTPLATE)) {
-                ItemMeta meta = chestplate.getItemMeta();
                 if (meta != null && meta.getDisplayName().equals(ChatColor.BLUE + "" + ChatColor.BOLD + "Star Dust Mines Chestplate")) {
-                    if (chestplate != null && chestplate.getType().equals(Material.LEATHER_LEGGINGS)) {
-                        if (meta != null && meta.getDisplayName().equals(ChatColor.BLUE + "" + ChatColor.BOLD + "Star Dust Mines Leggings")) {
-                            if (chestplate != null && chestplate.getType().equals(Material.LEATHER_BOOTS)) {
-                                if (meta != null && meta.getDisplayName().equals(ChatColor.BLUE + "" + ChatColor.BOLD + "Star Dust Mines Boots")) {
+                    if (leggings != null && leggings.getType().equals(Material.LEATHER_LEGGINGS)) {
+                        if (meta2 != null && meta2.getDisplayName().equals(ChatColor.BLUE + "" + ChatColor.BOLD + "Star Dust Mines Leggings")) {
+                            if (boots != null && boots.getType().equals(Material.LEATHER_BOOTS)) {
+                                if (meta3 != null && meta3.getDisplayName().equals(ChatColor.BLUE + "" + ChatColor.BOLD + "Star Dust Mines Boots")) {
                                     player.sendMessage("test");
                                 }
                             }
