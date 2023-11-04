@@ -24,9 +24,11 @@ public class Scrap_Melter implements Listener {
                 ItemStack itemInHand = player.getInventory().getItemInMainHand();
                 if (itemInHand != null && itemInHand.getType() == Material.RAW_COPPER && itemInHand.hasItemMeta() && itemInHand.getItemMeta().hasDisplayName() && itemInHand.getItemMeta().getDisplayName().equals(ChatColor.AQUA + "" + ChatColor.BOLD + "Low Level Scrap")) {
 
-                    if (itemInHand != null && itemInHand.getAmount() > 1) {
+                    if (itemInHand.getAmount() > 1) {
                         itemInHand.setAmount(itemInHand.getAmount() - 1);
-                        player.setItemInHand(itemInHand);
+                        player.getInventory().setItemInMainHand(itemInHand);
+                    } else {
+                        player.getInventory().setItemInMainHand(null);
 
                         ItemStack testiron = new ItemStack(Material.COPPER_INGOT);
 
