@@ -19,3 +19,6 @@ commands:
   Spawn_NPC_Mechanic:
     description: Spawns the NPC mechanic
     usage: /spawnnpcmechanic
+  GiveScrapAll:
+    description: gives all scrap
+    usage: /giveallscrap

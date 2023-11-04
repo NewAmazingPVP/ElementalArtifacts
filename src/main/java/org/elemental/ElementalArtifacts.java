@@ -4,14 +4,11 @@ import org.bukkit.Bukkit;
 import org.bukkit.Location;
 import org.bukkit.event.Listener;
 import org.bukkit.plugin.java.JavaPlugin;
-import org.elemental.Full_Set_Bonus_Armor.StarDustMineArmor;
+import org.elemental.Full_Set_Bonus_Armor.TestSetBonus;
 import org.elemental.MiningListsners.Loot_Block_Mine;
 import org.elemental.MiningListsners.MiningBlockReplace;
 import org.elemental.MiningListsners.Star_Dust_Mine;
-import org.elemental.command.GivePlasmaBlockPick_1;
-import org.elemental.command.GiveStarDistMine_1;
-import org.elemental.command.GiveStarDustMineArmor;
-import org.elemental.command.Spawn_NPC_Mechanic;
+import org.elemental.command.*;
 import org.elemental.listeners.AntiAnvilOpen;
 import org.elemental.listeners.CustomEnchantTable;
 import org.elemental.listeners.Scrap_Melter;
@@ -68,6 +65,8 @@ public final class ElementalArtifacts extends JavaPlugin implements Listener {
         getCommand("GiveStarDustCH").setExecutor(new GiveStarDistMine_1());
         getCommand("GiveStarDustMineArmor").setExecutor(new GiveStarDustMineArmor());
         getCommand("Spawn_NPC_Mechanic").setExecutor(new Spawn_NPC_Mechanic());
+        getCommand("GiveScrapAll").setExecutor(new GiveScrapAll());
+
 
 
         getServer().getPluginManager().registerEvents(new AntiAnvilOpen(), this);
@@ -76,7 +75,7 @@ public final class ElementalArtifacts extends JavaPlugin implements Listener {
         getServer().getPluginManager().registerEvents(new MiningBlockReplace(), this);
         getServer().getPluginManager().registerEvents(new CustomEnchantTable(), this);
         getServer().getPluginManager().registerEvents(new Scrap_Melter(), this);
-        getServer().getPluginManager().registerEvents(new StarDustMineArmor(), this);
+        getServer().getPluginManager().registerEvents(new TestSetBonus(), this);
 
 
 
