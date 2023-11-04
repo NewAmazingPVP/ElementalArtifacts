@@ -8,11 +8,8 @@ import org.bukkit.event.Listener;
 import org.bukkit.event.player.PlayerToggleSneakEvent;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
-import org.bukkit.scheduler.BukkitRunnable;
 
-import static org.elemental.ElementalArtifacts.elementalArtifacts;
-
-public class StarDustMineArmor implements Listener {
+public class TestSetBonus implements Listener {
 
     @EventHandler
     public void onPlayerToggleSneak(PlayerToggleSneakEvent event) {
@@ -31,18 +28,6 @@ public class StarDustMineArmor implements Listener {
                         if (meta2 != null && meta2.getDisplayName().equals(ChatColor.BLUE + "" + ChatColor.BOLD + "Star Dust Mines Leggings")) {
                             if (boots != null && boots.getType().equals(Material.LEATHER_BOOTS)) {
                                 if (meta3 != null && meta3.getDisplayName().equals(ChatColor.BLUE + "" + ChatColor.BOLD + "Star Dust Mines Boots")) {
-                                    player.sendMessage("test");
-                                    if (player.isSneaking()) {
-                                        player.setWalkSpeed(15);
-                                        new BukkitRunnable() {
-                                            @Override
-                                            public void run() {
-                                                if (!event.isSneaking()) {
-                                                    player.setWalkSpeed(0.2f); // Reset to normal speed
-                                                }
-                                            }
-                                        }.runTaskLater(elementalArtifacts, 1); // 20 ticks = 1 second
-                                    }
                                 }
                             }
                         }

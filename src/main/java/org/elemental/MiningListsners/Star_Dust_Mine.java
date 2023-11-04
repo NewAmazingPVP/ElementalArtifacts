@@ -39,7 +39,6 @@ public class Star_Dust_Mine implements Listener {
                 if (Math.random() < 0.10) {
                     event.getBlock().getWorld().dropItemNaturally(event.getBlock().getLocation(), new ItemStack(Material.AIR, 0));
 
-                    player.sendMessage(ChatColor.LIGHT_PURPLE + "" + ChatColor.BOLD + "X2 Drops");
                     player.getInventory().addItem(starDust());
                 }
             }
